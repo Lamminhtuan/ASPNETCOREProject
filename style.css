@@ -1,0 +1,35 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+.nav-item a{
+    text-decoration:none;
+    color:black;
+    font-weight: 600;
+    text-transform:uppercase; 
+    margin-right:15px;  
+    transition:all 0.4s;
+}
+.nav-item a:hover{
+    color:#165a72;  
+}
+.navbar-brand{
+    height:50px;
+    width:50px;
+}
+.search{
+    /* height:50px; */
+    outline:none;
+    border:2px solid #165a72;
+    background-color:transparent;
+    border-radius:20px 0px 0px 20px;
+    border-right:none;
+}
+.btn-search{
+    outline:none;
+    color:white;
+    background-color:#165a72;
+    border:none;
+    border-radius:0px 20px 20px 0px;
+}
