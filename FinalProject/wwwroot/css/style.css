@@ -26,22 +26,10 @@
     border-radius:20px 0px 0px 20px;
     border-right:none;
 }
-.search:focus{
-    outline:none;
-    box-shadow:none;
-    border:2px solid #165a72;
-    border-right:none;
-}
 .btn-search{
     outline:none;
     color:white;
     background-color:#165a72;
     border:none;
     border-radius:0px 20px 20px 0px;
-}
-
-.main{
-    /* background:url(images/smartphone-3317374_1920.jpg) no-repeat; */
-    background-size:cover;
-    height:100vh;
 }

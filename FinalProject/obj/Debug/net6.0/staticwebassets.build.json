@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NlHAq28xI2FvhdU3gcPD3fFKN6NqZ/3301fvLSHZRzw=",
+  "Hash": "4mmx7yeRcTkWriiswl4CMwXu2U/nAJT9p9lUs7a9HCk=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FinalProject.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css\\images\\logo-no-background.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "css/images/logo-no-background.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\images\\logo-no-background.png"
+    },
+    {
       "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css\\site.css",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
@@ -83,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\snow3.gif"
+    },
+    {
+      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css\\style.css",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
       "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\favicon.ico",
