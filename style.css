@@ -3,9 +3,31 @@
     margin:0;
     box-sizing:border-box;
 }
+a{
+    text-decoration:none;
+}
+nav, footer{
+    background-color:#3D5AFE;
+}
+h5{
+    font-weight:600;
+}
+.copyright{
+    text-shadow:0px 0px 1px white;
+    font-size:larger;
+}
+footer a{
+    font-size:larger;
+    text-decoration:none;
+    color:white;
+    transition:all 0.4s;
+}
+footer a:hover{
+    color:#1A237E;   
+}
 .nav-item a{
     text-decoration:none;
-    color:black;
+    color:white;
     font-weight: 600;
     text-transform:uppercase; 
     margin-right:15px;  
@@ -21,7 +43,7 @@
 .search{
     /* height:50px; */
     outline:none;
-    border:2px solid #165a72;
+    border:2px solid #0D47A1;
     background-color:transparent;
     border-radius:20px 0px 0px 20px;
     border-right:none;
@@ -29,17 +51,20 @@
 .search:focus{
     outline:none;
     box-shadow:none;
-    border:2px solid #165a72;
+    border:2px solid #0D47A1;
     border-right:none;
 }
 .btn-search{
     outline:none;
     color:white;
-    background-color:#165a72;
+    background-color:#0D47A1;
     border:none;
     border-radius:0px 20px 20px 0px;
 }
-
+.btn-search:hover{
+    background-color:#1A237E;
+    color:white;
+}
 .main{
     /* background:url(images/smartphone-3317374_1920.jpg) no-repeat; */
     background-size:cover;
