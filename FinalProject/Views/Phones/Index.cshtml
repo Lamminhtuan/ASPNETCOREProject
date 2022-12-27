@@ -1,0 +1,120 @@
+﻿@model IEnumerable<FinalProject.Models.Phone>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container">
+    <div class="row">
+        @foreach(var item in Model){
+              <a asp-action="Details" asp-route-id="@item.Id" class="col-md-2 m-1 items rounded text-center">
+
+
+           
+                <h5><b>@item.Ten</b></h5>
+
+            <img src=@item.ImagePath height="150px">
+              <div>
+                    <i class="bi bi-cpu minhhoa"></i><h6 style="display:inline"> @item.Chip</h6>
+              </div>
+              <div>
+                <i class="bi bi-phone minhhoa"></i><h6 style="display:inline">@item.ManHinh</h6>
+                </div>
+                <div>
+                <i class="bi bi-currency-dollar"></i><h6 style="display:inline"><b>@item.Gia.ToString("C")</b></h6>
+                </div>
+        
+            </a>
+        }
+    </div>
+</div>
+@*<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ten)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ManHinh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Os)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CameraSau)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CameraTruoc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ram)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImagePath)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ten)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManHinh)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Os)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CameraSau)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CameraTruoc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ram)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImagePath)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>*@
