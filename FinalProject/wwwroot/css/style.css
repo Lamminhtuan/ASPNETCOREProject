@@ -73,10 +73,10 @@ footer a:hover{
     transition: transform 0.5s;
     background-color: white;
     color: black;
-    border: 1px solid #003c8f;
+    border: 1px solid white;
 }
 .items:hover{
-    transform:scale(1.25);
+    transform:scale(1.1);
     color:black;
 }
 .minhhoa{

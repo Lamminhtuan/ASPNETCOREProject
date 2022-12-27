@@ -10076,11 +10076,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\test\\FinalProject.csproj",
+      "projectUniqueName": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\FinalProject.csproj",
       "projectName": "FinalProject",
-      "projectPath": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\test\\FinalProject.csproj",
+      "projectPath": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\FinalProject.csproj",
       "packagesPath": "C:\\Users\\Tuan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\test\\obj\\",
+      "outputPath": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Tuan\\AppData\\Roaming\\NuGet\\NuGet.Config",
