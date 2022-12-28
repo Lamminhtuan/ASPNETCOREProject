@@ -69,11 +69,14 @@ footer a:hover{
     background-size: cover;
     height: 100vh;
 }
+.navbar-brand{
+    width:200px;
+    float:left;
+}
 .items {
     transition: transform 0.5s;
     background-color: white;
     color: black;
-/*    border: 1px solid black;*/
 }
 .items:hover{
     transform:scale(1.1);
