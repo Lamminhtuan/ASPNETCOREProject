@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@model IEnumerable<FinalProject.Models.Phone>
   <div id="carouselExampleIndicators" class="carousel slide">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -19,6 +20,7 @@
       </div>
 
     </div>
+
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
@@ -28,3 +30,61 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+  <div class="container my-5">
+      <div class="row">
+          <div class="col-lg-3 text-center">
+              <img src="/images/giaithuong.png" style="width:100px;height:100px;">
+              <h6 class="logo-gioithieu">THƯƠNG HIỆU HÀNG ĐẦU</h6>
+          </div>
+              <div class="col-lg-3 text-center">
+              <img src="/images/giaohang.png" style="width:100px;height:100px;">
+              <h6 class="logo-gioithieu">GIAO HÀNG SIÊU NHANH</h6>
+          </div>
+           <div class="col-lg-3 text-center">
+              <img src="/images/tincay.png" style="width:100px;height:100px;">
+              <h6 class="logo-gioithieu">BẢO MẬT TUYỆT ĐỐI</h6>
+          </div>
+           <div class="col-lg-3 text-center">
+              <img src="/images/auth.png" style="width:100px;height:100px;">
+              <h6 class="logo-gioithieu">CAM KẾT CHÍNH HÃNG</h6>
+          </div>
+      </div>
+      </div>
+      <div class="container p-3 rounded" style="background-color:#29b6f6">
+          <div class="row">
+          <div class="col-lg-3 text-center">
+              <img src="/images/banner6.png" style="height:200px;">
+              
+          </div>
+          <div class="col-lg-3 text-center">
+              <img src="/images/banner5.gif" style="height:200px;">
+              </div>
+          </div>
+        <div class="container my-3">
+    <div class="row g-2">
+        @foreach(var item in Model){
+             <a asp-action="Details" asp-route-id="@item.Id" class="col-md-2 items border border-light rounded text-center">   
+              
+
+                <h5><b>@item.Ten</b></h5>
+
+						<img src=@item.ImagePath height="150px">
+              <div>
+                    <i class="bi bi-cpu minhhoa"></i><h6 style="display:inline"> @item.Chip</h6>
+              </div>
+              <div>
+                <i class="bi bi-phone minhhoa"></i><h6 style="display:inline">@item.ManHinh</h6>
+                </div>
+                <div>
+                <i class="bi bi-currency-dollar"></i><h6 style="display:inline"><b>@item.Gia.ToString("C")</b></h6>
+                </div>
+
+          
+                 
+
+     </a>
+        }
+    </div>
+</div>
+</div>
+      </div>
