@@ -22,6 +22,10 @@ footer a{
     color:white;
     transition:all 0.4s;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
 footer a:hover{
     color:#1A237E;   
 }
