@@ -39,7 +39,7 @@ VALUES(0, N'iPhone 14 Pro Max 128 GB', N'Apple', 33990000, N'OLED 6.7" Super Ret
 (15, 'iPhone SE (2022)', 'Apple', 12990000, 'IPS LCD 4.7" Retina HD','iOS', '12 MP','7 MP', 'Apple A15 Bionic', 4, 128, '2018 mAh', '/images/se2022.jpg'),
 (16, 'Realme 9 Pro+ 5G', 'Realme', 9990000, 'Super AMOLED 6.4" Full HD +', 'Android', N'Chính 50 MP & Phụ 8 MP, 2 MP', '16 MP', 'MediaTek Dimensity 920 5G', 8, 128, '4500 mAh', '/images/realme9pro+.jpg'),
 (17, 'Samsung Galaxy A53 5G', 'Samsung', 9990000, 'Super AMOLED 6.5" Full HD +', 'Android', N'Chính 64 MP & Phụ 12 MP, 5 MP, 5 MP','32 MP', 'Exynos 1280', 8, 128, '5000 mAh', '/images/a53.jpg'),
-(18, 'Xiaomi Redmi Note 10 Pro', 'Xiaomi', 7090000, 'AMOLED 6.67" Full HD +', 'Android', N'Chính 108 MP & Phụ 8 MP, 5 MP, 2 MP','16 MP', 'Snapdragon 732G', 8, 128, '5020 mAh', '/images/redminote10pro,jpg'),
+(18, 'Xiaomi Redmi Note 10 Pro', 'Xiaomi', 7090000, 'AMOLED 6.67" Full HD +', 'Android', N'Chính 108 MP & Phụ 8 MP, 5 MP, 2 MP','16 MP', 'Snapdragon 732G', 8, 128, '5020 mAh', '/images/redminote10pro.jpg'),
 (19, 'Vivo V23e', 'Vivo', 7190000, 'AMOLED 6.44" Full HD +', 'Android', N'Chính 64 MP & Phụ 8 MP, 2 MP','50 MP', 'MediaTek Helio G96', 8, 128, '4050 mAh', '/images/vivov23e.jpg'),
 (20, 'Xiaomi Redmi Note 11 Pro', 'Xiaomi', 7190000, 'AMOLED 6.67" Full HD +', 'Android', N'Chính 108 MP & Phụ 8 MP, 2 MP, 2 MP', '16 MP', 'MediaTek Helio G96', 8, 128, '5000 mAh', '/images/redminote11pro.jpg'),
 (21, 'Samsung Galaxy A33 5G', 'Samsung', 7290000, 'Super AMOLED 6.4" Full HD +','Android', N'Chính 48 MP & Phụ 8 MP, 5 MP, 2 MP','13 MP', 'Exynos 1280', 6, 128, '5000 mAh', '/images/a33.jpg'),

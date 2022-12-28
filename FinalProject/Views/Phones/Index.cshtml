@@ -4,16 +4,15 @@
     ViewData["Title"] = "Index";
 }
 
-<div class="container mt-3">
-    <div class="row">
+<div class="container my-3">
+    <div class="row g-2">
         @foreach(var item in Model){
-              <a asp-action="Details" asp-route-id="@item.Id" class="col-md-2 p-1 items border border-light rounded text-center">
+             <a asp-action="Details" asp-route-id="@item.Id" class="col-md-2 items border border-light rounded text-center">   
+              
 
-
-           
                 <h5><b>@item.Ten</b></h5>
 
-            <img src=@item.ImagePath height="150px">
+						<img src=@item.ImagePath height="150px">
               <div>
                     <i class="bi bi-cpu minhhoa"></i><h6 style="display:inline"> @item.Chip</h6>
               </div>
@@ -23,8 +22,11 @@
                 <div>
                 <i class="bi bi-currency-dollar"></i><h6 style="display:inline"><b>@item.Gia.ToString("C")</b></h6>
                 </div>
-        
-            </a>
+
+          
+                 
+
+     </a>
         }
     </div>
 </div>
