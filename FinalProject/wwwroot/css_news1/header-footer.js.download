@@ -1,0 +1,80 @@
+var urlPathApiServer='https://fptshop.com.vn/api-data/loyalty/';var onsignalAppId="78e86fca-3ff0-47a8-95b3-54cdf3fc07d3";var safari_web_id="web.onesignal.auto.5f80e2fb-b063-4ecb-90f7-0c7e45de9678";var lsLoginName="TokenInfo";$(document).ready(function(){$(".fs-mnul").hover(function(){$(this).find("img").each(function(){$(this).attr("src",$(this).data("src"));});$(this).off("mouseenter mouseleave");});var isResendOTP=false;initUserInfo();initOTPInput();var timerExpired;var timerResend;var ipLogin=$(".js-modal-login #phoneNumber");$("header").on("click",".js-open-login",function(e){e.preventDefault();$(".js-modal-login").addClass("open");$("html").addClass("disable-scroll");ipLogin.focus();});$("header").on("click",".head-logout",function(e){e.preventDefault();localStorage.removeItem(lsLoginName);document.cookie="_pTypeDelivery=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";document.cookie="_pStoreName=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";document.cookie="_pStoreId=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";document.cookie="_pAddressDefault=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";document.cookie="_pAddress=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";document.cookie="_pWardName=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";document.cookie="_pWardId=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";document.cookie="_pDistrictName=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";document.cookie="_pDistrictId=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";document.cookie="_pCityName=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";document.cookie="_pCityId=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";document.cookie="_pEmail=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";document.cookie="_pPhone=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";document.cookie="_pName=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";window.location.href="/";});$("body").on("click",".js-modal-lg-close",function(){closeModalLogin();});$("body").on("click",".js-modal-login",function(e){if(e.target.matches(".js-modal-login")){$(".js-modal-lg-close").click();}});ipLogin.keypress(function(e){if(e.keyCode==13){$(".btnSendPhone").trigger('click');}});$(".btnSendPhone").click(function(){sendPhone();});$(".btnSendOTP").click(function(){var phone=ipLogin.val();var otpCode=genOTP();var validOTP=checkOTP();if(!validOTP){return false;}
+hideMessOTP();$.post(urlPathApiServer+"Home/Login",{phone:phone,otpCode:otpCode},function(data){if(data.error==false&&data.datas.token!=null&&data.datas.token!=""){localStorage.setItem(lsLoginName,data.datas.token);if(typeof OneSignal=='function'){OneSignal.getUserId(function(userId){Subscriber(userId);});}
+closeModalLogin();location.reload();}else{showMessOTP("Mã xác nhận không chính xác");}});});$(".js-change-back").click(function(){$("#box-login-phone").show();$("#box-login-otp").hide();ipLogin.val("").focus();if(timerExpired)
+timerExpired.stop();if(timerResend)
+timerResend.stop();});function initResendPhone(){$(".js-resend-otp").unbind("click").show();$(".js-resend-otp").click(function(){isResendOTP=true;sendPhone();if(timerExpired)
+timerExpired.stop();if(timerResend)
+timerResend.stop();$(".js-resend-otp").unbind("click").hide();});}
+function sendPhone(){var isCheck=validatePhone();if(isCheck){$("#box-login-phone").hide();$("#box-login-otp").show();resetOTPInput();focusOTPInput();hideMessReOTP();var phone=ipLogin.val();$(".lg-phone-step2").text(phone);hideMessCountDown();hideMessCountDownResend();hideMessCountDownResendLimit();hideMessOTPLimit();$(".js-resend-otp").hide();hideMessOTP();$.post(urlPathApiServer+"Home/Verification",{phone:phone},function(data){if(data.datas.code!=null&&data.datas.code!=""){if(data.datas.code=="CIAMAPI:00411"||data.datas.code=="NOTI:000429"){var displayCdResend=document.querySelector('.lt-cd-resend');if(data.datas.code=="NOTI:000429")
+displayCdResend=document.querySelector('.lt-cd-resendlm');if(timerResend&&!timerResend.expired()){setTimeout(function(){timerResend=new CountDownTimer(data.datas.expiredSeconds);timerResend.onTick(formatCountDownSC(displayCdResend)).onTick(restartCdResend).start();if(data.datas.code=="CIAMAPI:00411")
+showMessCountDownResend();if(data.datas.code=="NOTI:000429")
+showMessCountDownResendLimit();},1000);}else{timerResend=new CountDownTimer(data.datas.expiredSeconds);timerResend.onTick(formatCountDownSC(displayCdResend)).onTick(restartCdResend).start();if(data.datas.code=="CIAMAPI:00411")
+showMessCountDownResend();if(data.datas.code=="NOTI:000429")
+showMessCountDownResendLimit();}}
+if(data.datas.code=="CIAMAPI:00410"){showMessOTPLimit();}
+isResendOTP=false;return false;}
+var displayExpired=document.querySelector('.lt-countdown-expired');if(timerExpired&&!timerExpired.expired()){setTimeout(function(){timerExpired=new CountDownTimer(data.datas.expiredSeconds);timerExpired.onTick(formatCountDown(displayExpired)).start();showMessCountDown();},1000);}else{timerExpired=new CountDownTimer(data.datas.expiredSeconds);timerExpired.onTick(formatCountDown(displayExpired)).start();showMessCountDown();}
+if(isResendOTP){isResendOTP=false;showMessReOTP();}
+initResendPhone();});}}
+function closeModalLogin(){$(".js-modal-login").removeClass("open");$("html").removeClass("disable-scroll");resetOTPInput();$("#box-login-phone").show();$("#box-login-otp").hide();if(timerExpired)
+timerExpired.stop();if(timerResend)
+timerResend.stop();}
+function validatePhone(){var phone=$.trim(ipLogin.val());if(phone==""){showLoginPhoneError("Thông tin bắt buộc");return false;}
+if(!checkIsPhone(phone)){showLoginPhoneError("Số điện thoại không hợp lệ");return false;}
+hideLoginPhoneError();return true;}
+function showLoginPhoneError(mess){$(".js-modal-login .phone-error .phone-error-mess").text(mess);$(".js-modal-login .phone-error").show();}
+function hideLoginPhoneError(){$(".js-modal-login .phone-error").hide();}
+function checkIsPhone(value){return /^(098|095|097|096|090|093|091|094|092|099|086|088|089|087|039|038|037|036|035|034|033|032|070|079|077|076|078|084|081|082|083|085|052|056|058|059)[0-9]{7}$/.test(value);}
+function genOTP(){var str="";for(i=0;i<6;i++){str+=$("#codeBox"+(i+1)).val();}
+return str;}
+function initOTPInput(){var ip=$("#box-login-otp .inputOtp");ip.keydown(function(e){if(e.keyCode==38||e.keyCode==40){return false;}
+if(e.keyCode==13){$(".btnSendOTP").trigger('click');return false;}
+var iPrev=$(this).prev();var iNext=$(this).next();if(e.keyCode===8&&iPrev.get(0)&&iPrev.get(0).tagName==="INPUT"&&!$(this).val()){$(this).prev().focus().val("");this.classList.remove('complete');return false;}
+if(e.keyCode===37){if(iPrev.get(0)&&iPrev.get(0).tagName==="INPUT")
+iPrev.focus();return false;}
+if(e.keyCode===39){if(iNext.get(0)&&iNext.get(0).tagName==="INPUT")
+iNext.focus();return false;}
+$(this).val("");});ip.focus(function(){$(this).addClass('complete').select();});ip.blur(function(){if(!$(this).val()){$(this).removeClass('complete');}});ip.keyup(function(e){if(e.keyCode===16||e.keyCode==9||e.keyCode==224||e.keyCode==18||e.keyCode==17||e.keyCode==46||e.keyCode==69||e.keyCode==8||e.keyCode===37||e.keyCode===38||e.keyCode==39||e.keyCode===40){return false;}
+if(e.keyCode==13){return false;}
+if(!$.isNumeric($(this).val())){$(this).val("");return false;}
+var val=$(this).val();if(val.length>1){var arrVal=val.split('');ip.each(function(index,element){if(arrVal[index]&&$.isNumeric(arrVal[index])){$(element).addClass('complete');$(element).val(arrVal[index]);}else{$(element).removeClass('complete');$(element).val('');}});var otpCode=genOTP();if(otpCode.length==6){$(".btnSendOTP").trigger('click');}}else if(val.length>0){$(this).addClass('complete');$(this).next().focus();}});}
+function resetOTPInput(){$("#box-login-otp .inputOtp").val("").removeClass("complete");}
+function focusOTPInput(){$("#box-login-otp #codeBox1").focus();}
+function checkOTP(){var otpCode=genOTP();if(otpCode.length<6){showMessOTP("Mã xác nhận không chính xác");return false;}
+return true;}
+function showMessOTP(mess){$(".lg-mess-otp span").text(mess);$(".lg-mess-otp").show();}
+function hideMessOTP(){$(".lg-mess-otp").hide();}
+function showMessReOTP(){$(".lg-mess-reotp").show();}
+function hideMessReOTP(){$(".lg-mess-reotp").hide();}
+function showMessCountDown(){$(".lt-cd-expired-box").show();}
+function hideMessCountDown(){$(".lt-cd-expired-box").hide();}
+function showMessCountDownResend(){$(".lg-mess-cdresend").show();}
+function hideMessCountDownResend(){$(".lg-mess-cdresend").hide();}
+function showMessCountDownResendLimit(){$(".lg-mess-cdresendlm").show();}
+function hideMessCountDownResendLimit(){$(".lg-mess-cdresendlm").hide();}
+function showMessOTPLimit(){$(".lg-mess-otplimit").show();}
+function hideMessOTPLimit(){$(".lg-mess-otplimit").hide();}
+function initUserInfo(){var token=localStorage.getItem(lsLoginName);if(token=='undefined'||token==null){return false;}
+$.ajax({type:"POST",url:urlPathApiServer+"Home/GetProfile",headers:{Authorization:'Bearer '+token},dataType:'json',statusCode:{401:function(){localStorage.removeItem(lsLoginName);}},success:function(result,status,xhr){var name=result.datas.profile.name;var avata=result.datas.profile.avatar;$(".js-open-href").attr("href","https://fptshop.com.vn/tai-khoan")
+if(avata!=''&&avata!=null){$(".ava-user").show();$(".user-img").addClass('active');document.getElementById("user-img-st").src=avata;}
+else{$(".user-img").removeClass('active');}
+$(".lg-name-view").text(name);$(".fs--sub-user").css('display','unset');$(".js-open-login").removeClass("js-open-login");$(".js-modal-login").remove();}});}
+function CountDownTimer(duration,granularity){this.duration=duration;this.granularity=granularity||1000;this.tickFtns=[];this.running=false;this.isCancel=false;}
+CountDownTimer.prototype.start=function(){if(this.running){return;}
+this.running=true;this.isCancel=false;var start=Date.now(),that=this,diff,obj;(function timer(){diff=that.duration-(((Date.now()-start)/1000)|0);if(diff>0&&!that.isCancel){setTimeout(timer,that.granularity);}else{diff=0;that.running=false;}
+obj=CountDownTimer.parse(diff);that.tickFtns.forEach(function(ftn){ftn.call(this,obj.minutes,obj.seconds,obj.secondsCurr);},that);}());};CountDownTimer.prototype.stop=function(){if(this.running){this.isCancel=true;}};CountDownTimer.prototype.onTick=function(ftn){if(typeof ftn==='function'){this.tickFtns.push(ftn);}
+return this;};CountDownTimer.prototype.expired=function(){return!this.running;};CountDownTimer.prototype.cancel=function(){return this.isCancel;};CountDownTimer.parse=function(seconds){return{'minutes':(seconds/60)|0,'seconds':(seconds%60)|0,'secondsCurr':seconds};};function formatCountDown(display){return function(minutes,seconds){minutes=minutes<10?"0"+minutes:minutes;seconds=seconds<10?"0"+seconds:seconds;display.textContent=minutes+' phút '+seconds+' giây';};}
+function formatCountDownSC(display){return function(minutes,seconds,secondsCurr){secondsCurr=secondsCurr<10?"0"+secondsCurr:secondsCurr;display.textContent=secondsCurr+' giây';};}
+function restartCdResend(){if(this.expired()&&!this.cancel()){initResendPhone();hideMessCountDownResend();hideMessCountDownResendLimit();}}
+var OneSignal=window.OneSignal||[];var initConfig={appId:onsignalAppId,safari_web_id:safari_web_id,notifyButton:{enable:false},allowLocalhostAsSecureOrigin:true,promptOptions:{slidedown:{prompts:[{type:"push",autoPrompt:true,text:{actionMessage:"Nhấn theo dõi để cập nhật khuyến mãi mới nhất từ FPT Shop",acceptButton:"Theo dõi",cancelButton:"Để sau"},delay:{pageViews:1,timeDelay:2}}]}}};OneSignal.push(function(){OneSignal.SERVICE_WORKER_PARAM={scope:'/Scripts/OneSignal/'};OneSignal.SERVICE_WORKER_PATH='Scripts/OneSignal/OneSignalSDKWorker.js';OneSignal.SERVICE_WORKER_UPDATER_PATH='Scripts/OneSignal/OneSignalSDKUpdaterWorker.js';OneSignal.init(initConfig);});OneSignal.push(function(){OneSignal.on('subscriptionChange',function(isSubscribed){if(isSubscribed){GetUserId().then((ctx)=>{Subscriber(ctx);});}else{GetUserId().then((ctx)=>{Unsubscribe(ctx);});}});function GetUserId(){return OneSignal.getUserId(function(userId){return userId;});}});OneSignal.push(function(){OneSignal.showSlidedownPrompt();OneSignal.on('popoverShown',function(){});});function Subscriber(userId){var token=localStorage.getItem(lsLoginName);if(token=='undefined'||token==null){return false;}
+var item={UserId:userId}
+var x=JSON.stringify(item);$.ajax({type:'POST',headers:{Authorization:'Bearer '+token},contentType:"application/json; charset=utf-8",url:urlPathApiServer+'Home/NotifiRegiter',data:x,success:function(res){}});}
+function Unsubscribe(userId){var item={UserId:userId}
+var x=JSON.stringify(item);$.ajax({type:'POST',contentType:"application/json; charset=utf-8",url:urlPathApiServer+'Home/UnNotifiRegiter',data:x,success:function(res){}});}});function LoyaltyCookieVieweds(id){{const pViewCookieName='_loyalty_vieweds';const currentProId=id;let pViewResult='';const currentCookie=localStorage.getItem(pViewCookieName);if(currentCookie==undefined||currentCookie==''){pViewResult=currentProId.toString();}else{const viewCount=100;const ckDataArr=currentCookie.split(',').map(c=>Number(c));let ckData=ckDataArr.slice(0,viewCount);if(!ckData.includes(currentProId)){if(ckData.length===viewCount){ckData.pop();}
+ckData.unshift(currentProId);}
+pViewResult=ckData.join();}
+if(currentCookie!=pViewResult)
+localStorage.setItem(pViewCookieName,pViewResult,{expires:7,path:'/'});}}
+function getCountNoReadNotify(){var token=localStorage.getItem(lsLoginName);if(token=='undefined'||token==null){return 0;}
+var x=$.ajax({type:'POST',headers:{Authorization:'Bearer '+token},contentType:"application/json; charset=utf-8",url:urlPathApiServer+'Home/GetCountNoReadNotify',success:function(res){if(res.error==false){if(res.datas>0){$("#hidenShowDos").addClass("noti");$("#hidenShowDosInBell").addClass("active");}}else{}}});}
+getCountNoReadNotify();
