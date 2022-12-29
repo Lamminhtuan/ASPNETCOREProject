@@ -3,10 +3,41 @@
 @{
     ViewData["Title"] = "Details";
 }
-<div class="text-center container">
-   
+<div class="container w-50 p-5" style="background-color:white">
+    <h1 class="text-center">@Model.Ten</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <img src=@Model.ImagePath />
+        </div>
+        <div class="col-md-8">
+
+            <div>
+                <i class="bi bi-cpu minhhoa"></i>
+                <h5 style="display:inline"> @Model.Chip</h5>
+            </div>
+        <div>
+            <i class="bi bi-phone minhhoa"></i>
+            <h5 style="display:inline"> @Model.ManHinh</h5>
+        </div>
+        <div>
+            <i class="bi bi-camera minhhoa"></i>
+            <h5 style="display:inline"> @Model.CameraSau</h5>
+        </div>
+        <div>
+            <i class="bi bi-person-bounding-box minhhoa"></i>
+            <h5 style="display:inline"> @Model.CameraTruoc</h5>
+        </div>
+         <div>
+            <i class="bi bi-memory minhhoa"></i>
+            <h5 style="display:inline"> @Model.Ram GB</h5>
+        </div>
+         <div>
+            <i class="bi bi-hdd minhhoa"></i>
+            <h5 style="display:inline"> @Model.Rom GB</h5>
+        </div>
+        <div>
+        @* <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |*@
+        <a asp-action="Index" class="btn btn-success">Quay lại mua hàng</a>
+    </div>
 </div>
-<div>
-  @*  <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |*@
-    <a asp-action="Index" class="btn btn-success">Quay lại mua hàng</a>
-</div>
+

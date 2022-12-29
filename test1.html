@@ -1,0 +1,21 @@
+<div class="container w-50 p-5" style="background-color:white">
+    <h1 class="text-center">@Model.Ten</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <img src=@Model.ImagePath />
+        </div>
+        <div class="col-md-8">
+
+            <div>
+                <i class="bi bi-cpu minhhoa"></i>
+                <h2 style="display:inline"> @Model.Chip</h2>
+            </div>
+
+            <i class="bi bi-phone minhhoa"></i>
+            <h2 style="display:inline"> @Model.ManHinh</h2>
+        </div>
+        <div></div>
+        @* <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |*@
+        <a asp-action="Index" class="btn btn-success">Quay lại mua hàng</a>
+    </div>
+</div>
