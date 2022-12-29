@@ -7,22 +7,43 @@ namespace FinalProject.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly ASPContext _context;
+    
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
 
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            return View(await _context.Phones.ToListAsync());
+            return View();
         }
-
+  
+        [HttpGet]
+        public IActionResult Blog()
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult About()
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult Contact()
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult FAQ()
+        {
+            return View();
+        }
+        [HttpGet]
+        public IActionResult TOS()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

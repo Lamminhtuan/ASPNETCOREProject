@@ -15,8 +15,40 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Tuan\Documents\GitHub\ASPNETCOREProject\FinalProject
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Blog/Blog1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nMS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Blog/Blog2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Blog/Blog3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nMy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/Blog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCbG9nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/FAQ.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGQVEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/TOS.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUT1MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Phones/Create.cshtml]

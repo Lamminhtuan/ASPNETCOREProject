@@ -4,11 +4,12 @@
     ViewData["Title"] = "Index";
 }
 
-<div class="container my-3">
+<div class="container my-3 text-center">
     <div class="row g-2">
         @foreach(var item in Model){
-             <a asp-action="Details" asp-route-id="@item.Id" class="col-md-2 items border border-light rounded text-center">   
-              
+           
+             <a asp-action="Details" asp-route-id="@item.Id" class="col-md-2 items text-center">   
+              <div class="card h-100">
 
                 <h5><b>@item.Ten</b></h5>
 
@@ -23,10 +24,11 @@
                 <i class="bi bi-currency-dollar"></i><h6 style="display:inline"><b>@item.Gia.ToString("C")</b></h6>
                 </div>
 
-          
-                 
+     
+                 </div>
 
      </a>
+   
         }
     </div>
 </div>
