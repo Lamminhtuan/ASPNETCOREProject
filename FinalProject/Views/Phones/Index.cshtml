@@ -2,8 +2,8 @@
 
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <div class="container my-3 text-center">
     <div class="row g-2">
         @foreach(var item in Model){
@@ -32,93 +32,9 @@
         }
     </div>
 </div>
-@*<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Ten)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Hang)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Gia)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ManHinh)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Os)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CameraSau)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CameraTruoc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Chip)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Ram)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Rom)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Pin)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImagePath)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ten)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Hang)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gia)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ManHinh)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Os)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CameraSau)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CameraTruoc)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Chip)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ram)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Rom)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Pin)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImagePath)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+
+
+            @*    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>*@
+*@

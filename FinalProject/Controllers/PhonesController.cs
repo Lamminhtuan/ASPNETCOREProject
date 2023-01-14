@@ -53,7 +53,7 @@ namespace FinalProject.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Ten,Hang,Gia,ManHinh,Os,CameraSau,CameraTruoc,Chip,Ram,Rom,Pin,ImagePath")] Phone phone)
+        public async Task<IActionResult> Create([Bind("Id,Ten,Hang,Gia,ManHinh,Os,CameraSau,CameraTruoc,NhuCau,Chip,Ram,Rom,Pin,ThietKe,ImagePath")] Phone phone)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace FinalProject.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Ten,Hang,Gia,ManHinh,Os,CameraSau,CameraTruoc,Chip,Ram,Rom,Pin,ImagePath")] Phone phone)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Ten,Hang,Gia,ManHinh,Os,CameraSau,CameraTruoc,NhuCau,Chip,Ram,Rom,Pin,ThietKe,ImagePath")] Phone phone)
         {
             if (id != phone.Id)
             {
