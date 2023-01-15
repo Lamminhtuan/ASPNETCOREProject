@@ -4,12 +4,14 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="container my-3 text-center">
-    <div class="row g-2">
+
+@*Danh sách sản phẩm*@
+<div class="container text-center">
+    <div class="row">
         @foreach(var item in Model){
            
              <a asp-action="Details" asp-route-id="@item.Id" class="col-md-2 items text-center">   
-              <div class="card h-100 bg-opacity-50">
+              <div>
 
                 <h5><b>@item.Ten</b></h5>
 

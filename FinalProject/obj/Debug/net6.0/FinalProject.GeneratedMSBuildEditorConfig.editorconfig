@@ -15,6 +15,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Tuan\Documents\GitHub\ASPNETCOREProject\FinalProject
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Blog/Blog1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nMS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Blog/Blog2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
