@@ -36,10 +36,18 @@
             <a class="nav-link" href="#"><i class="bi bi-laptop"></i> Laptop</a>
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control search" style="background-color:white" type="search" placeholder="Tìm kiếm" aria-label="Tìm kiếm">
+        <form asp-action="Index" asp-controller="Phones" method="post">
+            <div class="input-group">
+     
+
+          <input value="@ViewData["CurrentFilter"]" class="d-flex form-control search form-floating" role="search" name="searchString" style="background-color:white" type="search" placeholder="Tìm kiếm" aria-label="Tìm kiếm">
+            
+           
           <button class="btn btn-search" type="submit"><i class="bi bi-search"></i></button>
+      </div>
+          </>
         </form>
+    
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link"href="#"><i class="bi bi-cart"></i> Giỏ hàng</a>

@@ -12,16 +12,50 @@ namespace FinalProject.Controllers
     public class PhonesController : Controller
     {
         private readonly ASPContext _context;
+        public string PriceASC { get; set; }
+        public string PriceDESC { get; set; }
+        
 
         public PhonesController(ASPContext context)
         {
+
             _context = context;
+    
         }
 
-        // GET: Phones
-        public async Task<IActionResult> Index()
+
+    // GET: Phones
+    public async Task<IActionResult> Index(string sortOrder, string currentFilter, string searchString)
         {
-              return View(await _context.Phones.ToListAsync());
+            ViewData["PriceASC"] =  "PriceASC";
+            ViewData["PriceDESC"] = "PriceDESC";
+            if (searchString == null)    
+                 searchString = currentFilter;
+            ViewData["CurrentFilter"] = searchString;
+
+            ////Tìm kiếm 
+            var phones = from b in _context.Phones
+                      select b;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                phones = phones.Where(b => b.Ten.Contains(searchString));
+            }
+
+            switch (sortOrder)
+            {
+                case "PriceDESC":
+                    phones = phones.OrderByDescending(b => b.Gia);
+                    break;
+                case "PriceASC":
+                    phones = phones.OrderBy(b => b.Gia);
+                    break;
+
+            }
+            
+
+           
+            return View(await phones.AsNoTracking().ToListAsync());
         }
 
         // GET: Phones/Details/5
