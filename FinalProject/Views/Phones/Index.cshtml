@@ -5,9 +5,31 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<div class="container-fluid">
+<div class="container float-start" style="width:20%;">
+    <div class="text-start my-3" style="display:inline;">
+        <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Hãng
+  </button>
+  <ul class="dropdown-menu">
+      <li><a class="dropdown-item" onclick="filterhang('')">Tất cả</a></li>
+    <li><a class="dropdown-item" onclick="filterhang('Samsung')">Samsung</a></li>
+    <li><a class="dropdown-item" onclick="filterhang('Apple')">Apple</a></li>
 
-<div class="container">
-  <div class="text-end my-3">
+  </ul>
+   
+        <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Nhu cầu
+  </button>
+  <ul class="dropdown-menu">
+      <li><a class="dropdown-item" onclick="filternhucau('')">Tất cả</a></li>
+    <li><a class="dropdown-item" onclick="filternhucau('Cao cấp, sang trọng')">Cao cấp, sang trọng</a></li>
+    <li><a class="dropdown-item" onclick="filternhucau('Chụp ảnh, quay phim')">Chụp ảnh, quay phim</a></li>
+    <li><a class="dropdown-item" onclick="filternhucau('Chơi game, cấu hình mạnh')">Chơi game, cấu hình mạnh</a></li>
+
+  </ul>
+    </div>
+  <div class="my-3">
   <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
     Sắp xếp
   </button>
@@ -17,12 +39,15 @@
 
   </ul>
   </div>
+  </div>
+  <div class="container float-end" style="width:80%;">
     <div class="row">
         @foreach(var item in Model){
            
              <a asp-action="Details" asp-route-id="@item.Id" class="col-md-2 items text-center">   
               <div>
-
+                  <h6 class="hang" style="display:none">@item.Hang</h6>
+                  <h6 class="nhucau" style="display:none">@item.NhuCau</h6>
                 <h5><b>@item.Ten</b></h5>
 
 						<img src=@item.ImagePath height="150px">
@@ -44,6 +69,42 @@
         }
     </div>
 </div>
+</div>
+<script>
+      function filterhang(c) {
+    var input, filter, ul, li, a, i, txtValue;
+          x = document.getElementsByClassName("items");
+    
+   
+    for (i = 0; i < x.length; i++) {
+        a = x[i].getElementsByClassName("hang")[0];
+         txtValue = a.textContent || a.innerText;
+      if (txtValue.indexOf(c) > -1) {
+            x[i].style.display = "";
+        } else {
+            x[i].style.display = "none";
+        }
+
+    }
+}
+function filternhucau(c) {
+    var input, filter, ul, li, a, i, txtValue;
+          x = document.getElementsByClassName("items");
+    
+   
+    for (i = 0; i < x.length; i++) {
+        a = x[i].getElementsByClassName("nhucau")[0];
+         txtValue = a.textContent || a.innerText;
+      if (txtValue.indexOf(c) > -1) {
+            x[i].style.display = "";
+        } else {
+            x[i].style.display = "none";
+        }
+
+    }
+}
+
+ </script>
 
 
             @*    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

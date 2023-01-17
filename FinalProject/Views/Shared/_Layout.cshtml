@@ -40,9 +40,9 @@
             <div class="input-group">
      
 
-          <input value="@ViewData["CurrentFilter"]" class="d-flex form-control search form-floating" role="search" name="searchString" style="background-color:white" type="search" placeholder="Tìm kiếm" aria-label="Tìm kiếm">
+          @*<input value="@ViewData["CurrentFilter"]" class="d-flex form-control search form-floating" role="search" name="searchString" style="background-color:white" type="search" placeholder="Tìm kiếm" aria-label="Tìm kiếm">*@
             
-           
+           <input id="myInput" class="d-flex form-control search form-floating" onkeyup="searchfunc()" role="search" placeholder="Tìm kiếm" style="background-color:white" />
           <button class="btn btn-search" type="submit"><i class="bi bi-search"></i></button>
       </div>
           </>
@@ -174,7 +174,24 @@
       
     </div>
   </footer>
-
+  <script>
+      function searchfunc() {
+    var input, filter, ul, li, a, i, txtValue;
+          x = document.getElementsByClassName("items");
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+   
+    for (i = 0; i < x.length; i++) {
+        a = x[i].getElementsByTagName("h5")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            x[i].style.display = "";
+        } else {
+            x[i].style.display = "none";
+        }
+    }
+}
+</script>
   <script type="text/javascript">
 
 /******************************************

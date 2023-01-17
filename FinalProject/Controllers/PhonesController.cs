@@ -25,21 +25,23 @@ namespace FinalProject.Controllers
 
 
     // GET: Phones
-    public async Task<IActionResult> Index(string sortOrder, string currentFilter, string searchString)
+    public async Task<IActionResult> Index(string sortOrder, string currentFilter, string searchString, string Hang, string currentHang)
         {
             ViewData["PriceASC"] =  "PriceASC";
             ViewData["PriceDESC"] = "PriceDESC";
             if (searchString == null)    
                  searchString = currentFilter;
+            //if (Hang == null)
+            //    Hang = currentHang;
             ViewData["CurrentFilter"] = searchString;
-
+            ViewData["Hang"] = Hang;
             ////Tìm kiếm 
             var phones = from b in _context.Phones
                       select b;
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                phones = phones.Where(b => b.Ten.Contains(searchString));
+                phones = phones.Where(b => b.Ten.Contains(searchString) && b.Hang.Contains(""));
             }
 
             switch (sortOrder)

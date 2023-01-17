@@ -70,7 +70,8 @@ footer a:hover{
     color:white;
 }
 .main {
-    background: url('../images/bg.png') fixed no-repeat;
+    /*background: url('../images/bg.png') fixed no-repeat;*/
+    background-color:white;
     background-size: cover;
     min-height: 100vh;
 }
