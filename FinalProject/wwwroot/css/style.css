@@ -104,3 +104,8 @@ hr {
     border: 2px dashed #283593;
     border-radius:5px;
 }
+.hinhfilter{
+    height:auto;
+    width:20px;
+    max-width:20px;
+}

@@ -1,113 +1,84 @@
 ﻿@model IEnumerable<FinalProject.Models.Phone>
 @using System.Globalization;
 @{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="container-fluid">
-<div class="container float-start" style="width:20%;">
-    <div class="text-start my-3" style="display:inline;">
-        <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    Hãng
-  </button>
-  <ul class="dropdown-menu">
-      <li><a class="dropdown-item" asp-action="Index" asp-controller="Phones" asp-route-Hang="">Tất cả</a></li>
-                <li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="Samsung">Samsung</a></li>
-    <li><a class="dropdown-item">Apple</a></li>
+	<div class="row">
+	<div class="container col-md-3">
+		<div class="text-start my-3" style="display:inline;">
+			<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				Hãng
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="">Tất cả</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="Samsung"><img class="hinhfilter" src="/images/samsung.png">Samsung</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="Apple"><img src="/images/apple.png">Apple</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="OPPO"><img src="/images/oppo.png">OPPO</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="Xiaomi"><img src="/images/xiaomi.png">Xiaomi</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="Vivo"><img src="/images/vivo.png">Vivo</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="Realme"><img src="/images/realme.png">Realme</a></li>
 
-  </ul>
-   
-        <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    Nhu cầu
-  </button>
-  <ul class="dropdown-menu">
-      <li><a class="dropdown-item" onclick="filternhucau('')">Tất cả</a></li>
-    <li><a class="dropdown-item" onclick="filternhucau('Cao cấp, sang trọng')">Cao cấp, sang trọng</a></li>
-    <li><a class="dropdown-item" onclick="filternhucau('Chụp ảnh, quay phim')">Chụp ảnh, quay phim</a></li>
-    <li><a class="dropdown-item" onclick="filternhucau('Chơi game, cấu hình mạnh')">Chơi game, cấu hình mạnh</a></li>
+			</ul>
 
-  </ul>
-    </div>
-  <div class="my-3">
-  <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    Sắp xếp
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-sortOrder="@ViewData["PriceDESC"]">Giá cao đến thấp</a></li>
-    <li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-sortOrder="@ViewData["PriceASC"]">Giá thấp đến cao</a></li>
+			<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				Nhu cầu
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" onclick="filternhucau('')">Tất cả</a></li>
+				<li><a class="dropdown-item" onclick="filternhucau('Cao cấp, sang trọng')">Cao cấp, sang trọng</a></li>
+				<li><a class="dropdown-item" onclick="filternhucau('Chụp ảnh, quay phim')">Chụp ảnh, quay phim</a></li>
+				<li><a class="dropdown-item" onclick="filternhucau('Chơi game, cấu hình mạnh')">Chơi game, cấu hình mạnh</a></li>
 
-  </ul>
-  </div>
-  </div>
-  <div class="container float-end" style="width:80%;">
-    <div class="row">
-        @foreach(var item in Model){
-           
-             <a asp-action="Details" asp-route-id="@item.Id" class="col-md-2 items text-center">   
-              <div>
-                  <h6 class="hang" style="display:none">@item.Hang</h6>
-                  <h6 class="nhucau" style="display:none">@item.NhuCau</h6>
-                <h5><b>@item.Ten</b></h5>
+			</ul>
+		</div>
+		<div class="my-3">
+			<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				Sắp xếp
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-sortOrder="@ViewData["PriceDESC"]">Giá cao đến thấp</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-sortOrder="@ViewData["PriceASC"]">Giá thấp đến cao</a></li>
+
+			</ul>
+		</div>
+	</div>
+	<div class="container col-md-9">
+		<div class="row">
+			@foreach (var item in Model)
+			{
+
+				<a asp-action="Details" asp-route-id="@item.Id" class="col-md-2 items text-center">
+					<div>
+						<h6 class="hang" style="display:none">@item.Hang</h6>
+						<h6 class="nhucau" style="display:none">@item.NhuCau</h6>
+						<h5><b>@item.Ten</b></h5>
 
 						<img src=@item.ImagePath height="150px">
-              <div>
-                    <i class="bi bi-cpu minhhoa"></i><h6 style="display:inline"> @item.Chip</h6>
-              </div>
-              <div>
-                <i class="bi bi-phone minhhoa"></i><h6 style="display:inline">@item.ManHinh</h6>
-                </div>
-                <div>
-               <h6><b>@item.Gia.ToString("C",CultureInfo.CreateSpecificCulture("vi-VN"))</b></h6>
-               </div>
+						<div>
+							<i class="bi bi-cpu minhhoa"></i><h6 style="display:inline"> @item.Chip</h6>
+						</div>
+						<div>
+							<i class="bi bi-phone minhhoa"></i><h6 style="display:inline">@item.ManHinh</h6>
+						</div>
+						<div>
+							<h6><b>@item.Gia.ToString("C",CultureInfo.CreateSpecificCulture("vi-VN"))</b></h6>
+						</div>
 
-     
-                 </div>
 
-     </a>
-   
-        }
-    </div>
+					</div>
+
+				</a>
+
+			}
+		</div>
+	</div>
 </div>
 </div>
-<script>
-      function filterhang(c) {
-    var input, filter, ul, li, a, i, txtValue;
-          x = document.getElementsByClassName("items");
-    
-   
-    for (i = 0; i < x.length; i++) {
-        a = x[i].getElementsByClassName("hang")[0];
-         txtValue = a.textContent || a.innerText;
-      if (txtValue.indexOf(c) > -1) {
-            x[i].style.display = "";
-        } else {
-            x[i].style.display = "none";
-        }
 
-    }
-}
-function filternhucau(c) {
-    var input, filter, ul, li, a, i, txtValue;
-          x = document.getElementsByClassName("items");
-    
-   
-    for (i = 0; i < x.length; i++) {
-        a = x[i].getElementsByClassName("nhucau")[0];
-         txtValue = a.textContent || a.innerText;
-      if (txtValue.indexOf(c) > -1) {
-            x[i].style.display = "";
-        } else {
-            x[i].style.display = "none";
-        }
-
-    }
-}
-
- </script>
-
-
-            @*    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+@*    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
 *@
