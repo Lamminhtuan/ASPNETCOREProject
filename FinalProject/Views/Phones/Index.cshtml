@@ -12,9 +12,9 @@
     Hãng
   </button>
   <ul class="dropdown-menu">
-      <li><a class="dropdown-item" onclick="filterhang('')">Tất cả</a></li>
-    <li><a class="dropdown-item" onclick="filterhang('Samsung')">Samsung</a></li>
-    <li><a class="dropdown-item" onclick="filterhang('Apple')">Apple</a></li>
+      <li><a class="dropdown-item" asp-action="Index" asp-controller="Phones" asp-route-Hang="">Tất cả</a></li>
+                <li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="Samsung">Samsung</a></li>
+    <li><a class="dropdown-item">Apple</a></li>
 
   </ul>
    
@@ -34,8 +34,8 @@
     Sắp xếp
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" asp-action="Index" asp-route-currentFilter="@ViewData["CurrentFilter"]" asp-route-sortOrder="@ViewData["PriceDESC"]">Giá cao đến thấp</a></li>
-    <li><a class="dropdown-item" asp-action="Index" asp-route-currentFilter="@ViewData["CurrentFilter"]" asp-route-sortOrder="@ViewData["PriceASC"]">Giá thấp đến cao</a></li>
+    <li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-sortOrder="@ViewData["PriceDESC"]">Giá cao đến thấp</a></li>
+    <li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-sortOrder="@ViewData["PriceASC"]">Giá thấp đến cao</a></li>
 
   </ul>
   </div>

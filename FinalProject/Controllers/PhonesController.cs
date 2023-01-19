@@ -25,12 +25,12 @@ namespace FinalProject.Controllers
 
 
     // GET: Phones
-    public async Task<IActionResult> Index(string sortOrder, string currentFilter, string searchString, string Hang, string currentHang)
+    public async Task<IActionResult> Index(string sortOrder, string searchString, string Hang)
         {
             ViewData["PriceASC"] =  "PriceASC";
             ViewData["PriceDESC"] = "PriceDESC";
-            if (searchString == null)    
-                 searchString = currentFilter;
+            //if (searchString == null)
+            //    searchString = currentFilter;
             //if (Hang == null)
             //    Hang = currentHang;
             ViewData["CurrentFilter"] = searchString;
@@ -41,9 +41,12 @@ namespace FinalProject.Controllers
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                phones = phones.Where(b => b.Ten.Contains(searchString) && b.Hang.Contains(""));
+                phones = phones.Where(b => b.Ten.Contains(searchString));
             }
-
+            if (!String.IsNullOrEmpty(Hang))
+            {
+                phones = phones.Where(b=>b.Hang.Contains(Hang));
+            }
             switch (sortOrder)
             {
                 case "PriceDESC":

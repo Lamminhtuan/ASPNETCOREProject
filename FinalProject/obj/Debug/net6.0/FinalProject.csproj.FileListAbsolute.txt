@@ -839,3 +839,8 @@ C:\Users\Tuan\Documents\GitHub\ASPNETCOREProject\FinalProject\bin\Debug\net6.0\S
 C:\Users\Tuan\Documents\GitHub\ASPNETCOREProject\FinalProject\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Tuan\Documents\GitHub\ASPNETCOREProject\FinalProject\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\Tuan\Documents\GitHub\ASPNETCOREProject\FinalProject\obj\Debug\net6.0\FinalProject.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\84981\Documents\GitHub\ASPNETCOREProject\FinalProject\obj\Debug\net6.0\staticwebassets\msbuild.FinalProject.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\84981\Documents\GitHub\ASPNETCOREProject\FinalProject\obj\Debug\net6.0\staticwebassets\msbuild.build.FinalProject.props
+C:\Users\84981\Documents\GitHub\ASPNETCOREProject\FinalProject\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.FinalProject.props
+C:\Users\84981\Documents\GitHub\ASPNETCOREProject\FinalProject\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.FinalProject.props
+C:\Users\84981\Documents\GitHub\ASPNETCOREProject\FinalProject\obj\Debug\net6.0\staticwebassets.pack.json

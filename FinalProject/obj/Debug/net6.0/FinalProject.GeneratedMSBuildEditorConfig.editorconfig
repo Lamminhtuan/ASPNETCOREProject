@@ -5,104 +5,105 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FinalProject
 build_property.RootNamespace = FinalProject
-build_property.ProjectDir = C:\Users\Tuan\Documents\GitHub\ASPNETCOREProject\FinalProject\
+build_property.ProjectDir = C:\Users\84981\Documents\GitHub\ASPNETCOREProject\FinalProject\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Tuan\Documents\GitHub\ASPNETCOREProject\FinalProject
+build_property.MSBuildProjectDirectory = C:\Users\84981\Documents\GitHub\ASPNETCOREProject\FinalProject
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Blog/Blog1.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Blog/Blog1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nMS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Blog/Blog2.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Blog/Blog2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nMi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/About.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/Blog.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/Blog.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCbG9nLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/Contact.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/FAQ.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/FAQ.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGQVEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/Index.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/TOS.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/TOS.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUT1MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Laptops/Create.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Laptops/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFwdG9wc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Laptops/Delete.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Laptops/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFwdG9wc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Laptops/Details.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Laptops/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFwdG9wc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Laptops/Edit.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Laptops/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFwdG9wc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Laptops/Index.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Laptops/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGFwdG9wc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Phones/Create.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Phones/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmVzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Phones/Delete.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Phones/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmVzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Phones/Details.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Phones/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmVzXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Phones/Edit.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Phones/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmVzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Phones/Index.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Phones/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGhvbmVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Shared/Error.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/_ViewImports.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/_ViewStart.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Shared/_Layout.cshtml]
+[C:/Users/84981/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-1iqdgs6srz
