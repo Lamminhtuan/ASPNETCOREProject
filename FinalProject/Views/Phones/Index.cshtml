@@ -8,29 +8,34 @@
 <div class="container-fluid">
 	<div class="row">
 	<div class="container col-md-3">
-		<div class="text-start my-3" style="display:inline;">
+		<div class="text-start my-3">
+			
 			<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 				Hãng
 			</button>
 			<ul class="dropdown-menu">
 				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="">Tất cả</a></li>
-				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="Samsung"><img class="hinhfilter" src="/images/samsung.png">Samsung</a></li>
-				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="Apple"><img src="/images/apple.png">Apple</a></li>
-				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="OPPO"><img src="/images/oppo.png">OPPO</a></li>
-				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="Xiaomi"><img src="/images/xiaomi.png">Xiaomi</a></li>
-				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="Vivo"><img src="/images/vivo.png">Vivo</a></li>
-				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="Realme"><img src="/images/realme.png">Realme</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="Samsung"><img class="hinhfilter" src="/images/samsung.png"> Samsung</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="Apple"><img class="hinhfilter" src="/images/apple.png"> Apple</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="OPPO"><img class="hinhfilter" src="/images/oppo.png"> OPPO</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="Xiaomi"><img class="hinhfilter" src="/images/xiaomi.png"> Xiaomi</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="Vivo"><img class="hinhfilter" src="/images/vivo.png"> Vivo</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="Realme"><img class="hinhfilter" src="/images/realme.png"> Realme</a></li>
 
 			</ul>
-
+			
 			<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
 				Nhu cầu
 			</button>
 			<ul class="dropdown-menu">
-				<li><a class="dropdown-item" onclick="filternhucau('')">Tất cả</a></li>
-				<li><a class="dropdown-item" onclick="filternhucau('Cao cấp, sang trọng')">Cao cấp, sang trọng</a></li>
-				<li><a class="dropdown-item" onclick="filternhucau('Chụp ảnh, quay phim')">Chụp ảnh, quay phim</a></li>
-				<li><a class="dropdown-item" onclick="filternhucau('Chơi game, cấu hình mạnh')">Chơi game, cấu hình mạnh</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="@ViewData["Hang"]"
+				asp-route-Nhucau = "">Tất cả</a></li>
+				<li><a class="dropdown-item"asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="@ViewData["Hang"]"
+				asp-route-Nhucau = "Cao cấp, sang trọng"><img class="hinhfilter" src="/images/luxury.png"> Cao cấp, sang trọng</a></li>
+				<li><a class="dropdown-item"asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="@ViewData["Hang"]"
+				asp-route-Nhucau = "Chụp ảnh, quay phim"><img class="hinhfilter" src="/images/camera.png"> Chụp ảnh, quay phim</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="@ViewData["Hang"]"
+				asp-route-Nhucau = "Chơi game, cấu hình mạnh"><img class="hinhfilter" src="/images/gaming.png"> Chơi game, cấu hình mạnh</a></li>
 
 			</ul>
 		</div>

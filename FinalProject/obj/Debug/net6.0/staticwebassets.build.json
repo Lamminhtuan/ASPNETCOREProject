@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Dqhmlq9QHTtAQmIEcHfpU7FYGIYrIp6bz1JJR8z17Ew=",
+  "Hash": "8h2uLi47yv7fXlcbXQRTmfIwXz9bgRZJ3R2My8q9VyM=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -7803,6 +7803,23 @@
       "OriginalItemSpec": "wwwroot\\images\\c21-y.jpg"
     },
     {
+      "Identity": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\camera.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "images/camera.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\camera.png"
+    },
+    {
       "Identity": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\dienthoai.webp",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
@@ -7869,6 +7886,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\galaxy.webp"
+    },
+    {
+      "Identity": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\gaming.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "images/gaming.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\gaming.png"
     },
     {
       "Identity": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\giaithuong.png",
@@ -8277,6 +8311,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\logo_trend.png"
+    },
+    {
+      "Identity": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\luxury.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "images/luxury.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\luxury.png"
     },
     {
       "Identity": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\m53.jpg",
