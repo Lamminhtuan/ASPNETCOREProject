@@ -24,8 +24,8 @@ namespace FinalProject.Controllers
         }
 
 
-    // GET: Phones
-    public async Task<IActionResult> Index(string sortOrder, string searchString, string Hang, string Nhucau)
+        // GET: Phones
+        public async Task<IActionResult> Index(string sortOrder, string searchString, string Hang, string Nhucau, string Giamin, string Giamax)
         {
             ViewData["PriceASC"] =  "PriceASC";
             ViewData["PriceDESC"] = "PriceDESC";
@@ -36,6 +36,8 @@ namespace FinalProject.Controllers
             ViewData["CurrentFilter"] = searchString;
             ViewData["Hang"] = Hang;
             ViewData["NhuCau"] = Nhucau;
+            ViewData["GiaMin"] = Giamin; 
+            ViewData["GiaMax"] = Giamax; 
             ////Tìm kiếm 
             var phones = from b in _context.Phones
                       select b;
@@ -51,6 +53,10 @@ namespace FinalProject.Controllers
             if (!String.IsNullOrEmpty(Nhucau))
             {
                 phones = phones.Where(b => b.NhuCau.Contains(Nhucau));
+            }
+            if (!String.IsNullOrEmpty(Giamin) && !String.IsNullOrEmpty(Giamax))
+            {
+                phones = phones.Where(b => b.Gia >= Convert.ToDecimal(Giamin) && b.Gia < Convert.ToDecimal(Giamax));
             }
             switch (sortOrder)
             {

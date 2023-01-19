@@ -1,111 +1,164 @@
-*{
-    padding:0;
-    margin:0;
-    box-sizing:border-box;
-}
-a{
-    text-decoration:none;
+﻿* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-nav, footer{
-    background-color:#3D5AFE;
+a {
+    text-decoration: none;
 }
-h5{
-    font-weight:600;
+
+nav, footer {
+    background-color: #3D5AFE;
 }
-.copyright{
-    text-shadow:0px 0px 1px white;
-    font-size:larger;
+
+h5 {
+    font-weight: 600;
 }
-footer a{
-    font-size:larger;
-    text-decoration:none;
-    color:white;
-    transition:all 0.4s;
+
+.copyright {
+    text-shadow: 0px 0px 1px white;
+    font-size: larger;
 }
+
+footer a {
+    font-size: larger;
+    text-decoration: none;
+    color: white;
+    transition: all 0.4s;
+}
+
 img {
     max-width: 100%;
     height: auto;
 }
-footer a:hover{
-    color:#1A237E;   
+
+footer a:hover {
+    color: #1A237E;
 }
-.nav-item a{
-    text-decoration:none;
-    color:white;
+
+.nav-item a {
+    text-decoration: none;
+    color: white;
     font-weight: 600;
-    text-transform:uppercase; 
-    margin-right:15px;  
-    transition:all 0.4s;
+    text-transform: uppercase;
+    margin-right: 15px;
+    transition: all 0.4s;
 }
-.nav-item a:hover{
-    color:#1A237E;  
+
+    .nav-item a:hover {
+        color: #1A237E;
+    }
+
+.navbar-brand {
+    height: 50px;
+    width: 50px;
 }
-.navbar-brand{
-    height:50px;
-    width:50px;
+
+.search {
+    outline: none;
+    border: 2px solid #0D47A1;
+    background-color: transparent;
+    border-radius: 20px 0px 0px 20px;
+    border-right: none;
 }
-.search{
-    outline:none;
-    border:2px solid #0D47A1;
-    background-color:transparent;
-    border-radius:20px 0px 0px 20px;
-    border-right:none;
+    .search:focus {
+        outline: none;
+        box-shadow: none;
+        border: 2px solid #0D47A1;
+        border-right: none;
+    }
+
+.btn-search {
+    outline: none;
+    color: white;
+    background-color: #0D47A1;
+    border: none;
+    border-radius: 0px 20px 20px 0px;
 }
-.search:focus{
-    outline:none;
-    box-shadow:none;
-    border:2px solid #0D47A1;
-    border-right:none;
-}
-.btn-search{
-    outline:none;
-    color:white;
-    background-color:#0D47A1;
-    border:none;
-    border-radius:0px 20px 20px 0px;
-}
-.btn-search:hover{
-    background-color:#1A237E;
-    color:white;
-}
+
+    .btn-search:hover {
+        background-color: #1A237E;
+        color: white;
+    }
+
 .main {
     /*background: url('../images/bg.png') fixed no-repeat;*/
-    background-color:white;
+    background-color: white;
     background-size: cover;
     min-height: 100vh;
 }
-.navbar-brand{
-    width:200px;
-    float:left;
+
+.navbar-brand {
+    width: 200px;
+    float: left;
 }
+
 .items {
     transition: transform 0.2s;
-    background-color:white;
-    
+    background-color: white;
     color: black;
 }
+
 .card h-100 {
     background-color: rgba(255, 255, 1, 0.4);
 }
+
 .items:hover {
     transform: scale(1.05);
     color: black;
-    box-shadow:0px 0px 5px black;
+    box-shadow: 0px 0px 5px black;
 }
-.minhhoa{
-    display:inline;
+
+.minhhoa {
+    display: inline;
 }
-.logo-gioithieu{
-    text-shadow:0px 0px 1px black;
-    font-weight:bold;
+
+.logo-gioithieu {
+    text-shadow: 0px 0px 1px black;
+    font-weight: bold;
 }
+
 hr {
     border: 2px dashed #283593;
-    border-radius:5px;
+    border-radius: 5px;
 }
-.hinhfilter{
-    height:auto;
-    width:30px;
-    max-width:30px;
+/*Hình ở filter*/
+.hinhfilter {
+    height: auto;
+    width: 30px;
+    max-width: 30px;
 }
+/*Slider tầm giá*/
+.min-max-range {
+    clear: both;
+}
+
+.range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    background-color: #efefef;
+    float: left;
+    height: 5px;
+}
+.range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #004ba0;
+        cursor: pointer;
+    }
+
+.range::-moz-range-thumb {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #004ba0;
+        cursor: pointer;
+    }
