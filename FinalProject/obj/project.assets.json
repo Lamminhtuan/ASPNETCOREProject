@@ -33,6 +33,9 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
+      "jQuery/1.8.0": {
+        "type": "package"
+      },
       "MessagePack/2.1.152": {
         "type": "package",
         "dependencies": {
@@ -1518,6 +1521,12 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "noUiSlider/5.0.0": {
+        "type": "package",
+        "dependencies": {
+          "jQuery": "1.8.0"
         }
       },
       "NuGet.Common/6.3.1": {
@@ -3371,6 +3380,25 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "jQuery/1.8.0": {
+      "sha512": "laDFQRJrIRHT0Z0GVYklMt3bE0iu0MZFJwHwg21kt3SHb7Bj8TdNiM3K+ZdK1DzB8ZxKy8z7NkJvwMas+dmHBw==",
+      "type": "package",
+      "path": "jquery/1.8.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Content/Scripts/jquery-1.8.0-vsdoc.js",
+        "Content/Scripts/jquery-1.8.0.js",
+        "Content/Scripts/jquery-1.8.0.min.js",
+        "Tools/common.ps1",
+        "Tools/install.ps1",
+        "Tools/jquery-1.8.0.intellisense.js",
+        "Tools/uninstall.ps1",
+        "jquery.1.8.0.nupkg.sha512",
+        "jquery.nuspec"
       ]
     },
     "MessagePack/2.1.152": {
@@ -5713,6 +5741,19 @@
         "newtonsoft.json.13.0.1.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "noUiSlider/5.0.0": {
+      "sha512": "0wZyX2HBq3EKN/ETjc+GU6KB8UOxb7NdpSnxvc8h6aQ71eaJvbKgYzYIe2ifSG6WeihNdsGOc3MOffZbphu71A==",
+      "type": "package",
+      "path": "nouislider/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Content/noUiSlider/jquery.nouislider.css",
+        "content/Scripts/jquery.nouislider.js",
+        "nouislider.5.0.0.nupkg.sha512",
+        "nouislider.nuspec"
       ]
     },
     "NuGet.Common/6.3.1": {
@@ -10264,7 +10305,8 @@
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.13",
       "Microsoft.Extensions.Configuration >= 7.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.11",
-      "Swashbuckle.AspNetCore >= 6.3.0"
+      "Swashbuckle.AspNetCore >= 6.3.0",
+      "noUiSlider >= 5.0.0"
     ]
   },
   "packageFolders": {
@@ -10331,6 +10373,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.3.0, )"
+          },
+          "noUiSlider": {
+            "target": "Package",
+            "version": "[5.0.0, )"
           }
         },
         "imports": [

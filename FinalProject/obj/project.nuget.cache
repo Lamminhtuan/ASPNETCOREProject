@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Fp2BV8Vi08wVRcg2sdU82aMsbL03H00/E1vVml5VpU61t06aqHMSRMgxDNJTvVCjn2BdUOnOnF/F9sMoK3Y+8Q==",
+  "dgSpecHash": "ZfV+iI2IeKB5cnTju0OHILxXusY1vbVOU28BbOoQzqZc22AtI3Ck1bUG3eJlTSpPAMYlKG0jM3k9Oh+qI5Aovg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\FinalProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tuan\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Tuan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Tuan\\.nuget\\packages\\jquery\\1.8.0\\jquery.1.8.0.nupkg.sha512",
     "C:\\Users\\Tuan\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\Tuan\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\Tuan\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
@@ -74,6 +75,7 @@
     "C:\\Users\\Tuan\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Tuan\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\Tuan\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Tuan\\.nuget\\packages\\nouislider\\5.0.0\\nouislider.5.0.0.nupkg.sha512",
     "C:\\Users\\Tuan\\.nuget\\packages\\nuget.common\\6.3.1\\nuget.common.6.3.1.nupkg.sha512",
     "C:\\Users\\Tuan\\.nuget\\packages\\nuget.configuration\\6.3.1\\nuget.configuration.6.3.1.nupkg.sha512",
     "C:\\Users\\Tuan\\.nuget\\packages\\nuget.dependencyresolver.core\\6.3.1\\nuget.dependencyresolver.core.6.3.1.nupkg.sha512",
