@@ -25,19 +25,17 @@ namespace FinalProject.Controllers
 
 
         // GET: Phones
-        public async Task<IActionResult> Index(string sortOrder, string searchString, string Hang, string Nhucau, string Giamin, string Giamax)
+        public async Task<IActionResult> Index(string sortOrder, string searchString, string Hang, string Nhucau, string Giamin, string Giamax, string Loai, string Ram, string Rom)
         {
             ViewData["PriceASC"] =  "PriceASC";
             ViewData["PriceDESC"] = "PriceDESC";
-            //if (searchString == null)
-            //    searchString = currentFilter;
-            //if (Hang == null)
-            //    Hang = currentHang;
             ViewData["CurrentFilter"] = searchString;
             ViewData["Hang"] = Hang;
             ViewData["NhuCau"] = Nhucau;
             ViewData["GiaMin"] = Giamin; 
-            ViewData["GiaMax"] = Giamax; 
+            ViewData["GiaMax"] = Giamax; ViewData["Loai"] = Loai;
+            ViewData["RAM"] = Ram;
+            ViewData["ROM"] = Rom;
             ////Tìm kiếm 
             var phones = from b in _context.Phones
                       select b;
@@ -57,6 +55,18 @@ namespace FinalProject.Controllers
             if (!String.IsNullOrEmpty(Giamin) && !String.IsNullOrEmpty(Giamax))
             {
                 phones = phones.Where(b => b.Gia >= Convert.ToDecimal(Giamin) && b.Gia < Convert.ToDecimal(Giamax));
+            }
+            if (!String.IsNullOrEmpty(Loai))
+            {
+                phones = phones.Where(b => b.Os.Contains(Loai));
+            }
+            if (!String.IsNullOrEmpty(Ram))
+            {
+                phones = phones.Where(b => b.Ram == Convert.ToUInt16(Ram));
+            }
+            if (!String.IsNullOrEmpty(Rom))
+            {
+                phones = phones.Where(b => b.Rom == Convert.ToUInt16(Rom));
             }
             switch (sortOrder)
             {

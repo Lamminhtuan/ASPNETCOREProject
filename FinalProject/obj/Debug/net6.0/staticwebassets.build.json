@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8h2uLi47yv7fXlcbXQRTmfIwXz9bgRZJ3R2My8q9VyM=",
+  "Hash": "Y3FLPas2gYXLlsRGbzxRuzYwj4+sieLco31ej6Dl8go=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -7582,6 +7582,23 @@
       "OriginalItemSpec": "wwwroot\\images\\a73.jpg"
     },
     {
+      "Identity": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\android.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "images/android.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\android.png"
+    },
+    {
       "Identity": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\apple.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
@@ -7835,6 +7852,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\dienthoai.webp"
+    },
+    {
+      "Identity": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\dtpt.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "images/dtpt.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\dtpt.png"
     },
     {
       "Identity": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\favicon.ico",
@@ -8107,6 +8141,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\IMG-2902-1149-1669890556.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\ios.png",
+      "SourceId": "FinalProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "BasePath": "_content/FinalProject",
+      "RelativePath": "images/ios.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\ios.png"
     },
     {
       "Identity": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\ip.jpg",
