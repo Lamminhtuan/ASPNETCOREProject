@@ -227,3 +227,464 @@ input[type=number] {
     font-weight:bold;
     
  }
+
+
+ /*Xuân Hoàng's Blogs*/
+/*#root {
+    position: relative
+}
+
+    #root .container {
+        padding: 0
+    }
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap);
+
+@media only screen and (min-width: 1080px) {
+    .container {
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+
+    h1 {
+        font-weight: bold;
+    }
+
+
+    body {
+        font-family: Roboto, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        color: #444b52;
+        background: #f8f9fa;
+        overflow-anchor: none;
+        width: 100%;
+    }
+
+    .fb-button-share span, .zalo-share-button span {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500 !important;
+        line-height: 16px;
+        margin-left: 8px;
+        color: #444b52;
+        text-transform: capitalize
+    }
+
+    .fb-button-share {
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -ms-flex-align: center;
+        align-items: center;
+        border: 1px solid #e1e4e6;
+        padding: 7px 15px;
+        border-radius: 4px;
+        background: #fff;
+        cursor: pointer;
+        z-index: 1
+    }
+
+    .fb-button-share, .fb-share-wrapper {
+        position: relative
+    }
+
+    .fb-share-button {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        opacity: 0
+    }
+
+    .post__tag .list-tag {
+        margin-bottom: 8px
+    }
+
+    .social-network__action {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 32px;
+        margin-top: 24px
+    }
+
+    .zalo-share-button {
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -ms-flex-align: center;
+        align-items: center;
+        border: 1px solid #e1e4e6;
+        padding: 7px 25.5px;
+        border-radius: 4px;
+        background: #fff;
+        margin-left: 8px;
+        cursor: pointer
+    }
+
+        .fb-button-share span, .zalo-share-button span {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 500 !important;
+            line-height: 16px;
+            margin-left: 8px;
+            color: #444b52;
+            text-transform: capitalize
+        }
+
+    .fb-button-share {
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -ms-flex-align: center;
+        align-items: center;
+        border: 1px solid #e1e4e6;
+        padding: 7px 15px;
+        border-radius: 4px;
+        background: #fff;
+        cursor: pointer;
+        z-index: 1
+    }
+
+    .fb-button-share, .fb-share-wrapper {
+        position: relative
+    }
+
+    .fb-share-button {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        opacity: 0
+    }
+
+    .post__share {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center
+    }
+
+        .post__share .post-desc {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 14px;
+            color: #6a737a;
+            margin-right: 8px;
+            display: inline-block
+        }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+
+    h1 {
+        font-weight: bold;
+    }
+
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    body {
+        font-family: Roboto, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        color: #444b52;
+        background: #f8f9fa;
+        overflow-anchor: none;
+        width: 100%;
+    }
+
+    .fb-button-share span, .zalo-share-button span {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500 !important;
+        line-height: 16px;
+        margin-left: 8px;
+        color: #444b52;
+        text-transform: capitalize
+    }
+
+    .fb-button-share {
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -ms-flex-align: center;
+        align-items: center;
+        border: 1px solid #e1e4e6;
+        padding: 7px 15px;
+        border-radius: 4px;
+        background: #fff;
+        cursor: pointer;
+        z-index: 1
+    }
+
+    .fb-button-share, .fb-share-wrapper {
+        position: relative
+    }
+
+    .fb-share-button {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        opacity: 0
+    }
+
+    .post__tag .list-tag {
+        margin-bottom: 8px
+    }
+
+    .social-network__action {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 32px;
+        margin-top: 24px
+    }
+
+    .zalo-share-button {
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -ms-flex-align: center;
+        align-items: center;
+        border: 1px solid #e1e4e6;
+        padding: 7px 25.5px;
+        border-radius: 4px;
+        background: #fff;
+        margin-left: 8px;
+        cursor: pointer
+    }
+
+        .fb-button-share span, .zalo-share-button span {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 500 !important;
+            line-height: 16px;
+            margin-left: 8px;
+            color: #444b52;
+            text-transform: capitalize
+        }
+
+    .fb-button-share {
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -ms-flex-align: center;
+        align-items: center;
+        border: 1px solid #e1e4e6;
+        padding: 7px 15px;
+        border-radius: 4px;
+        background: #fff;
+        cursor: pointer;
+        z-index: 1
+    }
+
+    .fb-button-share, .fb-share-wrapper {
+        position: relative
+    }
+
+    .fb-share-button {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        opacity: 0
+    }
+
+    .post__share {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center
+    }
+
+        .post__share .post-desc {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 14px;
+            color: #6a737a;
+            margin-right: 8px;
+            display: inline-block
+        }
+}
+
+@media only screen and (max-width: 768px) {
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+
+    h1 {
+        font-weight: bold;
+    }
+
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    body {
+        font-family: Roboto, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        color: #444b52;
+        background: #f8f9fa;
+        overflow-anchor: none;
+        width: 100%;
+    }
+
+    .fb-button-share span, .zalo-share-button span {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500 !important;
+        line-height: 16px;
+        margin-left: 8px;
+        color: #444b52;
+        text-transform: capitalize
+    }
+
+    .fb-button-share {
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -ms-flex-align: center;
+        align-items: center;
+        border: 1px solid #e1e4e6;
+        padding: 7px 15px;
+        border-radius: 4px;
+        background: #fff;
+        cursor: pointer;
+        z-index: 1
+    }
+
+    .fb-button-share, .fb-share-wrapper {
+        position: relative
+    }
+
+    .fb-share-button {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        opacity: 0
+    }
+
+    .post__tag .list-tag {
+        margin-bottom: 8px
+    }
+
+    .social-network__action {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-align: center;
+        align-items: center;
+        margin-bottom: 32px;
+        margin-top: 24px
+    }
+
+    .zalo-share-button {
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -ms-flex-align: center;
+        align-items: center;
+        border: 1px solid #e1e4e6;
+        padding: 7px 25.5px;
+        border-radius: 4px;
+        background: #fff;
+        margin-left: 8px;
+        cursor: pointer
+    }
+
+        .fb-button-share span, .zalo-share-button span {
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 500 !important;
+            line-height: 16px;
+            margin-left: 8px;
+            color: #444b52;
+            text-transform: capitalize
+        }
+
+    .fb-button-share {
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -ms-flex-align: center;
+        align-items: center;
+        border: 1px solid #e1e4e6;
+        padding: 7px 15px;
+        border-radius: 4px;
+        background: #fff;
+        cursor: pointer;
+        z-index: 1
+    }
+
+    .fb-button-share, .fb-share-wrapper {
+        position: relative
+    }
+
+    .fb-share-button {
+        position: absolute !important;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        opacity: 0
+    }
+
+    .post__share {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center
+    }
+
+        .post__share .post-desc {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 14px;
+            color: #6a737a;
+            margin-right: 8px;
+            display: inline-block
+        }
+}
+*/
