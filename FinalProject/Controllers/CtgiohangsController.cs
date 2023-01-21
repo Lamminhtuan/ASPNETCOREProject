@@ -45,10 +45,10 @@ namespace FinalProject.Controllers
         }
 
         // GET: Ctgiohangs/Create
-        public IActionResult Create()
+        public void Create()
         {
             ViewData["Idgh"] = new SelectList(_context.Giohangs, "Idgh", "Idgh");
-            return View();
+            //return View();
         }
 
         // POST: Ctgiohangs/Create
@@ -56,16 +56,16 @@ namespace FinalProject.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Idgh,Idsp,ImagePath,DonGia,SoLuong")] Ctgiohang ctgiohang)
+        public void Create([Bind("Idgh,Idsp,ImagePath,DonGia,SoLuong")] Ctgiohang ctgiohang)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(ctgiohang);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                //await _context.SaveChangesAsync();
+                //return RedirectToAction(nameof(Index));
             }
             ViewData["Idgh"] = new SelectList(_context.Giohangs, "Idgh", "Idgh", ctgiohang.Idgh);
-            return View(ctgiohang);
+            //return View(ctgiohang);
         }
 
         // GET: Ctgiohangs/Edit/5

@@ -157,3 +157,21 @@ Intel® UHD Graphics (with single channel memory)', 8, 256, N'70WHrs, 3S1P, 3-ce
  (29, N'Gram 2022', N'LG', CAST(37790000.00 AS Decimal(18, 2)), N'14 inch WUXGA (1920x1200), 16:10, IPS, DCI-P3 99%, LGD, 350 nits, Anti-Glare', N'Windows 11 Home', N'Webcam IR FHD IR with Dual Mic', N'Văn phòng', N'Intel Core i7-1260P 1.5GHz up to 4.7GHz 18MB', N'Intel Iris Xe Graphics', 16, 512, N'72WHr', 0.999, N'2x Thunderbolt 4 supports display / power delivery;2x USB 3.2 Gen2;1x HDMI;1x 3.5mm Combo Audio Jack', N'hợp kim magie', N'https://product.hstatic.net/1000026716/product/022-14z90q-g-aj32a5-i3-1220p-1_ffb7c901da534c9480961af03cc13cdd_master_726ed92a7e5342468a96c766aa17cb7c.png'),
 
  (30, N'Gram 2022', N'LG', CAST(41990000.00 AS Decimal(18, 2)), N'16 inch WQXGA (2560 x 1600), 16:10, IPS, DCI-P3 99%, LGD, 350 nits, Anti-Glare', N'Windows 11 Home', N'Webcam IR FHD IR with Dual Mic', N'Văn phòng', N'Intel Core i5-1240P 1.7GHz up to 4.4GHz 12MB', N'Intel Iris Xe Graphics', 16, 256, N'80WHr', 1.199, N'2x Thunderbolt 4 supports display / power delivery;2x USB 3.2 Gen2;1x HDMI;1x 3.5mm Combo Audio Jack', N'hợp kim magie', N'https://product.hstatic.net/1000026716/product/022-16z90q-g-ah52a5-i5-1240p-1_2e9bc64c971f4c6996994035e663b022_master_2a6d9bc9707e410c948eef7e79ce7a25.png')
+
+ CREATE TABLE GIOHANG(
+IDGH int not null PRIMARY KEY,
+NgayMua date not null,
+TongGia decimal
+)
+
+CREATE TABLE CTGIOHANG(
+
+IDGH int FOREIGN KEY REFERENCES GIOHANG(IDGH),
+IDSP int not null,
+ImagePath nvarchar(550) not null,
+DonGia decimal not null,
+SoLuong int not null,
+PRIMARY KEY(IDGH, IDSP)
+)
+
+INSERT INTO GIOHANG VALUES (0, GETDATE(), 0)
