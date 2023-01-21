@@ -16,6 +16,8 @@ namespace FinalProject.Models
         {
         }
 
+        public virtual DbSet<Ctgiohang> Ctgiohangs { get; set; } = null!;
+        public virtual DbSet<Giohang> Giohangs { get; set; } = null!;
         public virtual DbSet<Laptop> Laptops { get; set; } = null!;
         public virtual DbSet<Phone> Phones { get; set; } = null!;
 
@@ -30,6 +32,42 @@ namespace FinalProject.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Ctgiohang>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.ToTable("CTGIOHANG");
+
+                entity.Property(e => e.DonGia).HasColumnType("decimal(18, 0)");
+
+                entity.Property(e => e.Idgh).HasColumnName("IDGH");
+
+                entity.Property(e => e.Idsp).HasColumnName("IDSP");
+
+                entity.Property(e => e.ImagePath).HasMaxLength(1);
+
+                entity.HasOne(d => d.IdghNavigation)
+                    .WithMany()
+                    .HasForeignKey(d => d.Idgh)
+                    .HasConstraintName("FK__CTGIOHANG__IDGH__18EBB532");
+            });
+
+            modelBuilder.Entity<Giohang>(entity =>
+            {
+                entity.HasKey(e => e.Idgh)
+                    .HasName("PK__GIOHANG__B87DE222369C3A9D");
+
+                entity.ToTable("GIOHANG");
+
+                entity.Property(e => e.Idgh)
+                    .ValueGeneratedNever()
+                    .HasColumnName("IDGH");
+
+                entity.Property(e => e.NgayMua).HasColumnType("date");
+
+                entity.Property(e => e.TongGia).HasColumnType("decimal(18, 0)");
+            });
+
             modelBuilder.Entity<Laptop>(entity =>
             {
                 entity.ToTable("LAPTOPS");

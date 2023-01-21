@@ -188,8 +188,8 @@
 				Sắp xếp
 			</button>
 			<ul class="dropdown-menu">
-				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-sortOrder="@TempData["PriceDESC"]">Giá cao đến thấp</a></li>
-				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-sortOrder="@TempData["PriceASC"]">Giá thấp đến cao</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-sortOrder="@TempData["PriceDESC"]">Giá cao đến thấp</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-sortOrder="@TempData["PriceASC"]">Giá thấp đến cao</a></li>
 
 			</ul>
 		</div>
