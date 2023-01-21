@@ -99,6 +99,6 @@
 <div>
 
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a href="#">Thêm vào giỏ hàng</a>
+    <a asp-action="Create" asp-controller="Ctgiohangs">Thêm vào giỏ hàng</a>
     <a asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]">Quay lại mua hàng</a>
 </div>

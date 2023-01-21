@@ -34,22 +34,24 @@ namespace FinalProject.Models
         {
             modelBuilder.Entity<Ctgiohang>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => new { e.Idgh, e.Idsp })
+                    .HasName("PK__CTGIOHAN__F3FA22084AE69E73");
 
                 entity.ToTable("CTGIOHANG");
-
-                entity.Property(e => e.DonGia).HasColumnType("decimal(18, 0)");
 
                 entity.Property(e => e.Idgh).HasColumnName("IDGH");
 
                 entity.Property(e => e.Idsp).HasColumnName("IDSP");
 
-                entity.Property(e => e.ImagePath).HasMaxLength(1);
+                entity.Property(e => e.DonGia).HasColumnType("decimal(18, 0)");
+
+                entity.Property(e => e.ImagePath).HasMaxLength(550);
 
                 entity.HasOne(d => d.IdghNavigation)
-                    .WithMany()
+                    .WithMany(p => p.Ctgiohangs)
                     .HasForeignKey(d => d.Idgh)
-                    .HasConstraintName("FK__CTGIOHANG__IDGH__18EBB532");
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__CTGIOHANG__IDGH__1F98B2C1");
             });
 
             modelBuilder.Entity<Giohang>(entity =>
