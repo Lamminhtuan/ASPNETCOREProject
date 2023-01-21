@@ -1,15 +1,14 @@
 ﻿@model FinalProject.Models.Phone
 
 @{
-    ViewData["Title"] = "Details";
+    TempData["Title"] = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
 
 <div>
-    <h4>Phone</h4>
-    <hr />
+    
+    
     <dl class="row">
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Ten)
@@ -99,5 +98,5 @@
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]">Back to List</a>
+    <a asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]">Quay lại mua hàng</a>
 </div>

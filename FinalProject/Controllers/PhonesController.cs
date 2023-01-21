@@ -27,15 +27,16 @@ namespace FinalProject.Controllers
         // GET: Phones
         public async Task<IActionResult> Index(string sortOrder, string searchString, string Hang, string Nhucau, string Giamin, string Giamax, string Loai, string Ram, string Rom)
         {
-            ViewData["PriceASC"] =  "PriceASC";
-            ViewData["PriceDESC"] = "PriceDESC";
-            ViewData["CurrentFilter"] = searchString;
-            ViewData["Hang"] = Hang;
-            ViewData["NhuCau"] = Nhucau;
-            ViewData["GiaMin"] = Giamin; 
-            ViewData["GiaMax"] = Giamax; ViewData["Loai"] = Loai;
-            ViewData["RAM"] = Ram;
-            ViewData["ROM"] = Rom;
+            TempData["PriceASC"] =  "PriceASC";
+            TempData["PriceDESC"] = "PriceDESC";
+            TempData["CurrentFilter"] = searchString;
+            TempData["Hang"] = Hang;
+            TempData["NhuCau"] = Nhucau;
+            TempData["GiaMin"] = Giamin;
+            TempData["GiaMax"] = Giamax; ViewData["Loai"] = Loai;
+            TempData["RAM"] = Ram;
+            TempData["ROM"] = Rom;
+            TempData.Keep();
             ////Tìm kiếm 
             var phones = from b in _context.Phones
                       select b;

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<FinalProject.Models.Phone>
 @using System.Globalization;
 @{
-	ViewData["Title"] = "Index";
+	TempData["Title"] = "Index";
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -15,13 +15,13 @@
 				Hãng
 			</button>
 			<ul class="dropdown-menu">
-				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]">Tất cả</a></li>
-				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="Samsung" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]"><img class="hinhfilter" src="/images/samsung.png"> Samsung</a></li>
-				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="Apple" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]"><img class="hinhfilter" src="/images/apple.png"> Apple</a></li>
-				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="OPPO" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]"><img class="hinhfilter" src="/images/oppo.png"> OPPO</a></li>
-				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="Xiaomi" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]"><img class="hinhfilter" src="/images/xiaomi.png"> Xiaomi</a></li>
-				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="Vivo" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]"><img class="hinhfilter" src="/images/vivo.png"> Vivo</a></li>
-				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="Realme" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]"><img class="hinhfilter" src="/images/realme.png"> Realme</a></li>
+				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]">Tất cả</a></li>
+				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="Samsung" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/samsung.png"> Samsung</a></li>
+				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="Apple" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/apple.png"> Apple</a></li>
+				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="OPPO" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/oppo.png"> OPPO</a></li>
+				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="Xiaomi" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/xiaomi.png"> Xiaomi</a></li>
+				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="Vivo" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/vivo.png"> Vivo</a></li>
+				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="Realme" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/realme.png"> Realme</a></li>
 
 			</ul>
 		
@@ -30,20 +30,20 @@
 			</button>
 			<ul class="dropdown-menu">
 				<li>
-					<a class="dropdown-item" asp-action="Index" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]"  asp-route-Hang="@ViewData["Hang"]"
-					   asp-route-Nhucau="" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]">Tất cả</a>
+					<a class="dropdown-item" asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]"  asp-route-Hang="@TempData["Hang"]"
+					   asp-route-Nhucau="" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]">Tất cả</a>
 				</li>
 				<li>
-					<a class="dropdown-item" asp-action="Index" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]"  asp-route-Hang="@ViewData["Hang"]"
-					   asp-route-Nhucau="Cao cấp, sang trọng" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]"><img class="hinhfilter" src="/images/luxury.png"> Cao cấp, sang trọng</a>
+					<a class="dropdown-item" asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]"  asp-route-Hang="@TempData["Hang"]"
+					   asp-route-Nhucau="Cao cấp, sang trọng" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/luxury.png"> Cao cấp, sang trọng</a>
 				</li>
 				<li>
-					<a class="dropdown-item" asp-action="Index" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]"  asp-route-Hang="@ViewData["Hang"]"
-					   asp-route-Nhucau="Chụp ảnh, quay phim" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]"><img class="hinhfilter" src="/images/camera.png"> Chụp ảnh, quay phim</a>
+					<a class="dropdown-item" asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]"  asp-route-Hang="@TempData["Hang"]"
+					   asp-route-Nhucau="Chụp ảnh, quay phim" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/camera.png"> Chụp ảnh, quay phim</a>
 				</li>
 				<li>
-					<a class="dropdown-item" asp-action="Index" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]"  asp-route-Hang="@ViewData["Hang"]"
-					   asp-route-Nhucau="Chơi game, cấu hình mạnh" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]"><img class="hinhfilter" src="/images/gaming.png"> Chơi game, cấu hình mạnh</a>
+					<a class="dropdown-item" asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]"  asp-route-Hang="@TempData["Hang"]"
+					   asp-route-Nhucau="Chơi game, cấu hình mạnh" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/gaming.png"> Chơi game, cấu hình mạnh</a>
 				</li>
 
 			</ul>
@@ -54,32 +54,32 @@
 
 			<ul class="dropdown-menu">
 				<li>
-					<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" 
-					asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="" asp-route-Giamax="" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]">Tất cả</a>
+					<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" 
+					asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="" asp-route-Giamax="" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]">Tất cả</a>
 				</li>
 				<li>
-					<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" 
-					asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="0" asp-route-Giamax="2000000" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]">Dưới 2 triệu</a>
+					<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" 
+					asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="0" asp-route-Giamax="2000000" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]">Dưới 2 triệu</a>
 				</li>
 				<li>
-					<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]"
-					asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="2000000" asp-route-Giamax="4000000" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]">Từ 2 đến 4 triệu</a>
+					<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]"
+					asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="2000000" asp-route-Giamax="4000000" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]">Từ 2 đến 4 triệu</a>
 				</li>
 				<li>
-					<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="4000000" asp-route-Giamax="7000000" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]">Từ 4 đến 7 triệu</a>
+					<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="4000000" asp-route-Giamax="7000000" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]">Từ 4 đến 7 triệu</a>
 				</li>
 				<li>
-					<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="7000000" asp-route-Giamax="13000000" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]">Từ 7 đến 13 triệu</a>
+					<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="7000000" asp-route-Giamax="13000000" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]">Từ 7 đến 13 triệu</a>
 				</li>
 				<li>
-					<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="13000000" asp-route-Giamax="20000000" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]">Từ 13 đến 20 triệu</a>
+					<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="13000000" asp-route-Giamax="20000000" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]">Từ 13 đến 20 triệu</a>
 				</li>
 				<li>
-					<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="20000000" asp-route-Giamax="200000000" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]">Trên 20 triệu</a>
+					<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="20000000" asp-route-Giamax="200000000" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]">Trên 20 triệu</a>
 				</li>
 				<div class="dropdown-divider"></div>
-				<form asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="@ViewData["Hang"]"
-					  asp-route-Nhucau="@ViewData["NhuCau"]">
+				<form asp-action="Index" asp-route-searchString="@TempData["CurrentFilter"]" asp-controller="Phones" asp-route-Hang="@TempData["Hang"]"
+					  asp-route-Nhucau="@TempData["NhuCau"]">
 					<div class="my-2">
 						<i class="bi bi-cash-coin minhhoa"></i><h5 style="display:inline"> Hoặc chọn mức giá phù hợp với bạn</h5>
 					</div>
@@ -115,16 +115,16 @@
 				</button>
 				<ul class="dropdown-menu">
 					<li>
-						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]">Tất cả</a>
+						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]">Tất cả</a>
 					</li>
 					<li>
-						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="Android" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]"><img class="hinhfilter" src="/images/android.png"> Android</a>
+						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="Android" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/android.png"> Android</a>
 					</li>
 					<li>
-						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="iOS" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]"><img class="hinhfilter" src="/images/ios.png"> iOS</a>
+						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="iOS" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/ios.png"> iOS</a>
 					</li>
 					<li>
-						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="PT" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]"><img class="hinhfilter" src="/images/dtpt.png"> Điện thoại phồ thông</a>
+						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="PT" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/dtpt.png"> Điện thoại phồ thông</a>
 					</li>
 				</ul>
 				
@@ -133,25 +133,25 @@
 				</button>
 				<ul class="dropdown-menu">
 					<li>
-						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="" asp-route-Rom="@ViewData["ROM"]">Tất cả</a>
+						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="" asp-route-Rom="@TempData["ROM"]">Tất cả</a>
 					</li>
 					<li>
-						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="2" asp-route-Rom="@ViewData["ROM"]">2 GB</a>
+						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="2" asp-route-Rom="@TempData["ROM"]">2 GB</a>
 					</li>
 					<li>
-						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="3" asp-route-Rom="@ViewData["ROM"]">3 GB</a>
+						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="3" asp-route-Rom="@TempData["ROM"]">3 GB</a>
 					</li>
 					<li>
-						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="4" asp-route-Rom="@ViewData["ROM"]">4 GB</a>
+						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="4" asp-route-Rom="@TempData["ROM"]">4 GB</a>
 					</li>
 					<li>
-						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="6" asp-route-Rom="@ViewData["ROM"]">6 GB</a>
+						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="6" asp-route-Rom="@TempData["ROM"]">6 GB</a>
 					</li>
 					<li>
-						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="8" asp-route-Rom="@ViewData["ROM"]">8 GB</a>
+						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="8" asp-route-Rom="@TempData["ROM"]">8 GB</a>
 					</li>
 					<li>
-						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="12" asp-route-Rom="@ViewData["ROM"]">12 GB</a>
+						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="12" asp-route-Rom="@TempData["ROM"]">12 GB</a>
 					</li>
 				</ul>
 				
@@ -160,25 +160,25 @@
 				</button>
 				<ul class="dropdown-menu">
 					<li>
-						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="">Tất cả</a>
+						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="">Tất cả</a>
 					</li>
 					<li>
-						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="32">32 GB</a>
+						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="32">32 GB</a>
 					</li>
 					<li>
-						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="64">64 GB</a>
+						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="64">64 GB</a>
 					</li>
 					<li>
-						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="128">128 GB</a>
+						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="128">128 GB</a>
 					</li>
 					<li>
-						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="256">256 GB</a>
+						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="256">256 GB</a>
 					</li>
 					<li>
-						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="512">512 GB</a>
+						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="512">512 GB</a>
 					</li>
 					<li>
-						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="1024">1 TB</a>
+						<a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="1024">1 TB</a>
 					</li>
 				</ul>
 		</div>
@@ -188,62 +188,62 @@
 				Sắp xếp
 			</button>
 			<ul class="dropdown-menu">
-				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-sortOrder="@ViewData["PriceDESC"]">Giá cao đến thấp</a></li>
-				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-sortOrder="@ViewData["PriceASC"]">Giá thấp đến cao</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-sortOrder="@TempData["PriceDESC"]">Giá cao đến thấp</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-sortOrder="@TempData["PriceASC"]">Giá thấp đến cao</a></li>
 
 			</ul>
 		</div>
 	</div>
 	<div style="display:flex">
 		<div class="mr-3">
-			@*Nếu ViewData có chứa hãng - nếu người dùng đã chọn hãng thì hiện div*@
-			@if (@ViewData["Hang"] != null)
+			@*Nếu TempData có chứa hãng - nếu người dùng đã chọn hãng thì hiện div*@
+			@if (@TempData["Hang"] != null)
 			{
 				<div class="currentfilter border rounded px-3">
-					@ViewData["Hang"] <a style="color:red" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]"><i class="bi bi-x-circle"></i></a>
+					@TempData["Hang"] <a style="color:red" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><i class="bi bi-x-circle"></i></a>
 				</div>
 			}
 		</div>
 		<div class="mr-3">
-			@if (@ViewData["NhuCau"] != null)
+			@if (@TempData["NhuCau"] != null)
 			{
 				<div class="currentfilter border rounded px-3">
-					@ViewData["NhuCau"] <a style="color:red" asp-action="Index" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]"  asp-route-Hang="@ViewData["Hang"]"
-					   asp-route-Nhucau="" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]"><i class="bi bi-x-circle"></i></a>
+					@TempData["NhuCau"] <a style="color:red" asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]"  asp-route-Hang="@TempData["Hang"]"
+					   asp-route-Nhucau="" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><i class="bi bi-x-circle"></i></a>
 				</div>
 			}
 		</div>
 		<div class="mr-3">
-			@if (@ViewData["GiaMin"] != null && @ViewData["GiaMax"] != null)
+			@if (@TempData["GiaMin"] != null && @TempData["GiaMax"] != null)
 			{
 			
 				<div class="currentfilter border rounded px-3">
-				 Từ @ViewData["GiaMin"]đ Đến @ViewData["GiaMax"]đ <a style="color:red" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="" asp-route-Giamax="" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]"><i class="bi bi-x-circle"></i></a>
+				 Từ @TempData["GiaMin"]đ Đến @TempData["GiaMax"]đ <a style="color:red"  asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="" asp-route-Giamax="" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><i class="bi bi-x-circle"></i></a>
 				</div>
 			}
 		</div>
 		<div class="mr-3">
-			@if (@ViewData["Loai"] != null)
+			@if (@TempData["Loai"] != null)
 			{
 				<div class="currentfilter border rounded px-3">
-					@ViewData["Loai"] <a style="color:red" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom="@ViewData["ROM"]"><i class="bi bi-x-circle"></i></a>
+					@TempData["Loai"] <a style="color:red"  asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><i class="bi bi-x-circle"></i></a>
 				</div>
 			}
 		</div>
 		<div class="mr-3">
-			@if (@ViewData["RAM"] != null)
+			@if (@TempData["RAM"] != null)
 			{
 				
 				<div class="currentfilter border rounded px-3">
-					@ViewData["RAM"] GB <a style="color:red" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="" asp-route-Rom="@ViewData["ROM"]"><i class="bi bi-x-circle"></i></a>
+					@TempData["RAM"] GB <a style="color:red"  asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="" asp-route-Rom="@TempData["ROM"]"><i class="bi bi-x-circle"></i></a>
 				</div>
 			}
 		</div>
 		<div class="mr-3">
-			@if (@ViewData["ROM"] != null)
+			@if (@TempData["ROM"] != null)
 			{
 				<div class="currentfilter border rounded px-3">
-					@ViewData["ROM"] GB<a style="color:red" asp-controller="Phones" asp-route-searchString="@ViewData["CurrentFilter"]" asp-route-Hang="@ViewData["Hang"]" asp-route-Nhucau="@ViewData["NhuCau"]" asp-route-Giamin="@ViewData["GiaMin"]" asp-route-Giamax="@ViewData["GiaMax"]" asp-route-Loai="@ViewData["Loai"]" asp-route-Ram="@ViewData["RAM"]" asp-route-Rom=""><i class="bi bi-x-circle"></i></a>
+					@TempData["ROM"] GB<a style="color:red"  asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom=""><i class="bi bi-x-circle"></i></a>
 				</div>
 			}
 		</div>
