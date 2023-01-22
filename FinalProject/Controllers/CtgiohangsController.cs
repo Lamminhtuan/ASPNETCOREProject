@@ -45,10 +45,26 @@ namespace FinalProject.Controllers
         }
 
         // GET: Ctgiohangs/Create
-        public void Create()
+        public IActionResult Create()
         {
             ViewData["Idgh"] = new SelectList(_context.Giohangs, "Idgh", "Idgh");
-            //return View();
+            return new EmptyResult();
+        }
+        public void CreateCT(int idgh, int idsp, string imagepath, decimal dongia, int soluong)
+        {
+            var giohang = new Ctgiohang()
+            {
+                Idgh = idgh,
+                Idsp = idsp,
+                ImagePath = imagepath,
+                DonGia = dongia,
+                SoLuong = soluong
+            };
+
+            
+            _context.Add(giohang);
+            _context.SaveChanges();
+            
         }
 
         // POST: Ctgiohangs/Create
@@ -56,16 +72,16 @@ namespace FinalProject.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public void Create([Bind("Idgh,Idsp,ImagePath,DonGia,SoLuong")] Ctgiohang ctgiohang)
+        public async Task<IActionResult> Create([Bind("Idgh,Idsp,ImagePath,DonGia,SoLuong")] Ctgiohang ctgiohang)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(ctgiohang);
-                //await _context.SaveChangesAsync();
-                //return RedirectToAction(nameof(Index));
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
             }
             ViewData["Idgh"] = new SelectList(_context.Giohangs, "Idgh", "Idgh", ctgiohang.Idgh);
-            //return View(ctgiohang);
+            return new EmptyResult();
         }
 
         // GET: Ctgiohangs/Edit/5

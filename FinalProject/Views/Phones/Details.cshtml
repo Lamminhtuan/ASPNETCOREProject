@@ -99,6 +99,11 @@
 <div>
 
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Create" asp-controller="Ctgiohangs">Thêm vào giỏ hàng</a>
+    <a asp-action="CreateCT" asp-controller="Ctgiohangs" asp-route-idgh="0" asp-route-idsp="@Model.Id" asp-route-imagepath="@Model.ImagePath"  asp-route-dongia="@Model.Gia"
+     asp-route-soluong="1">Thêm vào giỏ hàng</a>
+   
     <a asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]">Quay lại mua hàng</a>
 </div>
+<script>
+    $("ctgiohangcreate")
+</script>
