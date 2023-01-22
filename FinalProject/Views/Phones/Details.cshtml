@@ -1,10 +1,11 @@
 ﻿@model FinalProject.Models.Phone
+@*  Jquery*@
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
 @{
     TempData["Title"] = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 
 <div>
     
@@ -99,11 +100,35 @@
 <div>
 
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="CreateCT" asp-controller="Ctgiohangs" asp-route-idgh="0" asp-route-idsp="@Model.Id" asp-route-imagepath="@Model.ImagePath"  asp-route-dongia="@Model.Gia"
-     asp-route-soluong="1">Thêm vào giỏ hàng</a>
-   
+    <a href="#" id="ctgiohangcreate"
+       @*asp-action="CreateCT" asp-controller="Ctgiohangs" asp-route-idgh="0" asp-route-idsp="@Model.Id" asp-route-imagepath="@Model.ImagePath"
+    asp-route-dongia="@Model.Gia" asp-route-soluong="1"*@>Thêm vào giỏ hàng</a>
+    
     <a asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]">Quay lại mua hàng</a>
 </div>
-<script>
-    $("ctgiohangcreate")
-</script>
+
+
+@section Scripts{
+ 
+
+
+$(document).ready(function() {
+    $("#ctgiohangcreate").click(function(e) {
+        //Ngăn chuyển hướng
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "@Url.Action("CreateCT", "Ctgiohangs")",
+            data: {"idgh":"0","idsp":"@Model.Id","imagepath":"@Model.ImagePath","dongia":"@Model.Gia","soluong":"1"},
+            success:function(response){
+                alert("Done!");
+            }
+        });
+            
+
+            
+        
+       
+    });
+});
+}

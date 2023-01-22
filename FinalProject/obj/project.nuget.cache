@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ZfV+iI2IeKB5cnTju0OHILxXusY1vbVOU28BbOoQzqZc22AtI3Ck1bUG3eJlTSpPAMYlKG0jM3k9Oh+qI5Aovg==",
+  "dgSpecHash": "NdgwWLLX68yAu4pgo8n0dRLgNxUu++Wypjh4LYIY6bY479OEB2ZPJo0LgwbWjiSw8bnmq4QR7T3F+IEN9iXXzg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Tuan\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\FinalProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tuan\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Tuan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\Tuan\\.nuget\\packages\\jquery\\1.8.0\\jquery.1.8.0.nupkg.sha512",
+    "C:\\Users\\Tuan\\.nuget\\packages\\jquery\\3.6.3\\jquery.3.6.3.nupkg.sha512",
     "C:\\Users\\Tuan\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\Tuan\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\Tuan\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",

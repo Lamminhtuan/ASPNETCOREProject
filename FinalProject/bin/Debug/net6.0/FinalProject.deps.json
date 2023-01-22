@@ -14,6 +14,7 @@
           "Microsoft.Extensions.Configuration": "7.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.11",
           "Swashbuckle.AspNetCore": "6.3.0",
+          "jQuery": "3.6.3",
           "noUiSlider": "5.0.0"
         },
         "runtime": {
@@ -47,7 +48,7 @@
           }
         }
       },
-      "jQuery/1.8.0": {},
+      "jQuery/3.6.3": {},
       "MessagePack/2.1.152": {
         "dependencies": {
           "MessagePack.Annotations": "2.1.152",
@@ -1353,7 +1354,7 @@
       },
       "noUiSlider/5.0.0": {
         "dependencies": {
-          "jQuery": "1.8.0"
+          "jQuery": "3.6.3"
         }
       },
       "NuGet.Common/6.3.1": {
@@ -2441,12 +2442,12 @@
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
     },
-    "jQuery/1.8.0": {
+    "jQuery/3.6.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-laDFQRJrIRHT0Z0GVYklMt3bE0iu0MZFJwHwg21kt3SHb7Bj8TdNiM3K+ZdK1DzB8ZxKy8z7NkJvwMas+dmHBw==",
-      "path": "jquery/1.8.0",
-      "hashPath": "jquery.1.8.0.nupkg.sha512"
+      "sha512": "sha512-v87yTa8y+t642SsUBRl+XSFg1+zkMfRMd3aO714aYL+AwVxglV7tcW7ZoL4BgwczXev8ge+0kNQBj2rWdyI+dQ==",
+      "path": "jquery/3.6.3",
+      "hashPath": "jquery.3.6.3.nupkg.sha512"
     },
     "MessagePack/2.1.152": {
       "type": "package",

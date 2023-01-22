@@ -50,6 +50,7 @@ namespace FinalProject.Controllers
             ViewData["Idgh"] = new SelectList(_context.Giohangs, "Idgh", "Idgh");
             return new EmptyResult();
         }
+        [HttpPost]
         public void CreateCT(int idgh, int idsp, string imagepath, decimal dongia, int soluong)
         {
             var giohang = new Ctgiohang()

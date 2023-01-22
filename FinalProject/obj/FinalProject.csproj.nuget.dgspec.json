@@ -66,6 +66,10 @@
               "target": "Package",
               "version": "[6.3.0, )"
             },
+            "jQuery": {
+              "target": "Package",
+              "version": "[3.6.3, )"
+            },
             "noUiSlider": {
               "target": "Package",
               "version": "[5.0.0, )"
