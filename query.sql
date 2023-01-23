@@ -158,6 +158,214 @@ Intel® UHD Graphics (with single channel memory)', 8, 256, N'70WHrs, 3S1P, 3-ce
 
  (80, N'Gram 2022', N'LG', CAST(41990000.00 AS Decimal(18, 2)), N'16 inch WQXGA (2560 x 1600), 16:10, IPS, DCI-P3 99%, LGD, 350 nits, Anti-Glare', N'Windows 11 Home', N'Webcam IR FHD IR with Dual Mic', N'Văn phòng', N'Intel Core i5-1240P 1.7GHz up to 4.4GHz 12MB', N'Intel Iris Xe Graphics', 16, 256, N'80WHr', 1.199, N'2x Thunderbolt 4 supports display / power delivery;2x USB 3.2 Gen2;1x HDMI;1x 3.5mm Combo Audio Jack', N'hợp kim magie', N'https://product.hstatic.net/1000026716/product/022-16z90q-g-ah52a5-i5-1240p-1_2e9bc64c971f4c6996994035e663b022_master_2a6d9bc9707e410c948eef7e79ce7a25.png')
 
+ --Insert Laptops của Trường
+ INSERT LAPTOPS (ID, Ten, Hang, Gia, ManHinh, OS, Webcam, NhuCau, Chip, VGA, Ram, Rom, Pin, KhoiLuong, CongGiaoTiep, ThietKe, ImagePath) VALUES
+(81, N'G5 GE-51VN263SH', N'Gigabyte', 21690000, N'15.6 inch', N'Win11', N'HD type (30fps@720p)', N'Gaming', N'Intel, Core i5, 12500H', N'NVIDIA GeForce RTX 3050 4GB; Intel Iris Xe Graphics', 8, 512, N'Lithium-ion 54 Wh', 1.9, N'1 Card reader;
+1 DC-in jack;
+1 DisplayPort 1.4;
+1 HDMI 2.1;
+1 Jack 3.5 mm;
+1 LAN;
+1 USB 2.0;
+1 USB 3.2 Gen 1;
+2 USB 3.2 Gen 2', N'Vỏ máy: Nhựa', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/11/9/638036059541782094_gigabyte-gaming-g5-ge-i5-12500h-rtx3050-dd-bh-moi.jpg'),
+
+(82, N'TUF FX517ZC-HN077W', N'Asus', 23490000, N'15.6 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Gaming', N'Intel, Core i5, 12450H',N'NVIDIA GeForce RTX 3050 4GB; Intel UHD Graphics', 8, 512, N'Lithium-ion 4 Cell 180 W', 2, N'1 HDMI;
+1 Jack 3.5 mm;
+1 LAN;
+1 Thunderbolt;
+1 Type C;
+2 USB 3.2 Gen 1', N'Tản nhiệt: 1 quạt; Mặt lưng máy: Kim loại', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/3/22/637835763372337463_asus-tuf-gaming-fx517-den-dd-rtx-3050.jpg'),
+
+(83, N'IdeaPad 3 15IAH7', N'Lenovo', 20490000, N'15.6 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Gaming', N'Intel, Core i5, 12500H', N'NVIDIA GeForce RTX 3050 4GB', 16, 512, N'Lithium polymer 4 Cell', 2.25, N'1 HDMI;
+1 Jack 3.5 mm;
+1 LAN;
+2 USB 3.2', N'Tản nhiệt: 2 quạt; Mặt bàn phím + kê tay: Nhựa ABS', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/8/26/637971149907512230_lenovo-ideapad-gaming-3-15iah7-xam-dd.jpg'),
+
+(84, N'TUF Gaming FX517ZE-HN045W', N'Asus', 24490000, N'15.6 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Gaming', N'Intel, Core i5, 12450H', N'NVIDIA GeForce RTX 3050 Ti 4 GB; Intel Iris Xe Graphics', 8, 512, N'Lithium polymer 4 Cell 180W', 2, N'1 LAN;
+1 Thunderbolt;
+1 USB 3.2 Gen 2;
+2 USB 3.2 Gen 1', N'Vỏ: Nhôm cao cấp phủ chống dính', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/7/20/637939094246813408_asus-tuf-gaming-fx517-den-dd-rtx-3050ti.jpg'),
+
+(85, N'Inspiron 16 N5620', N'Dell', 26990000, N'16 inch', N'Win11', N'Trước RGB HD Camera', N'Sinh viên - Văn phòng', N'Intel, Core i5, 1240P', N'Intel Iris Xe Graphics', 16, 512, N'Lithium-ion 54 W', 1.97, N'1 HDMI 1.4;
+1 Jack 3.5 mm;
+1 USB 3.2 Gen 2;
+2 USB 3.2', N'Mặt bên ngoài cùng: Nhựa', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/7/22/637941164968673889_dell-inspiron-16-n5620-bac-dd.jpg'),
+
+(86, N'Katana GF66 12UCK-805VN', N'MSI', 23990000, N'15.6 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Gaming', N'Intel, Core i7, 12650H', N'NVIDIA GeForce RTX 3050 4GB; Intel UHD Graphics',8, 512, N'Lithium polymer 180W', 2.25, N'	
+1 HDMI;
+1 Jack 3.5 mm;
+1 LAN;
+1 Type C;
+1 USB 2.0;
+2 USB 3.2 Gen 1', N'Nhựa', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/11/21/638046447294275297_msi-gaming-katana-gf66-dd-bh-moi.jpg'),
+
+(87, N'Yoga Slim 7 Pro 14IHU5O', N'Lenovo', 21790000, N'14 inch',N'Win11', N'HD Webcam (720p Webcam)', N'Mỏng nhẹ', N'Intel, Core i5, 11300H', N'Intel Iris Xe Graphics', 16, 512, N'4 Cell', 1.4, N'1 Jack 3.5 mm;
+1 USB 3.2 Gen 1;
+2 Thunderbolt', N'Vỏ máy: Hợp kim nhôm', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/5/25/637890960008464129_lenovo-yoga-slim-7-pro-14ihu5-bac-dd-oled.jpg'),
+
+(88, N'IdeaPad 5 Pro 16IAH7', N'Lenovo', 23190000, N'16 inch', N'Win11', N'Full HD Webcam (1080p Webcam)', N'Học sinh - Sinh viên', N'Intel, Core i7, 12700H', N'Intel Iris Xe Graphics', 16, 512, N'Lithium polymer 100W', 1.95, N'1 Card reader;
+1 HDMI;
+1 Jack 3.5 mm;
+1 Type C;
+2 USB 3.2', N'Mặt bàn phím + kê tay: Hợp kim nhôm; Vỏ máy: Nhôm', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/9/22/637994515343436804_lenovo-ideapad-5-pro-16iah7-xam-dd.jpg'),
+
+(89, N'TUF FX517ZM-HN480W', N'Asus', 28490000, N'15.6 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Gaming', N'Intel, Core i7, 12650H', N'NVIDIA GeForce RTX 3060 6GB; Intel UHD Graphics',8,512, N'Lithium polymer 200W', 2, N'	
+1 HDMI 2.0;
+1 Jack 3.5 mm;
+1 LAN;
+1 Thunderbolt;
+1 Type C;
+2 USB 3.2', N'Khung máy: Nhựa; Mặt lưng máy: Kim loại', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/9/20/637992839292679823_asus-tuf-gaming-fx517-den-dd.jpg'),
+
+(90, N'Nitro AN515-58-52SP', N'Acer', 24290000, N'15.6 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Gaming', N'Intel, Core i5, 12500H', N'NVIDIA GeForce RTX 3050 4GB; Intel Iris Xe Graphics', 8, 512, N'Lithium-ion 57.5W', 2.5, N'	
+1 DC-in jack;
+1 HDMI;
+1 Jack 3.5 mm;
+1 LAN;
+1 Type C;
+3 USB 3.0', N'Mặt bàn phím + kê tay: Nhựa', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/3/1/637817434232133881_acer-nitro-gaming-an515-58-dd.jpg'),
+
+(91, N'IdeaPad 1 15AMN7 R5 7520U', N'Lenovo', 12490000, N'15.6 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Thiết kế đồ họa', N'AMD, Ryzen 5, 7520U', N'AMD Radeon 610 2GB', 8, 512, N'Lithium-ion 65W', 1.58, N'Card reader;
+HDMI 1.4;
+Jack 3.5 mm;
+Type C;
+USB 2.0;
+USB 3.2 Gen 1', N'Nhựa ABS', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/11/29/638053327684236749_lenovo-ideapad-1-15amn7-xam-dd.jpg'),
+
+(92, N'TUF FX506LHB-HN188W', N'Asus', 16990000, N'15.6 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Gaming', N'Intel, Core i5, 10300H', N'NVIDIA GeForce GTX 1650 4GB; Intel UHD Graphics', 8, 512, N'Lithium-ion 200W', 2.3, N'	
+1 HDMI;
+1 Jack 3.5 mm;
+1 Type C;
+1 USB 2.0;
+2 USB 3.0', N'Vỏ máy: Nhựa', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/1/26/637787904727727554_asus-tuf-gaming-fx506lh-den-2022-dd.jpg'),
+
+(93, N'GF63 Thin 11SC-1090VN', N'MSI', 16990000, N'15.6 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Gaming', N'Intel, Core i5, 11400H', N'NVIDIA GeForce GTX 1650 4GB', 8, 512, N'Lithium-ion 120W', 1.86, N'	
+1 HDMI;
+1 LAN;
+1 Type C;
+3 USB 3.2 Gen 1', N'Nhựa', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/10/7/638007352801976726_msi-gaming-gf63-thin-11sc-1090vn-den-dd.jpg'),
+
+(94, N'Modern 14 B11MOU-1028VN', N'MSI', 9990000, N'14 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Gaming', N'Intel, Core i3, 115G4', N'Intel UHD Graphics', 8, 256, N'Lithium polymer 39W', 1.3, N'1 HDMI;
+1 Jack 3.5 mm;
+3 USB 3.0', N'Khung màn hình: Nhựa;
+Mặt bàn phím + kê tay: Kim loại;
+Mặt bên ngoài cùng: Kim loại', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg'),
+
+(95, N'15s-fq2663TU', N'HP', 9690000, N'15.6 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Sinh viên - Văn phòng', N'Intel, Core i3, 1115G4', N'Intel UHD Graphics', 4, 256, N'Lithium-ion 45W', 1.7, N'	
+1 HDMI 1.4;
+1 Jack 3.5 mm;
+1 Type C;
+2 USB 2.0', N'Mặt bàn phím + kê tay: Nhựa', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/7/11/637931467519964702_hp-15s-fq-bac-win11-dd.jpg'),
+
+(96, N'Vivobook X515EA-BR2045W', N'Asus', 10590000, N'15.6 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Doanh nhân', N'Intel, Core i3, 1115G4', N'Intel UHD Graphics', 4, 512, N'Lithium-ion 45W', 1.8, N'	
+1 DC-in jack;
+1 HDMI 1.4;
+1 Jack 3.5 mm;
+1 Type C;
+1 USB 2.0', N'Chất liệu: Nhựa', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/1/12/637460615818949069_asus-vivobook-x515-bac-dd.png'),
+
+(97, N'ROG G513IC-HN729W R7 4800H', N'Asus', 20990000, N'15.6 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Sinh viên - Văn phòng', N'AMD, Ryzen 7, 4800H', N'NVIDIA GeForce RTX 3050 4GB; AMD Radeon Graphics', 8, 512, N'Lithium-ion 200W', 2.1, N'1 HDMI 2.0;
+1 Jack 3.5 mm;
+1 Type C;
+3 USB 3.2 Gen 1', N'Mặt bàn phím + kê tay: Nhựa', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/26/637655728046080925_asus-rog-gaming-g513-rgb4-xam-dd.jpg'),
+
+(98, N'GF63 Thin 11SC-663VN', N'MSI', 18990000, N'15.6 inch', N'Win11', N'Trước HD Webcam (720p Webcam)', N'Gaming', N'Intel, Core i7, 11800H', N'NVIDIA GeForce GTX 1650 Max-Q 4GB; Intel UHD Graphics', 8, 512, N'Lithium polymer 3 Cell', 1.86, N'	
+1 HDMI;
+1 LAN;
+1 Type C;
+3 USB 3.2 Gen 1', 
+N'Nhựa;
+Vỏ máy: Alumium CNC', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/7/637639339928194488_msi-gaming-gf63-den-dd.jpg'),
+
+(99, N'Nitro AN515-57-54MV', N'Acer', 21290000, N'15.6 inch', N'Win10', N'HD Webcam (720p Webcam)', N'Gaming', N'Intel, Core i5, 11400H', N'NVIDIA GeForce RTX 3050 4GB; Intel UHD Graphics', 8, 512, N'Lithium-ion 4 Cell', 2.2, N'1 DC-in jack;
+1 HDMI;
+1 Jack 3.5 mm;
+1 Type C;
+1 USB 2.0;
+1 USB 3.0', N'Khung màn hình: Nhựa;
+Mặt bàn phím + kê tay: Nhựa;
+Mặt bên ngoài cùng: Nhựa;
+Mặt lưng máy: Nhựa', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/7/20/637624023473077758_acer-nitro-gaming-an515-57-den-rtx3050-dd-1.jpg'),
+
+(100, N'GF63 Thin 11UC-444VN', N'MSI', 18490000, N'15.6 inch', N'Win10', N'HD Webcam (720p Webcam)', N'Gaming', N'Intel, Core i5, 11400H', N'NVIDIA GeForce RTX 3050 4GB; Intel UHD Graphics', 8, 512, N'Lithium polymer 120W 3 Cell', 1.86, N'1 DC-in jack;
+1 HDMI;
+1 Jack 3.5 mm;
+1 Type C;
+4 USB 3.0', N'Khung màn hình: Nhựa;
+Mặt bàn phím + kê tay: Kim loại;
+Mặt bên ngoài cùng: Kim loại;
+Mặt lưng máy: Nhựa', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/1/26/637788084553132269_msi-gf63-thin-den-dd.jpg'),
+
+(101, N'TUF FA506IHRB-HN019W R5', N'Asus', 16490000, N'15.6 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Cao cấp - Sang trọng', N'AMD, Ryzen 5, 4600H', N'NVIDIA GeForce GTX 1650 4GB; AMD Radeon Graphics', 8, 512, N'Lithium-ion 3 viên 150W', 2.3, N'1 HDMI 2.0;
+1 Jack 3.5 mm;
+1 LAN;
+1 Type C;
+3 USB 3.2', N'Mặt lưng máy: Nhựa', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/8/2/637950740313797526_asus-tuf-gaming-fa506ihr-den-dd.jpg'),
+
+(102, N'Vivobook M1403QA-LY022W R5', N'Asus', 14990000, N'14 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Sinh viên - Văn phòng', N'AMD, Ryzen 5, 5600H', N'AMD Radeon Graphics', 8, 512, N'Lithium-ion 3 viên 150W', 1.6, N'	
+1 DC-in jack;
+1 HDMI;
+1 Jack 3.5 mm;
+1 Type C;
+1 USB 2.0;
+2 USB 3.2 Gen 1', N'Chất liệu: Kim loại', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/9/14/637987718881809877_asus-vivobook-m1403-non-oled-bac-dd.jpg'),
+
+(103, N'Modern 15 A5M 235VN R7', N'MSI', 15990000, N'15.6 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Gaming', N'AMD, Ryzen 7, 5700U', N'AMD Radeon Graphics', 8, 512, N'Lithium polymer 65W 3 Cell', 1.6, N'	
+1 Card reader;
+1 DC-in jack;
+1 HDMI;
+1 Jack 3.5 mm;
+1 Type C;
+3 USB 3.0', N'	
+Khung màn hình: Nhựa;
+Mặt bàn phím + kê tay: Kim loại;
+Mặt bên ngoài cùng: Kim loại', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/11/18/637728547611527044_msi-modern-15-a5m-234vn-r5-5500u-xam-dd.jpg'),
+
+(104, N'IdeaPad 3 14IAU7', N'Lenovo', 14790000, N'14 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Cao cấp - Sang trọng', N'Intel, Core i5, 1235U', N'Intel Iris Xe Graphics', 8, 512, N'Lithium polymer 65W', 1.63, N'1 Card reader;	
+1 HDMI;
+1 Jack 3.5 mm;
+1 Type C;
+1 USB 2.0;
+1 USB 3.2', N'Vỏ máy: Nhựa ABS', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/10/7/638007503320711896_lenovo-ideapad-3-14iau7-xanh-dd.jpg'),
+
+(105, N'Pavilion 15 eg2057TU', N'HP', 17090000, N'15.6 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Thiết kế đồ họa', N'Intel, Core i5, 1240P', N'Intel Iris Xe Graphics', 8, 512, N'3 Cell 65W', 1.702, N'	
+1 HDMI;
+1 Jack 3.5 mm;
+3 USB 3.2 Gen 1', N'Mặt bàn phím + kê tay: Nhôm; Vỏ máy: Nhựa', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/7/29/637947006257497678_hp-pavilion-15-eg-bac-2022-win11-dd.jpg'),
+
+(106, N'Vivobook M1503QA-L1026W R5', N'Asus', 16490000, N'15.6 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Mỏng nhẹ', N'AMD, Ryzen 5, 5600H', N'AMD Radeon Graphics', 8, 512, N'Lithium-ion 90W', 1.7, N'1 DC-in jack;
+1 HDMI;
+1 Jack 3.5 mm;
+1 Type C;
+1 USB 2.0;
+2 USB 3.2 Gen 1', N'Chất liệu: Kim loại', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/8/26/637971384442849961_asus-vivobook-m1503-bac-dd.jpg'),
+
+(107, N'IdeaPad 5 Pro 16IAH7', N'Lenovo', 21490000, N'16 inch', N'Win11', N'Full HD Webcam (1080p Webcam)', N'Sinh viên - Văn phòng', N'Intel, Core i5, 12500H', N'Intel Iris Xe Graphics', 16, 512, N'Lithium polymer 4 Cell', 1.95, N'1 Card reader;
+1 HDMI;
+1 Jack 3.5 mm;
+1 Type C;
+2 USB 3.2', N'Mặt bàn phím + kê tay: Hợp kim nhôm; Vỏ máy: Nhôm', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/9/22/637994618112287575_lenovo-ideapad-5-pro-16iah7-xam-dd.jpg'),
+
+(108, N'Modern 14 B11MOU-1031VN', N'MSI', 15790000, N'14 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Gaming', N'Intel, Core i7, 1195G7', N'Intel Iris Xe Graphics', 8, 512, N'Lithium polymer 65W 3 Cell', 1.3, N'1 DC-in jack;
+1 HDMI;
+1 Jack 3.5 mm;
+1 Type C;
+3 USB 3.0', N'Khung màn hình: Nhựa; Mặt bàn phím + kê tay: Kim loại; Mặt bên ngoài cùng: Kim loại; Mặt lưng máy: Kim loại', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/9/4/637663485438013374_msi-modern-14-xam-dd.jpg'),
+
+(109, N'Pavilion 14 dv2034TU', N'HP', 16690000, N'14 inch', N'Win11', N'HD Webcam (720p Webcam)', N'Mỏng nhẹ', N'Intel, Core i5, 1235U', N'Intel Iris Xe Graphics', 8, 512, N'Lithium-ion 65W 3 Cell', 1.41, N'	
+1 HDMI;
+1 Jack 3.5 mm;
+1 Type C;
+2 USB 3.0', N'Hợp kim nhôm', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/3/15/637514266078486477_hp-pavilion-14-dv-bac-dd.jpg'),
+
+(110, N'Legion 5 15ARH7 R5', N'Lenovo', 26190000, N'15.6 inch', N'Win11', N'Full HD Webcam (1080p Webcam)', N'Gaming', N'AMD, Ryzen 5, 6600H', N'NVIDIA GeForce RTX 3050 4GB; AMD Radeon Graphics', 8, 512, N'Lithium polymer 3 viên 230W', 2.35, N'	
+1 HDMI;
+1 Jack 3.5 mm;
+1 LAN;
+3 Type C;
+3 USB 3.2 Gen 1', N'Mặt bên ngoài cùng: Nhựa ABS; Mặt lưng máy: Alumium CNC', N'https://images.fpt.shop/unsafe/fit-in/240x215/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/10/20/638018700298075854_lenovo-gaming-legion-5-15arh7-xam-dam-dd.jpg')
+
  CREATE TABLE GIOHANG(
 IDGH int not null PRIMARY KEY,
 NgayMua date not null,
@@ -171,7 +379,10 @@ IDSP int not null,
 ImagePath nvarchar(550) not null,
 DonGia decimal not null,
 SoLuong int not null,
+ThanhTien decimal not null,
 PRIMARY KEY(IDGH, IDSP)
 )
-
+DROP TABLE CTGIOHANG
 INSERT INTO GIOHANG VALUES (0, GETDATE(), 0)
+INSERT INTO GIOHANG VALUES (1, GETDATE(), 0)
+
