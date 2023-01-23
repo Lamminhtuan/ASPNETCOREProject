@@ -17,7 +17,22 @@ namespace FinalProject.Controllers
         {
             _context = context;
         }
-
+        public void CreateCT(int idgh, int idsp, string imagepath, decimal dongia, int soluong, decimal thanhtien)
+        {
+            var ctgiohang = new Ctgiohang()
+            {
+                Idgh = idgh,
+                Idsp = idsp,
+                ImagePath = imagepath,
+                DonGia = dongia,
+                SoLuong = soluong,
+                ThanhTien = thanhtien
+                
+ 
+            };
+            _context.Add(ctgiohang);
+            _context.SaveChanges();
+        }
         // GET: Ctgiohangs
         public async Task<IActionResult> Index()
         {
@@ -48,24 +63,7 @@ namespace FinalProject.Controllers
         public IActionResult Create()
         {
             ViewData["Idgh"] = new SelectList(_context.Giohangs, "Idgh", "Idgh");
-            return new EmptyResult();
-        }
-        [HttpPost]
-        public void CreateCT(int idgh, int idsp, string imagepath, decimal dongia, int soluong)
-        {
-            var giohang = new Ctgiohang()
-            {
-                Idgh = idgh,
-                Idsp = idsp,
-                ImagePath = imagepath,
-                DonGia = dongia,
-                SoLuong = soluong
-            };
-
-            
-            _context.Add(giohang);
-            _context.SaveChanges();
-            
+            return View();
         }
 
         // POST: Ctgiohangs/Create
@@ -73,7 +71,7 @@ namespace FinalProject.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Idgh,Idsp,ImagePath,DonGia,SoLuong")] Ctgiohang ctgiohang)
+        public async Task<IActionResult> Create([Bind("Idgh,Idsp,ImagePath,DonGia,SoLuong,ThanhTien")] Ctgiohang ctgiohang)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +80,7 @@ namespace FinalProject.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["Idgh"] = new SelectList(_context.Giohangs, "Idgh", "Idgh", ctgiohang.Idgh);
-            return new EmptyResult();
+            return View(ctgiohang);
         }
 
         // GET: Ctgiohangs/Edit/5
@@ -107,7 +105,7 @@ namespace FinalProject.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Idgh,Idsp,ImagePath,DonGia,SoLuong")] Ctgiohang ctgiohang)
+        public async Task<IActionResult> Edit(int id, [Bind("Idgh,Idsp,ImagePath,DonGia,SoLuong,ThanhTien")] Ctgiohang ctgiohang)
         {
             if (id != ctgiohang.Idgh)
             {

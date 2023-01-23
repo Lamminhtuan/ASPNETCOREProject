@@ -10,6 +10,7 @@ namespace FinalProject.Models
         public string ImagePath { get; set; } = null!;
         public decimal DonGia { get; set; }
         public int SoLuong { get; set; }
+        public decimal ThanhTien { get; set; }
 
         public virtual Giohang IdghNavigation { get; set; } = null!;
     }

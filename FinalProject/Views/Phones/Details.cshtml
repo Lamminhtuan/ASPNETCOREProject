@@ -103,13 +103,11 @@
 <div>
 
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a href="#" id="ctgiohangcreate"
-       @*asp-action="CreateCT" asp-controller="Ctgiohangs" asp-route-idgh="0" asp-route-idsp="@Model.Id" asp-route-imagepath="@Model.ImagePath"
-    asp-route-dongia="@Model.Gia" asp-route-soluong="1"*@>Thêm vào giỏ hàng</a>
+    <a href="#" id="ctgiohangcreate">Thêm vào giỏ hàng</a>
     
     <a asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]">Quay lại mua hàng</a>
 </div>
-
+<div class="alert alert-success" id="notify" style="display:none;">Thêm vào giỏ hàng thành công!</div>
 
 @section Scripts{
  
@@ -119,6 +117,8 @@ $(document).ready(function() {
     $("#ctgiohangcreate").click(function(e) {
         //Lấy giá trị trong input số lượng
         var x = $("#sl").val();
+        var dg = @Model.Gia;
+        var tt = dg * x
         //Ngăn chuyển hướng
        
         e.preventDefault();
@@ -127,9 +127,10 @@ $(document).ready(function() {
             //Gọi hàm CreateCT trong Controller Ctgiohangs
             url: "@Url.Action("CreateCT", "Ctgiohangs")",
             //Tham số truyền vào
-            data: {"idgh":"0","idsp":"@Model.Id","imagepath":"@Model.ImagePath","dongia":"@Model.Gia","soluong":x},
+           
+            data: {"idgh":"0","idsp":"@Model.Id","imagepath":"@Model.ImagePath","dongia":"@Model.Gia","soluong":x, "thanhtien":tt},
             success:function(response){
-                alert("Done!");
+                $(".alert").show();
             },
             failure: function(response){
                 alert(response.responseText);

@@ -112,4 +112,41 @@
 <div>
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
+    <label for="sl">Số lượng</label>
+        <input type="number" id="sl" min="1" max="100" value="1" style="display:inline"/>
+      <a href="#" id="ctgiohangcreate">Thêm vào giỏ hàng</a>
 </div>
+
+<div class="alert alert-success" id="notify" style="display:none;">Thêm vào giỏ hàng thành công!</div>
+
+@section Scripts{
+ 
+
+
+$(document).ready(function() {
+    $("#ctgiohangcreate").click(function(e) {
+        //Lấy giá trị trong input số lượng
+        var x = $("#sl").val();
+         var dg = @Model.Gia;
+            var tt = dg * x;
+        //Ngăn chuyển hướng
+       
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            //Gọi hàm CreateCT trong Controller Ctgiohangs
+            url: "@Url.Action("CreateCT", "Ctgiohangs")",
+            //Tham số truyền vào
+           
+            data: {"idgh":"0","idsp":"@Model.Id","imagepath":"@Model.ImagePath","dongia":"@Model.Gia","soluong":x, "thanhtien":tt},
+            success:function(response){
+                $(".alert").show();
+            },
+            failure: function(response){
+                alert(response.responseText);
+            }
+        });    
+    });
+});
+
+}
