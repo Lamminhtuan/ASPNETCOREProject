@@ -230,15 +230,15 @@ input[type=number] {
 
 
  /*Xuân Hoàng's Blogs*/
-/*#root {
-    position: relative
+#root {
+    position: relative;
 }
 
     #root .container {
-        padding: 0
+        padding: 0;
     }
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap);
+@@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap);
 
 @media only screen and (min-width: 1080px) {
     .container {
@@ -246,7 +246,25 @@ input[type=number] {
         padding-right: 200px;
     }
 
-    img {
+        .container > img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 100%;
+            height: auto;
+            width: auto;
+        }
+
+    p > img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+
+    col-8 col-sm-6 > img {
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -257,18 +275,6 @@ input[type=number] {
 
     h1 {
         font-weight: bold;
-    }
-
-
-    body {
-        font-family: Roboto, sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.42857143;
-        color: #444b52;
-        background: #f8f9fa;
-        overflow-anchor: none;
-        width: 100%;
     }
 
     .fb-button-share span, .zalo-share-button span {
@@ -391,7 +397,25 @@ input[type=number] {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1080px) {
-    img {
+    .container > img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+
+    p > img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+
+    col-8 col-sm-6 > img {
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -407,17 +431,6 @@ input[type=number] {
     .container {
         padding-left: 10px;
         padding-right: 10px;
-    }
-
-    body {
-        font-family: Roboto, sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.42857143;
-        color: #444b52;
-        background: #f8f9fa;
-        overflow-anchor: none;
-        width: 100%;
     }
 
     .fb-button-share span, .zalo-share-button span {
@@ -540,7 +553,25 @@ input[type=number] {
 }
 
 @media only screen and (max-width: 768px) {
-    img {
+    .container > img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+
+    p > img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+    }
+
+    col-8 col-sm-6 > img {
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -558,16 +589,6 @@ input[type=number] {
         padding-right: 10px;
     }
 
-    body {
-        font-family: Roboto, sans-serif;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.42857143;
-        color: #444b52;
-        background: #f8f9fa;
-        overflow-anchor: none;
-        width: 100%;
-    }
 
     .fb-button-share span, .zalo-share-button span {
         display: inline-block;
@@ -687,4 +708,3 @@ input[type=number] {
             display: inline-block
         }
 }
-*/
