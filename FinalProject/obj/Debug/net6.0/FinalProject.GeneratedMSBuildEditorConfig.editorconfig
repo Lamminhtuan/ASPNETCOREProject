@@ -27,6 +27,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nMy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Blog/Blog4.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nNC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Ctgiohangs/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3RnaW9oYW5nc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -45,6 +49,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Ctgiohangs/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3RnaW9oYW5nc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Giohangs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvaGFuZ3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Giohangs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvaGFuZ3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Giohangs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvaGFuZ3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Giohangs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvaGFuZ3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Giohangs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2lvaGFuZ3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Tuan/Documents/GitHub/ASPNETCOREProject/FinalProject/Views/Home/About.cshtml]

@@ -107,6 +107,7 @@
     
     <a asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]">Quay lại mua hàng</a>
 </div>
+
 <div class="alert alert-success" id="notify" style="display:none;">Thêm vào giỏ hàng thành công!</div>
 
 @section Scripts{
@@ -118,7 +119,8 @@ $(document).ready(function() {
         //Lấy giá trị trong input số lượng
         var x = $("#sl").val();
         var dg = @Model.Gia;
-        var tt = dg * x
+        var tt = dg * x;
+        var iddh = 
         //Ngăn chuyển hướng
        
         e.preventDefault();
