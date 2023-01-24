@@ -17,7 +17,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg">
 		<div class="container-fluid">
-			<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/UIT STORE.png" width="270"></a>
+			<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img id="logo" src="~/images/UIT STORE.png" width="270"></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -58,8 +58,9 @@
 				</form>
 
 				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-					<li class="nav-item">
+					<li class="nav-item cart">
 						<a class="nav-link" asp-action="Index" asp-controller="Ctgiohangs"><i class="bi bi-cart"></i> Giỏ hàng</a>
+						<span class="badge badge-warning" id="cartcount">@CtgiohangsDAL.GetSLInCart()</span>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#"><i class="bi bi-person-bounding-box"></i> Tài khoản</a>
