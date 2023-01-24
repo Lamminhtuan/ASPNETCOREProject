@@ -124,29 +124,37 @@
 
 
 $(document).ready(function() {
-    $("#ctgiohangcreate").click(function(e) {
-        //Lấy giá trị trong input số lượng
-        var x = $("#sl").val();
-         var dg = @Model.Gia;
-            var tt = dg * x;
-        //Ngăn chuyển hướng
-       
-        e.preventDefault();
-        $.ajax({
-            type: "POST",
-            //Gọi hàm CreateCT trong Controller Ctgiohangs
-            url: "@Url.Action("CreateCT", "Ctgiohangs")",
-            //Tham số truyền vào
-           
-            data: {"idgh":"0","idsp":"@Model.Id","imagepath":"@Model.ImagePath","dongia":"@Model.Gia","soluong":x, "thanhtien":tt},
+
+
+				$("#ctgiohangcreate").click(function(e) {
+					//Lấy giá trị trong input số lượng
+					var x = $("#sl").val();
+					var dg = @Model.Gia;
+					var tt = dg * x;
+					//Ngăn chuyển hướng
+
+					e.preventDefault();
+
+					$.ajax({
+						type: "POST",
+						//Gọi hàm CreateCT trong Controller Ctgiohangs
+						url: "@Url.Action("CreateCT", "Ctgiohangs")",
+						//Tham số truyền vào
+
+						data: {"idsp":"@Model.Id","imagepath":"@Model.ImagePath","dongia":"@Model.Gia","soluong":x, "thanhtien":tt},
             success:function(response){
                 $(".alert").show();
+				var t = $('#cartcount').text();
+		 var num = parseInt(t);
+		 num = num + 1;
+				
+
+		 $('#cartcount').text(num);
             },
             failure: function(response){
                 alert(response.responseText);
             }
-        });    
+        });
     });
 });
-
 }
