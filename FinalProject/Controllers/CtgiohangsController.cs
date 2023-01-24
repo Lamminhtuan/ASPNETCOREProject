@@ -17,8 +17,9 @@ namespace FinalProject.Controllers
         {
             _context = context;
         }
-        public void CreateCT(int idgh, int idsp, string imagepath, decimal dongia, int soluong, decimal thanhtien)
+        public void CreateCT(int idsp, string imagepath, decimal dongia, int soluong, decimal thanhtien)
         {
+            int idgh = GiohangsDAL.GetIDDH();
             var ctgiohang = new Ctgiohang()
             {
                 Idgh = idgh,

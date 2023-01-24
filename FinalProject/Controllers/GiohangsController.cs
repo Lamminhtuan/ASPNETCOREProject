@@ -17,11 +17,7 @@ namespace FinalProject.Controllers
         {
             _context = context;
         }
-        public void GetIDDH()
-        {
-            int count = _context.Giohangs.Count();
-            ViewData["GetIDDH"] = count - 1;
-        }
+        
 
         // GET: Giohangs
         public async Task<IActionResult> Index()

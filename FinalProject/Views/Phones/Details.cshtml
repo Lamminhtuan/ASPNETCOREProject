@@ -120,17 +120,17 @@ $(document).ready(function() {
         var x = $("#sl").val();
         var dg = @Model.Gia;
         var tt = dg * x;
-        var iddh = 
         //Ngăn chuyển hướng
        
         e.preventDefault();
+        
         $.ajax({
             type: "POST",
             //Gọi hàm CreateCT trong Controller Ctgiohangs
             url: "@Url.Action("CreateCT", "Ctgiohangs")",
             //Tham số truyền vào
            
-            data: {"idgh":"0","idsp":"@Model.Id","imagepath":"@Model.ImagePath","dongia":"@Model.Gia","soluong":x, "thanhtien":tt},
+            data: {"idsp":"@Model.Id","imagepath":"@Model.ImagePath","dongia":"@Model.Gia","soluong":x, "thanhtien":tt},
             success:function(response){
                 $(".alert").show();
             },
