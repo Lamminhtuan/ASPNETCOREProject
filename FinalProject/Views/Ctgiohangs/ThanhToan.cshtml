@@ -1,0 +1,334 @@
+﻿@model IEnumerable<FinalProject.Models.Ctgiohang>
+
+@using System.Globalization;
+<div class="thanhtoanform box p-3">
+	<div class="row">
+		<div class="col-md-6 p-3">
+			<div style="height:500px;overflow:auto;" class="mb-3">
+				<table class="table table-responsive text-center m-0 h6">
+					<thead style="background-color:#ff9800">
+						<tr>
+							<th>Tên sản phẩm</th>
+							<th>Hình sản phẩm</th>
+							<th>Đơn giá</th>
+							<th>Số lượng</th>
+							<th>Thành tiền</th>
+
+						</tr>
+					</thead>
+					<tbody class="fw-bold align-middle">
+						@foreach (var item in Model)
+						{
+
+							<tr>
+								<td class="d-none">@item.Idsp</td>
+								<td>@item.Ten</td>
+								<td><img src="@item.ImagePath" style="height:120px;width:auto;" /></td>
+								<td>@item.DonGia.ToString("C",CultureInfo.CreateSpecificCulture("vi-VN"))</td>
+								<td><span class="SoLuong"> @item.SoLuong</span></td>
+
+								<td>@item.ThanhTien.ToString("C",CultureInfo.CreateSpecificCulture("vi-VN"))</td>
+
+							</tr>
+						}
+					</tbody>
+				</table>
+			</div>
+			<div class="text-center mb-3 h4">
+
+				<i class="bi bi-ticket-detailed"></i> Mã giảm giá
+				<input type="text" id="voucher" />
+				<a class="btn fw-bold mb-3 timdambtn" id="voucherbtn">Áp dụng</a>
+				<div id="thongbaott"></div>
+			</div>
+
+			<div class="float-end text-end h4">
+				@{var khong = 0;}
+				<p id="ttt">Tổng thành tiền: @CtgiohangsDAL.GetTongTien().ToString("C", CultureInfo.CreateSpecificCulture("vi-VN"))</p>
+				<p>Giảm giá: <span  id="thongbaogg"> @khong.ToString("C", CultureInfo.CreateSpecificCulture("vi-VN"))</span></p>
+				<p>Phí giao hàng: Miễn phí</p>
+				<hr />
+				<p class="fw-bold">Tổng tiền phải trả: <span  id="tienphaitra">@CtgiohangsDAL.GetTongTien().ToString("C", CultureInfo.CreateSpecificCulture("vi-VN"))</span></p>
+			</div>
+
+		</div>
+		<div class="col-md-6 p-3">
+			<h2 class="fw-bold"><i class="bi bi-info-square"></i> Thông tin thanh toán</h2>
+			@{
+				var tk = @TaikhoansDAL.GetByEmail(TaikhoansDAL.emailhientai);
+			}
+			<div class="form-group mb-3">
+				<label class="control-label h4"><i class="bi bi-person-vcard"></i> Họ tên</label>
+				<input required class="form-control fc h4" value="@tk.HoTen" />
+
+			</div>
+			<div class="form-group mb-3">
+				<label class="control-label h4"><i class="bi bi-house"></i> Địa chỉ</label>
+				<input required class="form-control fc h4" value="@tk.DiaChi" />
+
+			</div>
+			<div class="form-group mb-3">
+				<label class="control-label h3"><i class="bi bi-telephone"></i> Số điện thoại</label>
+				<input required class="form-control fc h4" value="@tk.Sdt" />
+
+			</div>
+
+			<div>
+
+				<div class="form-check mb-3">
+					<h2 class="fw-bold"><i class="bi bi-currency-exchange"></i> Chọn phương thức thanh toán</h2>
+					<input class="form-check-input mb-3" type="radio" name="flexRadioDefault" id="visard" checked>
+					<label class="form-check-label h4"  for="flexRadioDefault1">
+						<i class="bi bi-credit-card"></i> Thẻ tín dụng
+					</label>
+				</div>
+				<div class="form-check mb-3">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="tknh">
+					<label class="form-check-label h4" for="flexRadioDefault2">
+						<i class="bi bi-bank"></i> Tài khoản ngân hàng
+					</label>
+
+				</div>
+				<div class="form-check mb-3">
+					<input class="form-check-input" type="radio" name="flexRadioDefault" id="codrd">
+					<label class="form-check-label h4"  for="flexRadioDefault2">
+						<i class="bi bi-wallet2"></i> Thanh toán khi nhận hàng
+					</label>
+
+				</div>
+				<div id="cardvisa">
+					<div id="cardv">
+						<div class="visa">
+							<div class="card-inner">
+								<div class="front">
+									<img src="/images/map.png" class="map-img">
+									<div class="r">
+										<img src="/images/chip.png" class="w-10" />
+										<img src="/images/visa.png" class="w-10" />
+									</div>
+									<div class="r card-no">
+										<p>4217</p>
+										<p>5628</p>
+										<p>2135</p>
+										<p>9075</p>
+									</div>
+									<div class="r card-holder">
+										<p>CARD HOLDER</p>
+										<p>VALID TILL</p>
+									</div>
+									<div class="r card-holder-info">
+										<p>TEN CHU THE</p>
+										<p>12/26</p>
+									</div>
+								</div>
+								<div class="back">
+									<img src="/images/map.png" class="map-img">
+									<div class="bar">
+									</div>
+									<div class="r card-cvv">
+										<div>
+											<img src="/images/pattern.png" />
+										</div>
+										<p>872</p>
+									</div>
+									<div class="r signature">
+										<p>Chữ Ký Chủ Thẻ</p>
+										<img src="/images/visa.png" class="w-20">
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+
+
+
+					<div class="form-floating mb-3 w-100">
+						<input minlength="16" maxlength="16" required type="text" class="form-control" id="floatingInput" placeholder="1234 5678 9874 1235">
+						<label for="floatingInput">Số thẻ</label>
+					</div>
+					<div class="form-floating mb-3 w-100">
+						<input minlength="1" required type="text" class="form-control" id="floatingInputname" placeholder="LAM MINH TUAN">
+						<label for="floatingInputname">Tên chủ thẻ</label>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-floating">
+								<input minlength="7" maxlength="7" required type="text" class="form-control" id="floatingInputdate" placeholder="MM/YYYY">
+								<label for="floatingInputdate">Ngày hết hạn</label>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-floating">
+								<input minlength="1" required type="password" class="form-control" id="floatingInputcvv" placeholder="&#9679&#9679&#9679&#9679&#9679&#9679">
+								<label for="floatingInputcvv">CVV</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="tknhoption">
+					<div class="dropdown mb-3">
+						<button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Chọn ngân hàng
+						</button>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#"><img class="hinhfilter" src="/images/vcb.png"> Vietcombank</a></li>
+							<li><a class="dropdown-item" href="#"><img class="hinhfilter" src="/images/scb.png"> Sacombank</a></li>
+							<li><a class="dropdown-item" href="#"><img class="hinhfilter" src="/images/mbb.png"> MB Bank</a></li>
+							<li><a class="dropdown-item" href="#"><img class="hinhfilter" src="/images/bidv.png"> BIDV</a></li>
+							<li><a class="dropdown-item" href="#"><img class="hinhfilter" src="/images/vtb.png"> Vietinbank</a></li>
+							<li><a class="dropdown-item" href="#"><img class="hinhfilter" src="/images/acb.png"> ACB</a></li>
+						</ul>
+					</div>
+					<div class="form-floating mb-3 w-100">
+						<input minlength="1" maxlength="15" required type="text" class="form-control" id="floatingInputtknh" placeholder="8721345912">
+						<label for="floatingInputtknh">Số tài khoản</label>
+					</div>
+				</div>
+				<div class="form-check" id="codoption">
+					<div class="mb-3">
+						<input class="form-check-input" type="checkbox" value="" id="diachichb" checked>
+						<label class="form-check-label" for="flexCheckDefault">
+							<i class="bi bi-house-door"></i> Sử dụng địa chỉ đã đăng ký
+						</label>
+					</div>
+					<div class="form-floating d-none" id="diachiddk">
+						<input minlength="1" required type="password" class="form-control" id="floatingInputddk" placeholder="Q.1 TP.HCM">
+						<label for="floatingInputddk">Nhập địa chỉ nhận hàng</label>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="text-center">
+		<a class="btn btn-success  fw-bold" id="btndathang">Đặt hàng</a>
+
+	</div>
+</div>
+
+<script>
+var gg = 0;
+var ttpt = 0;
+$("#btndathang").click(function() {
+
+    $.ajax({
+        type: "POST",
+        //Gọi hàm DatHang trong controller Giohangs
+        url: "@Url.Action("DatHang", "Giohangs")",
+        //Tham số truyền vào
+        data: { "giamgia": gg, "tongphaitra": ttpt },
+        success: function(data) {
+            window.location.href = data.redirectToUrl;
+        }
+    });
+});
+	window.addEventListener("resize", resizefunction);
+	function resizefunction(e) {
+		var card = document.getElementById("cardv");
+		if (card.offsetHeight / card.offsetWidth != 0.6) {
+
+
+			var height = Math.round(card.offsetWidth * 0.6);
+			var sh = String(height) + "px";
+			card.style.height = sh;
+
+		}
+	}
+	window.addEventListener("load", resizefunction);
+	function resizefunction(e) {
+		var card = document.getElementById("cardv");
+		if (card.offsetHeight / card.offsetWidth != 0.6) {
+
+
+			var height = Math.round(card.offsetWidth * 0.6);
+			var sh = String(height) + "px";
+			card.style.height = sh;
+
+		}
+	}
+	$("#visard").change(function() {
+		if (this.checked) {
+			$("#cardvisa").css("display", "block");
+		
+			$("#tknhoption").css("display", "none");
+		}
+	});
+		$("#tknh").change(function() {
+		if (this.checked) {
+			$("#cardvisa").css("display", "none");
+			
+			$("#tknhoption").css("display", "block");
+		}
+	});
+	$("#codrd").change(function() {
+		if (this.checked) {
+			$("#cardvisa").css("display", "none");
+		
+			$("#tknhoption").css("display", "none");
+		}
+	});
+	$("#diachichb").change(function() {
+		if (!this.checked) {
+			$("#diachiddk").css("display", "block");
+		}
+		else {
+			$("#diachiddk").css("display", "none");
+		}
+	});
+	//Lấy mã giảm giá
+	$("#voucherbtn").click(function() {
+		var vc = $("#voucher").val();
+		if (vc === null || vc === "") {
+			$("#thongbaott").text("Vui lòng nhập mã giảm giá để có thể áp dụng!");
+		}
+		else {
+			$.ajax({
+				type: "GET",
+				//Gọi hàm GetGiamGia trong controller Vouchers
+				url: "@Url.Action("GetGiamGia", "Vouchers")",
+				//Tham số truyền vào
+				data: { "voucher": vc },
+				success: function(data) {
+					if (data == 0) {
+						$("#thongbaott").text("Mã giảm giá không hợp lệ!");
+					}
+					else {
+						var tttold = @CtgiohangsDAL.GetTongTien();
+						var ggphantram = data * 100;
+						var ggtien = data * tttold;
+						var tttnew = tttold - ggtien;
+                        ttpt = tttnew;
+                        gg = data;
+						$.ajax({
+							type: "GET",
+							//Gọi hàm ConvertToVND trong controller Ctgiohangs
+							url: "@Url.Action("ConvertToVND", "Ctgiohangs")",
+							//Tham số truyền vào
+							data: { "money": tttnew },
+							success: function(tttvnd) {
+								$("#tienphaitra").text(tttvnd);
+                          
+
+							}
+						});
+						$.ajax({
+							type: "GET",
+							//Gọi hàm ConvertToVND trong controller Ctgiohangs
+							url: "@Url.Action("ConvertToVND", "Ctgiohangs")",
+							//Tham số truyền vào
+							data: { "money": ggtien },
+							success: function(vnd) {
+								
+								$("#thongbaott").text("Áp dụng mã giảm giá thành công! Bạn được giảm " + ggphantram + "%!");
+								$("#thongbaogg").text(vnd);
+
+							}
+						});
+					}
+				}
+			});
+		}
+	});
+</script>

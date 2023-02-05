@@ -1,0 +1,595 @@
+﻿@model FinalProject.Models.Phone
+@*  Jquery*@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+@{
+	TempData["Title"] = "Details";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+	#myImg {
+		border-radius: 5px;
+		cursor: pointer;
+		transition: 0.3s;
+	}
+
+		#myImg:hover {
+			opacity: 0.7;
+		}
+
+	/* The Modal (background) */
+	.modal-img {
+		display: none; /* Hidden by default */
+		position: fixed; /* Stay in place */
+		z-index: 1; /* Sit on top */
+		padding-top: 100px; /* Location of the box */
+		left: 0;
+		top: 0;
+		width: 100%; /* Full width */
+		height: 100%; /* Full height */
+		overflow: auto; /* Enable scroll if needed */
+		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+	}
+
+	/* Modal Content (image) */
+	.modal-content-img {
+		margin: auto;
+		display: block;
+		width: 100%;
+		max-width: 1200px;
+	}
+
+	/* Caption of Modal Image */
+	#caption {
+		margin: auto;
+		display: block;
+		width: 80%;
+		max-width: 700px;
+		text-align: center;
+		color: #ccc;
+		padding: 10px 0;
+		height: 150px;
+	}
+
+	/* Add Animation */
+	.modal-content-img, #caption-img {
+		-webkit-animation-name: zoom;
+		-webkit-animation-duration: 0.6s;
+		animation-name: zoom;
+		animation-duration: 0.6s;
+	}
+
+	@@-webkit-keyframes zoom {
+		from {
+			-webkit-transform: scale(1)
+		}
+
+		to {
+			-webkit-transform: scale(3)
+		}
+	}
+
+	@@keyframes zoom {
+		from {
+			transform: scale(0.4)
+		}
+
+		to {
+			transform: scale(1)
+		}
+	}
+
+	@@keyframes zoom-out {
+		from {
+			transform: scale(1)
+		}
+
+		to {
+			transform: scale(0)
+		}
+	}
+
+	/* The Close Button */
+	.close {
+		position: absolute;
+		top: 15px;
+		right: 35px;
+		color: #f1f1f1;
+		font-size: 40px;
+		font-weight: bold;
+		transition: 0.3s;
+	}
+
+		.close:hover,
+		.close:focus {
+			color: #bbb;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+	/* 100% Image Width on Smaller Screens */
+	@@media only screen and (max-width: 700px) {
+		.modal-content-img {
+			width: 100%;
+		}
+	}
+
+	.img-zoom-container {
+		position: relative;
+	}
+
+	.img-zoom-lens {
+		position: absolute;
+		border: 1px solid #d4d4d4;
+		/*set the size of the lens:*/
+		width: 40px;
+		height: 40px;
+	}
+
+	.img-zoom-result {
+		border: 1px solid #d4d4d4;
+		/*set the size of the result div:*/
+		width: 200px;
+		height: 200px;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+</style>
+<style>
+	#main {
+		margin-top: 10px;
+		justify-content: center;
+	}
+
+	.img-magnifier-container {
+		position: relative;
+	}
+
+	.img-magnifier-glass {
+		position: absolute;
+		border: 3px solid #000;
+		border-radius: 50%;
+		cursor: none;
+		/*Set the size of the magnifier glass:*/
+		width: 100px;
+		height: 100px;
+	}
+
+
+	.minus {
+		font-size: 30px;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+
+	.plus {
+		font-size: 30px;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	#name-pro {
+		font-size: 24px;
+		margin: 0px;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		font-weight: bold;
+	}
+
+	#price {
+		display: inline-flex;
+	}
+
+	#price-discount {
+		font-weight: 500;
+		color: #cb1c22;
+		margin-right: 10px;
+		font-size: 32px;
+		line-height: 40px;
+	}
+
+	#price-pro {
+		font-weight: 400;
+		margin-right: 10px;
+		font-size: 16px;
+		line-height: 50px;
+		display: inline-flex;
+	}
+
+
+	#preview-pro {
+		padding: 20px 20px 0px 20px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		border-radius: 4px;
+		border: solid 1px #e9ecef;
+		background-color: #f8f9fa;
+		margin-bottom: 16px;
+		width: auto;
+		padding-right: 0;
+	}
+
+	#full-preview {
+		border-radius: 4px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	#staticBackdrop {
+		--bs-modal-width: 800px;
+	}
+
+	#notify {
+		display: none;
+	}
+
+	#sl {
+		display: inline;
+		width: 100px;
+		height: 34px;
+		font-size: 26px;
+		border-radius: 4px;
+		vertical-align: middle;
+		justify-content: center;
+	}
+
+
+	@@media only screen and (min-width: 1080px) {
+		#image-pro {
+			margin-right: 100px;
+			background-color: #FFFFFF;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 4px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#img-pro {
+			background-color: #FFFFFF;
+		}
+	}
+
+	@@media only screen and (min-width: 768px) and (max-width: 1080px) {
+		#image-pro {
+			margin-right: 100px;
+			background-color: #FFFFFF;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 4px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#img-pro {
+			background-color: #FFFFFF;
+		}
+	}
+
+	@@media only screen and (max-width: 768px) {
+		#image-pro {
+			background-color: #FFFFFF;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			border-radius: 4px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#img-pro {
+			background-color: #FFFFFF;
+			justify-content: center;
+		}
+	}
+
+</style>
+<div>
+
+
+	<dl class="row" id="main">
+		<dt class="col-sm-5 " id="image-pro">
+			<img src=@Html.DisplayFor(model => model.ImagePath) id="img-pro" alt="">
+			<div id="myModal" class="modal-img">
+				<span class="close">&times;</span>
+				<img class="modal-content-img" id="img01">
+			</div>
+			<script>
+				// Get the modal
+				var modal = document.getElementById("myModal");
+
+				// Get the image and insert it inside the modal - use its "alt" text as a caption
+				var img = document.getElementById("img-pro");
+				var modalImg = document.getElementById("img01");
+				var captionText = document.getElementById("caption");
+				img.onclick = function() {
+					modal.style.display = "block";
+					modalImg.src = this.src;
+					captionText.innerHTML = this.alt;
+				}
+
+				// Get the <span> element that closes the modal
+				var span = document.getElementsByClassName("close")[0];
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() {
+					modal.style.display = "none";
+				}
+			</script>
+		</dt>
+		<dd class="col-sm-4">
+			<div id="name-pro">
+				@Html.DisplayFor(model => model.Ten)
+			</div>
+			<div id="price">
+				<p id="price-discount"></p>
+				<del><p id="price-pro"></p></del>
+			</div>
+			<div id="preview-pro">
+				<dl class="row">
+					<dt class="col-sm-5">
+						<i class="bi bi-globe"></i> Hãng
+					</dt>
+					<dd class="col-sm-7">
+						@Html.DisplayFor(model => model.Hang)
+					</dd>
+					<dt class="col-sm-5">
+
+						<i class="bi bi-display"></i> Màn hình
+					</dt>
+					<dd class="col-sm-7">
+						@Html.DisplayFor(model => model.ManHinh)
+					</dd>
+					<dt class="col-sm-5">
+						<i class="bi bi-windows"></i> Hệ điều hành
+					</dt>
+					<dd class="col-sm-7">
+						@Html.DisplayFor(model => model.Os)
+					</dd>
+					<dt class="col-sm-5">
+						<i class="bi bi-cpu"></i> Chip
+					</dt>
+					<dd class="col-sm-7">
+						@Html.DisplayFor(model => model.Chip)
+					</dd>
+					<dt class="col-sm-5">
+						<i class="bi bi-cpu-fill"></i> RAM
+					</dt>
+					<dd class="col-sm-7">
+						@Html.DisplayFor(model => model.Ram)<span> GB</span>
+					</dd>
+					<dt class="col-sm-5">
+						<i class="bi bi-hdd"></i> ROM
+					</dt>
+					<dd class="col-sm-7">
+						@Html.DisplayFor(model => model.Rom)<span> GB</span>
+					</dd>
+
+					<dd>
+						<div id="full-preview">
+							<!-- Button trigger modal -->
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+								Xem chi tiết thông số kỹ thuật
+							</button>
+
+							<!-- Modal -->
+							<div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" role="dialog">
+								<div class="modal-dialog modal-dialog-scrollable">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<dl class="row">
+												<dt class="col-sm-2">
+													Hãng
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.Hang)
+												</dd>
+												<dt class="col-sm-2">
+													Màn hình
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.ManHinh)
+												</dd>
+												<dt class="col-sm-2">
+													Hệ điều hành
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.Os)
+												</dd>
+												<dt class="col-sm-2">
+													Chip
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.Chip)
+												</dd>
+
+												<dt class="col-sm-2">
+													RAM
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.Ram)<span> GB</span>
+												</dd>
+												<dt class="col-sm-2">
+													ROM
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.Rom)<span> GB</span>
+												</dd>
+												<dt class="col-sm-2">
+													Nhu cầu
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.NhuCau)
+												</dd>
+												<dt class="col-sm-2">
+													Pin
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.Pin)
+												</dd>
+												<dt class="col-sm-2">
+													Camera sau
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.CameraSau)
+												</dd>
+												<dt class="col-sm-2">
+													Camera trước
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.CameraTruoc)
+												</dd>
+												<dt class="col-sm-2">
+													Thiết kế
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.ThietKe)
+												</dd>
+											</dl>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</dd>
+
+				</dl>
+			</div>
+			<div id="deal">
+				<label for="sl">Số lượng</label>
+				<div class="number">
+					<i class="bi bi-file-minus-fill minus"></i>
+					<input type="text" value="1" min="1" max="100" id="sl" />
+					<i class="bi bi-file-plus-fill plus"></i>
+				</div>
+				<br />
+				<br />
+				<a class="btn btn-success fw-bold" href="#" role="button" id="themvaogiohang"><i class="bi bi-cart-plus"></i> Thêm vào giỏ hàng</a>
+				<a class="btn btn-info fw-bold" role="button" asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]">
+					<i class="bi bi-box-arrow-in-left"></i> Quay lại gian hàng
+				</a>
+				<a id="themvaoyeuthich" href="#" class="btn hongdambtn fw-bold"><i class="bi bi-balloon-heart"></i> Thêm vào yêu thích</a>
+			</div>
+		</dd>
+
+	</dl>
+</div>
+@section Scripts{
+var price=$("#price-pro");
+var a = @Html.ValueFor(model => model.Gia);
+price.text(new Intl.NumberFormat('en-US').format(a)+"đ");
+var pricedis=$("#price-discount");
+var s = @Html.ValueFor(model => model.Gia)-2000000;
+pricedis.text(new Intl.NumberFormat('en-US').format(s)+"đ");
+
+$(document).ready(function() {
+$('.minus').click(function () {
+	var $input = $(this).parent().find('input');
+	var count = parseInt($input.val()) - 1;
+	count = 1 > count ? 1 : count;
+	$input.val(count);
+	$input.change();
+	return false;
+});
+
+
+$('.plus').click(function () {
+	var $input = $(this).parent().find('input');
+	$input.val(parseInt($input.val()) + 1);
+	$input.change();
+	return false;
+});
+
+
+$('#zumbut').click(function () {
+	var $input = $(this).parent().find('input');
+	$input.val(parseInt($input.val()) + 1);
+	$input.change();
+	return false;
+});
+
+$("#themvaoyeuthich").click(function(){
+	$.ajax({
+		type:"POST",
+		url : "@Url.Action("ThemVaoYeuThich", "Yeuthiches")",
+		data:{"email":"@TaikhoansDAL.emailhientai","idsp": "@Model.Id", "ten":"@Model.Ten", "gia":"@Model.Gia", "imagepath":"@Model.ImagePath"},
+		success:function(){
+			var t = $('#fvcount').text();
+			var num = parseInt(t);
+			num = num + 1;
+			$('#fvcount').text(num);
+			Swal.fire(
+			  'Thêm vào yêu thích',
+			  'Thành công!',
+			  'success'
+			)
+		
+		},
+		error:function(){
+			Swal.fire(
+			  'Thêm vào yêu thích',
+			  'Sản phẩm đã có trong yêu thích',
+			  'error'
+			)
+		}
+
+	});
+});
+
+$("#themvaogiohang").click(function(e) {
+	//Lấy giá trị trong input số lượng
+	var x = $("#sl").val();
+	var dg = @Model.Gia;
+	var tt = dg * x;
+	$.ajax({
+		type: "POST",
+		//Gọi hàm ThemVaoGioHang trong Controller Ctgiohangs
+		url: "@Url.Action("ThemVaoGioHang", "Ctgiohangs")",
+		//Tham số truyền vào
+		data: {"idgh":"@GiohangsDAL.GetIDDH()","idsp":"@Model.Id","ten":"@Model.Ten","imagepath":"@Model.ImagePath","dongia":"@Model.Gia","soluong":x, "thanhtien":tt},
+        success:function(response){
+        	Swal.fire(
+			  'Thêm vào giỏ hàng',
+			  'Thành công!',
+			  'success'
+				)		
+			var t = $('#cartcount').text();
+			var num = parseInt(t);
+			num = num + 1;
+			$('#cartcount').text(num);
+			
+		},
+       error: function(){
+		$.ajax({
+			type: "POST",
+			//Gọi hàm TangSoLuong trong controller Ctgiohangs
+			url: "@Url.Action("TangSoLuong", "Ctgiohangs")",
+			//Tham số truyền vào
+			data: { "idgh": "@GiohangsDAL.GetIDDH()", "idsp":"@Model.Id", "soluongtang":x },
+			success: function() {
+			Swal.fire(
+			  'Thêm vào giỏ hàng',
+			  'Thành công!',
+			  'success'
+			)
+			}
+		});
+			
+		}
+    });
+});
+});
+}
+
+			

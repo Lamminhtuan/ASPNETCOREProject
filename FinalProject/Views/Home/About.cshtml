@@ -1,0 +1,159 @@
+﻿@{
+    ViewData["Title"] = "About";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    :root{
+    --colorOne: #19456b;
+    --colorTwo: #0D47A1;
+}
+
+.center-vertical {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.about-us-section {
+    width: 100%;
+    padding: calc(5% + 30px) 0px;
+}
+
+.about-us-section .img-head {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-us-section .img-head img{
+    width: 100%;
+    transition: tranform .3s;
+}
+
+.about-us-section .img-head:hover img{
+    transform: scale(1.2);
+}
+
+.about-us-section .img-head::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right bottom,
+     var(--colorOne), var(--colorTwo));
+     position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .5;
+}
+
+.about-us-section .text-head {
+    font-size: 28px;
+    color: var(--colorTwo);
+}
+
+.about-us-section .break-small {
+    width: 80px;
+    height: 3px;
+    background-color: var(--colorTwo);
+}
+
+.about-us-section .text-para {
+    font-size: 16px;
+    color: #444;
+}
+
+.about-us-section .box {
+    background-color: var(--colorTwo);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-us-section .box i {
+    font-size: 42px;
+}
+
+.about-us-section .box h4 {
+    font-size: 14px;
+}
+
+.about-us-section .box p {
+    font-size: 22px;
+}
+
+.about-us-section .box::after,
+.about-us-section .box::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #fff5;
+    border-radius: 50%;
+    transition: transform .3s;
+}
+
+.about-us-section .box::after {
+    left: -50px;
+    top: -50px;
+}
+
+.about-us-section .box::before {
+    right: -50px;
+    bottom: -50px;
+}
+
+.about-us-section .box:hover:after,
+.about-us-section .box:hover:before {
+    transform: scale(1.2);
+}
+</style>
+<div class="container">
+      <!-- <div class="center-vertical bg-dark"> -->
+        <div class="about-us-section"> 
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                <div class="img-head">
+                  <img src="/images/uit.png">
+                </div>
+              </div>
+              <div class="col-12 col-lg-6">
+                <h2 class="text-head">
+                  KNOW MORE ABOUT US
+                </h2>
+                <div class="break-small mb-2"></div>
+                <p class="text-para">
+                  Trường Đại học Công nghệ Thông tin là một trường đại học công lập đào tạo về công nghệ thông tin và truyền thông là thành viên Đại học Quốc gia Thành phố Hồ Chí Minh, được thành lập theo Quyết định số 134/2006/QĐ-TTg ngày 8 tháng 6 năm 2006 của Thủ tướng Chính phủ
+                </p>
+                <div class="row">
+                  <div class="col-12 col-md-4 mb-2 mb-md">
+                    <div class="box">
+                      <i class="fa fa-users mb-3"></i>
+                      <h4 class="mb-0">TOTAL CLIENTS</h4>
+                      <p class="mb-0">999</p>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-4 mb-2 mb-md">
+                    <div class="box">
+                      <i class="fa fa-wrench mb-3"></i>
+                      <h4 class="mb-0">PROJECTS DONE</h4>
+                      <p class="mb-0">999</p>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-4 mb-2 mb-md">
+                    <div class="box">
+                      <i class="fa fa-paper-plane mb-3"></i>
+                      <h4 class="mb-0">WORKING YEARS</h4>
+                      <p class="mb-0">30</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+

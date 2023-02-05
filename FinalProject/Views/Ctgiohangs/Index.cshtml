@@ -1,0 +1,88 @@
+﻿@model IEnumerable<FinalProject.Models.Ctgiohang>
+@using System.Globalization;
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container box p-3 h4" style="overflow-x:auto;">
+	<div class="mb-3">
+		<h2 class="fw-bold d-inline"><i class="bi bi-cart4"></i> Chi tiết đơn hàng</h2>
+	</div>
+	@if (CtgiohangsDAL.GetSLInCart() > 0)
+	{
+		<div class="carttable">
+			<table class="table table-responsive text-center m-0 h4">
+				<thead style="background-color:#ff9800">
+					<tr>
+						<th>Tên sản phẩm</th>
+						<th>Hình sản phẩm</th>
+						<th>Đơn giá</th>
+						<th>Số lượng</th>
+						<th>Thành tiền</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody class="fw-bold align-middle">
+					@foreach (var item in Model)
+					{
+						<tr>
+							<td style="display:none">@item.Idsp</td>
+							
+							<td>
+								@if (@item.Idsp.Contains("DT"))
+								{
+									<a asp-action="Details" asp-controller="Phones" asp-route-id=@item.Idsp class="linktodetails"> @item.Ten</a>
+								}
+								else
+								{
+									<a asp-action="Details" asp-controller="Laptops" asp-route-id=@item.Idsp class="linktodetails"> @item.Ten</a>
+								}
+							</td>
+							<td><img src="@item.ImagePath" style="height:120px;width:auto;" /></td>
+							<td>@item.DonGia.ToString("C",CultureInfo.CreateSpecificCulture("vi-VN"))</td>
+							<td><a href="#" onclick="minus(this)"><i class="bi bi-dash-circle" style="color:#c63f17"> </i></a><span class="SoLuong"> @item.SoLuong</span> <a href="#" onclick="plus(this)"> <i class="bi bi-plus-circle" style="color:#00600f"></i></a></td>
+
+							<td>@item.ThanhTien.ToString("C",CultureInfo.CreateSpecificCulture("vi-VN"))</td>
+							<td><a href="#" onclick="delitem(this)"><i class="bi bi-trash dobtn"></i></a></td>
+						</tr>
+					}
+				</tbody>
+			</table>
+
+			<div id="total" class="float-end fw-bold border border-white p-3 px-5 h4" style="background-color:#ff9800;border-radius:0px 0px 0px 50px;">Tổng thành tiền: @CtgiohangsDAL.GetTongTien().ToString("C",CultureInfo.CreateSpecificCulture("vi-VN"))</div>
+
+		</div>
+
+
+	}
+	else 
+	{
+		@*<div id="cartempty" class="text-center fw-bold" style="color: #00766c;">
+			<img src="/images/cat.png" style="display:inline;height:100px;width:auto;">
+			<h2 class="fw-bold">Giỏ hàng trống! Hãy quay lại mua hàng nhé!</h2>
+		</div>*@
+	}
+	@*@if (CtgiohangsDAL.GetSLInCart() > 0)
+	{
+		@if (TaikhoansDAL.emailhientai == null){
+			
+			
+			<a class="btn btn-success m-1  fw-bold carttable h4" asp-action="DangNhap" asp-controller="Taikhoans" asp-route-thanhtoan="tt"><i class="bi bi-cash-coin"></i> Thanh toán</a>
+		}
+		else
+		{
+			<a class="btn btn-success m-1  fw-bold carttable h4" asp-action="ThanhToan" asp-controller="Ctgiohangs"><i class="bi bi-cash-coin"></i> Thanh toán</a>
+		}
+	}*@
+	@*<div id="cartempty" class="text-center fw-bold" style="display:none;color: #00766c;">
+		<img src="/images/cat.png" style="display:inline;height:100px;width:auto;">
+		<h2 class="fw-bold">Giỏ hàng trống! Hãy quay lại mua hàng nhé!</h2>
+	</div>*@
+
+@*	<a class="btn m-1 hongdambtn fw-bold"  asp-action="Index" asp-controller="Phones"><i class="bi bi-phone"></i> Tiếp tục mua điện thoại</a>
+	<a class="btn m-1 timdambtn  fw-bold" asp-action="Index" asp-controller="Laptops"><i class="bi bi-laptop"></i> Tiếp tục mua laptop</a>*@
+
+	
+
+</div>
+

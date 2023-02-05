@@ -1,0 +1,390 @@
+﻿@model IEnumerable<FinalProject.Models.Laptop>
+@using System.Globalization;
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+	<div class="row">
+
+		<div class="col my-3 md-8">
+			<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				Hãng
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"] " asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">Tất cả</a></li>
+				<li><a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="Acer" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/acer.png"> Acer</a></li>
+				<li><a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="Asus" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]"><img class="hinhfilter" src="/images/asus.png"> Asus</a></li>
+				<li><a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="DELL" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/dell.png"> DELL</a></li>
+				<li><a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="Gigabyte" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/gigabyte.png"> Gigabyte</a></li>
+				<li><a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="HP" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/hp.png"> HP</a></li>
+				<li><a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="MacBook" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/macbook.png"> Macbook</a></li>
+				<li><a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="Lenovo" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/lenovo-logo.png"> Lenovo</a></li>
+				<li><a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="LG" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/lg.png"> LG</a></li>
+
+			</ul>
+			<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				Nhu cầu
+			</button>
+			<ul class="dropdown-menu">
+				<li>
+					<a class="dropdown-item" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]"
+					   asp-route-Nhucau="" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">Tất cả</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]"
+					   asp-route-Nhucau="Gaming" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/gaming.jpg"> Gaming </a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]"
+					   asp-route-Nhucau="Văn phòng" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/vanphong.png"> Văn phòng</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]"
+					   asp-route-Nhucau="Đồ họa - Kỹ thuật" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/gaming.png"> Đồ họa</a>
+				</li>
+
+			</ul>
+
+			<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				Giá
+			</button>
+			<ul class="dropdown-menu">
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]"
+					   asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="" asp-route-Giamax="" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">Tất cả</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]"
+					   asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="0" asp-route-Giamax="19999999" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">Dưới 20 triệu</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]"
+					   asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="20000000" asp-route-Giamax="30000000" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">Từ 20 đến 30 triệu</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="30000000" asp-route-Giamax="40000000" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">Từ 30 đến 40 triệu</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="40000000" asp-route-Giamax="50000000" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">Từ 40 đến 50 triệu</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="50000001" asp-route-Giamax="500000000" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">Trên 50 triệu</a>
+				</li>
+				<div class="dropdown-divider"></div>
+				<form asp-action="Index" asp-route-searchString="@TempData["CurrentFilter"]" asp-controller="Laptops" asp-route-Hang="@TempData["Hang"]"
+					  asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">
+					<div class="my-2">
+						<i class="bi bi-cash-coin minhhoa"></i><h5 style="display:inline"> Hoặc chọn mức giá phù hợp với bạn</h5>
+					</div>
+					<div class="price-input">
+						<div class="field">
+							<span>Từ</span>
+							<input type="number" class="input-min" value="1000000" />
+						</div>
+						<div class="seperator">
+							-
+						</div>
+						<div class="field">
+							<span>Đến</span>
+							<input type="number" class="input-max" value="50000000" />
+						</div>
+					</div>
+					<div class="slider">
+						<div class="progress"></div>
+					</div>
+					<div class="range-input">
+						<input type="range" name="Giamin" class="range-min" min="1000000" max="50000000" value="1000000" step="500000" />
+						<input type="range" name="Giamax" class="range-max" min="1000000" max="50000000" value="50000000" step="500000" />
+					</div>
+					<div class="text-center">
+
+						<button class="btn btn-light text-center" type="submit">Áp dụng</button>
+					</div>
+				</form>
+			</ul>
+
+			<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				Hệ điều hành
+			</button>
+			<ul class="dropdown-menu">
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">Tất cả</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="Windows" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/window.png"> Windows</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="Mac OS" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/macos.png"> Mac OS</a>
+				</li>
+			</ul>
+
+			<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				RAM
+			</button>
+			<ul class="dropdown-menu">
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">Tất cả</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="4" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">4 GB</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="8" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">8 GB</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="12" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">12 GB</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="16" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">16 GB</a>
+				</li>
+			</ul>
+
+			<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				Rom
+			</button>
+			<ul class="dropdown-menu">
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">Tất cả</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="128" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">128 GB</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="256" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">256 GB</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="512" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">512 GB</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="1024" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">1 TB</a>
+				</li>
+			</ul>
+			<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				CPU
+			</button>
+			<ul class="dropdown-menu">
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="" asp-route-Vga="@TempData["Vga"]">Tất cả</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="i3" asp-route-Vga="@TempData["Vga"]">i3</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="i5" asp-route-Vga="@TempData["Vga"]">i5</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="i7" asp-route-Vga="@TempData["Vga"]">i7</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="AMD" asp-route-Vga="@TempData["Vga"]">AMD</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="Apple" asp-route-Vga="@TempData["Vga"]">Apple</a>
+				</li>
+			</ul>
+			<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				VGA
+			</button>
+			<ul class="dropdown-menu">
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="">Tất cả</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="Intel">Intel</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="NVIDIA">NVIDIA</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="AMD">AMD</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="Apple">Apple</a>
+				</li>
+			</ul>
+
+		</div>
+
+		<div class="text-end my-3 col-md-4">
+			<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+				Sắp xếp
+			</button>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-sortOrder="@TempData["PriceDESC"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">Giá cao đến thấp</a></li>
+				<li><a class="dropdown-item" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-sortOrder="@TempData["PriceASC"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">Giá thấp đến cao</a></li>
+
+			</ul>
+		</div>
+	</div>
+	<div style="display:flex">
+		<div class="mr-3">
+			@*Nếu TempData có chứa hãng - nếu người dùng đã chọn hãng thì hiện div*@
+			@if (@TempData["Hang"] != null)
+			{
+				<div class="currentfilter border rounded px-3">
+					@TempData["Hang"] <a style="color:red" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]">
+						<i class="bi bi-x-circle"></i>
+					</a>
+				</div>
+			}
+		</div>
+		<div class="mr-3">
+			@if (@TempData["NhuCau"] != null)
+			{
+				<div class="currentfilter border rounded px-3">
+					@TempData["NhuCau"] <a style="color:red" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]"
+								   asp-route-Nhucau="" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><i class="bi bi-x-circle"></i></a>
+				</div>
+			}
+		</div>
+		<div class="mr-3">
+			@if (@TempData["GiaMin"] != null && @TempData["GiaMax"] != null)
+			{
+				var giamin = Convert.ToDecimal(TempData["GiaMin"]);
+				var giamax = Convert.ToDecimal(TempData["GiaMax"]);
+				<div class="currentfilter border rounded px-3">
+					@if (giamin > 0 && giamax < 500000000) {
+						<span>Từ @giamin.ToString("C", CultureInfo.CreateSpecificCulture("vi-VN")) Đến @giamax.ToString("C", CultureInfo.CreateSpecificCulture("vi-VN"))</span>
+					}
+					else if (giamin == 0) {
+						giamax = giamax + 1;
+						<span>Dưới @giamax.ToString("C", CultureInfo.CreateSpecificCulture("vi-VN"))</span>
+					}
+					else if (giamax == 500000000)
+					{
+						giamin = giamin - 1;
+						<span>Trên @giamin.ToString("C", CultureInfo.CreateSpecificCulture("vi-VN"))</span>
+					}
+					<a style="color:red" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="" asp-route-Giamax="" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><i class="bi bi-x-circle"></i></a>
+				</div>
+			}
+		</div>
+		<div class="mr-3">
+			@if (@TempData["Loai"] != null)
+			{
+				<div class="currentfilter border rounded px-3">
+					@TempData["Loai"] <a style="color:red" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><i class="bi bi-x-circle"></i></a>
+				</div>
+			}
+		</div>
+		<div class="mr-3">
+			@if (@TempData["RAM"] != null)
+			{
+
+				<div class="currentfilter border rounded px-3">
+					RAM @TempData["RAM"] GB <a style="color:red" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><i class="bi bi-x-circle"></i></a>
+				</div>
+			}
+		</div>
+		<div class="mr-3">
+			@if (@TempData["ROM"] != null)
+			{
+				<div class="currentfilter border rounded px-3">
+					ROM @TempData["ROM"] GB<a style="color:red" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><i class="bi bi-x-circle"></i></a>
+				</div>
+			}
+		</div>
+		<div class="mr-3">
+			@if (@TempData["Chip"] != null)
+			{
+				<div class="currentfilter border rounded px-3">
+					Chip @TempData["Chip"]<a style="color:red" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="" asp-route-Vga="@TempData["Vga"]"><i class="bi bi-x-circle"></i></a>
+				</div>
+			}
+		</div>
+		<div class="mr-3">
+			@if (@TempData["Vga"] != null)
+			{
+				<div class="currentfilter border rounded px-3">
+					Vga @TempData["Vga"]<a style="color:red" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga=""><i class="bi bi-x-circle"></i></a>
+				</div>
+			}
+		</div>
+	</div>
+	<div class="row">
+	@foreach (var item in Model)
+	{
+
+		<a asp-action="Details" asp-route-id="@item.Id" class="col-md-2 items text-center my-3">
+			<div class="card h-100">
+				<h6 class="hang" style="display:none">@item.Hang</h6>
+				<h6 class="nhucau" style="display:none">@item.NhuCau</h6>
+				<h5><b>@item.Ten</b></h5>
+
+				<img src=@item.ImagePath>
+				<div>
+					<i class="bi bi-cpu minhhoa"></i><h6 style="display:inline"> @item.Chip</h6>
+				</div>
+				<div>
+					<i class="bi bi-fullscreen"></i><h6 style="display:inline"> @item.ManHinh</h6>
+				</div>
+				<div>
+					<h6><b>@item.Gia.ToString("C",CultureInfo.CreateSpecificCulture("vi-VN"))</b></h6>
+				</div>
+			</div>
+		</a>
+	}
+</div>
+</div>
+<script>
+
+	@*Hàm đổi giá trị khi trượt thanh tầm giá*@
+			const rangeinput = document.querySelectorAll(".range-input input");
+	priceinput = document.querySelectorAll(".price-input input")
+	progress = document.querySelector(".slider .progress");
+	let pricegap = 500000;
+
+	priceinput.forEach(input => {
+		input.addEventListener("input", e => {
+			let minval = parseInt(priceinput[0].value),
+				maxval = parseInt(priceinput[1].value);
+			if ((maxval - minval >= pricegap) && maxval <= 50000000 && minval >= 500000) {
+				if (e.target.className == "input-min") {
+					rangeinput[0].value = minval;
+					progress.style.left = (minval / rangeinput[0].max) * 100 + "%";
+				}
+				else {
+					rangeinput[1].value = maxval;
+					progress.style.right = 100 - (maxval / rangeinput[1].max) * 100 + "%";
+
+				}
+			}
+
+		})
+	})
+
+	rangeinput.forEach(input => {
+		input.addEventListener("input", e => {
+			let minval = parseInt(rangeinput[0].value),
+				maxval = parseInt(rangeinput[1].value);
+			if (maxval - minval < pricegap) {
+				if (e.target.className == "range-min") {
+					rangeinput[0].value = maxval - pricegap;
+				}
+				else {
+					rangeinput[1].value = minval + pricegap;
+				}
+			}
+			else {
+				priceinput[0].value = minval;
+				priceinput[1].value = maxval;
+				progress.style.left = (minval / rangeinput[0].max) * 100 + "%";
+				progress.style.right = 100 - (maxval / rangeinput[1].max) * 100 + "%";
+			}
+		})
+	})
+
+</script>
+
+@*
+	<td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>*@

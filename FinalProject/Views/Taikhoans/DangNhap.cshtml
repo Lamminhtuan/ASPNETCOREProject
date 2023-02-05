@@ -1,0 +1,50 @@
+﻿@model FinalProject.Models.Taikhoan
+<div class="dangnhapform box py-1">
+	<div class="row">
+		<div  class="col-md-6 p-3 text-right">
+			<img class="img-fluid" src="/images/login.png" style="object-fit:cover">
+		</div>
+		<div  class="col-md-6 p-3 text-start">
+			
+			<h1 class="fw-bold mb-3">	<i class="bi bi-box-arrow-in-right"></i> Đăng nhập</h1>
+				<form asp-action="DangNhap" asp-controller="Taikhoans" method="post">
+			<div asp-validation-summary="ModelOnly" class="text-danger my-3 h4"></div>
+			<div class="form-group my-3">
+				<label  for="username" class="control-label h3"><i class="bi bi-envelope"></i> Email</label>
+				<input required id="username" name="email" class="form-control fc h4" />
+			</div>
+			<div class="form-group my-3">
+				<label for="password" class="control-label h3"><i class="bi bi-key"></i> Mật khẩu</label>
+				<input  type="password" id="password" name="password" class="form-control fc h4" />
+			</div>
+			<div class="my-3">
+				<a href="#" onlick="showorhidepw()" id="showorhidepw" class="float-start h5 naudamlink"><span id="showpw"><i class="bi bi-eye"></i> Hiện mật khẩu</span><span style="display:none" id="hidepw"><i class="bi bi-eye-slash"></i> Ẩn mật khẩu</span></a>
+				<a asp-action="QuenMatKhau" asp-controller="Taikhoans" class="float-end h5 text-decoration-underline naudamlink">Quên mật khẩu</a>
+			</div>
+			<input type="submit" value="Đăng nhập" class="btn fw-bold my-3 w-100 xanhneonbtn" />
+			<div class="text-center mb-3 h4">
+				Chưa có tài khoản? <a asp-action="Create" asp-controller="Taikhoans" class="vangdatlink">Đăng ký ngay</a>
+			</div>
+		</form>
+	
+		</div>
+	</div>
+</div>
+<script>
+	//Hàm hiện/ ẩn mật khẩu
+	$("#showorhidepw").click(function() {
+		var pw = $("#password")[0];
+		var showpw = $("#showpw")[0];
+		var hidepw = $("#hidepw")[0];
+		if (pw.type == "password") {
+			pw.type = "text";
+			showpw.style.display = "none";
+			hidepw.style.display = "block";
+		}
+		else {
+			pw.type = "password";
+			showpw.style.display = "block";
+			hidepw.style.display = "none";
+		}
+	});
+</script>
