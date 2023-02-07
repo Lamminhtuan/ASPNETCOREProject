@@ -1,0 +1,107 @@
+﻿    @model IEnumerable<FinalProject.Models.Voucher>
+
+<a class="btn btn-warning fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModalCreate" style="margin-bottom:10px">Tạo đơn hàng mới</a>
+    <div class="modal fade" id="exampleModalCreate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel2">Tạo đơn hàng</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                @await Html.PartialAsync("Create",new FinalProject.Models.Voucher())
+
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="container box p-3" style="background:white;border-radius:8px;overflow-x:auto;">
+    <div class="carttable">
+        <table class="table table-responsive text-center m-0" style="font-size:large">
+            <thead style="background-color:#ff9800">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Voucher1)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.GiamGia)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="fw-bold align-middle">
+                <tbody >
+                @foreach (var item in Model)
+                {
+                    
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Voucher1)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GiamGia)
+                        </td>
+
+                        <td>
+                            <a class="btn btn-primary fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModalEdit" id="Editor" onclick="myFunction()">
+                                <i class="bi bi-pencil-fill"></i>
+                                Sửa
+                             
+                            </a> |
+
+                            <a class="btn btn-info fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModalDetail">
+                                <i class="bi bi-file-earmark-fill"></i>
+                                Chi tiết
+                            </a> |
+                            <a class="btn btn-danger fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModalDelete">
+                                <i class="bi bi-trash3-fill"></i>
+                                Xóa
+                            </a>
+                            <div class="modal fade" id="exampleModalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel2">Sửa đơn hàng</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body" id="content">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="exampleModalDetail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel2">Chi ti đơn hàng</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+
+                                                @await Html.PartialAsync("Details", item)
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="exampleModalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel2">Sửa đơn hàng</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            @await Html.PartialAsync("Delete", item)
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

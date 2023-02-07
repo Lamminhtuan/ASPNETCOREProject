@@ -489,10 +489,10 @@
 @section Scripts{
 var price=$("#price-pro");
 var a = @Html.ValueFor(model => model.Gia);
-price.text(new Intl.NumberFormat('en-US').format(a)+"đ");
 var pricedis=$("#price-discount");
-var s = @Html.ValueFor(model => model.Gia)-2000000;
-pricedis.text(new Intl.NumberFormat('en-US').format(s)+"đ");
+var s = @Html.ValueFor(model => model.Gia)+2000000;
+pricedis.text(new Intl.NumberFormat('en-US').format(a)+"đ");
+    price.text(new Intl.NumberFormat('en-US').format(s)+"đ");
 
 $(document).ready(function() {
 $('.minus').click(function () {

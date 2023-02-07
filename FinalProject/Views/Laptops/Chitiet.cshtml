@@ -1,0 +1,191 @@
+﻿@model IEnumerable<FinalProject.Models.Laptop>
+
+<a class="btn btn-warning fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModalCreate" style="margin-bottom:10px">Tạo đơn hàng mới</a>
+<div class="modal fade" id="exampleModalCreate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel2">Tạo đơn hàng</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                @await Html.PartialAsync("Create",new FinalProject.Models.Laptop())
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container box p-3" style="background:white;border-radius:8px;overflow-x:auto;">
+    <div class="carttable">
+        <table class="table table-responsive text-center m-0" style="font-size:large">
+            <thead style="background-color:#ff9800">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Ten)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Hang)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Gia)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ManHinh)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Os)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Webcam)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.NhuCau)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Chip)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Vga)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Ram)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Rom)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Pin)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.KhoiLuong)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CongGiaoTiep)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ThietKe)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ImagePath)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody class="fw-bold align-middle">
+            <tbody>
+                    @foreach (var item in Model)
+                    {
+
+
+                    <tr>
+                        <td>
+                                @Html.DisplayFor(modelItem => item.Ten)
+                        </td>
+                        <td>
+                                @Html.DisplayFor(modelItem => item.Hang)
+                        </td>
+                        <td>
+                                @Html.DisplayFor(modelItem => item.Gia)
+                        </td>
+                        <td>
+                                @Html.DisplayFor(modelItem => item.ManHinh)
+                        </td>
+                        <td>
+                                @Html.DisplayFor(modelItem => item.Os)
+                        </td>
+                        <td>
+                                @Html.DisplayFor(modelItem => item.Webcam)
+                        </td>
+                        <td>
+                                @Html.DisplayFor(modelItem => item.NhuCau)
+                        </td>
+                        <td>
+                                @Html.DisplayFor(modelItem => item.Chip)
+                        </td>
+                        <td>
+                                @Html.DisplayFor(modelItem => item.Vga)
+                        </td>
+                        <td>
+                                @Html.DisplayFor(modelItem => item.Ram)
+                        </td>
+                        <td>
+                                @Html.DisplayFor(modelItem => item.Rom)
+                        </td>
+                        <td>
+                                @Html.DisplayFor(modelItem => item.Pin)
+                        </td>
+                        <td>
+                                @Html.DisplayFor(modelItem => item.KhoiLuong)
+                        </td>
+                        <td>
+                                @Html.DisplayFor(modelItem => item.CongGiaoTiep)
+                        </td>
+                        <td>
+                                @Html.DisplayFor(modelItem => item.ThietKe)
+                        </td>
+                        <td>
+                                @Html.DisplayFor(modelItem => item.ImagePath)
+                        </td>
+                        <td>
+                            <a class="btn btn-primary fw-bold" asp-controller="Laptops" asp-action="Edit" asp-route-Id="@item.Id">
+                                <i class="bi bi-pencil-fill"></i>
+                                Sửa
+                            </a> |
+                            <a class="btn btn-info fw-bold" asp-controller="Laptops" asp-action="Details" asp-route-Id="@item.Id">
+                                <i class="bi bi-file-earmark-fill"></i>
+                                Chi tiết
+                            </a> |
+                            <a class="btn btn-danger fw-bold" asp-controller="Laptops" asp-action="Delete" asp-route-Id="@item.Id">
+                                <i class="bi bi-trash3-fill"></i>
+                                Xóa
+                            </a>
+                            <div class="modal fade" id="exampleModalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel2">Sửa đơn hàng</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                                @await Html.PartialAsync("Edit", item)
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="exampleModalDetail" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel2">Chi ti đơn hàng</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                                @await Html.PartialAsync("Details", item)
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="exampleModalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel2">Sửa đơn hàng</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                                @await Html.PartialAsync("Delete", item)
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -88,7 +88,6 @@ namespace FinalProject.Controllers
             //Xóa yêu thích trong bảng tạm
             _context.Yeuthiches.RemoveRange(_context.Yeuthiches.Where(b => b.Email.Equals("Test")));
             _context.SaveChanges();
-            TaikhoansDAL.DangXuat();
             HttpContext.SignOutAsync();
             return RedirectToAction("DangNhap");
         }

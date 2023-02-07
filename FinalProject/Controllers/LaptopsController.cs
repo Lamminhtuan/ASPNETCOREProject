@@ -131,7 +131,10 @@ namespace FinalProject.Controllers
             }
             return View(laptop);
         }
-
+        public async Task<IActionResult> Chitiet()
+        {
+            return View(await _context.Laptops.ToListAsync());
+        }
         // GET: Laptops/Edit/5
         public async Task<IActionResult> Edit(string id)
         {
