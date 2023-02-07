@@ -47,6 +47,10 @@ namespace FinalProject.Controllers
         {
             return View();
         }
+        public IActionResult QuanLyChoAdmin()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
