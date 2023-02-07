@@ -42,7 +42,7 @@ namespace FinalProject.Controllers
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                laptops = laptops.Where(b => b.Ten.Contains(searchString));
+                laptops = laptops.Where(b => b.Ten.Contains(searchString) || b.Hang.Contains(searchString));
             }
             if (!String.IsNullOrEmpty(Hang))
             {

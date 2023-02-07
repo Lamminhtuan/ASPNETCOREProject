@@ -27,7 +27,7 @@ namespace FinalProject.Controllers
             TempData["Hang"] = Hang;
             TempData["NhuCau"] = Nhucau;
             TempData["GiaMin"] = Giamin;
-            TempData["GiaMax"] = Giamax; 
+            TempData["GiaMax"] = Giamax;
             TempData["Loai"] = Loai;
             TempData["RAM"] = Ram;
             TempData["ROM"] = Rom;
@@ -38,7 +38,7 @@ namespace FinalProject.Controllers
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                phones = phones.Where(b => b.Ten.Contains(searchString));
+                phones = phones.Where(b => b.Ten.Contains(searchString) || b.Hang.Contains(searchString));
             }
             if (!String.IsNullOrEmpty(Hang))
             {

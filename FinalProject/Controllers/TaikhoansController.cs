@@ -1,6 +1,11 @@
 ﻿using FinalProject.Models;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
+
 
 namespace FinalProject.Controllers
 {
@@ -23,58 +28,49 @@ namespace FinalProject.Controllers
         {
             return View();
         }
-        public IActionResult DangNhap(string email, string password, string loaidn)
+
+
+        public IActionResult DangNhap(string email, string password, string returnUrl)
         {
-            if (!String.IsNullOrEmpty(loaidn))
-                TempData["ThanhToan"] = loaidn;
-            
+            //Nếu như đang load form thì lấy returnurl để chuyển hướng, còn nếu người dùng đã vào được form đăng nhập thì không lấy (vì khi đó sẽ lấy returnurl là chính view đăng nhập)
+            if (!String.IsNullOrEmpty(returnUrl) && String.IsNullOrEmpty(email) && String.IsNullOrEmpty(password))
+                TempData["returnurl"] = returnUrl;
+            TempData.Keep();
             if (!String.IsNullOrEmpty(email) && !String.IsNullOrEmpty(password))
             {
-               
-               
-                //Stored Procedure trong SQL
-                string query = "EXEC DangNhap @email = '" + email + "', @password = '" + password +"'";
+                //Đăng nhập
+                string query = "EXEC DangNhap @email = '" + email + "', @password = '" + password + "'";
                 var taikhoan = _context.Taikhoans.FromSqlRaw(query).ToList();
-
-                int count = taikhoan.Count();
-                if (count > 0)
+                //Nếu thành công
+                if (taikhoan.Count > 0)
                 {
-                    TaikhoansDAL.emailhientai = email;
-                    var yt = _context.Yeuthiches.Where(b => b.Email.Equals("Test")).ToList();
-                    //Add yêu thích đã yêu thích vào tài khoản
-                    for (int i = 0; i < yt.Count; i++)
-                    {
-                        var ytnew = new Yeuthich()
-                        {
-                            Idsp = yt[i].Idsp,
-                            Email = email,
-                            Gia = yt[i].Gia,
-                            ImagePath = yt[i].ImagePath,
-                            Ten = yt[i].Ten
-                        };
-                        try
-                        {
-                            _context.Yeuthiches.Add(ytnew);
-                            _context.SaveChanges();
-                        }
-                        catch
-                        {
+                    string role = taikhoan[0].VaiTro;
+                    string name = taikhoan[0].HoTen;
+                    string sdt = taikhoan[0].Sdt;
+                    string diachi = taikhoan[0].DiaChi;
 
-                        }
-                    }
+                    var claims = new List<Claim>
+                    {
+                        new Claim(ClaimTypes.Email, email),
+                        new Claim(ClaimTypes.Name, name),
+                        new Claim(ClaimTypes.Role, role),
+                        new Claim(ClaimTypes.MobilePhone, sdt),
+                        new Claim(ClaimTypes.StreetAddress, diachi)
+                    };
+                    var identity = new ClaimsIdentity(
+                        claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    var principal = new ClaimsPrincipal(identity);
+                    var props = new AuthenticationProperties();
+                    HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, props).Wait();
                     
-                    if (TempData["ThanhToan"].ToString().Equals("dn")) 
-
+                    if (TempData["returnurl"] != null)
                     {
-                        return RedirectToAction("DangNhapThanhCong");
-                        
+                        //Chuyển hướng tới trang mong muốn
+                        return LocalRedirect(TempData["returnurl"].ToString());
+                    }
 
-                    }
-                    if (TempData["ThanhToan"].ToString().Equals("tt")) 
-                    {
-                        return RedirectToAction("ThanhToan", "Ctgiohangs");
-                      
-                    }
+                    else
+                        return RedirectToAction("");
                 }
 
                 else
@@ -83,16 +79,17 @@ namespace FinalProject.Controllers
                     return View();
                 }
             }
-            return View();
-       
+            else
+                return View();
         }
-        
+
         public IActionResult DangXuat()
         {
             //Xóa yêu thích trong bảng tạm
             _context.Yeuthiches.RemoveRange(_context.Yeuthiches.Where(b => b.Email.Equals("Test")));
             _context.SaveChanges();
             TaikhoansDAL.DangXuat();
+            HttpContext.SignOutAsync();
             return RedirectToAction("DangNhap");
         }
         public IActionResult DangNhapThanhCong()
@@ -122,17 +119,17 @@ namespace FinalProject.Controllers
         }
         public void EditPassword(string email, string password)
         {
-         
+
             string query = "EXEC DoiMatKhau @email = '" + email + "'" + ",@password='" + password + "'";
             _context.Database.ExecuteSqlRaw(query);
-       
+
         }
-     
+
         public IActionResult KPMatKhau()
         {
             return View();
         }
-        
+
         public bool SoSanhMXN(string maxacnhan)
         {
             if (maxacnhan.Equals(TaikhoansDAL.kpmatkhau))
@@ -145,13 +142,14 @@ namespace FinalProject.Controllers
             return View();
         }
         // GET: Taikhoans
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Taikhoans.ToListAsync());
         }
 
         // GET: Taikhoans/Details/5
-        
+
         public async Task<IActionResult> Details(string id)
         {
             if (id == null || _context.Taikhoans == null)
@@ -180,16 +178,16 @@ namespace FinalProject.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Email,HoTen,DiaChi,Sdt,VaiTro")] Taikhoan taikhoan)
+        public async Task<IActionResult> Create([Bind("Email,HoTen,DiaChi, MatKhau, Sdt,VaiTro")] Taikhoan taikhoan)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
                     _context.Add(taikhoan);
-                    TaikhoansDAL.emailhientai = taikhoan.Email;
+                    
                     await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
+                    return RedirectToAction("DangNhap");
                 }
                 catch
                 {
@@ -220,7 +218,7 @@ namespace FinalProject.Controllers
         // POST: Taikhoans/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-       
+
 
         // GET: Taikhoans/Delete/5
         public async Task<IActionResult> Delete(string id)

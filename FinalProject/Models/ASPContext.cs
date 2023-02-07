@@ -38,7 +38,7 @@ namespace FinalProject.Models
             modelBuilder.Entity<Ctgiohang>(entity =>
             {
                 entity.HasKey(e => new { e.Idgh, e.Idsp })
-                    .HasName("PK__CTGIOHAN__F3FA220876EC7459");
+                    .HasName("PK__CTGIOHAN__F3FA22082CACE94D");
 
                 entity.ToTable("CTGIOHANG");
 
@@ -62,13 +62,13 @@ namespace FinalProject.Models
                     .WithMany(p => p.Ctgiohangs)
                     .HasForeignKey(d => d.Idgh)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__CTGIOHANG__IDGH__6B24EA82");
+                    .HasConstraintName("FK__CTGIOHANG__IDGH__440B1D61");
             });
 
             modelBuilder.Entity<Giohang>(entity =>
             {
                 entity.HasKey(e => e.Idgh)
-                    .HasName("PK__GIOHANG__B87DE222B0357409");
+                    .HasName("PK__GIOHANG__B87DE222D076B54F");
 
                 entity.ToTable("GIOHANG");
 
@@ -164,7 +164,7 @@ namespace FinalProject.Models
             modelBuilder.Entity<Taikhoan>(entity =>
             {
                 entity.HasKey(e => e.Email)
-                    .HasName("PK__TAIKHOAN__A9D10535910E9B9F");
+                    .HasName("PK__TAIKHOAN__A9D1053510F476E7");
 
                 entity.ToTable("TAIKHOAN");
 
@@ -191,7 +191,7 @@ namespace FinalProject.Models
             modelBuilder.Entity<Voucher>(entity =>
             {
                 entity.HasKey(e => e.Voucher1)
-                    .HasName("PK__VOUCHER__4BFED2CD6DBE3A90");
+                    .HasName("PK__VOUCHER__4BFED2CDD4D33954");
 
                 entity.ToTable("VOUCHER");
 
@@ -206,7 +206,7 @@ namespace FinalProject.Models
             modelBuilder.Entity<Yeuthich>(entity =>
             {
                 entity.HasKey(e => new { e.Email, e.Idsp })
-                    .HasName("PK__YEUTHICH__E256C51FC85B68EC");
+                    .HasName("PK__YEUTHICH__E256C51F02346B6B");
 
                 entity.ToTable("YEUTHICH");
 
@@ -228,7 +228,7 @@ namespace FinalProject.Models
                     .WithMany(p => p.Yeuthiches)
                     .HasForeignKey(d => d.Email)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__YEUTHICH__Email__3587F3E0");
+                    .HasConstraintName("FK__YEUTHICH__Email__3D5E1FD2");
             });
 
             OnModelCreatingPartial(modelBuilder);

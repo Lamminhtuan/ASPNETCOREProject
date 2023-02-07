@@ -1,6 +1,11 @@
 ﻿CREATE DATABASE ASP
+GO
+
 USE ASP
-SELECT * FROM TAIKHOAN
+GO
+USE ASP
+SELECT DISTINCT NHUCAU FROM LAPTOP
+	
 --CREATE TABLES
 CREATE TABLE PHONE
 (
@@ -14,8 +19,8 @@ CameraSau nvarchar(250) not null,
 CameraTruoc nvarchar(250) not null,
 NhuCau nvarchar(250) not null,
 Chip nvarchar(250) not null,
-Ram int not null,
-Rom int not null,
+Ram float not null,
+Rom float not null,
 Pin nvarchar(250) not null,
 ThietKe nvarchar(250) not null,
 ImagePath nvarchar(550) not null,
@@ -40,7 +45,17 @@ CongGiaoTiep nvarchar(250) not null,
 ThietKe nvarchar(250) not null,
 ImagePath nvarchar(550) not null,
 )
-DROP TABLE YEUTHICH
+CREATE TABLE TAIKHOAN(
+Email nvarchar(50) COLLATE SQL_Latin1_General_CP1_CS_AS not null primary key,
+HoTen nvarchar(100) not null,
+MatKhau nvarchar(100) COLLATE SQL_Latin1_General_CP1_CS_AS not null,
+
+DiaChi nvarchar(200) not null,
+SDT varchar(20) not null,
+VaiTro nvarchar(50) not null
+)
+
+
 CREATE TABLE YEUTHICH(
 Email  nvarchar (50) COLLATE SQL_Latin1_General_CP1_CS_AS FOREIGN KEY REFERENCES Taikhoan(Email),
 IDSP nvarchar(6) not null,
@@ -49,12 +64,9 @@ Gia decimal(18,2) not null,
 ImagePath nvarchar(550) not null,
 PRIMARY KEY (Email, IDSP),
 )
-INSERT INTO TAIKHOAN VALUES (N'Test', 'TEST', '1', '1', '1', 'TEMP')
-SELECT * FROM TAIKHOAN
-INSERT INTO TAIKHOAN VALUES
-INSERT INTO YEUTHICH VALUES('Test', 'DT01', 'iPhone14', 2132323213, N'/images/ip14.jpg')
-DELETE FROM YEUTHICH
-SELECT * FROM YEUTHICH
+
+
+
 CREATE TABLE GIOHANG(
 Email nvarchar(50) not null,
 IDGH nvarchar(5) not null PRIMARY KEY,
@@ -80,69 +92,70 @@ GiamGia decimal(4,2) not null,
 	ThanhTien decimal not null,
 	PRIMARY KEY(IDGH, IDSP)
 	)
+GO
+SELECT DISTINCT NHUCAU FROM LAPTOP
 
-	SELECT * FROM YEUTHICH
-	SELECT * FROM TAIKHOAN
-CREATE TABLE TAIKHOAN(
-Email nvarchar(50) COLLATE SQL_Latin1_General_CP1_CS_AS not null primary key,
-HoTen nvarchar(100) not null,
-MatKhau nvarchar(100) COLLATE SQL_Latin1_General_CP1_CS_AS not null,
-
-DiaChi nvarchar(200) not null,
-SDT varchar(20) not null,
-VaiTro nvarchar(50) not null
-)
 INSERT INTO PHONE(ID,Ten, Hang, Gia, ManHinh, OS, CameraSau, CameraTruoc, NhuCau, Chip,Ram,Rom,Pin, ThietKe, ImagePath)
-VALUES('DT01', N'iPhone 14 Pro Max 128 GB', N'Apple', 33990000, N'OLED 6.7" Super Retina XDR', N'iOS', N'Chính 48 MP & Phụ 12 MP, 12 MP', '12 MP',N'Cao cấp, sang trọng, chụp ảnh, quay phim', N'Apple A16 Bionic', 6, 128, N'4323 mAh',N'Khung thép không gỉ & Mặt lưng kính cường lực', '/images/ip14promax.jpg'),
-('DT02', N'iPhone 14 Pro', 'Apple', 30590000, N'OLED 6.1" Super Retina XDR',  'iOS', N'Chính 48 MP & Phụ 12 MP, 12 MP','12 MP', N'Cao cấp, sang trọng','Apple A16 Bionic', 6, 128, '3200 mAh', N'Khung thép không gỉ & Mặt lưng kính cường lực','/images/ip14pro.jpg'),
-('DT03', N'iPhone 13 Pro Max', 'Apple', 28490000, N'OLED 6.7" Super Retina XDR', 'iOS', '3 camera 12 MP ', '12 MP', N'Cao cấp, sang trọng', 'Apple 15 Bionic', 6, 128, '4352 mAh',N'Khung thép không gỉ & Mặt lưng kính cường lực', '/images/ip13promax.jpg'),
-('DT04', 'Samsung Galaxy S22 Ultra', 'Samsung', 25990000, 'Dynamic AMOLED 2X 6.8" Quad HD + (2K +)', 'Android', N'Chính 108 MP & Phụ 12 MP, 10 MP, 10 MP', '40 MP',N'Cao cấp, sang trọng', 'Snapdragon 8 Gen 1',  8, 128, '5000 mAh',N'Khung kim loại & Mặt lưng kính' ,'/images/s22ultra.jpg'),
-('DT05', 'Samsung Galaxy S22 Plus', 'Samsung', 21990000, 'Dynamic AMOLED 2X 6.6" Full HD +', 'Android', N'Chính 50 MP & Phụ 12 MP, 10 MP', '10 MP',N'Chụp ảnh, quay phim', 'Snapdragon 8 Gen 1', 8, 128, '4500 mAh', N'Khung nhôm & Mặt lưng kính','/images/s22plus.jpg'),
-('DT06', 'Samsung Galaxy Z Fold4 5G', 'Samsung', 37990000, N'Dynamic AMOLED 2X Chính 7.6" & Phụ 6.2" Quad HD+ (2K+)' , 'Android', N'Chính 50 MP & Phụ 12 MP, 10 MP', '10 MP & 4 MP',N'Màn hình gập', 'Snapdragon 8+ Gen 1', 12, 256, '4400 mAh',N'Khung nhôm & Mặt lưng kính cường lực', '/images/zfold4.jpg'),
-('DT07', 'Samsung Galaxy Z Flip4 5G', 'Samsung', 20990000, N'Chính: Dynamic AMOLED 2X, Phụ: Super AMOLED, Chính 6.7" & Phụ 1.9" Full HD+', 'Android', '2 camera 12 MP', '10 MP', N'Màn hình gập','Snapdragon 8+ Gen 1', 8, 256, '3700 mAh',N'Khung nhôm & Mặt lưng kính cường lực','/images/zflip4.jpg'),
-('DT08', 'OPPO Find X5 Pro 5G', 'OPPO', 30490000, 'AMOLED 6.7" Quad HD + (2K +)','Android', N'Chính 50 MP & Phụ 50 MP, 13 MP', '32 MP',N'Chụp ảnh, quay phim', 'Snapdragon 8 Gen 1', 12, 256, '5000 mAh',N'Khung kim loại & Mặt lưng gốm' ,'/images/findx5pro.jpg'),
-('DT09', 'Xiaomi 12 Pro', 'Xiaomi', 25490000, 'AMOLED 6.73" Quad HD + (2K +)', 'Android', '3 camera 50 MP', '32 MP',N'Cao cấp, sang trong','Snapdragon 8 Gen 1', 12, 256, '4600 mAh',N'Khung kim loại & Mặt lưng kính' ,'/images/xiaomi12pro.jpg'),
-('DT10', 'Vivo X80', 'Vivo', 19190000, 'AMOLED 6.78" Full HD +', 'Android', 'Chính 50 MP & Phụ 12 MP, 12 MP', '32 MP',N'Chụp ảnh, quay phim', 'MediaTek Dimensity 9000', 12, 256, '4500 mAh',N'Khung hợp kim nhôm & Mặt lưng kính' ,'/images/vivox80.jpg'),
-('DT11', 'OPPO Reno8 Pro 5G', 'OPPO', 18990000, 'AMOLED 6.7" Full HD +', 'Android', N'Chính 50 MP & Phụ 8 MP, 2 MP', '32 MP',N'Chụp ảnhm quay phim' ,N'MediaTek Dimensity 8100 Max 8 nhân', 12, 256, '4500 mAh', N'Khung kim loại & Mặt lưng kính cường lực Gorilla Glass 5','/images/reno8pro.jpg'),
-('DT12', 'Samsung Galaxy S21 FE 5G', 'Samsung', 12990000, 'Dynamic AMOLED 2X 6.4" Full HD +', 'Android', N'Chính 12 MP & Phụ 12 MP, 8 MP', '32 MP',N'Chụp ảnh, quay phim', 'Exynos 2100', 8, 128, '4500 mAh',N'Khung kim loại & Mặt lưng nhựa', '/images/s21fe.jpg'),
-('DT13', 'Samsung Galaxy A73 5G', 'Samsung', 11990000, 'Super AMOLED Plus 6.7" Full HD +','Android', N'Chính 108 MP & Phụ 12 MP, 5 MP, 5 MP', '32 MP', N'Chụp ảnh, quay phim','Snapdragon 778G 5G', 8, 128, '5000 mAh',N'Khung & Mặt lưng nhựa','/images/a73.jpg'),
-('DT14', 'Vivo V23 5G', 'Vivo', 11690000, 'AMOLED 6.44" Full HD +', 'Android', N'Chính 64 MP & Phụ 8 MP, 2 MP', N'Chính 50 MP & Phụ 8 MP',N'Chụp ảnh, quay phim', 'MediaTek Dimensity 920 5G', 8, 128, '4200 mAh',N'Khung kim loại & Mặt lưng kính', '/images/vivov23.jpg'),
-('DT15', 'Xiaomi 12T 5G', 'Xiaomi', 12490000, 'AMOLED 6.67" 1.5K','Android', N'Chính 108 MP & Phụ 8 MP, 2 MP','20 MP', N'Chơi game, cấu hình mạnh', N'MediaTek Dimensity 8100 Ultra 8 nhân', 8, 128, '5000 mAh', N'Khung kim loại, nhựa & Mặt lưng kính','/images/xiaomi12t.jpg'),
-('DT16', 'iPhone SE (2022)', 'Apple', 12990000, 'IPS LCD 4.7" Retina HD','iOS', '12 MP','7 MP',N'Chơi game, cấu hình cao', 'Apple A15 Bionic', 4, 128, '2018 mAh',N'Khung kim loại & Mặt lưng kính', '/images/se2022.jpg'),
-('DT17', 'Realme 9 Pro+ 5G', 'Realme', 9990000, 'Super AMOLED 6.4" Full HD +', 'Android', N'Chính 50 MP & Phụ 8 MP, 2 MP', '16 MP',N'Chụp ảnh, quay phim', 'MediaTek Dimensity 920 5G', 8, 128, '4500 mAh', N'Khung nhựa & Mặt lưng kính', '/images/realme9pro+.jpg'),
-('DT18', 'Samsung Galaxy A53 5G', 'Samsung', 9990000, 'Super AMOLED 6.5" Full HD +', 'Android', N'Chính 64 MP & Phụ 12 MP, 5 MP, 5 MP','32 MP', N'Chụp ảnh, quay phim','Exynos 1280', 8, 128, '5000 mAh', N'Khung & Mặt lưng nhựa','/images/a53.jpg')
---(18, 'Xiaomi Redmi Note 10 Pro', 'Xiaomi', 7090000, 'AMOLED 6.67" Full HD +', 'Android', N'Chính 108 MP & Phụ 8 MP, 5 MP, 2 MP','16 MP', 'Snapdragon 732G', 8, 128, '5020 mAh', '/images/redminote10pro.jpg'),
---(19, 'Vivo V23e', 'Vivo', 7190000, 'AMOLED 6.44" Full HD +', 'Android', N'Chính 64 MP & Phụ 8 MP, 2 MP','50 MP', 'MediaTek Helio G96', 8, 128, '4050 mAh', '/images/vivov23e.jpg'),
---(20, 'Xiaomi Redmi Note 11 Pro', 'Xiaomi', 7190000, 'AMOLED 6.67" Full HD +', 'Android', N'Chính 108 MP & Phụ 8 MP, 2 MP, 2 MP', '16 MP', 'MediaTek Helio G96', 8, 128, '5000 mAh', '/images/redminote11pro.jpg'),
---(21, 'Samsung Galaxy A33 5G', 'Samsung', 7290000, 'Super AMOLED 6.4" Full HD +','Android', N'Chính 48 MP & Phụ 8 MP, 5 MP, 2 MP','13 MP', 'Exynos 1280', 6, 128, '5000 mAh', '/images/a33.jpg'),
---(22, 'Vivo T1 5G', 'Vivo', 7990000, 'AMOLED 6.44" Full HD +','Android', N'Chính 64 MP & Phụ 8 MP, 2 MP','16 MP', 'Snapdragon 778G 5G', 8, 128, '4700 mAh', '/images/vivot1.jpg'),
---(23, 'Vivo Y53S', 'Vivo', 6990000, 'IPS LCD 6.58" Full HD +','Android', N'Chính 64 MP & Phụ 2 MP, 2 MP', '16 MP', 'MediaTek Helio G80', 8, 128, '5000 mAh', '/images/vivoy53s.jpg'),
---(24, 'OPPO A96', 'Oppo', 6490000, 'IPS LCD 6.59" Full HD +','Android', N'Chính 50 MP & Phụ 2 MP','16 MP', 'Snapdragon 680', 8, 128, '5000 mAh', '/images/oppoa96.jpg'),
---(25, 'Realme C21-Y', 'Realme', 2690000, 'IPS LCD 6.5" HD +', 'Android', N'Chính 13 MP & Phụ 2 MP, 2 MP', '5 MP', 'Spreadtrum T610', 3, 32, '5000 mAh', '/images/c21-y.jpg'),
---(26, 'Realme C11', 'Realme', 2790000, 'IPS LCD 6.5" HD +','Android', '8 MP','5 MP', 'Spreadtrum SC9863A', 4, 64, '5000 mAh', '/images/c11.jpg'),
---(27, 'Nokia C31', 'Nokia', 2790000, 'TFT LCD 6.7" HD +', 'Android', N'Chính 13 MP & Phụ 2 MP, 2 MP','5 MP', 'Unisoc SC9863A1', 3, 32, '5050 mAh', '/images/nokiac31.jpg'),
---(28, 'Nokia G10', 'Nokia', 2990000, 'TFT LCD 6.5" HD +','Android', N'Chính 13 MP & Phụ 2 MP, 2 MP','8 MP', 'MediaTek Helio G25', 4, 64, '5050 mAh', '/images/nokiag10.jpg'),
---(29, 'Nokia G21', 'Nokia', 3890000, 'TFT LCD 6.5" HD +','Android', N'Chính 50 MP & Phụ 2 MP, 2 MP','8 MP', 'Unisoc T606', 4, 128, '5050 mAh', '/images/nokiag21.jpg'),
---(30, 'iPhone 14 Pro Max 1TB', 'Apple', 49990000, 'OLED 6.7" Super Retina XDR', 'iOS', N'Chính 48 MP & Phụ 12 MP, 12 MP', '12 MP', 'Apple A16 Bionic', 6, 1024, '4323 mAh', '/images/ip14promax.jpg'),
---(31, 'Xiaomi Redmi 10A', 'Xiaomi', 2490000, 'IPS LCD 6.53" HD +', 'Android', N'Chính 13 MP & Phụ 2 MP', '5 MP', 'MediaTek Helio G25', 2, 32, '5000 mAh', '/images/redmi10a.jpg'),
---(32, 'Xiaomi Redmi 9A', 'Xiaomi', 2290000, 'IPS LCD 6.53" HD +', 'Android', '13 MP', '5 MP', 'MediaTek Helio G25', 2, 32, '5000 mAh', '/images/redmi9a.jpg'),
---(33, 'Xiaomi 11T Pro 5G', 'Xiaomi', 14390000, 'AMOLED 6.67" Full HD +', 'Android', 'Chính 108 MP & Phụ 8 MP, 5 MP', '16 MP', 'Snapdragon 888', 12, 256, '5000 mAh', '/images/xiaomi11tpro.jpg'),
---(34, 'Samsung Galaxy S22 Ultra 512 GB', 'Samsung', 29990000, 'Dynamic AMOLED 2X 6.8" Quad HD + (2K +)', 'Android', N'Chính 108 MP & Phụ 12 MP, 10 MP, 10 MP', '40 MP', 'Snapdragon 8 Gen 1', 12, 512, '5000 mAh', '/images/s22ultra.jpg'),
---(35, 'Samsung Galaxy M53', 'Samsung', 11990000, 'Super AMOLED Plus 6.7" Full HD +', 'Android', N'Chính 108 MP & Phụ 8 MP, 2 MP, 2 MP', '32 MP', 'MediaTek Dimensity 900 5G', 8, 256, '5000 mAh', '/images/m53.jpg'),
---(36, 'Xiaomi 11 Lite 5G NE', 'Xiaomi', 8490000, 'AMOLED 6.55" Full HD +', 'Android', N'Chính 64 MP & Phụ 8 MP, 5 MP', '20 MP', 'Snapdragon 778G 5G' , 8, 128, '4250 mAh', '/images/11lite.jpg'),
---(37, 'Xiaomi Redmi 9C', 'Xiaomi', 3290000, 'IPS LCD 6.53" HD +', 'Android', N'Chính 13 MP & Phụ 2 MP, 2 MP', '5 MP', 'MediaTek Helio G35', 4, 128, '5000 mAh', '/images/redmi9c.jpg'),
---(38, 'iPhone 14 256 GB', 'Apple', 24990000, 'OLED 6.1" Super Retina XDR', 'iOS', '2 camera 12 MP', '12 MP', 'Apple A15 Bionic', 6, 256, '3279 mAh', '/images/ip14.jpg'),
---(39, 'iPhone 14 Plus 256 GB', 'Apple', 27990000, 'OLED 6.7" Super Retina XDR', 'iOS', '2 camera 12 MP', '12 MP', 'Apple A15 Bionic', 6, 256, '4325 mAh', '/images/ip14plus.jpg'),
---(40, 'Samsung Galaxy Z Fold3 5G', 'Samsung', 31990000, 'Dynamic AMOLED 2X Chính 7.6" & Phụ 6.2" Full HD+', 'Android', '3 camera 12 MP', '10 MP & 4 MP', 'Snapdragon 888', 12, 512, '4400 mAh', '/images/zfold3.jpg'),
---(41, 'iPhone 13 mini 512 GB', 'Apple', 22490000, 'OLED 5.4" Super Retina XDR', 'iOS', '2 camera 12 MP', '12 MP', 'Apple A15 Bionic', 4, 512, '2438 mAh', '/images/ip13mini.jpg'),
---(42, 'iPhone 13 512 GB', 'Apple', 25990000, 'OLED 6.1" Super Retina XDR', 'iOS', '2 camera 12 MP', '12 MP', 'Apple A15 Bionic', 4, 512, '3240 mAh', '/images/ip13.jpg'),
---(43, 'OPPO A17', 'Oppo', 3790000, 'IPS LCD 6.56" HD +', 'Android', N'Chính 50 MP & Phụ 0.3 MP', '5 MP', 'MediaTek Helio G35', 4, 64, '5000 mAh', '/images/oppoa17.jpg'),
---(44, 'Samsung Galaxy A04', 'Samsung', 2790000, 'IPS LCD 6.5" HD +', 'Android', N'Chính 50 MP & Phụ 2 MP', '5 MP', 'MediaTek Helio P35', 3, 32, '5000 mAh', '/images/a04.jpg'),
---(45, 'Realme C33', 'Realme', 3690000, 'IPS LCD 6.5" HD +', 'Android', N'Chính 50 MP & Phụ 0.3 MP', '5 MP', 'Unisoc Tiger T612', 4, 64, '5000 mAh', '/images/realmec33.jpg'),
---(46, 'Realme C30s', 'Realme', 2990000, 'IPS LCD 6.5" HD +', 'Android', '8 MP', '5 MP', 'Unisoc SC9863A1', 4, 64, '5000 mAh', '/images/realmec30s.jpg'),
---(47, 'Nokia G11 Plus', 'Nokia', 3140000, 'TFT LCD 6.51" HD +', 'Android', N'Chính 50 MP & Phụ 2 MP', '8 MP', 'Unisoc T606', 3, 64, '5050 mAh', '/images/nokiag11+.jpg'),
---(48, 'Vivo Y16', 'Vivo', 3790000, 'IPS LCD 6.51" HD +', 'Android', N'Chính 13 MP & Phụ 2 MP', '5 MP', 'MediaTek Helio P35', 4, 64, '5000 mAh', '/images/vivoy16.jpg'),
---(49, 'Nokia C21 Plus', 'Nokia', 2790000, 'TFT LCD 6.5" HD +', 'Android', N'Chính 13 MP & Phụ 2 MP', '5 MP', 'Spreadtrum SC9863A', 3, 64, '5050 mAh', '/images/nokiac21+.jpg')
+VALUES('DT01', N'iPhone 14 Pro Max 128 GB', N'Apple', 33990000, N'OLED 6.7" Super Retina XDR', N'iOS', N'Chính 48 MP & Phụ 12 MP, 12 MP', '12 MP',N'Cao cấp, sang trọng, chụp ảnh, quay phim', N'Apple A16 Bionic', 6, 128, N'4323 mAh',N'Khung thép không gỉ & Mặt lưng kính cường lực', 'https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-vang-thumb-600x600.jpg'),
+('DT02', N'iPhone 14 Pro', 'Apple', 30590000, N'OLED 6.1" Super Retina XDR',  'iOS', N'Chính 48 MP & Phụ 12 MP, 12 MP','12 MP', N'Cao cấp, sang trọng, chụp ảnh, quay phim','Apple A16 Bionic', 6, 128, '3200 mAh', N'Khung thép không gỉ & Mặt lưng kính cường lực','https://cdn.tgdd.vn/Products/Images/42/247508/iphone-14-pro-tim-thumb-600x600.jpg'),
+('DT03', N'iPhone 13 Pro Max', 'Apple', 28490000, N'OLED 6.7" Super Retina XDR', 'iOS', '3 camera 12 MP ', '12 MP', N'Cao cấp, sang trọng, chụp ảnh, quay phim', 'Apple 15 Bionic', 6, 128, '4352 mAh',N'Khung thép không gỉ & Mặt lưng kính cường lực', 'https://cdn.tgdd.vn/Products/Images/42/230529/iphone-13-pro-max-xanh-la-thumb-600x600.jpg'),
+('DT04', 'Samsung Galaxy S22 Ultra', 'Samsung', 25990000, 'Dynamic AMOLED 2X 6.8" Quad HD + (2K +)', 'Android', N'Chính 108 MP & Phụ 12 MP, 10 MP, 10 MP', '40 MP',N'Cao cấp, sang trọng, chụp ảnh, quay phim', 'Snapdragon 8 Gen 1',  8, 128, '5000 mAh',N'Khung kim loại & Mặt lưng kính' ,'https://cdn.tgdd.vn/Products/Images/42/235838/Galaxy-S22-Ultra-Burgundy-600x600.jpg'),
+('DT05', 'Samsung Galaxy S22 Plus', 'Samsung', 21990000, 'Dynamic AMOLED 2X 6.6" Full HD +', 'Android', N'Chính 50 MP & Phụ 12 MP, 10 MP', '10 MP',N'Chụp ảnh, quay phim, cao cấp, sang trọng', 'Snapdragon 8 Gen 1', 8, 128, '4500 mAh', N'Khung nhôm & Mặt lưng kính','https://cdn.tgdd.vn/Products/Images/42/242439/Galaxy-S22-Plus-White-600x600.jpg'),
+('DT06', 'Samsung Galaxy Z Fold4 5G', 'Samsung', 37990000, N'Dynamic AMOLED 2X Chính 7.6" & Phụ 6.2" Quad HD+ (2K+)' , 'Android', N'Chính 50 MP & Phụ 12 MP, 10 MP', '10 MP & 4 MP',N'Màn hình gập, cao cấp, sang trọng, chụp ảnh, quay phim', 'Snapdragon 8+ Gen 1', 12, 256, '4400 mAh',N'Khung nhôm & Mặt lưng kính cường lực', 'https://cdn.tgdd.vn/Products/Images/42/250625/samsung-galaxy-z-fold4-xanh-256gb-600x600.jpg'),
+('DT07', 'Samsung Galaxy Z Flip4 5G', 'Samsung', 20990000, N'Chính: Dynamic AMOLED 2X, Phụ: Super AMOLED, Chính 6.7" & Phụ 1.9" Full HD+', 'Android', '2 camera 12 MP', '10 MP', N'Màn hình gập, cao cấp, sang trọng, chụp ảnh, quay phim','Snapdragon 8+ Gen 1', 8, 256, '3700 mAh',N'Khung nhôm & Mặt lưng kính cường lực','https://cdn.tgdd.vn/Products/Images/42/258047/samsung-galaxy-z-flip4-5g-128gb-thumb-tim-600x600.jpg'),
+('DT08', 'OPPO Find X5 Pro 5G', 'OPPO', 30490000, 'AMOLED 6.7" Quad HD + (2K +)','Android', N'Chính 50 MP & Phụ 50 MP, 13 MP', '32 MP',N'Cao cấp, sang trọng, chụp ảnh, quay phim', 'Snapdragon 8 Gen 1', 12, 256, '5000 mAh',N'Khung kim loại & Mặt lưng gốm' ,'https://cdn.tgdd.vn/Products/Images/42/250622/oppo-find-x5-pro-den-thumb-600x600.jpg'),
+('DT09', 'Xiaomi 12 Pro', 'Xiaomi', 25490000, 'AMOLED 6.73" Quad HD + (2K +)', 'Android', '3 camera 50 MP', '32 MP',N'Cao cấp, sang trọng, chụp ảnh, quay phim','Snapdragon 8 Gen 1', 12, 256, '4600 mAh',N'Khung kim loại & Mặt lưng kính' ,'https://cdn.tgdd.vn/Products/Images/42/255635/Xiaomi-12-Pro-tim-thumb-mau-600x600.jpg'),
+('DT10', 'Vivo X80', 'Vivo', 19190000, 'AMOLED 6.78" Full HD +', 'Android', 'Chính 50 MP & Phụ 12 MP, 12 MP', '32 MP',N'Cao cấp, sang trọng, chụp ảnh, quay phim', 'MediaTek Dimensity 9000', 12, 256, '4500 mAh',N'Khung hợp kim nhôm & Mặt lưng kính' ,'https://cdn.tgdd.vn/Products/Images/42/253138/vivo-x80-xanh-thumb-600x600.jpg'),
+('DT11', 'OPPO Reno8 Pro 5G', 'OPPO', 18990000, 'AMOLED 6.7" Full HD +', 'Android', N'Chính 50 MP & Phụ 8 MP, 2 MP', '32 MP',N'Chụp ảnh, quay phim',N'MediaTek Dimensity 8100 Max 8 nhân', 12, 256, '4500 mAh', N'Khung kim loại & Mặt lưng kính cường lực Gorilla Glass 5','https://cdn.tgdd.vn/Products/Images/42/260546/oppo-reno8-pro-thumb-xanh-1-600x600.jpg'),
+('DT12', 'Samsung Galaxy S21 FE 5G', 'Samsung', 12990000, 'Dynamic AMOLED 2X 6.4" Full HD +', 'Android', N'Chính 12 MP & Phụ 12 MP, 8 MP', '32 MP',N'Chụp ảnh, quay phim', 'Exynos 2100', 8, 128, '4500 mAh',N'Khung kim loại & Mặt lưng nhựa', 'https://cdn.tgdd.vn/Products/Images/42/233090/Samsung-Galaxy-S21-FE-trang-1-2-600x600.jpg'),
+('DT13', 'Samsung Galaxy A73 5G', 'Samsung', 11990000, 'Super AMOLED Plus 6.7" Full HD +','Android', N'Chính 108 MP & Phụ 12 MP, 5 MP, 5 MP', '32 MP', N'Chụp ảnh, quay phim','Snapdragon 778G 5G', 8, 128, '5000 mAh',N'Khung & Mặt lưng nhựa','https://cdn.tgdd.vn/Products/Images/42/246195/samsung-galaxy-a73-5g-xanh-thumb-600x600.jpg'),
+('DT14', 'Vivo V23 5G', 'Vivo', 11690000, 'AMOLED 6.44" Full HD +', 'Android', N'Chính 64 MP & Phụ 8 MP, 2 MP', N'Chính 50 MP & Phụ 8 MP',N'Chụp ảnh, quay phim', 'MediaTek Dimensity 920 5G', 8, 128, '4200 mAh',N'Khung kim loại & Mặt lưng kính', 'https://cdn.tgdd.vn/Products/Images/42/264034/vivo-v23-5g-5-600x600.jpg'),
+('DT15', 'Xiaomi 12T 5G', 'Xiaomi', 12490000, 'AMOLED 6.67" 1.5K','Android', N'Chính 108 MP & Phụ 8 MP, 2 MP','20 MP', N'Chơi game', N'MediaTek Dimensity 8100 Ultra 8 nhân', 8, 128, '5000 mAh', N'Khung kim loại, nhựa & Mặt lưng kính','https://cdn.tgdd.vn/Products/Images/42/279065/xiaomi-12t-thumb-600x600.jpg'),
+('DT16', 'iPhone SE (2022)', 'Apple', 12990000, 'IPS LCD 4.7" Retina HD','iOS', '12 MP','7 MP',N'Chơi game', 'Apple A15 Bionic', 4, 128, '2018 mAh',N'Khung kim loại & Mặt lưng kính', 'https://cdn.tgdd.vn/Products/Images/42/244141/iphone-se-white-600x600.jpg'),
+('DT17', 'Realme 9 Pro+ 5G', 'Realme', 9990000, 'Super AMOLED 6.4" Full HD +', 'Android', N'Chính 50 MP & Phụ 8 MP, 2 MP', '16 MP',N'Chụp ảnh, quay phim', 'MediaTek Dimensity 920 5G', 8, 128, '4500 mAh', N'Khung nhựa & Mặt lưng kính', 'https://cdn.tgdd.vn/Products/Images/42/255513/realme-9-pro-plus-5g-blue-thumb-600x600.jpg'),
+('DT18', 'Samsung Galaxy A53 5G', 'Samsung', 9990000, 'Super AMOLED 6.5" Full HD +', 'Android', N'Chính 64 MP & Phụ 12 MP, 5 MP, 5 MP','32 MP', N'Chụp ảnh, quay phim','Exynos 1280', 8, 128, '5000 mAh', N'Khung & Mặt lưng nhựa','https://cdn.tgdd.vn/Products/Images/42/246196/Samsung-Galaxy-A53-xanh-thumb-600x600.jpg'),
+('DT19', 'Xiaomi Redmi Note 10 Pro', 'Xiaomi', 7090000, 'AMOLED 6.67" Full HD +', 'Android', N'Chính 108 MP & Phụ 8 MP, 5 MP, 2 MP','16 MP', N'Cao cấp, sang trọng, chụp ảnh, quay phim', 'Snapdragon 732G', 8, 128, '5020 mAh',N'Khung kim loại & Mặt lưng kính cường lực' ,'https://cdn.tgdd.vn/Products/Images/42/229228/xiaomi-redmi-note-10-pro-thumb-xam-600x600-600x600.jpg'),
+('DT20', 'Vivo V23e', 'Vivo', 7190000, 'AMOLED 6.44" Full HD +', 'Android', N'Chính 64 MP & Phụ 8 MP, 2 MP','50 MP',N'Chụp ảnh, quay phim', 'MediaTek Helio G96', 8, 128, '4050 mAh', N'Khung nhựa & Mặt lưng kính', 'https://cdn.tgdd.vn/Products/Images/42/245607/Vivo-V23e-1-2-600x600.jpg'),
+('DT21', 'Xiaomi Redmi Note 11 Pro', 'Xiaomi', 7190000, 'AMOLED 6.67" Full HD +', 'Android', N'Chính 108 MP & Phụ 8 MP, 2 MP, 2 MP', '16 MP',N'Chơi game', 'MediaTek Helio G96', 8, 128, '5000 mAh', N'Khung nhựa & Mặt lưng kính','https://cdn.tgdd.vn/Products/Images/42/270471/xiaomi-redmi-note-11-pro-trang-thumb-600x600.jpg'),
+('DT22', 'Samsung Galaxy A33 5G', 'Samsung', 7290000, 'Super AMOLED 6.4" Full HD +','Android', N'Chính 48 MP & Phụ 8 MP, 5 MP, 2 MP','13 MP', N'Chơi game','Exynos 1280', 6, 128, '5000 mAh', N'Khung & Mặt lưng nhựa' ,'https://cdn.tgdd.vn/Products/Images/42/246199/samsung-galaxy-a33-5g-thumb-new-1-600x600.jpg'),
+('DT23', 'Vivo T1 5G', 'Vivo', 7990000, 'AMOLED 6.44" Full HD +','Android', N'Chính 64 MP & Phụ 8 MP, 2 MP','16 MP', N'Chơi game', 'Snapdragon 778G 5G', 8, 128, '4700 mAh',N'Khung & Mặt lưng nhựa Polymer cao cấp', 'https://cdn.tgdd.vn/Products/Images/42/279643/vivo-t1-44w-thumb-600x600.jpg'),
+('DT24', 'Vivo Y53S', 'Vivo', 6990000, 'IPS LCD 6.58" Full HD +','Android', N'Chính 64 MP & Phụ 2 MP, 2 MP', '16 MP',N'Chơi game' ,'MediaTek Helio G80', 8, 128, '5000 mAh',N'Khung & Mặt lưng nhựa Polymer cao cấp'  ,'https://cdn.tgdd.vn/Products/Images/42/240286/vivo-y53s-xanh-600x600.jpg'),
+('DT25', 'OPPO A96', 'Oppo', 6490000, 'IPS LCD 6.59" Full HD +','Android', N'Chính 50 MP & Phụ 2 MP','16 MP',N'Chụp ảnh, quay phim', 'Snapdragon 680', 8, 128, '5000 mAh',N'Khung nhựa & Mặt lưng thuỷ tinh hữu cơ'  ,'https://cdn.tgdd.vn/Products/Images/42/274381/oppo-a96-den-thumb-1-600x600.jpg'),
+('DT26', 'Realme C21-Y', 'Realme', 3690000, 'IPS LCD 6.5" HD +', 'Android', N'Chính 13 MP & Phụ 2 MP, 2 MP', '5 MP',N'Giá rẻ, pin trâu', 'Spreadtrum T610', 3, 32, '5000 mAh',N'Khung & Mặt lưng nhựa', 'https://cdn.tgdd.vn/Products/Images/42/253402/realme-c21-y-blue-600x600.jpg'),
+('DT27', 'Realme C11', 'Realme', 2790000, 'IPS LCD 6.5" HD +','Android', '8 MP','5 MP',N'Giá rẻ, pin trâu', 'Spreadtrum SC9863A', 4, 64, '5000 mAh',N'Khung & Mặt lưng nhựa', 'https://cdn.tgdd.vn/Products/Images/42/236257/realme-c11-2021-blue-1-600x600.jpg'),
+('DT28', 'Nokia C31', 'Nokia', 2790000, 'TFT LCD 6.7" HD +', 'Android', N'Chính 13 MP & Phụ 2 MP, 2 MP','5 MP',N'Giá rẻ, pin trâu', 'Unisoc SC9863A1', 3, 32, '5050 mAh',N'Khung & Mặt lưng nhựa Polycarbonate', 'https://cdn.tgdd.vn/Products/Images/42/292717/Nokia-C31-Green-thumb-600x600.jpg'),
+('DT29', 'Nokia G10', 'Nokia', 2990000, 'TFT LCD 6.5" HD +','Android', N'Chính 13 MP & Phụ 2 MP, 2 MP','8 MP', N'Giá rẻ, pin trâu','MediaTek Helio G25', 4, 64, '5050 mAh',N'Khung kim loại & Mặt lưng nhựa', 'https://cdn.tgdd.vn/Products/Images/42/235995/Nokia%20g10%20xanh%20duong-600x600.jpg'),
+('DT30', 'Nokia G21', 'Nokia', 3890000, 'TFT LCD 6.5" HD +','Android', N'Chính 50 MP & Phụ 2 MP, 2 MP','8 MP', N'Giá rẻ, pin trâu','Unisoc T606', 4, 128, '5050 mAh',N'Khung kim loại & Mặt lưng nhựa', 'https://cdn.tgdd.vn/Products/Images/42/270207/nokia-g21-xanh-thumb-600x600.jpg'),
+('DT31', 'iPhone 14 Pro Max 1TB', 'Apple', 49990000, 'OLED 6.7" Super Retina XDR', 'iOS', N'Chính 48 MP & Phụ 12 MP, 12 MP', '12 MP',N'Cao cấp, sang trọng, chụp ảnh, quay phim', 'Apple A16 Bionic', 6, 1024, '4323 mAh',N'Khung thép không gỉ & Mặt lưng kính cường lực','https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-vang-thumb-600x600.jpg'),
+('DT32', 'Xiaomi Redmi 10A', 'Xiaomi', 2490000, 'IPS LCD 6.53" HD +', 'Android', N'Chính 13 MP & Phụ 2 MP', '5 MP', N'Giá rẻ, pin trâu','MediaTek Helio G25', 2, 32, '5000 mAh',N'Khung & Mặt lưng nhựa','https://cdn.tgdd.vn/Products/Images/42/271734/xiaomi-redmi-10a-thumb-600x600.jpg'),
+('DT33', 'Xiaomi Redmi 9A', 'Xiaomi', 2290000, 'IPS LCD 6.53" HD +', 'Android', '13 MP', '5 MP', N'Giá rẻ, pin trâu','MediaTek Helio G25', 2, 32, '5000 mAh',N'Khung & Mặt lưng nhựa', 'https://cdn.tgdd.vn/Products/Images/42/218734/xiaomi-redmi-9a-xanhla-600x600-200x200.jpg'),
+('DT34', 'Xiaomi 11T Pro 5G', 'Xiaomi', 14390000, 'AMOLED 6.67" Full HD +', 'Android', 'Chính 108 MP & Phụ 8 MP, 5 MP', '16 MP',N'Chơi game, chụp ảnh, quay phim' ,'Snapdragon 888', 12, 256, '5000 mAh',N'Khung kim loại & Mặt lưng kính', 'https://cdn.tgdd.vn/Products/Images/42/248218/Xiaomi-11T-Pro-Blue-1-2-600x600.jpg'),
+('DT35', 'Samsung Galaxy S22 Ultra 512 GB', 'Samsung', 29990000, 'Dynamic AMOLED 2X 6.8" Quad HD + (2K +)', 'Android', N'Chính 108 MP & Phụ 12 MP, 10 MP, 10 MP', '40 MP',N'Chụp ảnh, quay phim, cao cấp, sang trọng', 'Snapdragon 8 Gen 1', 12, 512, '5000 mAh',N'Khung kim loại & Mặt lưng kính', 'https://cdn.tgdd.vn/Products/Images/42/271698/Galaxy-S22-Ultra-White-600x600.jpg'),
+('DT36', 'Samsung Galaxy M53', 'Samsung', 11990000, 'Super AMOLED Plus 6.7" Full HD +', 'Android', N'Chính 108 MP & Phụ 8 MP, 2 MP, 2 MP', '32 MP', N'Chơi game' ,'MediaTek Dimensity 900 5G', 8, 256, '5000 mAh', N'Khung kim loại & Mặt lưng nhựa' ,'https://cdn.tgdd.vn/Products/Images/42/247364/samsung-galaxy-m53-nau-thumb-600x600.jpg'),
+('DT37', 'Xiaomi 11 Lite 5G NE', 'Xiaomi', 8490000, 'AMOLED 6.55" Full HD +', 'Android', N'Chính 64 MP & Phụ 8 MP, 5 MP', '20 MP', N'Cao cấp, sang trọng','Snapdragon 778G 5G' , 8, 128, '4250 mAh',N'Khung kim loại & Mặt lưng kính cường lực Gorilla Glass 5','https://cdn.tgdd.vn/Products/Images/42/249427/xiaomi-11-lite-5g-ne-white-600x600.jpg'),
+('DT38', 'Xiaomi Redmi 9C', 'Xiaomi', 3290000, 'IPS LCD 6.53" HD +', 'Android', N'Chính 13 MP & Phụ 2 MP, 2 MP', '5 MP',N'Giá rẻ, pin trâu', 'MediaTek Helio G35', 4, 128, '5000 mAh',N'Khung & Mặt lưng nhựa' ,'https://cdn.tgdd.vn/Products/Images/42/246937/xiaomi-redmi-9c-4gb-xanh-1-600x600.jpg'),
+('DT39', 'iPhone 14 256 GB', 'Apple', 24990000, 'OLED 6.1" Super Retina XDR', 'iOS', '2 camera 12 MP', '12 MP', N'Cao cấp, sang trọng, chụp ảnh, quay phim','Apple A15 Bionic', 6, 256, '3279 mAh', N'Khung nhôm & Mặt lưng kính cường lực','https://cdn.tgdd.vn/Products/Images/42/240259/iPhone-14-thumb-tim-1-600x600.jpg'),
+('DT40', 'iPhone 14 Plus 256 GB', 'Apple', 27990000, 'OLED 6.7" Super Retina XDR', 'iOS', '2 camera 12 MP', '12 MP', N'Cao cấp, sang trọng, chụp ảnh, quay phim','Apple A15 Bionic', 6, 256, '4325 mAh',N'Khung nhôm & Mặt lưng kính cường lực', 'https://cdn.tgdd.vn/Products/Images/42/245545/iPhone-14-plus-thumb-den-600x600.jpg'),
+('DT41', 'Samsung Galaxy Z Fold3 5G', 'Samsung', 31990000, 'Dynamic AMOLED 2X Chính 7.6" & Phụ 6.2" Full HD+', 'Android', '3 camera 12 MP', '10 MP & 4 MP',N'Màn hình gập, cao cấp, sang trọng, chụp ảnh, quay phim', 'Snapdragon 888', 12, 512, '4400 mAh',N'Khung nhôm & Mặt lưng kính cường lực', 'https://cdn.tgdd.vn/Products/Images/42/226935/samsung-galaxy-z-fold-3-silver-1-600x600.jpg'),
+('DT42', 'iPhone 13 mini 512 GB', 'Apple', 22490000, 'OLED 5.4" Super Retina XDR', 'iOS', '2 camera 12 MP', '12 MP', N'Cao cấp, sang trọng, chơi game', 'Apple A15 Bionic', 4, 512, '2438 mAh',N'Khung nhôm & Mặt lưng kính cường lực', 'https://cdn.tgdd.vn/Products/Images/42/236780/iphone-13-mini-midnight-1-600x600.jpg'),
+('DT43', 'iPhone 13 512 GB', 'Apple', 25990000, 'OLED 6.1" Super Retina XDR', 'iOS', '2 camera 12 MP', '12 MP', N'Cao cấp, sang trọng, chụp ảnh, quay phim','Apple A15 Bionic', 4, 512, '3240 mAh',N'Khung nhôm & Mặt lưng kính cường lực' ,'https://cdn.tgdd.vn/Products/Images/42/223602/iphone-13-starlight-1-600x600.jpg'),
+('DT44', 'OPPO A17', 'Oppo', 3790000, 'IPS LCD 6.56" HD +', 'Android', N'Chính 50 MP & Phụ 0.3 MP', '5 MP',N'Giá rẻ, pin trâu', 'MediaTek Helio G35', 4, 64, '5000 mAh',N'Khung nhựa & Mặt lưng thuỷ tinh hữu cơ', 'https://cdn.tgdd.vn/Products/Images/42/288401/oppo-a17-den-thumb-600x600.jpg'),
+('DT45', 'Samsung Galaxy A04', 'Samsung', 2790000, 'IPS LCD 6.5" HD +', 'Android', N'Chính 50 MP & Phụ 2 MP', '5 MP', N'Giá rẻ, pin trâu','MediaTek Helio P35', 3, 32, '5000 mAh',N'Khung & Mặt lưng nhựa', 'https://cdn.tgdd.vn/Products/Images/42/275434/samsung-galaxy-a04-thumb-1-600x600.jpg'),
+('DT46', 'Realme C33', 'Realme', 3690000, 'IPS LCD 6.5" HD +', 'Android', N'Chính 50 MP & Phụ 0.3 MP', '5 MP',N'Giá rẻ, pin trâu', 'Unisoc Tiger T612', 4, 64, '5000 mAh',N'Khung nhựa & Mặt lưng thuỷ tinh hữu cơ', 'https://cdn.tgdd.vn/Products/Images/42/292247/realme-c33-thumb-600x600-1-600x600.jpg'),
+('DT47', 'Realme C30s', 'Realme', 2990000, 'IPS LCD 6.5" HD +', 'Android', '8 MP', '5 MP', N'Giá rẻ, pin trâu', 'Unisoc SC9863A1', 4, 64, '5000 mAh', N'Khung nhựa, kim loại & Mặt lưng nhựa','https://cdn.tgdd.vn/Products/Images/42/290877/Realme-c30s-xanh-temp-600x600.jpg'),
+('DT48', 'Nokia G11 Plus', 'Nokia', 3140000, 'TFT LCD 6.51" HD +', 'Android', N'Chính 50 MP & Phụ 2 MP', '8 MP',N'Giá rẻ, pin trâu', 'Unisoc T606', 3, 64, '5050 mAh',N'Khung kim loại & Mặt lưng nhựa', 'https://cdn.tgdd.vn/comment/52810818/nokia-g11-plus-xam-thumb-600x600U6ODF.jpg'),
+('DT49', 'Vivo Y16', 'Vivo', 3790000, 'IPS LCD 6.51" HD +', 'Android', N'Chính 13 MP & Phụ 2 MP', '5 MP', N'Giá rẻ, pin trâu','MediaTek Helio P35', 4, 64, '5000 mAh',N'Khung & Mặt lưng nhựa Polymer cao cấp', 'https://cdn.tgdd.vn/Products/Images/42/262004/xiaomi-redmi-10-2022-xanh-thumb-600x600.jpg'),
+('DT50', 'Nokia C21 Plus', 'Nokia', 2790000, 'TFT LCD 6.5" HD +', 'Android', N'Chính 13 MP & Phụ 2 MP', '5 MP', N'Giá rẻ, pin trâu','Spreadtrum SC9863A', 3, 64, '5050 mAh',N'Khung hợp kim nhôm & Mặt lưng nhựa', 'https://cdn.tgdd.vn/Products/Images/42/274084/Nokia-C21-Plus-Gray-600x600.jpg'),
+('DT51', 'Masstel Lux 20 4G', 'Masstel', 850000, N'TFT LCD 2.4", 16.7 triệu màu', N'Điện thoại phổ thông', N'Không', 'Không', N'Nghe gọi','Unisoc T107', 0.048,  0.128, '1800 mAh',N'Khung & Mặt lưng nhựa', 'https://cdn.tgdd.vn/Products/Images/42/285027/masstel-lux-20-xanh-thumb-600x600.jpeg'),
+('DT52', 'Mobell M239', 'Mobell', 500000, N'TFT LCD 1.77", 65.000 màu', N'Điện thoại phổ thông', N'8 MP', N'Không', N'Nghe gọi','Unisoc UMS9117-L', 0.048,  0.128, '1000 mAh',N'Khung & Mặt lưng nhựa', 'https://cdn.tgdd.vn/Products/Images/42/284122/mobell-m239-do-thumb-1-600x600.jpg'),
+('DT53', 'Masstel Lux 10 4G', 'Masstel', 750000, N'TFT LCD 2.4", 16.7 triệu màu', N'Điện thoại phổ thông', N'Không' , 'Không', N'Nghe gọi','Unisoc T107', 0.048,  0.128, '1400 mAh',N'Khung & Mặt lưng nhựa', 'https://cdn.tgdd.vn/Products/Images/42/299611/masstel-lux-10-vang-thumb-600x600.jpg'),
+('DT54', 'Masstel FAMI 60 4G', 'Masstel', 800000, N'TFT LCD 2", 260.000 màu ', N'Điện thoại phổ thông', N'Không', 'Không', N'Nghe gọi','Unisoc UIS8910', 0.016,  0.024, '2000 mAh',N'Khung kim loại & Mặt lưng nhựa', 'https://cdn.tgdd.vn/Products/Images/42/264121/masstel-fami-60-thumb-600x600.jpeg'),
+('DT55', 'Nokia 110 4G', 'Nokia', 870000, N'TFT LCD 1.8", 65.536 màu', N'Điện thoại phổ thông', N'0.08 MP', 'Không', N'Nghe gọi','Unisoc T107', 0.048,  0.128, '1020 mAh',N'Khung & Mặt lưng nhựa', 'https://cdn.tgdd.vn/Products/Images/42/240196/nokia-110-4g-blue-600x600.jpg'),
+('DT56', 'Nokia 105 4G', 'Nokia', 820000, N'TFT LCD 1.8", 65.536 màu', N'Điện thoại phổ thông', N'Không', 'Không', N'Nghe gọi','Unisoc T107', 0.048,  0.128, '1020 mAh',N'Khung & Mặt lưng nhựa', 'https://cdn.tgdd.vn/Products/Images/42/240194/nokia-105-4g-blue-600x600.jpg'),
+('DT57', 'Itel it9210 4G', 'Itel', 680000, N'LCD 2.4", 256.000 màu', N'Điện thoại phổ thông', N'0.3 MP', 'Không', N'Nghe gọi','Unisoc T117', 0.064,  0.128, '1900 mAh',N'Khung & Mặt lưng nhựa', 'https://cdn.tgdd.vn/Products/Images/42/260146/itel-it9210-black-1-600x600.jpg'),
+('DT58', 'Itel it9010 4G', 'Itel', 580000, N'LCD 1.77", 256.000 màu ', N'Điện thoại phổ thông', N'0.08 MP', 'Không', N'Nghe gọi','Không có thông tin', 0.048,  0.128, '1000 mAh',N'Khung & Mặt lưng nhựa', 'https://cdn.tgdd.vn/Products/Images/42/279401/itel-it9010-thumb-1-2-600x600.jpg'),
+('DT59', 'Masstel IZI 26 4G', 'Masstel', 630000, N'TFT LCD 2.4", 262.000 màu', N'Điện thoại phổ thông', N'Không', 'Không', N'Nghe gọi','Unisoc T107', 0.048,  0.128, '1800 mAh',N'Khung & Mặt lưng nhựa', 'https://cdn.tgdd.vn/Products/Images/42/299610/masstel-izi-26-4g-thum-600x600.jpg'),
+('DT60', 'Nokia 8210 4G', 'Nokia', 1590000, N'QVGA 2.8"', N'Điện thoại phổ thông', N'0.3 MP', 'Không', N'Nghe gọi','Unisoc T107', 0.048,  0.128, '1450 mAh',N'Khung & Mặt lưng nhựa Polycarbonate', 'https://cdn.tgdd.vn/Products/Images/42/286060/Nokia%208210-xanh-thumb-600x600.jpg')
 --Insert laptops
 INSERT LAPTOP(ID, Ten, Hang, Gia, ManHinh, OS, Webcam, NhuCau, Chip, VGA, Ram, Rom, Pin, KhoiLuong, CongGiaoTiep, ThietKe, ImagePath) VALUES ('LT01', N'Nitro 5 Tiger AN515 58 769J', N'Acer', CAST(30990000.00 AS Decimal(18, 2)), N'15.6 inch FHD(1920 x 1080) IPS 144Hz SlimBezel', N'Windows 11 Home', N'720p HD audio/video recording', N'Gaming, Văn phòng, Đồ họa - Kỹ thuật', N'Intel Core i7-12700H up to 4.7GHz, 24MB Cache', N'NVIDIA® GeForce RTX™ 3050 4GB GDDR6', 8, 512, N'4 Cell 57.5WHr', 2.5, N'1x USB 3.2 Gen 2 Type-C Ports ; DisplayPort over USB-C; Thunderbolt 4; USB charging 5 V; 3 A; DC-in port 20 V; 65 W);1x USB 3.2 Gen 2 port featuring power-off USB charging;1x USB 3.2 Gen 2 port;1x USB 3.2 Gen 1 por', N'nhựa Polycarbonate với màu Obsidian Black', N'https://product.hstatic.net/1000026716/product/fe2769ba0040c59929f58641d85409_master_1b48676e034340379d49fab4078b5949_1c6ae60d0b2f422eafc29e6bab219a13.png'),
  ('LT02', N'Aspire 5 A514 54 5127', N'Acer', CAST(18490000.00 AS Decimal(18, 2)), N'14" FHD (+A3:E41920 x 1080) IPS, Acer ComfyView LCD', N'Windows 11 Home', N'HD Camera', N'Văn phòng', N'Intel Core i5-1135G7 2.4GHz up to 4.2GHz 8MB', N'Intel® Iris® Xe Graphics', 8, 512, N'3 Cell 48WHrs', 1.45, N'1x USB 3.2 port with power-off charging;2x USB 3.2 port;1x USB Type-C port;1x RJ-45 port;1x HDMI® 2.0', N'Vỏ nhựa - nắp lưng bằng kim loại', N'https://product.hstatic.net/1000026716/product/laptop-acer-aspire-5-a514-54-5127-1_b245f3377c9b4339aad8148a99d67e08.jpg'),
@@ -417,10 +430,12 @@ Mặt bên ngoài cùng: Kim loại', N'https://images.fpt.shop/unsafe/fit-in/24
 
 
 INSERT INTO VOUCHER VALUES('HAPPYUIT', 0.2)
-
+INSERT INTO TAIKHOAN VALUES (N'Test', 'TEST', '1', '1', '1', 'TEMP')
 INSERT INTO TAIKHOAN VALUES('jclay9907@gmail.com', N'Johnson', '123', 'TPHCM', '098', 'Admin')
-INSERT INTO TAIKHOAN VALUES('Irelia', '123', '123', 'TPHCM', '098', N'Người dùng')
+INSERT INTO TAIKHOAN VALUES('123@gmail.com', N'Johnson', '123', 'TPHCM', '098', 'User')
 INSERT INTO GIOHANG VALUES ('', 'GH01', GETDATE(), 0, 0, 0)
+GO
+
 
 CREATE PROCEDURE DangNhap @email nvarchar(50), @password nvarchar(100)
 AS
@@ -428,7 +443,7 @@ BEGIN
 SELECT * FROM TAIKHOAN WHERE Email  = @email COLLATE SQL_Latin1_General_CP1_CS_AS
 AND MatKhau = @password COLLATE SQL_Latin1_General_CP1_CS_AS
 END
-
+GO
 
 --STORED PROCEDURE
 CREATE PROCEDURE CheckTaiKhoanTrung @email nvarchar(50)
@@ -457,5 +472,7 @@ BEGIN
 END
 GO
 
-SELECT * FROM TAIKHOAN
+
+
+
 

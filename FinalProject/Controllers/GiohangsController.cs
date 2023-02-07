@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FinalProject.Models;
+using System.Security.Claims;
 
 namespace FinalProject.Controllers
 {
@@ -37,7 +38,7 @@ namespace FinalProject.Controllers
             gh.TongPhaiTra = tongphaitra;
             gh.TongGia = CtgiohangsDAL.GetTongTien();
             gh.GiamGia = giamgia;
-            gh.Email = TaikhoansDAL.emailhientai;
+            gh.Email = @User.FindFirstValue(ClaimTypes.Email);
             gh.NgayMua = DateTime.Now;
             _context.SaveChanges();
             GiohangsDAL.DatHang();

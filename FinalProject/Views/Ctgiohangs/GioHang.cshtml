@@ -64,12 +64,12 @@
 	}
 	@if (CtgiohangsDAL.GetSLInCart() > 0)
 	{
-		@if (TaikhoansDAL.emailhientai == null){
+		@*@if (!User.Identity.IsAuthenticated){
 			
 			
-			<a class="btn btn-success m-1  fw-bold carttable h4" asp-action="DangNhap" asp-controller="Taikhoans" asp-route-loaidn="tt"><i class="bi bi-cash-coin"></i> Thanh toán</a>
+			<a class="btn btn-success m-1  fw-bold carttable h4" asp-action="DangNhap" asp-controller="Taikhoans"><i class="bi bi-cash-coin"></i> Thanh toán</a>
 		}
-		else
+		else*@
 		{
 			<a class="btn btn-success m-1  fw-bold carttable h4" asp-action="ThanhToan" asp-controller="Ctgiohangs"><i class="bi bi-cash-coin"></i> Thanh toán</a>
 		}

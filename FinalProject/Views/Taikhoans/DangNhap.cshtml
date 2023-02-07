@@ -7,7 +7,7 @@
 		<div  class="col-md-6 p-3 text-start">
 			
 			<h1 class="fw-bold mb-3">	<i class="bi bi-box-arrow-in-right"></i> Đăng nhập</h1>
-				<form asp-action="DangNhap" asp-controller="Taikhoans" method="post">
+		<form asp-action="DangNhap" asp-controller="Taikhoans" method="post">
 			<div asp-validation-summary="ModelOnly" class="text-danger my-3 h4"></div>
 			<div class="form-group my-3">
 				<label  for="username" class="control-label h3"><i class="bi bi-envelope"></i> Email</label>
@@ -21,7 +21,7 @@
 				<a href="#" onlick="showorhidepw()" id="showorhidepw" class="float-start h5 naudamlink"><span id="showpw"><i class="bi bi-eye"></i> Hiện mật khẩu</span><span style="display:none" id="hidepw"><i class="bi bi-eye-slash"></i> Ẩn mật khẩu</span></a>
 				<a asp-action="QuenMatKhau" asp-controller="Taikhoans" class="float-end h5 text-decoration-underline naudamlink">Quên mật khẩu</a>
 			</div>
-			<input type="submit" value="Đăng nhập" class="btn fw-bold my-3 w-100 xanhneonbtn" />
+			<input class="btn fw-bold my-3 w-100 xanhneonbtn" type="submit" asp-route-returnUrl = "@Context.Request.Path" value="Đăng nhập">
 			<div class="text-center mb-3 h4">
 				Chưa có tài khoản? <a asp-action="Create" asp-controller="Taikhoans" class="vangdatlink">Đăng ký ngay</a>
 			</div>

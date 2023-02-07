@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<FinalProject.Models.Yeuthich>
+@using System.Security.Claims
 @using System.Globalization;
 <div class="position-04">
 	<div class="container">
@@ -124,7 +125,7 @@ function xoakhoiyeuthich(e) {
     $.ajax({
         type: "POST",
         url: "@Url.Action("XoaKhoiYeuThich","Yeuthiches")",
-        data: { "email": "@TaikhoansDAL.emailhientai" , "idsp": idsp },
+        data: { "email": @User.FindFirstValue(ClaimTypes.Email) , "idsp": idsp },
         success: function(){
            
 		}

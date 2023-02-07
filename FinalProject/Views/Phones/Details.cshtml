@@ -1,4 +1,5 @@
-﻿@model FinalProject.Models.Phone
+﻿@using System.Security.Claims
+@model FinalProject.Models.Phone
 @*  Jquery*@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
@@ -523,7 +524,7 @@ $("#themvaoyeuthich").click(function(){
 	$.ajax({
 		type:"POST",
 		url : "@Url.Action("ThemVaoYeuThich", "Yeuthiches")",
-		data:{"email":"@TaikhoansDAL.emailhientai","idsp": "@Model.Id", "ten":"@Model.Ten", "gia":"@Model.Gia", "imagepath":"@Model.ImagePath"},
+		data:{"email":"@User.FindFirstValue(ClaimTypes.Email)","idsp": "@Model.Id", "ten":"@Model.Ten", "gia":"@Model.Gia", "imagepath":"@Model.ImagePath"},
 		success:function(){
 			var t = $('#fvcount').text();
 			var num = parseInt(t);

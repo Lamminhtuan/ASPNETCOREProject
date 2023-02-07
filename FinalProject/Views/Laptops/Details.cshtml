@@ -1,5 +1,5 @@
 ﻿@model FinalProject.Models.Laptop
-
+@using System.Security.Claims;
 @{
     ViewData["Title"] = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -502,7 +502,7 @@ $("#themvaoyeuthich").click(function(){
 	$.ajax({
 		type:"POST",
 		url : "@Url.Action("ThemVaoYeuThich", "Yeuthiches")",
-		data:{"email":"@TaikhoansDAL.emailhientai","idsp": "@Model.Id", "ten":"@Model.Ten", "gia":"@Model.Gia", "imagepath":"@Model.ImagePath"},
+		data:{"email":"@User.FindFirstValue(ClaimTypes.Email)","idsp": "@Model.Id", "ten":"@Model.Ten", "gia":"@Model.Gia", "imagepath":"@Model.ImagePath"},
 		success:function(){
 			var t = $('#fvcount').text();
 			var num = parseInt(t);

@@ -15,8 +15,8 @@ namespace FinalProject.Models
         public string CameraTruoc { get; set; } = null!;
         public string NhuCau { get; set; } = null!;
         public string Chip { get; set; } = null!;
-        public int Ram { get; set; }
-        public int Rom { get; set; }
+        public double Ram { get; set; }
+        public double Rom { get; set; }
         public string Pin { get; set; } = null!;
         public string ThietKe { get; set; } = null!;
         public string ImagePath { get; set; } = null!;

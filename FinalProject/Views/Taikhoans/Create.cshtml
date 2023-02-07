@@ -15,45 +15,39 @@
 				<span id="errordiv" class="text-danger h4 mb-3"></span>
 				<div class="form-group mb-3">
 					<label asp-for="Email" class="control-label h4"><i class="bi bi-envelope"></i> E-Mail</label>
-					<input type="email" asp-for="Email" id="email" class="form-control fc h4" />
-					<span asp-validation-for="Email" class="text-danger"></span>
+					<input required type="email" asp-for="Email" id="email" class="form-control fc h4" />
 				</div>
 				<div class="form-group mb-3">
 					<label asp-for="HoTen" class="control-label h4"><i class="bi bi-person-vcard"></i> Họ tên</label>
-					<input asp-for="HoTen" class="form-control fc h4" />
-					<span asp-validation-for="HoTen" class="text-danger"></span>
+					<input required asp-for="HoTen" class="form-control fc h4" />
 				</div>
 				<div class="form-group mb-3">
 					<label asp-for="MatKhau" class="control-label h4"><i class="bi bi-key"></i> Mật khẩu</label>
 					<div class="pw-text position-relative">
-						<input asp-for="MatKhau" type="password" class="form-control fc d-inline h4" id="password" />
+						<input required asp-for="MatKhau" type="password" class="form-control fc d-inline h4" id="password" />
 						<a id="showorhidepw" class="position-absolute end-0 h4 naudamlink"><i id="showpw" class="bi bi-eye"></i><i style="display:none" id="hidepw" class="bi bi-eye-slash"></i></a>
 					</div>
-					<span asp-validation-for="MatKhau" class="text-danger"></span>
 				</div>
 
 				<div class="form-group mb-3">
 					<label class="control-label h4"><i class="bi bi-key-fill"></i> Xác nhận mật khẩu</label>
 					<div class="pw-text" style="position:relative">
-						<input asp-for="MatKhau" type="password" id="cfpassword" class="form-control fc d-inline h4" />
+						<input required asp-for="MatKhau" type="password" id="cfpassword" class="form-control fc d-inline h4" />
 						<a id="cfshoworhidepw" class="position-absolute end-0 h4 naudamlink"><i id="cfshowpw" class="bi bi-eye"></i><i style="display:none" id="cfhidepw" class="bi bi-eye-slash"></i></a>
 					</div>
-					<span asp-validation-for="MatKhau" class="text-danger"></span>
 				</div>
 
 				<div class="form-group mb-3">
 					<label asp-for="DiaChi" class="control-label h4"><i class="bi bi-house"></i> Địa chỉ</label>
-					<input asp-for="DiaChi" class="form-control fc h4" />
-					<span asp-validation-for="DiaChi" class="text-danger"></span>
+					<input required asp-for="DiaChi" class="form-control fc h4" />
 				</div>
 				<div class="form-group mb-3">
 					<label asp-for="Sdt" class="control-label h4"><i class="bi bi-telephone"></i> Số điện thoại</label>
-					<input asp-for="Sdt" class="form-control fc h4" />
-					<span asp-validation-for="Sdt" class="text-danger"></span>
+					<input required asp-for="Sdt" class="form-control fc h4" />
 				</div>
 				<div class="form-group d-none">
 					<label asp-for="VaiTro" class="control-label"></label>
-					<input asp-for="VaiTro" class="form-control" value="Người dùng" />
+					<input required asp-for="VaiTro" class="form-control" value="Người dùng" />
 					<span asp-validation-for="VaiTro" class="text-danger"></span>
 				</div>
 				<div class="form-check mb-3 h4">

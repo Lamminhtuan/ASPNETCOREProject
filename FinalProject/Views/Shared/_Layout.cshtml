@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims;
+@using Microsoft.AspNetCore.Identity;
+<!DOCTYPE html>
 <html>
 <head>
 	<title>UIT Store</title>
@@ -64,8 +66,8 @@
 
 				<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 					<li class="nav-item cart">
-						<a class="nav-link" asp-action="Index" asp-controller="Yeuthiches" asp-route-email="@TaikhoansDAL.emailhientai"><i class="bi bi-heart"></i> Yêu thích</a>
-						<span class="badge badge-warning" id="fvcount">@YeuthichesDAL.GetYeuThichesSL(@TaikhoansDAL.emailhientai)</span>
+						<a class="nav-link" asp-action="Index" asp-controller="Yeuthiches" asp-route-email="@User.FindFirstValue(ClaimTypes.Email)"><i class="bi bi-heart"></i> Yêu thích</a>
+						<span class="badge badge-warning" id="fvcount">@YeuthichesDAL.GetYeuThichesSL(@User.FindFirstValue(ClaimTypes.Email))</span>
 					</li>
 					<li class="nav-item cart">
 						<a class="nav-link" asp-action="Giohang" asp-controller="Ctgiohangs"><i class="bi bi-cart4"></i> Giỏ hàng</a>
@@ -75,13 +77,13 @@
 
 
 
-						@if (TaikhoansDAL.emailhientai == null)
+						@if (!User.Identity.IsAuthenticated)
 						{
 							<a class="nav-link" asp-action="DangNhap" asp-controller="Taikhoans" asp-route-loaidn="dn"><i class="bi bi-person-bounding-box"></i> Tài khoản</a>
 						}
 						else
 						{
-							<a class="nav-link" asp-action="DangNhapThanhCong" asp-controller="Taikhoans"><i class="bi bi-person-bounding-box"></i> @TaikhoansDAL.GetHoTenByEmail(TaikhoansDAL.emailhientai)</a>
+							<a class="nav-link" asp-action="DangNhapThanhCong" asp-controller="Taikhoans"><i class="bi bi-person-bounding-box"></i> @User.Identity.Name</a>
 						}
 
 

@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<FinalProject.Models.Ctgiohang>
-
+@using System.Security.Claims;
 @using System.Globalization;
 <div class="thanhtoanform box p-3">
 	<div class="row">
@@ -54,22 +54,19 @@
 		</div>
 		<div class="col-md-6 p-3">
 			<h2 class="fw-bold"><i class="bi bi-info-square"></i> Thông tin thanh toán</h2>
-			@{
-				var tk = @TaikhoansDAL.GetByEmail(TaikhoansDAL.emailhientai);
-			}
 			<div class="form-group mb-3">
 				<label class="control-label h4"><i class="bi bi-person-vcard"></i> Họ tên</label>
-				<input required class="form-control fc h4" value="@tk.HoTen" />
+				<input required class="form-control fc h4" value="@User.Identity.Name" />
 
 			</div>
 			<div class="form-group mb-3">
 				<label class="control-label h4"><i class="bi bi-house"></i> Địa chỉ</label>
-				<input required class="form-control fc h4" value="@tk.DiaChi" />
+				<input required class="form-control fc h4" value="@User.FindFirstValue(ClaimTypes.StreetAddress)" />
 
 			</div>
 			<div class="form-group mb-3">
 				<label class="control-label h3"><i class="bi bi-telephone"></i> Số điện thoại</label>
-				<input required class="form-control fc h4" value="@tk.Sdt" />
+				<input required class="form-control fc h4" value="@User.FindFirstValue(ClaimTypes.MobilePhone)" />
 
 			</div>
 
@@ -193,7 +190,7 @@
 							<i class="bi bi-house-door"></i> Sử dụng địa chỉ đã đăng ký
 						</label>
 					</div>
-					<div class="form-floating d-none" id="diachiddk">
+					<div class="form-floating" id="diachiddk" style="display:none">
 						<input minlength="1" required type="password" class="form-control" id="floatingInputddk" placeholder="Q.1 TP.HCM">
 						<label for="floatingInputddk">Nhập địa chỉ nhận hàng</label>
 					</div>
@@ -248,6 +245,7 @@ $("#btndathang").click(function() {
 
 		}
 	}
+	//Tùy chọn thanh toán bằng thẻ visa
 	$("#visard").change(function() {
 		if (this.checked) {
 			$("#cardvisa").css("display", "block");
@@ -255,13 +253,15 @@ $("#btndathang").click(function() {
 			$("#tknhoption").css("display", "none");
 		}
 	});
-		$("#tknh").change(function() {
+	//Tùy chọn thanh toán bằng ngân hàng
+	$("#tknh").change(function() {
 		if (this.checked) {
 			$("#cardvisa").css("display", "none");
 			
 			$("#tknhoption").css("display", "block");
 		}
 	});
+	//Tùy chọn thanh toán tại nhà
 	$("#codrd").change(function() {
 		if (this.checked) {
 			$("#cardvisa").css("display", "none");
@@ -269,6 +269,7 @@ $("#btndathang").click(function() {
 			$("#tknhoption").css("display", "none");
 		}
 	});
+	//Nhập địa chỉ mới nếu không sử dụng địa chỉ đã đăng ký
 	$("#diachichb").change(function() {
 		if (!this.checked) {
 			$("#diachiddk").css("display", "block");

@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FinalProject.Models;
 using System.Globalization;
+using Microsoft.AspNetCore.Authorization;
+
 namespace FinalProject.Controllers
 {
     public class CtgiohangsController : Controller
@@ -27,6 +29,7 @@ namespace FinalProject.Controllers
             _context.SaveChanges();
             return thanhtien.ToString("C", CultureInfo.CreateSpecificCulture("vi-VN"));
         }
+        [Authorize]
         public async Task<IActionResult> ThanhToan()
         {
             int count = _context.Giohangs.Count();
@@ -106,6 +109,7 @@ namespace FinalProject.Controllers
             var current = _context.Ctgiohangs.Where(b => b.Idgh.Equals(idgh));
             return View(await current.ToListAsync());
         }
+     
         public async Task<IActionResult> Index(string idgh)
         {
             var aSPContext = _context.Ctgiohangs.Include(c => c.IdghNavigation);

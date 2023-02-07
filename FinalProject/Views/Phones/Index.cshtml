@@ -22,7 +22,10 @@
 				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="Xiaomi" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/xiaomi.png"> Xiaomi</a></li>
 				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="Vivo" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/vivo.png"> Vivo</a></li>
 				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="Realme" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/realme.png"> Realme</a></li>
-
+				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="Nokia" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/nokia.png"> Nokia</a></li>
+				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="Mobell" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/mobell.png"> Mobell</a></li>
+				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="Masstel" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/masstel.png"> Masstel</a></li>
+				<li><a class="dropdown-item" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="Itel" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/itel.png"> Itel</a></li>
 			</ul>
 		
 			<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -33,19 +36,32 @@
 					<a class="dropdown-item" asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]"  asp-route-Hang="@TempData["Hang"]"
 					   asp-route-Nhucau="" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]">Tất cả</a>
 				</li>
+
 				<li>
 					<a class="dropdown-item" asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]"  asp-route-Hang="@TempData["Hang"]"
 					   asp-route-Nhucau="Cao cấp, sang trọng" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/luxury.png"> Cao cấp, sang trọng</a>
 				</li>
+
 				<li>
 					<a class="dropdown-item" asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]"  asp-route-Hang="@TempData["Hang"]"
 					   asp-route-Nhucau="Chụp ảnh, quay phim" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/camera.png"> Chụp ảnh, quay phim</a>
 				</li>
 				<li>
 					<a class="dropdown-item" asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]"  asp-route-Hang="@TempData["Hang"]"
-					   asp-route-Nhucau="Chơi game, cấu hình mạnh" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/gaming.png"> Chơi game, cấu hình mạnh</a>
+					   asp-route-Nhucau="Chơi game" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/gaming.png"> Chơi game</a>
 				</li>
-
+				<li>
+					<a class="dropdown-item" asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]"  asp-route-Hang="@TempData["Hang"]"
+					   asp-route-Nhucau="Màn hình gập" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/mhgap.png"> Màn hình gập</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]"  asp-route-Hang="@TempData["Hang"]"
+					   asp-route-Nhucau="Giá rẻ, pin trâu" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/pintrau.png"> Giá rẻ, pin trâu</a>
+				</li>
+				<li>
+					<a class="dropdown-item" asp-action="Index" asp-controller="Phones" asp-route-searchString="@TempData["CurrentFilter"]"  asp-route-Hang="@TempData["Hang"]"
+					   asp-route-Nhucau="Nghe gọi" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]"><img class="hinhfilter" src="/images/nghegoi.png"> Nghe gọi</a>
+				</li>
 			</ul>
 			
 			<button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
