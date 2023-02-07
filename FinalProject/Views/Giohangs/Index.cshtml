@@ -1,23 +1,79 @@
 ﻿@{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="suamodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form asp-action="SuaGioHang" asp-controller="Giohangs">
+					<div class="form-group">
+						<label class="control-label">IDGH</label>
+						<input required name="idgh" id="mdidgh" readonly class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Email</label>
+						<input required name="email" id="mdemail" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Ngày mua</label>
+						<input type="date" name="ngaymua" id="mdngaymua" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Tổng giá</label>
+						<input type="number" name="tonggia" id="mdtonggia" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Giảm giá</label>
+						<input type="text" name="giamgia" id="mdgiamgia" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Tổng phải trả</label>
+						<input type="number" name="tongphaitra" id="mdtongphaitra" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Lưu lại" class="btn btn-primary" />
+					</div>
+				</form>
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 <h1>Trang quản lí giỏ hàng</h1>
 <a class="btn btn-warning fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModalCreate" style="margin-bottom:10px">Tạo đơn hàng mới</a>
 <div class="modal fade" id="exampleModalCreate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel2">Tạo đơn hàng</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                @await Html.PartialAsync("Create", new FinalProject.Models.Giohang())
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel2">Tạo đơn hàng</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				@await Html.PartialAsync("Create", new FinalProject.Models.Giohang())
 
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>
+	</div>
 </div>
 
 @model IEnumerable<FinalProject.Models.Giohang>
@@ -25,68 +81,100 @@
 <!-- Modal -->
 <br />
 <div class="container box p-3" style="background:white;border-radius:8px;overflow-x:auto;">
-    <div class="carttable">
-        <table class="table table-responsive text-center m-0" style="font-size:large">
-            <thead style="background-color:#ff9800">
-                <tr>
-                    <th>
-                        Email
-                    </th>
-                    <th>
-                        Ngày mua
-                    </th>
-                    <th>
-                        Tổng giá
-                    </th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody class="fw-bold align-middle">
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Email)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.NgayMua)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.TongGia)
-                        </td>
-                        <td>
-                            <a class="btn btn-primary fw-bold" asp-controller="Giohangs" asp-action="Edit" asp-route-id="@item.Idgh">
-                                <i class="bi bi-pencil-fill"></i>
-                                Sửa
-                            </a> |
-                            <a class="btn btn-info fw-bold" asp-controller="Ctgiohangs" asp-action="Details" asp-route-id="@item.Idgh">
-                                <i class="bi bi-file-earmark-fill"></i>
-                                Chi tiết
-                            </a> |
-                            <a class="btn btn-danger fw-bold" asp-controller="Giohangs" asp-action="Delete" asp-route-id="@item.Idgh">
-                                <i class="bi bi-trash3-fill"></i>
-                                Xóa
-                            </a>
-                        </td>
-                    </tr>
-                    <div class="modal fade" id="exampleModalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel2">Sửa đơn hàng</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    @await Html.PartialAsync("Edit", item)
+	<div class="carttable">
+		<table class="table table-responsive text-center m-0" style="font-size:large">
+			<thead style="background-color:#ff9800">
+				<tr>
+					<th>
+						IDGH
+					</th>
+					<th>
+						Email
+					</th>
+					<th>
+						Ngày mua
+					</th>
+					<th>
+						Tổng giá
+					</th>
+					<th>
+						Giảm giá
+					</th>
+					<th>
+						Tổng tiền phải trả
+					</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody class="fw-bold align-middle">
+				@foreach (var item in Model)
+				{
+					<tr>
+						<td class="idgh">
+							@Html.DisplayFor(modelItem => item.Idgh)
+						</td>
+						<td class="email">
+							@Html.DisplayFor(modelItem => item.Email)
+						</td>
+						<td class="ngaymua">
+							@Html.DisplayFor(modelItem => item.NgayMua)
+						</td>
+						<td class="tonggia">
+							@Html.DisplayFor(modelItem => item.TongGia)
+						</td>
+						<td class="giamgia">
+							@Html.DisplayFor(modelItem => item.GiamGia)
+						</td>
+						<td class="tongphaitra">
+							@Html.DisplayFor(modelItem => item.TongPhaiTra)
+						</td>
+						<td>
+							<button type="button" onclick="suagiohang(this)" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#suamodal">
+								Sửa
+							</button>
+							<a class="btn btn-info fw-bold" asp-controller="Ctgiohangs" asp-action="Details" asp-route-id="@item.Idgh">
+								<i class="bi bi-file-earmark-fill"></i>
+								Chi tiết
+							</a> 
+							
+						</td>
+					</tr>
+					@*<div class="modal fade" id="exampleModalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel2">Sửa đơn hàng</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									@await Html.PartialAsync("Edit", item)
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                }
-            </tbody>
-        </table>
-    </div>
+								</div>
+							</div>
+						</div>
+					</div>*@
+				}
+			</tbody>
+		</table>
+	</div>
 </div>
+<script>
+function  suagiohang(e){
+	var p = e.parentNode.parentNode;
+	var idgh = p.getElementsByClassName("idgh")[0].innerText;
+	var email = p.getElementsByClassName("email")[0].innerText;
+	var ngaymua = p.getElementsByClassName("ngaymua")[0].innerText;
+	var tongtien = p.getElementsByClassName("tonggia")[0].innerText;
+	var giamgia = p.getElementsByClassName("giamgia")[0].innerText;
+	var tongphaitra = p.getElementsByClassName("tongphaitra")[0].innerText;
+	$("#mdidgh").val(idgh);
+	$("#mdemail").val(email);
+	$("#mdngaymua").val(ngaymua);
+	$("#mdtonggia").val(tongtien);
+	$("#mdgiamgia").val(giamgia);
+	$("#mdtongphaitra").val(tongphaitra);
+
+}
+</script>
 <!-- Button trigger modal -->
 <!-- Modal -->
