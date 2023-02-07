@@ -22,6 +22,17 @@ namespace FinalProject.Controllers
         {
             return View();
         }
+        public IActionResult SuaGioHang(string idgh, string email, DateTime ngaymua, decimal tonggia, decimal giamgia, decimal tongphaitra)
+        {
+            var giohang = _context.Giohangs.FirstOrDefault(b => b.Idgh.Equals(idgh));
+            giohang.Email = email;
+            giohang.NgayMua = ngaymua;
+            giohang.TongGia = tonggia;
+            giohang.GiamGia = giamgia;
+            giohang.TongPhaiTra = tongphaitra;
+            _context.SaveChanges();
+            return Redirect("Index");
+        }
         public JsonResult DatHang(decimal giamgia, decimal tongphaitra)
         {
             if (giamgia == 0)

@@ -94,47 +94,8 @@
 			</div>
 		</div>
 	</nav>
-	<div id="nav-cont">
-		<nav class="navbar" id="nav-cont1">
-			<div class="container-fluid" id="nav-cont2">
-				<ul class="navbar-nav" id="nav-cont3">
-					<li class="nav-item" id="content1">
-						<a class="nav-link" asp-action="Index" asp-controller="Giohangs" asp-route-idgh="@GiohangsDAL.GetIDDH()">
-							<i class="bi bi-list-ul"></i>
-							Danh sách đơn hàng
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" asp-action="Index" asp-controller="Vouchers">
-							<i class="bi bi-list-ul"></i>
-							Voucher
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" asp-action="Index" asp-controller="Taikhoans">
-							<i class="bi bi-list-ul"></i>
-							Quản lí tài khoản
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" asp-action="Index" asp-controller="Phones">
-							<i class="bi bi-list-ul"></i>
-							Quản lí điện thoại
-						</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" asp-action="Chitiet" asp-controller="Laptops">
-							<i class="bi bi-list-ul"></i>
-							Quản lí laptop
-						</a>
-					</li>
-
-				</ul>
-			</div>
-		</nav>
-	</div>
-
-	<section class="main overflow-auto p-3">
+	
+	<section class="main overflow-auto">
 
 
 		@RenderBody()
