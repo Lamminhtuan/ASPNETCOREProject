@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8cWyX5xfda9RAH/4xQa69+hXbnkOzJhbZPhDQ5/gsu0=",
+  "Hash": "jM+udKfsJnKffklNdyuA0DUYoZRKViGILNZuN1dxJmE=",
   "Source": "FinalProject",
   "BasePath": "_content/FinalProject",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "FinalProject\\wwwroot",
       "Source": "FinalProject",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\obj\\Debug\\net6.0\\scopedcss\\bundle\\FinalProject.styles.css",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\obj\\Debug\\net6.0\\scopedcss\\bundle\\FinalProject.styles.css",
       "SourceId": "FinalProject",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "FinalProject.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\obj\\Debug\\net6.0\\scopedcss\\bundle\\FinalProject.styles.css"
+      "OriginalItemSpec": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\obj\\Debug\\net6.0\\scopedcss\\bundle\\FinalProject.styles.css"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FinalProject.bundle.scp.css",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FinalProject.bundle.scp.css",
       "SourceId": "FinalProject",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "FinalProject.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FinalProject.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FinalProject.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css\\hoang.css",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css\\hoang.css",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css/hoang.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\hoang.css"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css\\nam.css",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css\\nam.css",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css/nam.css",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\nam.css"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css\\style.css",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css\\style.css",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css/style.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css\\truong.css",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css\\truong.css",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css/truong.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\truong.css"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css\\tuan.css",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css\\tuan.css",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css/tuan.css",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\tuan.css"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news1\\638086451302984528_anh-dai-dien-1.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news1\\638086451302984528_anh-dai-dien-1.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news1/638086451302984528_anh-dai-dien-1.jpg",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css_news1\\638086451302984528_anh-dai-dien-1.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news1\\fb-logo.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news1\\fb-logo.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news1/fb-logo.png",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css_news1\\fb-logo.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news1\\vr-game.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news1\\vr-game.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news1/vr-game.jpg",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css_news1\\vr-game.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news1\\vr-game-1.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news1\\vr-game-1.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news1/vr-game-1.jpg",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css_news1\\vr-game-1.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news1\\vr-game-2.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news1\\vr-game-2.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news1/vr-game-2.jpg",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css_news1\\vr-game-2.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news1\\vr-game-3.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news1\\vr-game-3.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news1/vr-game-3.jpg",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css_news1\\vr-game-3.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news1\\vr-game-4.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news1\\vr-game-4.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news1/vr-game-4.jpg",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css_news1\\vr-game-4.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news1\\zalo-logo.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news1\\zalo-logo.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news1/zalo-logo.png",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\css_news1\\zalo-logo.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news2\\638023391163754792_chi.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news2\\638023391163754792_chi.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news2/638023391163754792_chi.jpg",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\css_news2\\638023391163754792_chi.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news2\\fb-logo.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news2\\fb-logo.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news2/fb-logo.png",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\css_news2\\fb-logo.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news2\\your-virus-and-threat-protection (1).png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news2\\your-virus-and-threat-protection (1).png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news2/your-virus-and-threat-protection (1).png",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\css_news2\\your-virus-and-threat-protection (1).png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news2\\your-virus-and-threat-protection (2).png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news2\\your-virus-and-threat-protection (2).png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news2/your-virus-and-threat-protection (2).png",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\css_news2\\your-virus-and-threat-protection (2).png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news2\\your-virus-and-threat-protection (3).png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news2\\your-virus-and-threat-protection (3).png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news2/your-virus-and-threat-protection (3).png",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\css_news2\\your-virus-and-threat-protection (3).png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news2\\your-virus-and-threat-protection (4).png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news2\\your-virus-and-threat-protection (4).png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news2/your-virus-and-threat-protection (4).png",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\css_news2\\your-virus-and-threat-protection (4).png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news2\\your-virus-and-threat-protection (5).png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news2\\your-virus-and-threat-protection (5).png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news2/your-virus-and-threat-protection (5).png",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\css_news2\\your-virus-and-threat-protection (5).png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news2\\your-virus-and-threat-protection (6).png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news2\\your-virus-and-threat-protection (6).png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news2/your-virus-and-threat-protection (6).png",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\css_news2\\your-virus-and-threat-protection (6).png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news2\\zalo-logo.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news2\\zalo-logo.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news2/zalo-logo.png",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\css_news2\\zalo-logo.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\636925656081349181_hinh-anh-dai-dien.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\636925656081349181_hinh-anh-dai-dien.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/636925656081349181_hinh-anh-dai-dien.jpg",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\636925656081349181_hinh-anh-dai-dien.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\636925656081349181_hinh-anh-dai-dien (1).jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\636925656081349181_hinh-anh-dai-dien (1).jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/css_news4/636925656081349181_hinh-anh-dai-dien (1).jpg",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\css_news4\\636925656081349181_hinh-anh-dai-dien (1).jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\bat-bass-boost-00.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\bat-bass-boost-00.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/css_news4/bat-bass-boost-00.jpg",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\css_news4\\bat-bass-boost-00.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\bat-bass-boost-01.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\bat-bass-boost-01.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/css_news4/bat-bass-boost-01.jpg",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\css_news4\\bat-bass-boost-01.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\bat-bass-boost-02.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\bat-bass-boost-02.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/css_news4/bat-bass-boost-02.jpg",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\css_news4\\bat-bass-boost-02.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\bat-bass-boost-03.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\bat-bass-boost-03.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/css_news4/bat-bass-boost-03.jpg",
       "AssetKind": "All",
@@ -527,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\css_news4\\bat-bass-boost-03.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\bat-bass-boost-04.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\bat-bass-boost-04.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/css_news4/bat-bass-boost-04.jpg",
       "AssetKind": "All",
@@ -544,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\css_news4\\bat-bass-boost-04.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\bat-bass-boost-05.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\bat-bass-boost-05.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/css_news4/bat-bass-boost-05.jpg",
       "AssetKind": "All",
@@ -561,10 +561,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\css_news4\\bat-bass-boost-05.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\bat-bass-boost-06.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\bat-bass-boost-06.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/css_news4/bat-bass-boost-06.jpg",
       "AssetKind": "All",
@@ -578,10 +578,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\css_news4\\bat-bass-boost-06.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\fb-logo.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\fb-logo.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/css_news4/fb-logo.png",
       "AssetKind": "All",
@@ -595,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\css_news4\\fb-logo.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\zalo-logo.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\css_news4\\zalo-logo.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/css_news4/zalo-logo.png",
       "AssetKind": "All",
@@ -612,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\css_news4\\zalo-logo.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\fb-logo.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\fb-logo.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/fb-logo.png",
       "AssetKind": "All",
@@ -629,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\fb-logo.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-00.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-00.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/man-hinh-cam-ung-00.jpg",
       "AssetKind": "All",
@@ -646,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\man-hinh-cam-ung-00.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-01.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-01.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/man-hinh-cam-ung-01.jpg",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\man-hinh-cam-ung-01.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-02.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-02.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/man-hinh-cam-ung-02.jpg",
       "AssetKind": "All",
@@ -680,10 +680,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\man-hinh-cam-ung-02.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-03.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-03.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/man-hinh-cam-ung-03.jpg",
       "AssetKind": "All",
@@ -697,10 +697,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\man-hinh-cam-ung-03.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-04.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-04.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/man-hinh-cam-ung-04.jpg",
       "AssetKind": "All",
@@ -714,10 +714,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\man-hinh-cam-ung-04.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-05.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-05.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/man-hinh-cam-ung-05.jpg",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\man-hinh-cam-ung-05.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-06.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-06.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/man-hinh-cam-ung-06.jpg",
       "AssetKind": "All",
@@ -748,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\man-hinh-cam-ung-06.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-07.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-07.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/man-hinh-cam-ung-07.jpg",
       "AssetKind": "All",
@@ -765,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\man-hinh-cam-ung-07.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-08.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-08.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/man-hinh-cam-ung-08.jpg",
       "AssetKind": "All",
@@ -782,10 +782,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\man-hinh-cam-ung-08.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-09.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-09.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/man-hinh-cam-ung-09.jpg",
       "AssetKind": "All",
@@ -799,10 +799,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\man-hinh-cam-ung-09.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-10.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\man-hinh-cam-ung-10.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/man-hinh-cam-ung-10.jpg",
       "AssetKind": "All",
@@ -816,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\man-hinh-cam-ung-10.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\zalo-logo.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news3\\zalo-logo.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "css_news3/zalo-logo.png",
       "AssetKind": "All",
@@ -833,10 +833,10 @@
       "OriginalItemSpec": "wwwroot\\css_news3\\zalo-logo.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\acb.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\acb.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/acb.png",
       "AssetKind": "All",
@@ -850,10 +850,10 @@
       "OriginalItemSpec": "wwwroot\\images\\acb.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\acer.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\acer.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/acer.png",
       "AssetKind": "All",
@@ -867,10 +867,10 @@
       "OriginalItemSpec": "wwwroot\\images\\acer.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\android.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\android.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/android.png",
       "AssetKind": "All",
@@ -884,10 +884,10 @@
       "OriginalItemSpec": "wwwroot\\images\\android.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\apple.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\apple.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/apple.png",
       "AssetKind": "All",
@@ -901,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\images\\apple.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\apple.webp",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\apple.webp",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/apple.webp",
       "AssetKind": "All",
@@ -918,10 +918,10 @@
       "OriginalItemSpec": "wwwroot\\images\\apple.webp"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\asus.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\asus.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/asus.png",
       "AssetKind": "All",
@@ -935,10 +935,10 @@
       "OriginalItemSpec": "wwwroot\\images\\asus.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\auth.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\auth.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/auth.png",
       "AssetKind": "All",
@@ -952,10 +952,10 @@
       "OriginalItemSpec": "wwwroot\\images\\auth.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\avatar.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\avatar.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/avatar.png",
       "AssetKind": "All",
@@ -969,10 +969,10 @@
       "OriginalItemSpec": "wwwroot\\images\\avatar.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\banner1.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\banner1.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/banner1.png",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\images\\banner1.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\banner2.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\banner2.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/banner2.png",
       "AssetKind": "All",
@@ -1003,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\images\\banner2.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\banner3.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\banner3.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/banner3.png",
       "AssetKind": "All",
@@ -1020,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\images\\banner3.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\banner4.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\banner4.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/banner4.png",
       "AssetKind": "All",
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\images\\banner4.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\banner5.gif",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\banner5.gif",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/banner5.gif",
       "AssetKind": "All",
@@ -1054,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\images\\banner5.gif"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\banner6.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\banner6.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/banner6.png",
       "AssetKind": "All",
@@ -1071,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\images\\banner6.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\bg.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\bg.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/bg.png",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\images\\bg.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\bidv.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\bidv.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/bidv.png",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\images\\bidv.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\bkg-testimo.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\bkg-testimo.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/bkg-testimo.png",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\images\\bkg-testimo.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\camera.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\camera.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/camera.png",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\images\\camera.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\cat.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\cat.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/cat.png",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\images\\cat.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\chip.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\chip.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/chip.png",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\images\\chip.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\dell.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\dell.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/dell.png",
       "AssetKind": "All",
@@ -1190,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\images\\dell.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\dienthoai.webp",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\dienthoai.webp",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/dienthoai.webp",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\images\\dienthoai.webp"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\dtpt.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\dtpt.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/dtpt.png",
       "AssetKind": "All",
@@ -1224,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\images\\dtpt.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\favicon.ico",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\favicon.ico",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/favicon.ico",
       "AssetKind": "All",
@@ -1241,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\images\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\galaxy.webp",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\galaxy.webp",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/galaxy.webp",
       "AssetKind": "All",
@@ -1258,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\images\\galaxy.webp"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\gaming.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\gaming.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/gaming.jpg",
       "AssetKind": "All",
@@ -1275,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\images\\gaming.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\gaming.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\gaming.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/gaming.png",
       "AssetKind": "All",
@@ -1292,10 +1292,10 @@
       "OriginalItemSpec": "wwwroot\\images\\gaming.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\giaithuong.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\giaithuong.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/giaithuong.png",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\images\\giaithuong.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\giaohang.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\giaohang.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/giaohang.png",
       "AssetKind": "All",
@@ -1326,10 +1326,10 @@
       "OriginalItemSpec": "wwwroot\\images\\giaohang.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\gigabyte.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\gigabyte.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/gigabyte.png",
       "AssetKind": "All",
@@ -1343,10 +1343,10 @@
       "OriginalItemSpec": "wwwroot\\images\\gigabyte.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\head-img.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\head-img.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/head-img.jpg",
       "AssetKind": "All",
@@ -1360,10 +1360,10 @@
       "OriginalItemSpec": "wwwroot\\images\\head-img.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\hoa.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\hoa.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/hoa.png",
       "AssetKind": "All",
@@ -1377,10 +1377,10 @@
       "OriginalItemSpec": "wwwroot\\images\\hoa.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\home-office-1867761_1920.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\home-office-1867761_1920.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/home-office-1867761_1920.jpg",
       "AssetKind": "All",
@@ -1394,10 +1394,10 @@
       "OriginalItemSpec": "wwwroot\\images\\home-office-1867761_1920.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\hp.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\hp.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/hp.png",
       "AssetKind": "All",
@@ -1411,10 +1411,10 @@
       "OriginalItemSpec": "wwwroot\\images\\hp.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\image1.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\image1.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/image1.png",
       "AssetKind": "All",
@@ -1428,10 +1428,10 @@
       "OriginalItemSpec": "wwwroot\\images\\image1.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\image2.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\image2.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/image2.png",
       "AssetKind": "All",
@@ -1445,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\images\\image2.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\image3.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\image3.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/image3.png",
       "AssetKind": "All",
@@ -1462,10 +1462,10 @@
       "OriginalItemSpec": "wwwroot\\images\\image3.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\image4.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\image4.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/image4.png",
       "AssetKind": "All",
@@ -1479,10 +1479,10 @@
       "OriginalItemSpec": "wwwroot\\images\\image4.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\images - Shortcut.lnk",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\images - Shortcut.lnk",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/images - Shortcut.lnk",
       "AssetKind": "All",
@@ -1496,10 +1496,10 @@
       "OriginalItemSpec": "wwwroot\\images\\images - Shortcut.lnk"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\IMG-2900-3029-1669890556.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\IMG-2900-3029-1669890556.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/IMG-2900-3029-1669890556.jpg",
       "AssetKind": "All",
@@ -1513,10 +1513,10 @@
       "OriginalItemSpec": "wwwroot\\images\\IMG-2900-3029-1669890556.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\IMG-2901-3035-1669890556.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\IMG-2901-3035-1669890556.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/IMG-2901-3035-1669890556.jpg",
       "AssetKind": "All",
@@ -1530,10 +1530,10 @@
       "OriginalItemSpec": "wwwroot\\images\\IMG-2901-3035-1669890556.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\IMG-2902-1149-1669890556.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\IMG-2902-1149-1669890556.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/IMG-2902-1149-1669890556.jpg",
       "AssetKind": "All",
@@ -1547,10 +1547,10 @@
       "OriginalItemSpec": "wwwroot\\images\\IMG-2902-1149-1669890556.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\ios.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\ios.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/ios.png",
       "AssetKind": "All",
@@ -1564,10 +1564,10 @@
       "OriginalItemSpec": "wwwroot\\images\\ios.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\ip.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\ip.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/ip.jpg",
       "AssetKind": "All",
@@ -1581,10 +1581,10 @@
       "OriginalItemSpec": "wwwroot\\images\\ip.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\ip14.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\ip14.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/ip14.jpg",
       "AssetKind": "All",
@@ -1598,10 +1598,10 @@
       "OriginalItemSpec": "wwwroot\\images\\ip14.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\itel.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\itel.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/itel.png",
       "AssetKind": "All",
@@ -1615,10 +1615,10 @@
       "OriginalItemSpec": "wwwroot\\images\\itel.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\lap.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\lap.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/lap.png",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\images\\lap.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\laptop.webp",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\laptop.webp",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/laptop.webp",
       "AssetKind": "All",
@@ -1649,10 +1649,10 @@
       "OriginalItemSpec": "wwwroot\\images\\laptop.webp"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\lenovo.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\lenovo.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/lenovo.png",
       "AssetKind": "All",
@@ -1666,10 +1666,10 @@
       "OriginalItemSpec": "wwwroot\\images\\lenovo.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\lenovo-logo.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\lenovo-logo.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/lenovo-logo.png",
       "AssetKind": "All",
@@ -1683,10 +1683,10 @@
       "OriginalItemSpec": "wwwroot\\images\\lenovo-logo.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\lg.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\lg.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/lg.png",
       "AssetKind": "All",
@@ -1700,10 +1700,10 @@
       "OriginalItemSpec": "wwwroot\\images\\lg.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\login.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\login.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/login.png",
       "AssetKind": "All",
@@ -1717,10 +1717,10 @@
       "OriginalItemSpec": "wwwroot\\images\\login.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\logo_trend.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\logo_trend.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/logo_trend.png",
       "AssetKind": "All",
@@ -1734,10 +1734,10 @@
       "OriginalItemSpec": "wwwroot\\images\\logo_trend.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\luxury.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\luxury.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/luxury.png",
       "AssetKind": "All",
@@ -1751,10 +1751,10 @@
       "OriginalItemSpec": "wwwroot\\images\\luxury.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\m53.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\m53.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/m53.jpg",
       "AssetKind": "All",
@@ -1768,10 +1768,10 @@
       "OriginalItemSpec": "wwwroot\\images\\m53.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\macbook.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\macbook.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/macbook.png",
       "AssetKind": "All",
@@ -1785,10 +1785,10 @@
       "OriginalItemSpec": "wwwroot\\images\\macbook.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\macos.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\macos.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/macos.png",
       "AssetKind": "All",
@@ -1802,10 +1802,10 @@
       "OriginalItemSpec": "wwwroot\\images\\macos.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\map.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\map.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/map.png",
       "AssetKind": "All",
@@ -1819,10 +1819,10 @@
       "OriginalItemSpec": "wwwroot\\images\\map.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\masstel.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\masstel.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/masstel.png",
       "AssetKind": "All",
@@ -1836,10 +1836,10 @@
       "OriginalItemSpec": "wwwroot\\images\\masstel.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\mbb.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\mbb.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/mbb.png",
       "AssetKind": "All",
@@ -1853,10 +1853,10 @@
       "OriginalItemSpec": "wwwroot\\images\\mbb.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\mhgap.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\mhgap.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/mhgap.png",
       "AssetKind": "All",
@@ -1870,10 +1870,10 @@
       "OriginalItemSpec": "wwwroot\\images\\mhgap.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\mobell.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\mobell.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/mobell.png",
       "AssetKind": "All",
@@ -1887,10 +1887,10 @@
       "OriginalItemSpec": "wwwroot\\images\\mobell.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\modes-nexdock-360.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\modes-nexdock-360.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/modes-nexdock-360.jpg",
       "AssetKind": "All",
@@ -1904,10 +1904,10 @@
       "OriginalItemSpec": "wwwroot\\images\\modes-nexdock-360.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\nexcomputer-macmini.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\nexcomputer-macmini.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/nexcomputer-macmini.jpg",
       "AssetKind": "All",
@@ -1921,10 +1921,10 @@
       "OriginalItemSpec": "wwwroot\\images\\nexcomputer-macmini.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\nexdock-360-gamer-pc.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\nexdock-360-gamer-pc.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/nexdock-360-gamer-pc.jpg",
       "AssetKind": "All",
@@ -1938,10 +1938,10 @@
       "OriginalItemSpec": "wwwroot\\images\\nexdock-360-gamer-pc.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\nexdock-360-nintendo.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\nexdock-360-nintendo.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/nexdock-360-nintendo.jpg",
       "AssetKind": "All",
@@ -1955,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\images\\nexdock-360-nintendo.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\nghegoi.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\nghegoi.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/nghegoi.png",
       "AssetKind": "All",
@@ -1972,10 +1972,10 @@
       "OriginalItemSpec": "wwwroot\\images\\nghegoi.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\nokia.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\nokia.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/nokia.png",
       "AssetKind": "All",
@@ -1989,10 +1989,10 @@
       "OriginalItemSpec": "wwwroot\\images\\nokia.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\oppo.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\oppo.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/oppo.png",
       "AssetKind": "All",
@@ -2006,10 +2006,10 @@
       "OriginalItemSpec": "wwwroot\\images\\oppo.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\oppo.webp",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\oppo.webp",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/oppo.webp",
       "AssetKind": "All",
@@ -2023,10 +2023,10 @@
       "OriginalItemSpec": "wwwroot\\images\\oppo.webp"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\pair.jpeg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\pair.jpeg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/pair.jpeg",
       "AssetKind": "All",
@@ -2040,10 +2040,10 @@
       "OriginalItemSpec": "wwwroot\\images\\pair.jpeg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\pattern.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\pattern.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/pattern.png",
       "AssetKind": "All",
@@ -2057,10 +2057,10 @@
       "OriginalItemSpec": "wwwroot\\images\\pattern.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\pintrau.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\pintrau.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/pintrau.png",
       "AssetKind": "All",
@@ -2074,10 +2074,10 @@
       "OriginalItemSpec": "wwwroot\\images\\pintrau.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\realme.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\realme.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/realme.png",
       "AssetKind": "All",
@@ -2091,10 +2091,10 @@
       "OriginalItemSpec": "wwwroot\\images\\realme.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\sales.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\sales.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/sales.png",
       "AssetKind": "All",
@@ -2108,10 +2108,10 @@
       "OriginalItemSpec": "wwwroot\\images\\sales.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\samsung.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\samsung.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/samsung.png",
       "AssetKind": "All",
@@ -2125,10 +2125,10 @@
       "OriginalItemSpec": "wwwroot\\images\\samsung.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\samsung-dex-laptop.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\samsung-dex-laptop.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/samsung-dex-laptop.jpg",
       "AssetKind": "All",
@@ -2142,10 +2142,10 @@
       "OriginalItemSpec": "wwwroot\\images\\samsung-dex-laptop.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\scb.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\scb.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/scb.png",
       "AssetKind": "All",
@@ -2159,10 +2159,10 @@
       "OriginalItemSpec": "wwwroot\\images\\scb.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\screen.webp",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\screen.webp",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/screen.webp",
       "AssetKind": "All",
@@ -2176,10 +2176,10 @@
       "OriginalItemSpec": "wwwroot\\images\\screen.webp"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\se2022.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\se2022.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/se2022.jpg",
       "AssetKind": "All",
@@ -2193,10 +2193,10 @@
       "OriginalItemSpec": "wwwroot\\images\\se2022.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\signature.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\signature.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/signature.png",
       "AssetKind": "All",
@@ -2210,10 +2210,10 @@
       "OriginalItemSpec": "wwwroot\\images\\signature.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\signup.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\signup.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/signup.png",
       "AssetKind": "All",
@@ -2227,10 +2227,10 @@
       "OriginalItemSpec": "wwwroot\\images\\signup.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\testimo1.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\testimo1.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/testimo1.png",
       "AssetKind": "All",
@@ -2244,10 +2244,10 @@
       "OriginalItemSpec": "wwwroot\\images\\testimo1.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\testimo2.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\testimo2.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/testimo2.png",
       "AssetKind": "All",
@@ -2261,10 +2261,10 @@
       "OriginalItemSpec": "wwwroot\\images\\testimo2.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\testimo3.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\testimo3.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/testimo3.png",
       "AssetKind": "All",
@@ -2278,10 +2278,10 @@
       "OriginalItemSpec": "wwwroot\\images\\testimo3.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\thankyou.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\thankyou.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/thankyou.png",
       "AssetKind": "All",
@@ -2295,10 +2295,10 @@
       "OriginalItemSpec": "wwwroot\\images\\thankyou.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\tincay.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\tincay.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/tincay.png",
       "AssetKind": "All",
@@ -2312,10 +2312,10 @@
       "OriginalItemSpec": "wwwroot\\images\\tincay.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\UIT STORE.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\UIT STORE.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/UIT STORE.png",
       "AssetKind": "All",
@@ -2329,10 +2329,10 @@
       "OriginalItemSpec": "wwwroot\\images\\UIT STORE.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\uit.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\uit.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/uit.png",
       "AssetKind": "All",
@@ -2346,10 +2346,10 @@
       "OriginalItemSpec": "wwwroot\\images\\uit.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\uitbg.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\uitbg.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/uitbg.png",
       "AssetKind": "All",
@@ -2363,10 +2363,10 @@
       "OriginalItemSpec": "wwwroot\\images\\uitbg.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\update.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\update.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/update.png",
       "AssetKind": "All",
@@ -2380,10 +2380,10 @@
       "OriginalItemSpec": "wwwroot\\images\\update.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\vanphong.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\vanphong.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/vanphong.png",
       "AssetKind": "All",
@@ -2397,10 +2397,10 @@
       "OriginalItemSpec": "wwwroot\\images\\vanphong.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\vcb.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\vcb.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/vcb.png",
       "AssetKind": "All",
@@ -2414,10 +2414,10 @@
       "OriginalItemSpec": "wwwroot\\images\\vcb.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\visa.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\visa.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/visa.png",
       "AssetKind": "All",
@@ -2431,10 +2431,10 @@
       "OriginalItemSpec": "wwwroot\\images\\visa.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\visa1.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\visa1.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/visa1.png",
       "AssetKind": "All",
@@ -2448,10 +2448,10 @@
       "OriginalItemSpec": "wwwroot\\images\\visa1.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\vivo.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\vivo.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/vivo.png",
       "AssetKind": "All",
@@ -2465,10 +2465,10 @@
       "OriginalItemSpec": "wwwroot\\images\\vivo.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\vivo.webp",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\vivo.webp",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/vivo.webp",
       "AssetKind": "All",
@@ -2482,10 +2482,10 @@
       "OriginalItemSpec": "wwwroot\\images\\vivo.webp"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\vtb.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\vtb.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/vtb.png",
       "AssetKind": "All",
@@ -2499,10 +2499,10 @@
       "OriginalItemSpec": "wwwroot\\images\\vtb.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\wall.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\wall.jpg",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/wall.jpg",
       "AssetKind": "All",
@@ -2516,10 +2516,10 @@
       "OriginalItemSpec": "wwwroot\\images\\wall.jpg"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\window.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\window.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/window.png",
       "AssetKind": "All",
@@ -2533,10 +2533,10 @@
       "OriginalItemSpec": "wwwroot\\images\\window.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\xiaomi.png",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\xiaomi.png",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/xiaomi.png",
       "AssetKind": "All",
@@ -2550,10 +2550,10 @@
       "OriginalItemSpec": "wwwroot\\images\\xiaomi.png"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\xiaomi.webp",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\xiaomi.webp",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "images/xiaomi.webp",
       "AssetKind": "All",
@@ -2567,10 +2567,10 @@
       "OriginalItemSpec": "wwwroot\\images\\xiaomi.webp"
     },
     {
-      "Identity": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\js\\site.js",
       "SourceId": "FinalProject",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\",
       "BasePath": "_content/FinalProject",
       "RelativePath": "js/site.js",
       "AssetKind": "All",

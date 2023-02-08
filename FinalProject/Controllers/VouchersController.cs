@@ -75,6 +75,28 @@ namespace FinalProject.Controllers
         }
 
         // GET: Vouchers/Edit/5
+        public IActionResult EditVoucher(string vc, decimal gg)
+        {
+            var voucher = _context.Vouchers.FirstOrDefault(b => b.Voucher1.Equals(vc));
+            voucher.Voucher1 = vc;
+            voucher.GiamGia = gg;
+
+            _context.SaveChanges();
+            return Redirect("Index");
+}
+        public IActionResult Xoa(string vc)
+        {
+            var voucher = _context.Vouchers.FirstOrDefault(b => b.Voucher1.Equals(vc));
+            if (voucher == null)
+            {
+                return NotFound();
+            }
+            _context.Vouchers.Remove(voucher);
+            _context.SaveChanges();
+            return Redirect("Index");
+
+        }
+
         public async Task<IActionResult> Edit(string id)
         {
             if (id == null || _context.Vouchers == null)

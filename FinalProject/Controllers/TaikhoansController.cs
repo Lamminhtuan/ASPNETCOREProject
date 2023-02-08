@@ -28,7 +28,10 @@ namespace FinalProject.Controllers
         {
             return View();
         }
-
+        public IActionResult Viewadmin()
+        {
+            return View();
+        }
 
         public IActionResult DangNhap(string email, string password, string returnUrl)
         {

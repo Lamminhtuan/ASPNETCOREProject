@@ -39,7 +39,9 @@ namespace FinalProject.Controllers
             {
                 tongphaitra = CtgiohangsDAL.GetTongTien();
             }
-            int count = _context.Giohangs.Count();
+
+            int v = _context.Giohangs.Count();
+            int count = v;
             string currentid;
             if (count < 10)
                 currentid = "GH0" + count.ToString();
