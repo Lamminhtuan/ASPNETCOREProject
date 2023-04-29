@@ -1,0 +1,57 @@
+﻿<div class="card text-center qmkform pb-3" style="box-shadow:0 0 5px;">
+	<div class="h4 bg-primary card-header fw-bold p-3 text-white"><i class="bi bi-lock"></i> Quên mật khẩu</div>
+	<div class="card-body">
+		<form id="formqmk">
+		<div class="card-text mb-3 h4">Nhập email đã đăng ký và hệ thống sẽ cấp mã xác nhận để khôi phục mật khẩu cho bạn.</div>
+		<div class="text-danger mb-3 h4" id="tbkttemail" style="display:none;">Không tồn tại email!</div>
+		<div class="text-primary mb-3 h4" id="tbcho" style="display:none;">Vui lòng chờ trong khi hệ thống đang cấp mã xác nhận cho bạn!</div>
+		<div class="form-group mb-3 text-start">
+				<label  for="nguoinhan" class="control-label h4"><i class="bi bi-envelope"></i> Email</label>
+				<input required id="nguoinhan" type="email" name="email" class="form-control fc h4 w-100" />
+			</div>
+		<div class="d-flex align-items-center">
+			<button class="btn btn-success mb-3 w-100  fw-bold" id="gmxnbtn" type="submit">Gửi mã xác nhận</button>
+		</div>
+		</form>
+		<div class="d-flex align-items-center justify-content-between">
+			<a class="btn nauvangbtn fw-bold" asp-action="DangNhap" asp-controller="Taikhoans">Đăng nhập</a>
+			<a class="btn xanhneonbtn fw-bold" asp-action="Create" asp-controller="Taikhoans">Đăng ký</a>
+		</div>
+	</div>
+</div>
+<script>
+$("#formqmk").submit(function(e) {
+	     e.preventDefault();
+});
+	$("#gmxnbtn").click(function(e) {
+		
+		var nn = $("#nguoinhan").val();
+		$.ajax({
+			type: "POST",
+			//Gọi hàm CheckEmailExists trong Controller Taikhoans
+			url: "@Url.Action("CheckEmailExists", "Taikhoans")",
+			//Tham số truyền vào
+			data: { "email": nn },
+			success: function(data) {
+				if (data == false) {
+                 
+					$("#tbkttemail").css("display", "block");
+				}
+				else {
+			$("#tbkttemail").css("display", "none");
+			$("#tbcho").css("display", "block");
+                    $.ajax({
+                        type: "POST",
+                        //
+                        url: "@Url.Action("Index", "Emails")",
+                        //Tham số truyền vào
+                        data: { "nguoinhan": nn },
+                        success: function(res) {
+                            window.location.href = res.toxacnhan;
+						}
+                    });
+				}
+			}
+			});
+	});
+</script>

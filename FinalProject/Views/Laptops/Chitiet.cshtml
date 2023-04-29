@@ -1,0 +1,509 @@
+﻿@model IEnumerable<FinalProject.Models.Laptop>
+
+@using System.Globalization;
+
+<!-- Add -->
+<div id="nav-cont">
+	<nav class="navbar" id="nav-cont1">
+		<div class="container-fluid" id="nav-cont2">
+			<ul class="navbar-nav" id="nav-cont3">
+				<li class="nav-item" id="content1">
+					<a class="nav-link" asp-action="Index" asp-controller="Giohangs" asp-route-all="yes" value="">
+						<i class="bi bi-list-ul"></i>
+						Danh sách đơn hàng
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" asp-action="Index" asp-controller="Vouchers">
+						<i class="bi bi-card-list"></i>
+
+						Voucher
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" asp-action="Index" asp-controller="Taikhoans">
+						<i class="bi bi-person-vcard"></i>
+						Quản lý tài khoản
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" asp-action="Chitiet" asp-controller="Phones">
+						<i class="bi bi-phone-fill"></i>
+						Quản lý điện thoại
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" asp-action="Chitiet" asp-controller="Laptops">
+						<i class="bi bi-laptop-fill"></i>
+
+						Quản lý laptop
+					</a>
+				</li>
+				<li class="nav-item">
+					<a asp-action="DangXuat" asp-controller="Taikhoans" class="btn btn-danger">
+						<i class="bi bi-key-fill"></i>
+
+						Đăng xuất
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</div>
+<div class="modal fade" id="themlaptop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<form id="formthemlaptop">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Thêm mới laptop</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-group">
+						<label class="control-label">ID</label>
+						<input required id="themid" readonly class="form-control" value="@LaptopsDAL.GetID()" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Tên</label>
+						<input required id="themten" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Hãng</label>
+						<input required id="themhang" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Giá</label>
+						<input type="number" required id="themgia" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Màn hình</label>
+						<input required id="themmanhinh" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Hệ điều hành</label>
+						<input required id="themos" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Webcam</label>
+						<input required id="themwebcam" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Nhu cầu</label>
+						<input required id="themnhucau" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Chip</label>
+						<input required id="themchip" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">VGA</label>
+						<input required id="themvga" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">RAM (Gb)</label>
+						<input required id="themram" type="number" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">ROM (Gb)</label>
+						<input required id="themrom" type="number" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Pin</label>
+						<input required id="thempin" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Khối lượng (Kg)</label>
+						<input required id="themkhoiluong" type="number" min="0" step="0.01" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Cổng giao tiếp</label>
+						<input required id="themcgt" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Thiết kế</label>
+						<input required id="themthietke" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Đường dẫn hình ảnh</label>
+						<input required id="themimagepath" class="form-control" />
+
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+					<button type="submit" class="btn btn-primary" id="btnthemlaptop">Thêm mới</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- update -->
+<div class="modal fade" id="sualaptop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<form id="formsualaptop">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Sửa laptop</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-group">
+						<label class="control-label">ID</label>
+						<input required id="suaid" readonly class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Tên</label>
+						<input required id="suaten" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Hãng</label>
+						<input required id="suahang" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Giá</label>
+						<input type="number" required id="suagia" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Màn hình</label>
+						<input required id="suamanhinh" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Hệ điều hành</label>
+						<input required id="suaos" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Webcam</label>
+						<input required id="suawebcam" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Nhu cầu</label>
+						<input required id="suanhucau" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Chip</label>
+						<input required id="suachip" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">VGA</label>
+						<input required id="suavga" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">RAM (Gb)</label>
+						<input required id="suaram" type"number" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">ROM (Gb)</label>
+						<input required id="suarom" type="number" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Pin</label>
+						<input required id="suapin" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Khối lượng (Kg)</label>
+						<input required id="suakhoiluong" type="number" min="0" step="0.01" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Cổng giao tiếp</label>
+						<input required id="suacgt" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Thiết kế</label>
+						<input required id="suathietke" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Đường dẫn hình ảnh</label>
+						<input required id="suaimagepath" class="form-control" />
+
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+					<button type="submit" class="btn btn-primary">Cập nhật</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<div class="container box p-3 my-3" style="background:white;border-radius:8px;overflow-x:auto;">
+	<div class="mb-3">
+		<h2 class="fw-bold d-inline"><i class="bi bi-laptop"></i> Danh sách laptop</h2>
+	</div>
+	<button type="button" class="btn btn-success fw-bold mb-3" data-bs-toggle="modal" data-bs-target="#themlaptop">
+		<i class="bi bi-plus-circle"></i> Thêm mới laptop
+	</button>
+	<div class="mb-3 text-center">
+		<form asp-action="Chitiet" asp-controller="Laptops">
+			<div class="input-group mb-3">
+				<input name="searchstring" type="text" class="form-control" placeholder="Tìm kiếm" aria-label="Tìm kiếm" aria-describedby="button-addon2">
+				<button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i class="bi bi-search"></i></button>
+			</div>
+		</form>
+	</div>
+	<table class="table table-responsive text-center m-0 h5 align-middle">
+		<thead style="background-color:#ff9800">
+			<tr>
+				
+				<th>
+					Tên sản phẩm
+				</th>
+				<th>
+					Hãng
+				</th>
+				<th>
+					Giá
+				</th>
+				<th>
+					Hình sản phẩm
+				</th>
+				<th></th>
+			</tr>
+		</thead>
+
+		<tbody class="fw-bold align-middle">
+
+			@foreach (var item in Model)
+			{
+
+
+				<tr>
+					<td class="d-none idlt">
+						@item.Id
+					</td>
+					<td class="ten">
+						<a asp-action="Details" asp-controller="Laptops" class="linktodetails" asp-route-id="@item.Id">
+							@Html.DisplayFor(modelItem => item.Ten)
+						</a>
+					</td>
+					<td class="hang">
+						@Html.DisplayFor(modelItem => item.Hang)
+					</td>
+					<td>
+						<span class="d-none gia"> @Convert.ToInt32(@item.Gia)</span>
+						@item.Gia.ToString("C",CultureInfo.CreateSpecificCulture("vi-VN"))
+					</td>
+					<td class="d-none manhinh">
+						@Html.DisplayFor(modelItem => item.ManHinh)
+					</td>
+					<td class="d-none os">
+						@Html.DisplayFor(modelItem => item.Os)
+					</td>
+					<td class="d-none webcam">
+						@Html.DisplayFor(modelItem => item.Webcam)
+					</td>
+					<td class="d-none nhucau">
+						@Html.DisplayFor(modelItem => item.NhuCau)
+					</td>
+					<td class="d-none chip">
+						@Html.DisplayFor(modelItem => item.Chip)
+					</td>
+					<td class="d-none vga">
+						@Html.DisplayFor(modelItem => item.Vga)
+					</td>
+					<td class="d-none ram">
+						@Html.DisplayFor(modelItem => item.Ram)
+					</td>
+					<td class="d-none rom">
+						@Html.DisplayFor(modelItem => item.Rom)
+					</td>
+					<td class="d-none pin">
+						@Html.DisplayFor(modelItem => item.Pin)
+					</td>
+					<td class="d-none khoiluong">
+						@Html.DisplayFor(modelItem => item.KhoiLuong)
+					</td>
+					<td class="d-none cgt">
+						@Html.DisplayFor(modelItem => item.CongGiaoTiep)
+					</td>
+					<td class="d-none thietke">
+						@Html.DisplayFor(modelItem => item.ThietKe)
+					</td>
+					<td>
+						<span class="d-none imagepath">@item.ImagePath></span>
+						<img src="@item.ImagePath" style="height:120px;width:auto;" />
+					</td>
+					<td>
+						<button type="button" onclick="sualaptop(this)" class="btn btn-info fw-bold mb-3" data-bs-toggle="modal" data-bs-target="#sualaptop">
+							<i class="bi bi-pen"></i> Sửa laptop
+						</button> |
+						<a href="#" onclick="xoalaptop(this)"><i class="bi bi-trash dobtn"></i></a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+<script>
+	function xoalaptop(e) {
+		var p = e.parentNode.parentNode;
+		var idlt = p.getElementsByClassName("idlt")[0].innerText.trim();
+		p.parentNode.removeChild(p);
+
+		$.ajax({
+			type: "POST",
+
+			url: "@Url.Action("XoaLaptop", "Laptops")",
+			//Tham số truyền vào
+			data: { "idlt": idlt },
+			success: function () {
+				Swal.fire(
+					'Thành công!',
+					'Xóa thành công!',
+					'success'
+				)
+			}
+		});
+	}
+	function sualaptop(e) {
+		var p = e.parentNode.parentNode;
+		var id = p.getElementsByClassName("idlt")[0].innerText.trim();
+		var ten = p.getElementsByClassName("ten")[0].innerText.trim();
+		var hang = p.getElementsByClassName("hang")[0].innerText.trim();
+		var gia = p.getElementsByClassName("gia")[0].innerText.trim();
+		var manhinh = p.getElementsByClassName("manhinh")[0].innerText.trim();
+		var os = p.getElementsByClassName("os")[0].innerText.trim();
+		var webcam = p.getElementsByClassName("webcam")[0].innerText.trim();
+		var nhucau = p.getElementsByClassName("nhucau")[0].innerText.trim();
+		var chip = p.getElementsByClassName("chip")[0].innerText.trim();
+		var vga = p.getElementsByClassName("vga")[0].innerText.trim();
+		var ram = p.getElementsByClassName("ram")[0].innerText.trim();
+		var rom = p.getElementsByClassName("rom")[0].innerText.trim();
+		var pin = p.getElementsByClassName("pin")[0].innerText.trim();
+		var khoiluong = p.getElementsByClassName("khoiluong")[0].innerText.trim();
+		var cgt = p.getElementsByClassName("cgt")[0].innerText.trim();
+		var thietke = p.getElementsByClassName("thietke")[0].innerText.trim();
+		var imagepath = p.getElementsByClassName("imagepath")[0].innerText.trim();
+		$("#suaid").val(id);
+		$("#suaten").val(ten);
+		$("#suahang").val(hang);
+		$("#suagia").val(gia);
+		$("#suamanhinh").val(manhinh);
+		$("#suaos").val(os);
+		$("#suawebcam").val(webcam);
+		$("#suanhucau").val(nhucau);
+		$("#suachip").val(chip);
+		$("#suavga").val(vga);
+		$("#suaram").val(ram);
+		$("#suarom").val(rom);
+		$("#suapin").val(pin);
+		$("#suakhoiluong").val(khoiluong);
+		$("#suacgt").val(cgt);
+		$("#suathietke").val(thietke);
+		$("#suaimagepath").val(imagepath);
+
+	}
+	$("#formsualaptop").submit(function (e) {
+		e.preventDefault();
+		var id = $("#suaid").val();
+		var ten = $("#suaten").val();
+		var hang = $("#suahang").val();
+		var gia = $("#suagia").val();
+		var manhinh = $("#suamanhinh").val();
+		var os = $("#suaos").val();
+		var webcam = $("#suawebcam").val();
+		var nhucau = $("#suanhucau").val();
+		var chip = $("#suachip").val();
+		var vga = $("#suavga").val();
+		var ram = $("#suaram").val();
+		var rom = $("#suarom").val();
+		var pin = $("#suapin").val();
+		var khoiluong = $("#suakhoiluong").val();
+		var cgt = $("#suacgt").val();
+		var thietke = $("#suathietke").val();
+		var imagepath = $("#suaimagepath").val();
+		$.ajax({
+			type: "POST",
+
+			url: "@Url.Action("SuaLaptop", "Laptops")",
+			//Tham số truyền vào
+			data: { "id": id, "ten": ten, "hang": hang, "gia": gia, "manhinh": manhinh, "os": os, "webcam": webcam, "nhucau": nhucau, "chip": chip, "vga": vga, "ram": ram, "rom": rom, "pin": pin, "khoiluong": khoiluong, "cgt": cgt, "thietke": thietke, "imagepath": imagepath },
+			success: function () {
+				window.location.href = "@Url.Action("Chitiet", "Laptops")";
+			},
+			error: function () {
+				
+			}
+
+		});
+	});
+	//Thêm laptop
+	$("#formthemlaptop").submit(function (e) {
+		e.preventDefault();
+		
+		var ten = $("#themten").val();
+		var hang = $("#themhang").val();
+		var gia = $("#themgia").val();
+		var manhinh = $("#themmanhinh").val();
+		var os = $("#themos").val();
+		var webcam = $("#themwebcam").val();
+		var nhucau = $("#themnhucau").val();
+		var chip = $("#themchip").val();
+		var vga = $("#themvga").val();
+		var ram = $("#themram").val();
+		var rom = $("#themrom").val();
+		var pin = $("#thempin").val();
+		var khoiluong = $("#themkhoiluong").val();
+		var cgt = $("#themcgt").val();
+		var thietke = $("#themthietke").val();
+		var imagepath = $("#themimagepath").val();
+		$.ajax({
+			type: "POST",
+
+			url: "@Url.Action("ThemLaptop", "Laptops")",
+			//Tham số truyền vào
+            data: { "id": "@LaptopsDAL.GetID()", "ten": ten, "hang": hang, "gia": gia, "manhinh": manhinh, "os": os, "webcam": webcam, "nhucau": nhucau, "chip": chip, "vga": vga, "ram": ram, "rom": rom, "pin": pin, "khoiluong": khoiluong, "cgt": cgt, "thietke": thietke, "imagepath": imagepath },
+			success: function () {
+				window.location.href = "@Url.Action("Chitiet", "Laptops")";
+			},
+			error: function () {
+				
+			}
+
+		});
+	});
+
+</script>

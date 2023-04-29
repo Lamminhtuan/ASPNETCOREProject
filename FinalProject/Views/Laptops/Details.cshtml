@@ -1,0 +1,485 @@
+﻿@model FinalProject.Models.Laptop
+@using System.Security.Claims;
+@{
+	ViewData["Title"] = "Details";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+
+	<dl class="row" id="main">
+		<dt class="col-sm-7 " id="image-pro">
+			<img src=@Html.DisplayFor(model => model.ImagePath) id="img-pro" alt="" width="750" height="750">
+			<div id="myModal" class="modal-img">
+				<span class="close">&times;</span>
+				<img class="modal-content-img" id="img01">
+			</div>
+			<script>
+				// Get the modal
+				var modal = document.getElementById("myModal");
+
+				// Get the image and insert it inside the modal - use its "alt" text as a caption
+				var img = document.getElementById("img-pro");
+				var modalImg = document.getElementById("img01");
+				var captionText = document.getElementById("caption");
+				img.onclick = function() {
+					modal.style.display = "block";
+					modalImg.src = this.src;
+					captionText.innerHTML = this.alt;
+				}
+
+				// Get the <span> element that closes the modal
+				var span = document.getElementsByClassName("close")[0];
+
+				// When the user clicks on <span> (x), close the modal
+				span.onclick = function() {
+					modal.style.display = "none";
+				}
+			</script>
+
+		</dt>
+
+
+		<dd class="col-sm-4">
+			<div id="name-pro">
+				@Html.DisplayFor(model => model.Ten)
+			</div>
+			<div id="price">
+				<p id="price-discount"></p>
+				<del><p id="price-pro"></p></del>
+			</div>
+			<div id="preview-pro">
+				<dl class="row">
+					<dt class="col-sm-5">
+						<i class="bi bi-globe"></i> Hãng
+					</dt>
+					<dd class="col-sm-7">
+						@Html.DisplayFor(model => model.Hang)
+					</dd>
+					<dt class="col-sm-5">
+
+						<i class="bi bi-display"></i> Màn hình
+					</dt>
+					<dd class="col-sm-7">
+						@Html.DisplayFor(model => model.ManHinh)
+					</dd>
+					<dt class="col-sm-5">
+						<i class="bi bi-windows"></i> Hệ điều hành
+					</dt>
+					<dd class="col-sm-7">
+						@Html.DisplayFor(model => model.Os)
+					</dd>
+					<dt class="col-sm-5">
+						<i class="bi bi-cpu"></i> Chip
+					</dt>
+					<dd class="col-sm-7">
+						@Html.DisplayFor(model => model.Chip)
+					</dd>
+					<dt class="col-sm-5">
+						<i class="bi bi-box-fill"></i> VGA
+					</dt>
+					<dd class="col-sm-7">
+						@Html.DisplayFor(model => model.Vga)
+					</dd>
+					<dt class="col-sm-5">
+						<i class="bi bi-cpu-fill"></i> RAM
+					</dt>
+					<dd class="col-sm-7">
+						@Html.DisplayFor(model => model.Ram)<span> GB</span>
+					</dd>
+					<dt class="col-sm-5">
+						<i class="bi bi-hdd"></i> ROM
+					</dt>
+					<dd class="col-sm-7">
+						@Html.DisplayFor(model => model.Rom)<span> GB</span>
+					</dd>
+
+					<dd>
+						<div id="full-preview">
+							<!-- Button trigger modal -->
+							<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+								Xem chi tiết thông số kỹ thuật
+							</button>
+
+							<!-- Modal -->
+							<div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" role="dialog">
+								<div class="modal-dialog modal-dialog-scrollable">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<dl class="row">
+												<dt class="col-sm-2">
+													Màn hình
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.ManHinh)
+												</dd>
+												<dt class="col-sm-2">
+													Hệ điều hành
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.Os)
+												</dd>
+												<dt class="col-sm-2">
+													Chip
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.Chip)
+												</dd>
+												<dt class="col-sm-2">
+													VGA
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.Vga)
+												</dd>
+												<dt class="col-sm-2">
+													RAM
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.Ram)<span> GB</span>
+												</dd>
+												<dt class="col-sm-2">
+													ROM
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.Rom)<span> GB</span>
+												</dd>
+												<dt class="col-sm-2">
+													Hãng
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.Hang)
+												</dd>
+												<dt class="col-sm-2">
+													Webcam
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.Webcam)
+												</dd>
+												<dt class="col-sm-2">
+													Nhu cầu
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.NhuCau)
+												</dd>
+												<dt class="col-sm-2">
+													Pin
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.Pin)
+												</dd>
+												<dt class="col-sm-2">
+													Khối lượng
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.KhoiLuong)<span> kg</span>
+												</dd>
+												<dt class="col-sm-2">
+													Cổng giao tiếp
+
+												</dt>
+												<dd class="col-sm-10">
+													<p id="cgt"></p>
+
+												</dd>
+												<dt class="col-sm-2">
+													Thiết kế
+												</dt>
+												<dd class="col-sm-10">
+													@Html.DisplayFor(model => model.ThietKe)
+												</dd>
+											</dl>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</dd>
+
+				</dl>
+			</div>
+			<div id="deal">
+				<label for="sl">Số lượng</label>
+				<div class="number">
+					<i class="bi bi-file-minus-fill minus"></i>
+					<input type="text" value="1" min="1" max="100" id="sl" />
+					<i class="bi bi-file-plus-fill plus"></i>
+				</div>
+				<br />
+				<br />
+				<a class="btn btn-success fw-bold" href="#" id="themvaogiohang" role="button"> <i class="bi bi-cart-plus"></i> Thêm vào giỏ hàng</a>
+				<a class="btn btn-info fw-bold" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]" asp-route-Nhucau="@TempData["NhuCau"]" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]" role="button">
+					<i class="bi bi-box-arrow-in-left"></i> Quay lại gian hàng
+				</a>
+				<a id="themvaoyeuthich" href="#" class="btn fw-bold hongdambtn"><i class="bi bi-balloon-heart"></i> Thêm vào yêu thích</a>
+			</div>
+			
+		</dd>
+	</dl>
+	<div class="carttable box bg-white m-3 h2">
+					<div class="m-3">
+						
+						@{
+							var saotrungbinh = Math.Round(Model.SaoTrungBinh * 2, MidpointRounding.AwayFromZero) / 2;
+
+						}
+						@if (saotrungbinh == 0)
+						{
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+						}
+						else if (saotrungbinh == 0.5)
+						{
+							<i class="bi bi-star-half checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+						}
+						else if (saotrungbinh == 1)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+						}
+						else if (saotrungbinh == 1.5)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-half checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+
+							<i class="bi bi-star-fill unchecked"></i>
+						}
+						else if (saotrungbinh == 2)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+						}
+						else if (saotrungbinh == 2.5)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-half checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+
+						}
+						else if (saotrungbinh == 3)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+						}
+						else if (saotrungbinh == 3.5)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-half checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+
+						}
+						else if (saotrungbinh == 4){
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+
+						}
+						else if (saotrungbinh == 4.5)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-half checked"></i>
+						}
+						else
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+						}
+						<span> (@ReviewsDAL.GetSoLuongDanhGia(Model.Id))</span>
+					</div>	
+
+			<table class="table table-responsive text-center m-0 h4">
+				<thead style="background-color:#ff9800">
+					<tr>
+						<th>Đánh giá</th>
+						<th>Bình luận</th>
+						
+					</tr>
+				</thead>
+				<tbody class="fw-bold align-middle">
+					@foreach (var item in ReviewsDAL.GetReviewLaptop(Model.Id))
+					{
+						<tr>
+							<td>
+								@if (item.Sao == 1){
+									<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+								}
+								else if (item.Sao == 2){
+									<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+								}
+								else if (item.Sao == 3){
+									<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+								<i class="bi bi-star-fill unchecked"></i>
+							}
+							else if (item.Sao == 4)
+							{
+								<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+								<i class="bi bi-star-fill unchecked"></i>
+							}
+							else
+							{
+								<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							}
+						</td>
+							<td>
+							@item.BinhLuan
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+
+
+		</div>
+
+</div>
+
+@section Scripts{
+	var price=$("#price-pro");
+	var a = @Html.ValueFor(model => model.Gia);
+	var pricedis=$("#price-discount");
+	var s = @Html.ValueFor(model => model.Gia)+2000000;
+	pricedis.text(new Intl.NumberFormat('en-US').format(a)+"đ");
+		price.text(new Intl.NumberFormat('en-US').format(s)+"đ");
+	$('.minus').click(function () {
+		var $input = $(this).parent().find('input');
+		var count = parseInt($input.val()) - 1;
+		count = 1 > count ? 1 : count;
+		$input.val(count);
+		$input.change();
+		return false;
+	});
+
+
+	$('.plus').click(function () {
+		var $input = $(this).parent().find('input');
+		$input.val(parseInt($input.val()) + 1);
+		$input.change();
+		return false;
+	});
+
+	$("#themvaoyeuthich").click(function(){
+		$.ajax({
+			type:"POST",
+			url : "@Url.Action("ThemVaoYeuThich", "Yeuthiches")",
+			data:{"email":"@User.FindFirstValue(ClaimTypes.Email)","idsp": "@Model.Id", "ten":"@Model.Ten", "gia":"@Model.Gia", "imagepath":"@Model.ImagePath"},
+			success:function(){
+				var t = $('#fvcount').text();
+				var num = parseInt(t);
+				num = num + 1;
+				$('#fvcount').text(num);
+				Swal.fire(
+				'Thêm vào yêu thích',
+				'Thành công!',
+				'success'
+				)
+
+			},
+			error:function(){
+				Swal.fire(
+				  'Thêm vào yêu thích',
+				  'Sản phẩm đã có trong yêu thích',
+				  'error'
+				)
+			}
+		});
+	});
+
+
+	$("#themvaogiohang").click(function(e) {
+		//Lấy giá trị trong input số lượng
+		var x = $("#sl").val();
+		var dg = @Model.Gia;
+		var tt = dg * x;
+		$.ajax({
+			type: "POST",
+			url: "@Url.Action("ThemVaoGioHang", "Ctgiohangs")",
+			//Tham số truyền vào
+
+			data: {"idgh":"@GiohangsDAL.GetIDDH()","idsp":"@Model.Id","ten":"@Model.Ten","imagepath":"@Model.ImagePath","dongia":"@Model.Gia","soluong":x, "thanhtien":tt},
+			success:function(response){
+				Swal.fire(
+              'Thêm vào giỏ hàng',
+              'Thành công!',
+              'success'
+				)
+			var t = $('#cartcount').text();
+				 var num = parseInt(t);
+				 num = num + 1;
+
+				 $('#cartcount').text(num);
+				 
+			},
+			error:function(){
+				$.ajax({
+				type: "POST",
+				//Gọi hàm TangSoLuong trong controller Ctgiohangs
+				url: "@Url.Action("TangSoLuong", "Ctgiohangs")",
+				//Tham số truyền vào
+				data: { "idgh": "@GiohangsDAL.GetIDDH()", "idsp":"@Model.Id", "soluongtang":x },
+			success: function() {
+					     Swal.fire(
+              'Thêm vào giỏ hàng',
+              'Thành công!',
+              'success'
+            )
+
+			}
+		});
+    }
+    });
+});
+}
