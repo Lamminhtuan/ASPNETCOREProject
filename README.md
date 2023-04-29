@@ -12,7 +12,7 @@ Danh sách thành viên:
   ![sitemap](https://user-images.githubusercontent.com/79350128/235311094-2cdc7c00-a0a9-4d8a-a2ed-cafa52ff46d8.png)
 <i>Những trang có dấu * là những trang yêu cầu xác thực, nếu chưa xác thực sẽ quay về trang
 đăng nhập. Ngoài ra còn một trang Access Denied sẽ hiện lên khi người dùng thông thường cố
-truy cập vào các trang không được quyền.</li>
+truy cập vào các trang không được quyền.</i>
 #### Công nghệ sử dụng:
 <ul>
  <li>Sử dụng ngôn ngữ HTML5 và định dạng CSS3 để thiết kế giao diện.</li>
