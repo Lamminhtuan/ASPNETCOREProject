@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FinalProject.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FinalProject.Controllers
 {
@@ -78,6 +79,75 @@ namespace FinalProject.Controllers
 
 
             return View(await phones.AsNoTracking().ToListAsync());
+        }
+        public void ThemDienthoai(string id, string ten, string hang, decimal gia, string manhinh, string os, string camerasau, string cameratruoc, string nhucau, string chip, double ram, double rom, string pin, string thietke, string imagepath)
+        {
+            var phone = new Phone()
+            {
+                Id = id,
+                Ten = ten,
+                Hang = hang,
+                Gia = gia,
+                ManHinh = manhinh,
+                Os = os,
+                NhuCau = nhucau,
+                CameraSau = camerasau,
+                CameraTruoc = cameratruoc,
+
+                Chip = chip,
+                Ram = ram,
+                Rom = rom,
+                Pin = pin,
+
+                ThietKe = thietke,
+                ImagePath = imagepath
+            };
+            _context.Phones.Add(phone);
+
+            _context.SaveChanges();
+        }
+        public void SuaDienthoai(string id, string ten, string hang, decimal gia, string manhinh, string os, string camerasau, string cameratruoc, string nhucau, string chip, double ram, double rom, string pin, string thietke, string imagepath)
+        {
+            var phone = _context.Phones.SingleOrDefault(b => b.Id.Equals(id));
+            phone.Ten = ten;
+            phone.Hang = hang;
+            phone.Gia = gia;
+            phone.ManHinh = manhinh;
+            phone.Os = os;
+            phone.NhuCau = nhucau;
+            phone.CameraSau = camerasau;
+            phone.CameraTruoc = cameratruoc;
+
+            phone.Chip = chip;
+            phone.Ram = ram;
+            phone.Rom = rom;
+            phone.Pin = pin;
+
+            phone.ThietKe = thietke;
+            phone.ImagePath = imagepath;
+
+
+            _context.SaveChanges();
+        }
+        public void XoaDienthoai(string iddt)
+        {
+            var kq = _context.Phones.SingleOrDefault(b => b.Id.Equals(iddt));
+            _context.Phones.Remove(kq);
+            _context.SaveChanges();
+
+        }
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Chitiet(string searchstring)
+        {
+            
+            var dienthoais = from b in _context.Phones
+                             select b;
+            if (!String.IsNullOrEmpty(searchstring))
+            {
+                dienthoais = dienthoais.Where(b => b.Ten.Contains(searchstring) || b.Hang.Contains(searchstring));
+            }
+
+            return View(await dienthoais.ToListAsync());
         }
 
         // GET: Phones/Details/5
@@ -203,14 +273,14 @@ namespace FinalProject.Controllers
             {
                 _context.Phones.Remove(phone);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool PhoneExists(string id)
         {
-          return _context.Phones.Any(e => e.Id == id);
+            return _context.Phones.Any(e => e.Id == id);
         }
     }
 }

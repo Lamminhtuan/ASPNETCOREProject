@@ -74,6 +74,11 @@ namespace FinalProject.Controllers
             _context.Ctgiohangs.Remove(kq);
             _context.SaveChanges();
         }
+        public async Task<IActionResult> GetCTGiohangsAndReview(string idgh)
+        {
+            var kq = _context.Ctgiohangs.Where(b => b.Idgh.Equals(idgh));
+            return View(await kq.ToListAsync());
+        }
         public void TangSoLuong(string idgh, string idsp, int soluongtang)
         {
             var ctgh = _context.Ctgiohangs.SingleOrDefault(b => b.Idgh.Equals(idgh) && b.Idsp.Equals(idsp));

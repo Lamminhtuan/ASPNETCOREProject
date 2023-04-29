@@ -5,6 +5,11 @@ namespace FinalProject.Models
 {
     public partial class Laptop
     {
+        public Laptop()
+        {
+            Reviewlaptops = new HashSet<Reviewlaptop>();
+        }
+
         public string Id { get; set; } = null!;
         public string Ten { get; set; } = null!;
         public string Hang { get; set; } = null!;
@@ -22,5 +27,8 @@ namespace FinalProject.Models
         public string CongGiaoTiep { get; set; } = null!;
         public string ThietKe { get; set; } = null!;
         public string ImagePath { get; set; } = null!;
+        public double SaoTrungBinh { get; set; }
+
+        public virtual ICollection<Reviewlaptop> Reviewlaptops { get; set; }
     }
 }

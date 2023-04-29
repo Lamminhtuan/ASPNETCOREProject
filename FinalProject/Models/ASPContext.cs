@@ -20,6 +20,8 @@ namespace FinalProject.Models
         public virtual DbSet<Giohang> Giohangs { get; set; } = null!;
         public virtual DbSet<Laptop> Laptops { get; set; } = null!;
         public virtual DbSet<Phone> Phones { get; set; } = null!;
+        public virtual DbSet<Reviewlaptop> Reviewlaptops { get; set; } = null!;
+        public virtual DbSet<Reviewphone> Reviewphones { get; set; } = null!;
         public virtual DbSet<Taikhoan> Taikhoans { get; set; } = null!;
         public virtual DbSet<Voucher> Vouchers { get; set; } = null!;
         public virtual DbSet<Yeuthich> Yeuthiches { get; set; } = null!;
@@ -29,7 +31,7 @@ namespace FinalProject.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=LAPTOP-ONAL8V52;Initial Catalog=ASP;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-TNPKD3S\\SQLEXPRESS;Initial Catalog=ASP;Integrated Security=True");
             }
         }
 
@@ -38,7 +40,7 @@ namespace FinalProject.Models
             modelBuilder.Entity<Ctgiohang>(entity =>
             {
                 entity.HasKey(e => new { e.Idgh, e.Idsp })
-                    .HasName("PK__CTGIOHAN__F3FA22082CACE94D");
+                    .HasName("PK__CTGIOHAN__F3FA22085D83D60E");
 
                 entity.ToTable("CTGIOHANG");
 
@@ -68,7 +70,7 @@ namespace FinalProject.Models
             modelBuilder.Entity<Giohang>(entity =>
             {
                 entity.HasKey(e => e.Idgh)
-                    .HasName("PK__GIOHANG__B87DE222D076B54F");
+                    .HasName("PK__GIOHANG__B87DE222A55999E3");
 
                 entity.ToTable("GIOHANG");
 
@@ -161,10 +163,70 @@ namespace FinalProject.Models
                 entity.Property(e => e.ThietKe).HasMaxLength(250);
             });
 
+            modelBuilder.Entity<Reviewlaptop>(entity =>
+            {
+                entity.HasKey(e => new { e.Idgh, e.Idsp })
+                    .HasName("PK__REVIEWLA__F3FA22086506CB4D");
+
+                entity.ToTable("REVIEWLAPTOP");
+
+                entity.Property(e => e.Idgh)
+                    .HasMaxLength(5)
+                    .HasColumnName("IDGH");
+
+                entity.Property(e => e.Idsp)
+                    .HasMaxLength(6)
+                    .HasColumnName("IDSP");
+
+                entity.Property(e => e.BinhLuan).HasMaxLength(200);
+
+                entity.HasOne(d => d.IdghNavigation)
+                    .WithMany(p => p.Reviewlaptops)
+                    .HasForeignKey(d => d.Idgh)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__REVIEWLAPT__IDGH__4E88ABD4");
+
+                entity.HasOne(d => d.IdspNavigation)
+                    .WithMany(p => p.Reviewlaptops)
+                    .HasForeignKey(d => d.Idsp)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__REVIEWLAPT__IDSP__4F7CD00D");
+            });
+
+            modelBuilder.Entity<Reviewphone>(entity =>
+            {
+                entity.HasKey(e => new { e.Idgh, e.Idsp })
+                    .HasName("PK__REVIEWPH__F3FA2208247624A3");
+
+                entity.ToTable("REVIEWPHONE");
+
+                entity.Property(e => e.Idgh)
+                    .HasMaxLength(5)
+                    .HasColumnName("IDGH");
+
+                entity.Property(e => e.Idsp)
+                    .HasMaxLength(6)
+                    .HasColumnName("IDSP");
+
+                entity.Property(e => e.BinhLuan).HasMaxLength(200);
+
+                entity.HasOne(d => d.IdghNavigation)
+                    .WithMany(p => p.Reviewphones)
+                    .HasForeignKey(d => d.Idgh)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__REVIEWPHON__IDGH__4AB81AF0");
+
+                entity.HasOne(d => d.IdspNavigation)
+                    .WithMany(p => p.Reviewphones)
+                    .HasForeignKey(d => d.Idsp)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__REVIEWPHON__IDSP__4BAC3F29");
+            });
+
             modelBuilder.Entity<Taikhoan>(entity =>
             {
                 entity.HasKey(e => e.Email)
-                    .HasName("PK__TAIKHOAN__A9D1053510F476E7");
+                    .HasName("PK__TAIKHOAN__A9D10535EBC1199A");
 
                 entity.ToTable("TAIKHOAN");
 
@@ -191,7 +253,7 @@ namespace FinalProject.Models
             modelBuilder.Entity<Voucher>(entity =>
             {
                 entity.HasKey(e => e.Voucher1)
-                    .HasName("PK__VOUCHER__4BFED2CDD4D33954");
+                    .HasName("PK__VOUCHER__4BFED2CD35C79B30");
 
                 entity.ToTable("VOUCHER");
 
@@ -206,7 +268,7 @@ namespace FinalProject.Models
             modelBuilder.Entity<Yeuthich>(entity =>
             {
                 entity.HasKey(e => new { e.Email, e.Idsp })
-                    .HasName("PK__YEUTHICH__E256C51F02346B6B");
+                    .HasName("PK__YEUTHICH__E256C51F3DE7D142");
 
                 entity.ToTable("YEUTHICH");
 

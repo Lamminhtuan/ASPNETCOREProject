@@ -1,131 +1,48 @@
-﻿
-@{
-    ViewData["Title"] = "Contact";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-<style>
-    .get_in_touch {
-    max-width: 800px;
-    margin: 50px  auto;
-    position: relative;
-    box-shadow: 0 10px 30px 0px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-}
-
-.get_in_touch .title {
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 3px;
-    font-size: 3em;
-    line-height: 48px;
-    padding-bottom: 20px;
-    color: #5543ca;
-    background: linear-gradient(to right, #4d66f4 0%,
-     #2d027d 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.contact-form .form-field {
-    position: relative;
-    margin: 32px 0;
-}
-
-.contact-form .input-text {
-    display: block;
-    width: 100%;
-    height: 36px;
-    border-width: 0 0 2px 0;
-    border-color: #2f16d3;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: 400;
-    background: transparent;
-}
-
-.contact-form .input-text:focus + .label,
-.contact-form .input-text.not-empty + .label {
-    transform: translateY(-24px);
-}
-
-.contact-form .input-text:focus {
-    outline: none;
-}
-
-.contact-form .label {
-    position: absolute;
-    left: 20px;
-    bottom: 11px;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: 400;
-    color: #2d027d;
-    cursor: text;
-    text-transform: capitalize;
-    transition: transform 0.2s ease-in-out;
-}
-
-.contact-form .submit-btn  {
-    display: inline-block;
-    background-image: linear-gradient(125deg, #4d66f4,
-    #2d027d);
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 16px;
-    padding: 8px 16px;
-    border: none;
-    width: 200px;
-    cursor: pointer;
-}
-
-</style>
-<div class="container">
-        <section class="get_in_touch">
-            <h1 class="title">Liên hệ</h1>
-            <h2 class="text-center w-responsive mx-auto mb-5">Hãy đặt câu hỏi nếu có bất kì thắc mắc nào!</h2>
-            <div class="container">
-                <div class="contact-form row">
-                    <div class="form-field col-lg-6">
-                        <input id="name" class="input-text" type="text" name="">
-                        <label for="name" class="label">Họ Tên</label>
-                    </div>
-                    <div class="form-field col-lg-6">
-                        <input id="email" class="input-text" type="email" name="">
-                        <label for="email" class="label">Email</label>
-                    </div>
-                    <div class="form-field col-lg-6">
-                        <input id="company" class="input-text" type="company" name="">
-                        <label for="company" class="label">Nơi ở</label>
-                    </div>
-                    <div class="form-field col-lg-6">
-                        <input id="phone" class="input-text" type="company" name="">
-                        <label for="phone" class="label">Điện thoại</label>
-                    </div>
-                    <div class="form-field col-lg-12">
-                        <textarea id="message" type="company" name="" rows="3" class="input-text"></textarea>
-                        <label for="message" class="label">Câu hỏi</label>
-                    </div>
-                    <div class="form-field col-lg-12">
-                        <input class="submit-btn" type="submit" value="Gửi">
-                    </div>
-                </div>
-                <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31346.307422240116!2d106.76678834832825!3d10.86565320226507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527587e9ad5bf%3A0xafa66f9c8be3c91!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiAtIMSQSFFHIFRQLkhDTQ!5e0!3m2!1svi!2s!4v1672213811205!5m2!1svi!2s"
-                     width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-            <div class="row text-center text-primary">
-                <div class="col-sm">
-                    <i class="bi bi-building">  Đường Hàn Thuyên, <br> khu phố 6 P, Thủ Đức</i>
-                </div>
-                <div class="col-sm">
-                    <i class="bi bi-telephone-fill"> Liên hệ: <br> 0387489450 <br> (028) 372 52002</i>
-                </div>
-                <div class="col-sm">
-                    <i class="bi bi-envelope-at"> contactUs@gmail.com</i>
-                </div>
-            </div>
-         </section>
-    </div>
-
+﻿<div class="container">
+			<section class="get_in_touch">
+				<h1 class="title">Liên hệ</h1>
+				<h2 class="text-center w-responsive mx-auto mb-5">Hãy đặt câu hỏi nếu có bất kì thắc mắc nào!</h2>
+				<div class="container">
+					<div class="contact-form row">
+						<div class="form-field col-lg-6">
+							<input id="name" class="input-text" type="text" name="">
+							<label for="name" class="label">Họ Tên</label>
+						</div>
+						<div class="form-field col-lg-6">
+							<input id="email" class="input-text" type="email" name="">
+							<label for="email" class="label">Email</label>
+						</div>
+						<div class="form-field col-lg-6">
+							<input id="company" class="input-text" type="company" name="">
+							<label for="company" class="label">Nơi ở</label>
+						</div>
+						<div class="form-field col-lg-6">
+							<input id="phone" class="input-text" type="company" name="">
+							<label for="phone" class="label">Điện thoại</label>
+						</div>
+						<div class="form-field col-lg-12">
+							<textarea id="message" type="company" name="" rows="3" class="input-text"></textarea>
+							<label for="message" class="label">Câu hỏi</label>
+						</div>
+						<div class="form-field col-lg-12">
+							<input class="submit-btn" type="submit" value="Gửi">
+						</div>
+					</div>
+					<div>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31346.307422240116!2d106.76678834832825!3d10.86565320226507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527587e9ad5bf%3A0xafa66f9c8be3c91!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiAtIMSQSFFHIFRQLkhDTQ!5e0!3m2!1svi!2s!4v1672213811205!5m2!1svi!2s"
+						 width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+				</div>
+				<div class="row text-center text-primary">
+					<div class="col-sm">
+						<i class="bi bi-building">  Đường Hàn Thuyên, <br> khu phố 6 P, Thủ Đức</i>
+					</div>
+					<div class="col-sm">
+						<i class="bi bi-telephone-fill"> Liên hệ: <br> 0387489450 <br> (028) 372 52002</i>
+					</div>
+					<div class="col-sm">
+						<i class="bi bi-envelope-at"> contactUs@gmail.com</i>
+					</div>
+				</div>
+			 </section>
+		</div>

@@ -78,18 +78,22 @@
 
 						@if (!User.Identity.IsAuthenticated)
 						{
-							<a class="nav-link" asp-action="DangNhap" asp-controller="Taikhoans" asp-route-loaidn="dn"><i class="bi bi-person-bounding-box"></i> Tài khoản</a>
+							<a class="nav-link" asp-action="DangNhap" asp-controller="Taikhoans"><i class="bi bi-person-bounding-box"></i> Tài khoản</a>
 						}
-						else
+						else if (User.IsInRole("Admin"))
 						{
-							<a class="nav-link" asp-action="DangNhapThanhCong" asp-controller="Taikhoans"><i class="bi bi-person-bounding-box"></i> @User.Identity.Name</a>
+							<a class="nav-link" asp-action="QuanLyChoAdmin" asp-controller="Home"><i class="bi bi-person-bounding-box"></i> @User.Identity.Name</a>
+						}
+						else if (User.IsInRole("User"))
+						{
+							<a class="nav-link" asp-action="QuanLyChoUser" asp-controller="Home"><i class="bi bi-person-bounding-box"></i> @User.Identity.Name</a>
 						}
 
 
 
 
 					</li>
-					
+
 				</ul>
 			</div>
 		</div>
@@ -197,7 +201,7 @@
 	</footer>
 	<script>
 		//Hiển thị nút về đầu trang
-		window.onscroll = function() { scrollfunc() };
+		window.onscroll = function () { scrollfunc() };
 		let btn_gotop = document.getElementById("btn_totop");
 		function scrollfunc() {
 			if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
@@ -213,7 +217,7 @@
 			document.documentElement.scrollTop = 0;
 		}
 		//Đổi controller tìm kiếm điện thoại hay laptop
-		$('#selectctl').on('change', function(e) {
+		$('#selectctl').on('change', function (e) {
 			var optionSelected = $("#selectctl option:selected").val();
 			if (optionSelected == "Phones") {
 				$('#formsearch').attr('action', '/Phones');
@@ -226,7 +230,7 @@
 			}
 		});
 		//Khi chọn trang Laptop thì sẽ tìm kiếm Laptop, tương tự như điện thoại
-		$(window).on('load', function() {
+		$(window).on('load', function () {
 			var pathname = window.location.pathname;
 			if (pathname.includes("/Phones")) {
 				$('#formsearch').attr('action', '/Phones');
@@ -344,7 +348,7 @@
 		}
 
 
-										//@RenderSection("Scripts", false);
+												//@RenderSection("Scripts", false);
 	</script>
 
 </body>

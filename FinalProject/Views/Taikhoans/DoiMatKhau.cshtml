@@ -49,7 +49,7 @@
 			}
 		
 			else if (pw.localeCompare(cfpw) != 0) {
-                $("#tb").text("Xác nhật mật khẩu không khớp!");
+                $("#tb").text("Xác nhận mật khẩu không khớp!");
 				$("#tb").css("display", "block");
 			}
 			else {
@@ -59,7 +59,7 @@
 					url: "@Url.Action("EditPassword","Taikhoans")",
 					data: { "email":"@Model.Email", "password": pw },
 					success: function() {
-						window.location.href = "@Url.Action("DangNhapThanhCong", "Taikhoans")";
+						window.location.href = "@Url.Action("QuanLyChoUser", "Home")";
 					}
 				});
 			}

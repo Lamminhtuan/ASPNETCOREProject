@@ -10,12 +10,16 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 {
     options.LoginPath = "/Taikhoans/DangNhap";
     options.Cookie.Name = "ASPCookie";
+    options.AccessDeniedPath = "/Home/AccessDenied";
 });
 var app = builder.Build();
 GiohangsDAL.KhoiTao();
 CtgiohangsDAL.KhoiTao();
 TaikhoansDAL.KhoiTao();
 YeuthichesDAL.KhoiTao();
+ReviewsDAL.KhoiTao();
+LaptopsDAL.KhoiTao();
+PhonesDAL.KhoiTao();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

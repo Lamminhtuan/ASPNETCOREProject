@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FinalProject.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FinalProject.Controllers
 {
@@ -29,6 +30,7 @@ namespace FinalProject.Controllers
             return res;
         }
         // GET: Vouchers
+        [Authorize(Roles="Admin")]
         public async Task<IActionResult> Index()
         {
               return View(await _context.Vouchers.ToListAsync());
@@ -52,7 +54,35 @@ namespace FinalProject.Controllers
             return View(voucher);
         }
 
+       
         // GET: Vouchers/Create
+        public void ThemVoucher(string voucher, int giamgia)
+        {
+            decimal gg = (decimal)giamgia / 100;
+            var vc = new Voucher()
+            {
+                Voucher1 = voucher,
+                GiamGia = gg
+
+            };
+            _context.Vouchers.Add(vc);
+            _context.SaveChanges();
+          
+
+        }
+        public void XoaVoucher(string voucher)
+        {
+            var kq = _context.Vouchers.SingleOrDefault(b => b.Voucher1.Equals(voucher));
+            _context.Vouchers.Remove(kq);
+            _context.SaveChanges();
+        }
+        public void SuaVoucher(string voucher, int giamgia)
+        {
+            decimal gg = (decimal)giamgia / 100;
+            var kq = _context.Vouchers.SingleOrDefault(b => b.Voucher1.Equals(voucher));
+            kq.GiamGia = gg;
+            _context.SaveChanges();
+        }
         public IActionResult Create()
         {
             return View();
@@ -75,28 +105,6 @@ namespace FinalProject.Controllers
         }
 
         // GET: Vouchers/Edit/5
-        public IActionResult EditVoucher(string vc, decimal gg)
-        {
-            var voucher = _context.Vouchers.FirstOrDefault(b => b.Voucher1.Equals(vc));
-            voucher.Voucher1 = vc;
-            voucher.GiamGia = gg;
-
-            _context.SaveChanges();
-            return Redirect("Index");
-}
-        public IActionResult Xoa(string vc)
-        {
-            var voucher = _context.Vouchers.FirstOrDefault(b => b.Voucher1.Equals(vc));
-            if (voucher == null)
-            {
-                return NotFound();
-            }
-            _context.Vouchers.Remove(voucher);
-            _context.SaveChanges();
-            return Redirect("Index");
-
-        }
-
         public async Task<IActionResult> Edit(string id)
         {
             if (id == null || _context.Vouchers == null)

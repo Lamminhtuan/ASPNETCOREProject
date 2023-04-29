@@ -222,7 +222,7 @@
 	}
 
 	#staticBackdrop {
-		--bs-modal-width: 800px;
+		--bs-modal-width: 800px;`
 	}
 
 	#notify {
@@ -328,7 +328,7 @@
 			</div>
 			<div id="price">
 				<p id="price-discount"></p>
-				<del><p id="price-pro"></p></del>
+				<del><p id="price-pro" class="text-decoration-line-through"></p></del>
 			</div>
 			<div id="preview-pro">
 				<dl class="row">
@@ -482,10 +482,178 @@
 				</a>
 				<a id="themvaoyeuthich" href="#" class="btn hongdambtn fw-bold"><i class="bi bi-balloon-heart"></i> Thêm vào yêu thích</a>
 			</div>
+
 		</dd>
+		
 
 	</dl>
+	<div class="carttable box bg-white m-3 h2">
+					<div class="m-3">
+						
+						@{
+							var saotrungbinh = Math.Round(Model.SaoTrungBinh * 2, MidpointRounding.AwayFromZero) / 2;
+
+						}
+						@if (saotrungbinh == 0)
+						{
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+						}
+						else if (saotrungbinh == 0.5)
+						{
+							<i class="bi bi-star-half checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+						}
+						else if (saotrungbinh == 1)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+						}
+						else if (saotrungbinh == 1.5)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-half checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+
+							<i class="bi bi-star-fill unchecked"></i>
+						}
+						else if (saotrungbinh == 2)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+						}
+						else if (saotrungbinh == 2.5)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-half checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+
+						}
+						else if (saotrungbinh == 3)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+						}
+						else if (saotrungbinh == 3.5)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-half checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+
+						}
+						else if (saotrungbinh == 4){
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+
+						}
+						else if (saotrungbinh == 4.5)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-half checked"></i>
+						}
+						else
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+						}
+						<span> (@ReviewsDAL.GetSoLuongDanhGia(Model.Id))</span>
+					</div>	
+
+			<table class="table table-responsive text-center m-0 h4">
+				<thead style="background-color:#ff9800">
+					<tr>
+						<th>Đánh giá</th>
+						<th>Bình luận</th>
+						
+					</tr>
+				</thead>
+				<tbody class="fw-bold align-middle">
+					@foreach (var item in ReviewsDAL.GetReviewPhone(Model.Id))
+					{
+						<tr>
+							<td>
+								@if (item.Sao == 1){
+									<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+								}
+								else if (item.Sao == 2){
+									<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+								}
+								else if (item.Sao == 3){
+									<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+								<i class="bi bi-star-fill unchecked"></i>
+							}
+							else if (item.Sao == 4)
+							{
+								<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+								<i class="bi bi-star-fill unchecked"></i>
+							}
+							else
+							{
+								<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							}
+						</td>
+							<td>
+							@item.BinhLuan
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+
+
+		</div>
+
 </div>
+
+	
+
 @section Scripts{
 var price=$("#price-pro");
 var a = @Html.ValueFor(model => model.Gia);

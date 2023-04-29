@@ -1,8 +1,0 @@
-$.ajax({
-	type: "POST",
-	url: "@Url.Action("TangSoLuong", "Ctgiohangs"),
-	data: {"idgh":"@GiohangsDAL.GetIDDH()", "idsp":"@Model.Id", "soluongtang":x},
-	success:function(){
-		$(".alert").show();
-	}
-});

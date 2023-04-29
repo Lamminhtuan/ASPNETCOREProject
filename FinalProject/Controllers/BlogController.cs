@@ -38,5 +38,10 @@ namespace FinalProject.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public IActionResult Blog7()
+        {
+            return View();
+        }
     }
 }

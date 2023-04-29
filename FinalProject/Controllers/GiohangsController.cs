@@ -39,9 +39,7 @@ namespace FinalProject.Controllers
             {
                 tongphaitra = CtgiohangsDAL.GetTongTien();
             }
-
-            int v = _context.Giohangs.Count();
-            int count = v;
+            int count = _context.Giohangs.Count();
             string currentid;
             if (count < 10)
                 currentid = "GH0" + count.ToString();
@@ -61,13 +59,16 @@ namespace FinalProject.Controllers
             });
         }
 
-
+     
         // GET: Giohangs
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string email, string all)
         {
-              return View(await _context.Giohangs.ToListAsync());
+            if (!String.IsNullOrEmpty(all))
+                return View(await _context.Giohangs.ToListAsync());
+            var ghs = _context.Giohangs.Where(b => b.Email.Equals(email));
+            return View(await ghs.ToListAsync());
         }
-
+     
         // GET: Giohangs/Details/5
         public async Task<IActionResult> Details(string id)
         {

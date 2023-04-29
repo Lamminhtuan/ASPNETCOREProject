@@ -1,6 +1,9 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Maven+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 
+.modal{
+    background-color:rgba(0,0,0,0) !important;
+}
 * {
     padding: 0;
     margin: 0;
@@ -223,7 +226,7 @@ a {
 #codoption {
     font-size: larger;
 }
-/**/
+
 .dangnhapform {
     width: 45%;
     margin: auto;
@@ -354,7 +357,7 @@ footer a:hover {
     }
 
 .navbar-brand {
-    height:100px;
+    height: 50px;
     width: 50px;
 }
 /*Combo box chọn điện thoại hay laptop để tìm kiếm*/
@@ -498,7 +501,7 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-/* Firefox */
+ /*Firefox */
 input[type=number] {
     -moz-appearance: textfield;
 }
@@ -590,6 +593,13 @@ input[type=number] {
 .currentfilter {
     font-size: larger;
     font-weight: bold;
+}
+/*Sao*/
+.checked{
+    color:orange;
+}
+.unchecked{
+    color:gray;
 }
 
 

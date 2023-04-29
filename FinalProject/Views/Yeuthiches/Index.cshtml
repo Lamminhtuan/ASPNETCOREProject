@@ -1,4 +1,5 @@
-@model IEnumerable<FinalProject.Models.Yeuthich>
+﻿@model IEnumerable<FinalProject.Models.Yeuthich>
+@using System.Security.Claims
 @using System.Globalization;
 <div class="position-04">
 	<div class="container">
@@ -24,7 +25,7 @@
 					{
 						@*Để lấy idsp cho hàm ajax*@
 						<div class="item item-1 col-lg-3 col-md-3 col-sm-6 col-xs-12 mt-5">
-							<div class="box-11">
+							<div class="box-1">
 								<a href="#"><img src="@item.ImagePath" alt="" /></a>
 							</div>
 
@@ -42,7 +43,7 @@
 
 								}
 								<div class="money">
-									<span class="std" style="font-size: 15px">@item.Gia.ToString("C", CultureInfo.CreateSpecificCulture("vi-VN"))</span>
+									<span class="std">@item.Gia.ToString("C", CultureInfo.CreateSpecificCulture("vi-VN"))</span>
 									@{
 										var tientang = @item.Gia + Convert.ToDecimal(2000000);
 									}
@@ -111,7 +112,6 @@
 		</div>
 
 	</div>
-</div>
 
 
 	<section style="margin-top: 100px;">
@@ -125,9 +125,12 @@ function xoakhoiyeuthich(e) {
     $.ajax({
         type: "POST",
         url: "@Url.Action("XoaKhoiYeuThich","Yeuthiches")",
-        data: { "email": "@TaikhoansDAL.emailhientai" , "idsp": idsp },
+        data: { "email": "@User.FindFirstValue(ClaimTypes.Email)" , "idsp": idsp },
         success: function(){
-           
+           var t = $('#fvcount').text();
+			var num = parseInt(t);
+			num = num - 1;
+			$('#fvcount').text(num);
 		}
     });
 }

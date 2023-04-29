@@ -1,4 +1,5 @@
 ﻿using FinalProject.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Data.Entity;
 using System.Diagnostics;
@@ -47,7 +48,18 @@ namespace FinalProject.Controllers
         {
             return View();
         }
+        [Authorize(Roles = "User, Admin")]
+        public IActionResult QuanLyChoUser()
+        {
+            return View();
+        }
+        [Authorize(Roles = "Admin")]
         public IActionResult QuanLyChoAdmin()
+        {
+            return View();
+        }
+
+        public IActionResult AccessDenied()
         {
             return View();
         }

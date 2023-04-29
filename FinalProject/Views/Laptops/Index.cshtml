@@ -46,7 +46,7 @@
 				</li>
 							<li>
 					<a class="dropdown-item" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]"
-					   asp-route-Nhucau="Cao cấp - Sang trọng" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/gaming.jpg">Cao cấp - Sang trọng</a>
+					   asp-route-Nhucau="Cao cấp - Sang trọng" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/gaming.jpg"> Cao cấp - Sang trọng</a>
 				</li>
 				<li>
 					<a class="dropdown-item" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]"
@@ -62,7 +62,7 @@
 				</li>
 							<li>
 					<a class="dropdown-item" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]"
-					   asp-route-Nhucau="Mỏng nhẹ" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/thin.png">Mỏng nhẹ</a>
+					   asp-route-Nhucau="Mỏng nhẹ" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/thin.png"> Mỏng nhẹ</a>
 				</li>
 							<li>
 					<a class="dropdown-item" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]"
@@ -70,10 +70,10 @@
 				</li>
 							<li>
 					<a class="dropdown-item" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]"
-					   asp-route-Nhucau="Thiết kế đồ họa" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/pencil1.png">Thiết kế đồ họa</a>
+					   asp-route-Nhucau="Thiết kế đồ họa" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/pencil1.png"> Thiết kế đồ họa</a>
 				</li>
 					<a class="dropdown-item" asp-action="Index" asp-controller="Laptops" asp-route-searchString="@TempData["CurrentFilter"]" asp-route-Hang="@TempData["Hang"]"
-				   asp-route-Nhucau="Văn phòng, Đồ họa - Kỹ thuật" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/vanphongdohoa.png">Văn phòng, Đồ họa - Kỹ thuật</a>
+				   asp-route-Nhucau="Văn phòng, Đồ họa - Kỹ thuật" asp-route-Giamin="@TempData["GiaMin"]" asp-route-Giamax="@TempData["GiaMax"]" asp-route-Loai="@TempData["Loai"]" asp-route-Ram="@TempData["RAM"]" asp-route-Rom="@TempData["ROM"]" asp-route-Chip="@TempData["Chip"]" asp-route-Vga="@TempData["Vga"]"><img class="hinhfilter" src="/images/vanphongdohoa.png"> Văn phòng, Đồ họa - Kỹ thuật</a>
 				</li>
 
 			</ul>
@@ -354,6 +354,105 @@
 				<div>
 					<h6><b>@item.Gia.ToString("C",CultureInfo.CreateSpecificCulture("vi-VN"))</b></h6>
 				</div>
+				<div>
+						
+						@{
+							var saotrungbinh = Math.Round(@item.SaoTrungBinh * 2, MidpointRounding.AwayFromZero) / 2;
+
+						}
+						@if (saotrungbinh == 0)
+						{
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+						}
+						else if (saotrungbinh == 0.5)
+						{
+							<i class="bi bi-star-half checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+						}
+						else if (saotrungbinh == 1)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+						}
+						else if (saotrungbinh == 1.5)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-half checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+
+							<i class="bi bi-star-fill unchecked"></i>
+						}
+						else if (saotrungbinh == 2)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+						}
+						else if (saotrungbinh == 2.5)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-half checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+
+						}
+						else if (saotrungbinh == 3)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+						}
+						else if (saotrungbinh == 3.5)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-half checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+
+						}
+						else if (saotrungbinh == 4){
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill unchecked"></i>
+
+						}
+						else if (saotrungbinh == 4.5)
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-half checked"></i>
+						}
+						else
+						{
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+							<i class="bi bi-star-fill checked"></i>
+						}
+						<span> (@ReviewsDAL.GetSoLuongDanhGia(item.Id))</span>
+					</div>
 			</div>
 		</a>
 	}

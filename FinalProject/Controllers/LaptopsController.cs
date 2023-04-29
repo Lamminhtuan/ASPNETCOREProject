@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FinalProject.Models;
+using Org.BouncyCastle.Bcpg.OpenPgp;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FinalProject.Controllers
 {
@@ -91,6 +93,61 @@ namespace FinalProject.Controllers
 
             return View(await laptops.AsNoTracking().ToListAsync());
         }
+        public void ThemLaptop(string id, string ten, string hang, decimal gia, string manhinh, string os, string webcam, string nhucau, string chip, string vga, int ram, int rom, string pin, double khoiluong, string cgt, string thietke, string imagepath)
+        {
+            var laptop = new Laptop()
+            {
+                Id = id,
+                Ten = ten,
+                Hang = hang,
+                Gia = gia,
+                Os = os,
+                NhuCau = nhucau,
+                Webcam = webcam,
+                Chip = chip,
+                ManHinh = manhinh,
+                Vga = vga,
+                Ram = ram,
+                Rom = rom,
+                Pin = pin,
+                KhoiLuong  = khoiluong,
+                CongGiaoTiep = cgt,
+                ThietKe= thietke,   
+                ImagePath = imagepath,
+                SaoTrungBinh = 0
+            };
+            _context.Laptops.Add(laptop);
+            _context.SaveChanges();
+        }
+		public void SuaLaptop(string id, string ten, string hang, decimal gia, string manhinh, string os, string webcam, string nhucau, string chip, string vga, int ram, int rom, string pin, double khoiluong, string cgt, string thietke, string imagepath)
+		{
+            var laptop = _context.Laptops.SingleOrDefault(b => b.Id.Equals(id));
+            laptop.Ten = ten;
+			laptop.Hang = hang;
+            laptop.Gia = gia;
+            laptop.Os = os;
+            laptop.NhuCau = nhucau;
+            laptop.Webcam = webcam;
+            laptop.Chip = chip;
+            laptop.ManHinh = manhinh;
+            laptop.Vga = vga;
+            laptop.Ram = ram;
+            laptop.Rom = rom;
+            laptop.Pin = pin;
+            laptop.KhoiLuong = khoiluong;
+            laptop.CongGiaoTiep = cgt;
+            laptop.ThietKe = thietke;
+            laptop.ImagePath = imagepath;
+			
+	
+			_context.SaveChanges();
+		}
+		public void XoaLaptop(string idlt)
+        {
+            var kq = _context.Laptops.SingleOrDefault(b => b.Id.Equals(idlt));
+            _context.Laptops.Remove(kq);
+            _context.SaveChanges();
+        }
 
         // GET: Laptops/Details/5
         public async Task<IActionResult> Details(string id)
@@ -131,9 +188,18 @@ namespace FinalProject.Controllers
             }
             return View(laptop);
         }
-        public async Task<IActionResult> Chitiet()
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Chitiet(string searchstring)
         {
-            return View(await _context.Laptops.ToListAsync());
+            
+            var laptops = from b in _context.Laptops
+                          select b;
+            if (!String.IsNullOrEmpty(searchstring))
+            {
+                laptops = laptops.Where(b => b.Ten.Contains(searchstring) || b.Hang.Contains(searchstring));
+            }
+    
+            return View(await laptops.ToListAsync());
         }
         // GET: Laptops/Edit/5
         public async Task<IActionResult> Edit(string id)

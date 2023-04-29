@@ -48,7 +48,7 @@
 				$.ajax({
 					type: 'POST',
 					url: "@Url.Action("EditPassword","Taikhoans")",
-					data: { "email":@TaikhoansDAL.emailkpmatkhau, "password": pw },
+					data: { "email":"@TaikhoansDAL.emailkpmatkhau", "password": pw },
 					success: function() {
 						window.location.href = "@Url.Action("Index", "Home")";
 					}

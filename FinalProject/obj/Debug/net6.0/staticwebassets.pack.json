@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css\\template2.css",
+      "PackagePath": "staticwebassets\\css\\template2.css"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css\\template3.css",
+      "PackagePath": "staticwebassets\\css\\template3.css"
+    },
+    {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css\\truong.css",
       "PackagePath": "staticwebassets\\css\\truong.css"
     },
@@ -189,6 +197,54 @@
       "PackagePath": "staticwebassets\\css_news3\\zalo-logo.png"
     },
     {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news4\\636925656081349181_hinh-anh-dai-dien (1).jpg",
+      "PackagePath": "staticwebassets\\css_news4\\636925656081349181_hinh-anh-dai-dien (1).jpg"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news4\\bat-bass-boost-00.jpg",
+      "PackagePath": "staticwebassets\\css_news4\\bat-bass-boost-00.jpg"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news4\\bat-bass-boost-01.jpg",
+      "PackagePath": "staticwebassets\\css_news4\\bat-bass-boost-01.jpg"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news4\\bat-bass-boost-02.jpg",
+      "PackagePath": "staticwebassets\\css_news4\\bat-bass-boost-02.jpg"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news4\\bat-bass-boost-03.jpg",
+      "PackagePath": "staticwebassets\\css_news4\\bat-bass-boost-03.jpg"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news4\\bat-bass-boost-04.jpg",
+      "PackagePath": "staticwebassets\\css_news4\\bat-bass-boost-04.jpg"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news4\\bat-bass-boost-05.jpg",
+      "PackagePath": "staticwebassets\\css_news4\\bat-bass-boost-05.jpg"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news4\\bat-bass-boost-06.jpg",
+      "PackagePath": "staticwebassets\\css_news4\\bat-bass-boost-06.jpg"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news4\\fb-logo.png",
+      "PackagePath": "staticwebassets\\css_news4\\fb-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\css_news4\\zalo-logo.png",
+      "PackagePath": "staticwebassets\\css_news4\\zalo-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\font\\themify-icons\\themify-icons.css",
+      "PackagePath": "staticwebassets\\font\\themify-icons\\themify-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\DatHangThanhCong-removebg-preview.png",
+      "PackagePath": "staticwebassets\\images\\DatHangThanhCong-removebg-preview.png"
+    },
+    {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\IMG-2900-3029-1669890556.jpg",
       "PackagePath": "staticwebassets\\images\\IMG-2900-3029-1669890556.jpg"
     },
@@ -205,8 +261,20 @@
       "PackagePath": "staticwebassets\\images\\UIT STORE.png"
     },
     {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\a53.jpg",
+      "PackagePath": "staticwebassets\\images\\a53.jpg"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\about-background.png",
+      "PackagePath": "staticwebassets\\images\\about-background.png"
+    },
+    {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\acb.png",
       "PackagePath": "staticwebassets\\images\\acb.png"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\accessdenied.png",
+      "PackagePath": "staticwebassets\\images\\accessdenied.png"
     },
     {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\acer.png",
@@ -273,6 +341,10 @@
       "PackagePath": "staticwebassets\\images\\bkg-testimo.png"
     },
     {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\business.png",
+      "PackagePath": "staticwebassets\\images\\business.png"
+    },
+    {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\camera.png",
       "PackagePath": "staticwebassets\\images\\camera.png"
     },
@@ -283,6 +355,10 @@
     {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\chip.png",
       "PackagePath": "staticwebassets\\images\\chip.png"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\dealHomePageBanner.png",
+      "PackagePath": "staticwebassets\\images\\dealHomePageBanner.png"
     },
     {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\dell.png",
@@ -313,6 +389,10 @@
       "PackagePath": "staticwebassets\\images\\gaming.png"
     },
     {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\gamingdohoakt.png",
+      "PackagePath": "staticwebassets\\images\\gamingdohoakt.png"
+    },
+    {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\giaithuong.png",
       "PackagePath": "staticwebassets\\images\\giaithuong.png"
     },
@@ -327,6 +407,10 @@
     {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\head-img.jpg",
       "PackagePath": "staticwebassets\\images\\head-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\heart.png",
+      "PackagePath": "staticwebassets\\images\\heart.png"
     },
     {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\hoa.png",
@@ -445,6 +529,10 @@
       "PackagePath": "staticwebassets\\images\\modes-nexdock-360.jpg"
     },
     {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\musinhvien.jpg",
+      "PackagePath": "staticwebassets\\images\\musinhvien.jpg"
+    },
+    {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\nexcomputer-macmini.jpg",
       "PackagePath": "staticwebassets\\images\\nexcomputer-macmini.jpg"
     },
@@ -481,12 +569,24 @@
       "PackagePath": "staticwebassets\\images\\pattern.png"
     },
     {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\pencil.png",
+      "PackagePath": "staticwebassets\\images\\pencil.png"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\pencil1.png",
+      "PackagePath": "staticwebassets\\images\\pencil1.png"
+    },
+    {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\pintrau.png",
       "PackagePath": "staticwebassets\\images\\pintrau.png"
     },
     {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\realme.png",
       "PackagePath": "staticwebassets\\images\\realme.png"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\s22ultra.jpg",
+      "PackagePath": "staticwebassets\\images\\s22ultra.jpg"
     },
     {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\sales.png",
@@ -521,6 +621,38 @@
       "PackagePath": "staticwebassets\\images\\signup.png"
     },
     {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\sinhvienvanphong.jpg",
+      "PackagePath": "staticwebassets\\images\\sinhvienvanphong.jpg"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\sinhvienvanphong.webp",
+      "PackagePath": "staticwebassets\\images\\sinhvienvanphong.webp"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\slider1.png",
+      "PackagePath": "staticwebassets\\images\\slider1.png"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\slider2.png",
+      "PackagePath": "staticwebassets\\images\\slider2.png"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\slider3.png",
+      "PackagePath": "staticwebassets\\images\\slider3.png"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\slider4.png",
+      "PackagePath": "staticwebassets\\images\\slider4.png"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\slider5.png",
+      "PackagePath": "staticwebassets\\images\\slider5.png"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\slider6.png",
+      "PackagePath": "staticwebassets\\images\\slider6.png"
+    },
+    {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\testimo1.png",
       "PackagePath": "staticwebassets\\images\\testimo1.png"
     },
@@ -535,6 +667,10 @@
     {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\thankyou.png",
       "PackagePath": "staticwebassets\\images\\thankyou.png"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\thin.png",
+      "PackagePath": "staticwebassets\\images\\thin.png"
     },
     {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\tincay.png",
@@ -555,6 +691,14 @@
     {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\vanphong.png",
       "PackagePath": "staticwebassets\\images\\vanphong.png"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\vanphongdohoa.png",
+      "PackagePath": "staticwebassets\\images\\vanphongdohoa.png"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\vanphongmongnhe.png",
+      "PackagePath": "staticwebassets\\images\\vanphongmongnhe.png"
     },
     {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\vcb.png",
@@ -595,6 +739,30 @@
     {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\xiaomi.webp",
       "PackagePath": "staticwebassets\\images\\xiaomi.webp"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\xiaomi11tpro.jpg",
+      "PackagePath": "staticwebassets\\images\\xiaomi11tpro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\xuhuong1.png",
+      "PackagePath": "staticwebassets\\images\\xuhuong1.png"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\xuhuong2.png",
+      "PackagePath": "staticwebassets\\images\\xuhuong2.png"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\xuhuong3.webp",
+      "PackagePath": "staticwebassets\\images\\xuhuong3.webp"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\xuhuong4.png",
+      "PackagePath": "staticwebassets\\images\\xuhuong4.png"
+    },
+    {
+      "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\images\\zfold3.jpg",
+      "PackagePath": "staticwebassets\\images\\zfold3.jpg"
     },
     {
       "Id": "C:\\Users\\84981\\Documents\\GitHub\\ASPNETCOREProject\\FinalProject\\wwwroot\\js\\site.js",

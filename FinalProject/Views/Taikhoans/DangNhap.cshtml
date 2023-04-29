@@ -1,7 +1,5 @@
 ﻿@model FinalProject.Models.Taikhoan
-<a type="button" class="btn btn-warning" asp-action="Viewadmin" asp-controller="Taikhoans">View admin</a>
-
-<div class="dangnhapform box py-1">
+<div class="dangnhapform box py-1 mb-3">
 	<div class="row">
 		<div  class="col-md-6 p-3 text-right">
 			<img class="img-fluid" src="/images/login.png" style="object-fit:cover">
@@ -13,7 +11,7 @@
 			<div asp-validation-summary="ModelOnly" class="text-danger my-3 h4"></div>
 			<div class="form-group my-3">
 				<label  for="username" class="control-label h3"><i class="bi bi-envelope"></i> Email</label>
-				<input required id="username" name="email" class="form-control fc h4" />
+				<input required  type="email" id="username" name="email" class="form-control fc h4" />
 			</div>
 			<div class="form-group my-3">
 				<label for="password" class="control-label h3"><i class="bi bi-key"></i> Mật khẩu</label>

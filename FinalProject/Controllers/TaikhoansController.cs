@@ -19,19 +19,22 @@ namespace FinalProject.Controllers
         {
             _context = context;
         }
+        [Authorize]
         public async Task<IActionResult> DoiMatKhau(string email)
         {
+            if (@User.FindFirstValue(ClaimTypes.Email) != email)
+            {
+                return RedirectToAction("AccessDenied", "Home");
+            }
             var tk = _context.Taikhoans.SingleOrDefault(b => b.Email.Equals(email));
             return View(tk);
         }
+
         public IActionResult QuenMatKhau()
         {
             return View();
         }
-        public IActionResult Viewadmin()
-        {
-            return View();
-        }
+
 
         public IActionResult DangNhap(string email, string password, string returnUrl)
         {
@@ -65,7 +68,7 @@ namespace FinalProject.Controllers
                     var principal = new ClaimsPrincipal(identity);
                     var props = new AuthenticationProperties();
                     HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, props).Wait();
-                    
+
                     if (TempData["returnurl"] != null)
                     {
                         //Chuyển hướng tới trang mong muốn
@@ -73,7 +76,18 @@ namespace FinalProject.Controllers
                     }
 
                     else
-                        return RedirectToAction("");
+                    {
+                        //Vì sau khi chuyển hướng mới có thông tin user
+                        if (role == "Admin")
+                        {
+                            return RedirectToAction("QuanLyChoAdmin", "Home");
+                        }
+                        else
+                        {
+                            return RedirectToAction("QuanLyChoUser", "Home");
+                        }
+                    }
+
                 }
 
                 else
@@ -85,7 +99,7 @@ namespace FinalProject.Controllers
             else
                 return View();
         }
-
+        [Authorize]
         public IActionResult DangXuat()
         {
             //Xóa yêu thích trong bảng tạm
@@ -94,10 +108,7 @@ namespace FinalProject.Controllers
             HttpContext.SignOutAsync();
             return RedirectToAction("DangNhap");
         }
-        public IActionResult DangNhapThanhCong()
-        {
-            return View();
-        }
+      
         public bool CheckEmailExists(string email)
         {
             string query = "EXEC CheckEmailExists @email = '" + email + "'";
@@ -110,6 +121,7 @@ namespace FinalProject.Controllers
             else
                 return false;
         }
+        [Authorize]
         public IActionResult EditTaiKhoan(string email, string hoten, string diachi, string sdt)
         {
             var tk = _context.Taikhoans.SingleOrDefault(b => b.Email.Equals(email));
@@ -117,8 +129,9 @@ namespace FinalProject.Controllers
             tk.DiaChi = diachi;
             tk.Sdt = sdt;
             _context.SaveChanges();
-            return RedirectToAction("DangNhapThanhCong");
+            return RedirectToAction("QuanLyChoUser", "Home");
         }
+    
         public void EditPassword(string email, string password)
         {
 
@@ -126,7 +139,7 @@ namespace FinalProject.Controllers
             _context.Database.ExecuteSqlRaw(query);
 
         }
-
+        
         public IActionResult KPMatKhau()
         {
             return View();
@@ -144,7 +157,7 @@ namespace FinalProject.Controllers
             return View();
         }
         // GET: Taikhoans
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Index()
         {
             return View(await _context.Taikhoans.ToListAsync());
@@ -202,8 +215,13 @@ namespace FinalProject.Controllers
         }
 
         // GET: Taikhoans/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(string id)
         {
+            if (@User.FindFirstValue(ClaimTypes.Email) != id)
+            {
+                return RedirectToAction("AccessDenied", "Home");
+            }
             if (id == null || _context.Taikhoans == null)
             {
                 return NotFound();

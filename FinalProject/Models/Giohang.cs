@@ -8,6 +8,8 @@ namespace FinalProject.Models
         public Giohang()
         {
             Ctgiohangs = new HashSet<Ctgiohang>();
+            Reviewlaptops = new HashSet<Reviewlaptop>();
+            Reviewphones = new HashSet<Reviewphone>();
         }
 
         public string Email { get; set; } = null!;
@@ -18,5 +20,7 @@ namespace FinalProject.Models
         public decimal TongPhaiTra { get; set; }
 
         public virtual ICollection<Ctgiohang> Ctgiohangs { get; set; }
+        public virtual ICollection<Reviewlaptop> Reviewlaptops { get; set; }
+        public virtual ICollection<Reviewphone> Reviewphones { get; set; }
     }
 }
