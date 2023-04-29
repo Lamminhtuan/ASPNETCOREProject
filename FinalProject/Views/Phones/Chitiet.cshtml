@@ -1,0 +1,483 @@
+﻿@model IEnumerable<FinalProject.Models.Phone>
+
+@using System.Globalization;
+
+<div id="nav-cont">
+	<nav class="navbar" id="nav-cont1">
+		<div class="container-fluid" id="nav-cont2">
+			<ul class="navbar-nav" id="nav-cont3">
+				<li class="nav-item" id="content1">
+					<a class="nav-link" asp-action="Index" asp-controller="Giohangs" asp-route-all="yes" value="">
+						<i class="bi bi-list-ul"></i>
+						Danh sách đơn hàng
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" asp-action="Index" asp-controller="Vouchers">
+						<i class="bi bi-card-list"></i>
+
+						Voucher
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" asp-action="Index" asp-controller="Taikhoans">
+						<i class="bi bi-person-vcard"></i>
+						Quản lý tài khoản
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" asp-action="Chitiet" asp-controller="Phones">
+						<i class="bi bi-phone-fill"></i>
+						Quản lý điện thoại
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" asp-action="Chitiet" asp-controller="Laptops">
+						<i class="bi bi-laptop-fill"></i>
+
+						Quản lý laptop
+					</a>
+				</li>
+				<li class="nav-item">
+					<a asp-action="DangXuat" asp-controller="Taikhoans" class="btn btn-danger">
+						<i class="bi bi-key-fill"></i>
+
+						Đăng xuất
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</div>
+<!-- Add -->
+<div class="modal fade" id="themdth" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<form id="formthemdth">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Thêm mới điện thoại</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-group">
+						<label class="control-label">ID</label>
+						<input required id="themid" class="form-control" readonly value="@PhonesDAL.GetID()" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Tên</label>
+						<input required id="themten" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Hãng</label>
+						<input required id="themhang" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Giá</label>
+						<input type="number" required id="themgia" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Màn hình</label>
+						<input required id="themmanhinh" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Hệ điều hành</label>
+						<input required id="themos" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Camera Sau</label>
+						<input required id="themcamerasau" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Camera Trước</label>
+						<input required id="themcameratruoc" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Nhu cầu</label>
+						<input required id="themnhucau" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Chip</label>
+						<input required id="themchip" class="form-control" />
+
+					</div>
+					
+					<div class="form-group">
+						<label class="control-label">RAM (Gb)</label>
+						<input required id="themram" type="number" step="0.001" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">ROM (Gb)</label>
+						<input required id="themrom"  step="0.001" type="number" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Pin</label>
+						<input required id="thempin" class="form-control" />
+
+					</div>
+				
+					<div class="form-group">
+						<label class="control-label">Thiết kế</label>
+						<input required id="themthietke" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Đường dẫn hình ảnh</label>
+						<input required id="themimagepath" class="form-control" />
+
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+					<button type="submit" class="btn btn-primary" id="btnthemlaptop">Thêm mới</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- update -->
+<div class="modal fade" id="suadth" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<form id="formsuadth">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Sửa điện thoại</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-group">
+						<label class="control-label">ID</label>
+						<input required readonly id="suaid" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Tên</label>
+						<input required id="suaten" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Hãng</label>
+						<input required id="suahang" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Giá</label>
+						<input type="number" required id="suagia" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Màn hình</label>
+						<input required id="suamanhinh" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Hệ điều hành</label>
+						<input required id="suaos" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Camera Sau</label>
+						<input required id="suacamerasau" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Camera Trước</label>
+						<input required id="suacameratruoc" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Nhu cầu</label>
+						<input required id="suanhucau" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Chip</label>
+						<input required id="suachip" class="form-control" />
+
+					</div>
+					
+					<div class="form-group">
+						<label class="control-label">RAM (Gb)</label>
+						<input required id="suaram"  step="0.001" type="number" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">ROM (Gb)</label>
+						<input required id="suarom" step="0.001" type="number" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Pin</label>
+						<input required id="suapin" class="form-control" />
+
+					</div>
+				
+					<div class="form-group">
+						<label class="control-label">Thiết kế</label>
+						<input required id="suathietke" class="form-control" />
+
+					</div>
+					<div class="form-group">
+						<label class="control-label">Đường dẫn hình ảnh</label>
+						<input required id="suaimagepath" class="form-control" />
+
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+					<button type="submit" class="btn btn-primary" id="btnthemlaptop">Cập nhật</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<div class="container box p-3 my-3" style="background:white;border-radius:8px;overflow-x:auto;">
+	<div class="mb-3">
+		<h2 class="fw-bold d-inline"><i class="bi bi-phone"></i> Danh sách điện thoại</h2>
+	</div>
+	<button type="button" class="btn btn-success fw-bold mb-3" data-bs-toggle="modal" data-bs-target="#themdth">
+		<i class="bi bi-plus-circle"></i> Thêm mới điện thoại
+	</button>
+	<div class="mb-3 text-center">
+		<form asp-action="Chitiet" asp-controller="Phones">
+			<div class="input-group mb-3">
+				<input name="searchstring" type="text" class="form-control" placeholder="Tìm kiếm" aria-label="Tìm kiếm" aria-describedby="button-addon2">
+				<button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i class="bi bi-search"></i></button>
+			</div>
+		</form>
+	</div>
+	<table class="table table-responsive text-center m-0 h5 align-middle">
+		<thead style="background-color:#ff9800">
+			<tr>
+				
+				<th>
+					Tên sản phẩm
+				</th>
+				<th>
+					Hãng
+				</th>
+				<th>
+					Giá
+				</th>
+				<th>
+					Hình sản phẩm
+				</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody class="fw-bold align-middle">
+			@foreach (var item in Model)
+			{
+				<tr>
+					<td class="d-none iddt">
+						@item.Id
+					</td>
+					<td class="ten">
+						<a asp-action="Details" asp-controller="Phones" class="linktodetails" asp-route-id="@item.Id">
+							@Html.DisplayFor(modelItem => item.Ten)
+						</a>
+					</td>
+					<td class="hang">
+						@Html.DisplayFor(modelItem => item.Hang)
+					</td>
+					<td>
+						<span class="d-none gia"> @Convert.ToInt32(@item.Gia)</span>
+						@item.Gia.ToString("C",CultureInfo.CreateSpecificCulture("vi-VN"))
+					</td>
+					<td class="d-none manhinh">
+						@Html.DisplayFor(modelItem => item.ManHinh)
+					</td>
+					<td class="d-none os">
+						@Html.DisplayFor(modelItem => item.Os)
+					</td>
+					<td class="d-none camerasau">
+						@item.CameraSau
+					</td>
+					<td class="d-none cameratruoc">
+						@item.CameraTruoc
+					</td>
+					<td class="d-none nhucau">
+						@Html.DisplayFor(modelItem => item.NhuCau)
+					</td>
+					<td class="d-none chip">
+						@Html.DisplayFor(modelItem => item.Chip)
+					</td>
+					
+					<td class="d-none ram">
+						@Html.DisplayFor(modelItem => item.Ram)
+					</td>
+					<td class="d-none rom">
+						@Html.DisplayFor(modelItem => item.Rom)
+					</td>
+					<td class="d-none pin">
+						@Html.DisplayFor(modelItem => item.Pin)
+					</td>
+					
+					<td class="d-none thietke">
+						@Html.DisplayFor(modelItem => item.ThietKe)
+					</td>
+					<td>
+						<span class="d-none imagepath">@item.ImagePath></span>
+						<img src="@item.ImagePath" style="height:120px;width:auto;" />
+					</td>
+					<td>
+						<button type="button" onclick="suadienthoai(this)" class="btn btn-info fw-bold mb-3" data-bs-toggle="modal" data-bs-target="#suadth">
+							<i class="bi bi-pen"></i> Sửa điện thoại
+						</button> |
+						<a href="#" onclick="xoadienthoai(this)"><i class="bi bi-trash dobtn"></i></a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+</div>
+
+<script>
+	function xoadienthoai(e) {
+		var p = e.parentNode.parentNode;
+		var iddt = p.getElementsByClassName("iddt")[0].innerText.trim();
+		p.parentNode.removeChild(p);
+
+		$.ajax({
+			type: "POST",
+
+			url: "@Url.Action("XoaDienthoai", "Phones")",
+			//Tham số truyền vào
+			data: { "iddt": iddt },
+			success: function () {
+				Swal.fire(
+					'Thành công!',
+					'Xóa thành công!',
+					'success'
+				)
+			}
+		});
+	}
+	function suadienthoai(e) {
+		var p = e.parentNode.parentNode;
+		var id = p.getElementsByClassName("iddt")[0].innerText.trim();
+		var ten = p.getElementsByClassName("ten")[0].innerText.trim();
+		var hang = p.getElementsByClassName("hang")[0].innerText.trim();
+		var gia = p.getElementsByClassName("gia")[0].innerText.trim();
+		var manhinh = p.getElementsByClassName("manhinh")[0].innerText.trim();
+		var os = p.getElementsByClassName("os")[0].innerText.trim();
+		var camerasau = p.getElementsByClassName("camerasau")[0].innerText.trim();
+		var cameratruoc = p.getElementsByClassName("cameratruoc")[0].innerText.trim();
+		var nhucau = p.getElementsByClassName("nhucau")[0].innerText.trim();
+		var chip = p.getElementsByClassName("chip")[0].innerText.trim();
+		
+		var ram = p.getElementsByClassName("ram")[0].innerText.trim();
+		var rom = p.getElementsByClassName("rom")[0].innerText.trim();
+		var pin = p.getElementsByClassName("pin")[0].innerText.trim();
+		var thietke = p.getElementsByClassName("thietke")[0].innerText.trim();
+		var imagepath = p.getElementsByClassName("imagepath")[0].innerText.trim();
+		$("#suaid").val(id);
+		$("#suaten").val(ten);
+		$("#suahang").val(hang);
+		$("#suagia").val(gia);
+		$("#suamanhinh").val(manhinh);
+		$("#suaos").val(os);
+		$("#suacamerasau").val(camerasau);
+		$("#suacameratruoc").val(cameratruoc);
+		$("#suanhucau").val(nhucau);
+		$("#suachip").val(chip);
+	
+		$("#suaram").val(ram);
+		$("#suarom").val(rom);
+		$("#suapin").val(pin);
+		$("#suathietke").val(thietke);
+		$("#suaimagepath").val(imagepath);
+
+	}
+	$("#formsuadth").submit(function (e) {
+		e.preventDefault();
+		var id = $("#suaid").val();
+		var ten = $("#suaten").val();
+		var hang = $("#suahang").val();
+		var gia = $("#suagia").val();
+		var manhinh = $("#suamanhinh").val();
+		var os = $("#suaos").val();
+		var camerasau = $("#suacamerasau").val();
+		var cameratruoc = $("#suacameratruoc").val();
+		var nhucau = $("#suanhucau").val();
+		var chip = $("#suachip").val();
+	
+		var ram = $("#suaram").val();
+		var rom = $("#suarom").val();
+		var pin = $("#suapin").val();
+		var thietke = $("#suathietke").val();
+		var imagepath = $("#suaimagepath").val();
+		$.ajax({
+			type: "POST",
+
+			url: "@Url.Action("SuaDienthoai", "Phones")",
+			//Tham số truyền vào
+				data: { "id": id, "ten": ten, "hang": hang, "gia": gia, "manhinh": manhinh, "os": os, "camerasau": camerasau, "cameratruoc":cameratruoc, "nhucau": nhucau, "chip": chip,  "ram": ram, "rom": rom, "pin": pin, "thietke": thietke, "imagepath": imagepath },
+			success: function () {
+				window.location.href = "@Url.Action("Chitiet", "Phones")";
+			},
+			error: function () {
+				
+			}
+
+		});
+	});
+	//Thêm điện thoại
+	$("#formthemdth").submit(function (e) {
+		e.preventDefault();
+		//var id = $("#themid").val();
+		var ten = $("#themten").val();
+		var hang = $("#themhang").val();
+		var gia = $("#themgia").val();
+		var manhinh = $("#themmanhinh").val();
+		var os = $("#themos").val();
+		var camerasau = $("#themcamerasau").val();
+		var cameratruoc = $("#themcameratruoc").val();
+		var nhucau = $("#themnhucau").val();
+		var chip = $("#themchip").val();
+	
+		var ram = $("#themram").val();
+		var rom = $("#themrom").val();
+		var pin = $("#thempin").val();
+		
+		var thietke = $("#themthietke").val();
+		var imagepath = $("#themimagepath").val();
+		$.ajax({
+			type: "POST",
+
+			url: "@Url.Action("ThemDienthoai", "Phones")",
+			//Tham số truyền vào
+			data: { "id": "@PhonesDAL.GetID()", "ten": ten, "hang": hang, "gia": gia, "manhinh": manhinh, "os": os, "camerasau": camerasau, "cameratruoc":cameratruoc, "nhucau": nhucau, "chip": chip,  "ram": ram, "rom": rom, "pin": pin, "thietke": thietke, "imagepath": imagepath },
+			success: function () {
+				window.location.href = "@Url.Action("Chitiet", "Phones")";
+			},
+			error: function () {
+				
+			}
+
+		});
+	});
+
+</script>

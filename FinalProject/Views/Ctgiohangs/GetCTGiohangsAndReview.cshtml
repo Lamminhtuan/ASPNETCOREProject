@@ -1,0 +1,147 @@
+﻿@model IEnumerable<FinalProject.Models.Ctgiohang>
+@using System.Globalization;
+
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+	.checked {
+		color: orange;
+	}
+</style>
+<div class="modal fade" id="danhgiamodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<form id="formdanhgia" asp-action="DanhGia" asp-controller="Reviewphones">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Đánh giá sản phẩm</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body text-center h4">
+					<input type="hidden" name="idgh" value="@Model.FirstOrDefault().Idgh">
+					<input type="hidden" name="idsp" id="modalid">
+						<input type="hidden" name="sao" id="modalsao">
+					<div id="modalten"></div>
+					<img src="123" id="modalimg" />
+					<div class="mb-3">
+						<span><i class="bi bi-star-fill checked" id="1star" onmouseover="danhgiasao(this)"></i></span>
+						<span><i class="bi bi-star-fill checked" id="2star" onmouseover="danhgiasao(this)"></i></span>
+						<span><i class="bi bi-star-fill checked" id="3star" onmouseover="danhgiasao(this)"></i></span>
+						<span><i class="bi bi-star-fill checked" id="4star" onmouseover="danhgiasao(this)"></i></span>
+						<span><i class="bi bi-star-fill checked" id="5star" onmouseover="danhgiasao(this)"></i></span>
+					</div>
+					<div class="input-group">
+						<span class="input-group-text">Bình luận</span>
+						<textarea class="form-control" name="binhluan" aria-label="With textarea"></textarea>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary fw-bold" data-bs-dismiss="modal">Hủy</button>
+					<button type="submit" class="btn btn-success fw-bold">Đánh giá</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div class="container box p-3 h4 mt-3" style="overflow-x:auto;">
+	<div class="mb-3">
+		<h2 class="fw-bold d-inline"><i class="bi bi-cart4"></i> Chi tiết đơn hàng @Model.First().Idgh</h2>
+	</div>
+
+	<div class="carttable">
+		<table class="table table-responsive text-center m-0 h4">
+			<thead style="background-color:#ff9800">
+				<tr>
+					<th>Tên sản phẩm</th>
+					<th>Hình sản phẩm</th>
+					<th>Đơn giá</th>
+					<th>Số lượng</th>
+					<th>Thành tiền</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody class="fw-bold align-middle">
+				@foreach (var item in Model)
+				{
+					<tr>
+						<td class="idsp" style="display:none">@item.Idsp</td>
+
+						<td>
+							@if (@item.Idsp.Contains("DT"))
+							{
+								<a asp-action="Details" asp-controller="Phones" class="ten" asp-route-id=@item.Idsp class="linktodetails"> @item.Ten</a>
+							}
+							else
+							{
+								<a asp-action="Details" asp-controller="Laptops" class="ten" asp-route-id=@item.Idsp class="linktodetails"> @item.Ten</a>
+							}
+						</td>
+						<td><img class="img" src="@item.ImagePath" style="height:120px;width:auto;" /></td>
+						<td>@item.DonGia.ToString("C",CultureInfo.CreateSpecificCulture("vi-VN"))</td>
+						<td>@item.SoLuong</td>
+
+						<td>@item.ThanhTien.ToString("C",CultureInfo.CreateSpecificCulture("vi-VN"))</td>
+						<td>
+
+							@if (User.IsInRole("User")){
+							@if (!ReviewsDAL.GetDaDanhGia(@item.Idgh, @item.Idsp))
+							{
+								<button onclick="danhgia(this)" type="button" class="btn btn-warning fw-bold text-dark" data-bs-toggle="modal" data-bs-target="#danhgiamodal">
+									<i class="bi bi-pencil-square"></i> Đánh giá sản phẩm
+								</button>
+							}
+							else
+							{
+								<button type="button" class="btn btn-warning fw-bold text-dark disabled">
+									<i class="bi bi-pencil-square"></i> Đánh giá sản phẩm
+								</button>
+							}
+							}
+						</td>
+					</tr>
+
+				}
+			</tbody>
+		</table>
+
+		@*<div id="total" class="float-end fw-bold border border-white p-3 px-5 h4" style="background-color:#ff9800;border-radius:0px 0px 0px 50px;">Tổng thành tiền: @CtgiohangsDAL.GetTongTien().ToString("C",CultureInfo.CreateSpecificCulture("vi-VN"))</div>*@
+
+	</div>
+</div>
+<script>
+var rating = 5;
+	function danhgia(e) {
+		var p = e.parentNode.parentNode;
+		var tensp = p.getElementsByClassName("ten")[0].innerText;
+		var img = p.getElementsByClassName("img")[0].src;
+		var idsp = p.getElementsByClassName("idsp")[0].innerText;
+		$("#modalten").text(tensp);
+		$("#modalimg").attr("src", img);
+        $("#modalid").val(idsp);
+        if (idsp.includes("DT")) {
+			$('#formdanhgia').attr('action', '/Reviewphones/DanhGia');
+		}
+		else{
+			$('#formdanhgia').attr('action', '/Reviewlaptops/DanhGia');
+		}
+	}
+
+	function danhgiasao(item) {
+		var count = item.id[0];
+		rating = count;
+		 $("#modalsao").val(rating);
+
+		var subid = item.id.substring(1);
+		for (var i = 1; i < 6; i++) {
+			if (i < count) {
+				document.getElementById((i + 1) + subid).style.color = "orange";
+			}
+			else {
+				document.getElementById((i + 1) + subid).style.color = "black";
+			}
+		}
+
+	}
+</script>
