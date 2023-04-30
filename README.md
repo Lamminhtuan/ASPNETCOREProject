@@ -1,4 +1,4 @@
-## Đồ án môn học Công nghệ Web và ứng dụng
+## Đồ án môn học Công nghệ Web và ứng dụng - Đại học Quốc gia Thành phố Hồ Chí Minh - Trường Đại học Công nghệ Thông tin
 ### Đề tài: THIẾT KẾ WEBSITE BÁN ĐIỆN THOẠI VÀ LAPTOP SỬ DỤNG ASP.NET CORE MVC, AJAX VÀ BOOTSTRAP
 Danh sách thành viên:
 <ul>
