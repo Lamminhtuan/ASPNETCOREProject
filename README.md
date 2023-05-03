@@ -31,4 +31,4 @@ truy cập vào các trang không được quyền.</i>
  <li>Sử dụng thư viện SweetAlert2 để tùy chỉnh Alert thông báo người dùng.</li>
 </ul>
 
-<b>Các hình ảnh điện thoại, laptop... có bản quyền trong đồ án đều không thuộc sở hữu của nhóm. Các hình ảnh có bản quyền chỉ nhằm mục đích học tập. Bản quyền thuộc về chủ sở hữu các hình ảnh đó.</b>
+<b>Các hình ảnh và thông tin điện thoại, laptop... có bản quyền trong đồ án đều không thuộc sở hữu của nhóm. Các hình ảnh và thông tin có bản quyền chỉ nhằm mục đích học tập. Bản quyền thuộc về chủ sở hữu các hình ảnh và thông tin đó.</b>
